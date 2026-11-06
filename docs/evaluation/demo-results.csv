@@ -1,0 +1,423 @@
+﻿"case_id","scenario","client_id","motif","line","selected_sku","occasion","expected_status","actual_status","resolved_sku","rule_passed","model","candidate_1","candidate_2","candidate_3","error"
+"ML-001","recommend","CL-001","jasmin","jasmin","","","READY","READY","JAS-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+Jasmin Étoilé的戒指：五瓣茉莉开口戒，花心小钻，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的戒指为五瓣茉莉开口戒，花心小钻，采用18K玫瑰金；与您最近提到的18K玫瑰金偏好相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的戒指以18K玫瑰金呈现五瓣茉莉开口戒，花心小钻，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-002","recommend","CL-001","feuille","aqua","","","READY","READY","FEU-A-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+Aqua Héritage的戒指：椭圆海蓝宝主石与叶片托镶，采用18K白金，呼应海蓝宝与叶片承载宁静记忆的意象。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+风掠过叶片，水光在叶脉间流动。将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。Aqua Héritage的戒指为椭圆海蓝宝主石与叶片托镶，采用18K白金；与您曾关注的戒指相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+清澈的海蓝宝托于叶片之间，让一份记忆有了可以传递的形状。Aqua Héritage的戒指以18K白金呈现椭圆海蓝宝主石与叶片托镶，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-003","recommend","CL-001","feuille","","","","READY","READY","FEU-A-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+Aqua Héritage的戒指：椭圆海蓝宝主石与叶片托镶，采用18K白金，呼应海蓝宝与叶片承载宁静记忆的意象。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+风掠过叶片，水光在叶脉间流动。将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。Aqua Héritage的戒指为椭圆海蓝宝主石与叶片托镶，采用18K白金；与您曾关注的戒指相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+清澈的海蓝宝托于叶片之间，让一份记忆有了可以传递的形状。Aqua Héritage的戒指以18K白金呈现椭圆海蓝宝主石与叶片托镶，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-004","recommend","CL-001","jasmin","jasmin","JAS-N01","","READY","READY","JAS-N01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+Jasmin Étoilé的项链：单朵茉莉钻石吊坠，采用18K白金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的项链为单朵茉莉钻石吊坠，采用18K白金；与您曾关注的Jasmin Étoilé相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的项链以18K白金呈现单朵茉莉钻石吊坠，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-005","recommend","CL-003","muguet","","","","READY","READY","MUG-C-N01","true","demo-template-v1.2","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+Clochette Royale的项链：多花冠错落垂坠项链，采用18K白金，呼应层叠铃兰花序的庆典意象。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+铃兰低垂的花冠像把祝福轻轻递到掌心。将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。Clochette Royale的项链为多花冠错落垂坠项链，采用18K白金；与您最近提到的18K白金偏好相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+层叠的铃兰花序，如一串静默的钟声，将祝福留在值得纪念的片刻。Clochette Royale的项链以18K白金呈现多花冠错落垂坠项链，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-006","recommend","CL-002","feuille","aqua","","","READY","READY","FEU-A-N01","true","demo-template-v1.2","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+Aqua Héritage的项链：梨形海蓝宝吊坠与叶片光环，采用18K白金，呼应海蓝宝与叶片承载宁静记忆的意象。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+风掠过叶片，水光在叶脉间流动。将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。Aqua Héritage的项链为梨形海蓝宝吊坠与叶片光环，采用18K白金；与您曾关注的Aqua Héritage相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+清澈的海蓝宝托于叶片之间，让一份记忆有了可以传递的形状。Aqua Héritage的项链以18K白金呈现梨形海蓝宝吊坠与叶片光环，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-007","recommend","CL-002","feuille","aqua","FEU-A-B01","","READY","READY","FEU-A-B01","true","demo-template-v1.2","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+Aqua Héritage的手镯：中央海蓝宝与两侧叶脉造型，采用18K白金，呼应海蓝宝与叶片承载宁静记忆的意象。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+风掠过叶片，水光在叶脉间流动。将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。Aqua Héritage的手镯为中央海蓝宝与两侧叶脉造型，采用18K白金；与您曾关注的Aqua Héritage相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+清澈的海蓝宝托于叶片之间，让一份记忆有了可以传递的形状。Aqua Héritage的手镯以18K白金呈现中央海蓝宝与两侧叶脉造型，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-008","recommend","CL-005","","","","","READY","READY","MUG-R-B01","true","demo-template-v1.2","Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。
+
+Rosée du Matin的手镯：细链手镯，铃兰与露珠双吊饰，采用18K白金，呼应晨光落在铃兰露珠上的轻盈祝愿。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。
+
+铃兰低垂的花冠像把祝福轻轻递到掌心。清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。Rosée du Matin的手镯为细链手镯，铃兰与露珠双吊饰，采用18K白金；与您曾关注的Rosée du Matin相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。
+
+清晨第一缕光落在铃兰露珠上，轻轻托起新篇章的祝愿。Rosée du Matin的手镯以18K白金呈现细链手镯，铃兰与露珠双吊饰，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-009","care","CL-006","","","","","READY","READY","MUG-R-B01","true","demo-template-v1.2","Bonjour，沈女士，我是 Maison Lioré 的珠宝顾问 Élise。
+
+Rosée du Matin的手镯：细链手镯，铃兰与露珠双吊饰，采用18K白金，呼应晨光落在铃兰露珠上的轻盈祝愿。最近佩戴感受如何？
+
+若有想交流的佩戴感受，欢迎随时告诉我。","Bonjour，沈女士，我是 Maison Lioré 的珠宝顾问 Élise。
+
+您在2026-10-12选择的作品，有这样一段自然意象：铃兰低垂的花冠像把祝福轻轻递到掌心。清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。Rosée du Matin的手镯为细链手镯，铃兰与露珠双吊饰，采用18K白金；与您曾关注的Rosée du Matin相呼应。最近日常佩戴的感受如何？
+
+如果您有佩戴方面的疑问，欢迎随时与我沟通。","Bonjour，沈女士，我是 Maison Lioré 的珠宝顾问 Élise。
+
+清晨第一缕光落在铃兰露珠上，轻轻托起新篇章的祝愿。Rosée du Matin的手镯以18K白金呈现细链手镯，铃兰与露珠双吊饰，将自然的一瞬留在可以珍藏的日常里。这件与您相伴的作品，最近佩戴是否舒心？
+
+您若愿意分享与这件作品相伴的片刻，我很乐意听。",""
+"ML-010","care","CL-001","","","","","NEEDS_REVIEW","NEEDS_REVIEW","","true","","","","",""
+"ML-011","care","CL-006","","","","","NEEDS_REVIEW","NEEDS_REVIEW","","true","","","","",""
+"ML-012","recommend","CL-008","feuille","aqua","","","READY","READY","FEU-A-B01","true","demo-template-v1.2","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+Aqua Héritage的手镯：中央海蓝宝与两侧叶脉造型，采用18K白金，呼应海蓝宝与叶片承载宁静记忆的意象。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+风掠过叶片，水光在叶脉间流动。将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。Aqua Héritage的手镯为中央海蓝宝与两侧叶脉造型，采用18K白金；与您曾关注的Aqua Héritage相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+清澈的海蓝宝托于叶片之间，让一份记忆有了可以传递的形状。Aqua Héritage的手镯以18K白金呈现中央海蓝宝与两侧叶脉造型，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-013","price","CL-008","feuille","aqua","FEU-A-R01","","READY","READY","FEU-A-R01","true","demo-template-v1.2","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+理解您想进一步了解价格所对应的材质与设计，Aqua Héritage的戒指：椭圆海蓝宝主石与叶片托镶，采用18K白金，呼应海蓝宝与叶片承载宁静记忆的意象。模拟建议零售价为¥68,800。
+
+您若愿意，可告诉我更在意哪些材质或设计细节。","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+理解您想进一步了解价格所对应的材质与设计，风掠过叶片，水光在叶脉间流动。将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。Aqua Héritage的戒指为椭圆海蓝宝主石与叶片托镶，采用18K白金；与您曾关注的Aqua Héritage相呼应；模拟建议零售价为¥68,800，这些是可供从容比较的具体信息。
+
+若还有想了解的价格与设计信息，欢迎随时与我沟通。","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+理解您想进一步了解价格所对应的材质与设计，清澈的海蓝宝托于叶片之间，让一份记忆有了可以传递的形状。Aqua Héritage的戒指以18K白金呈现椭圆海蓝宝主石与叶片托镶，将自然的一瞬留在可以珍藏的日常里。作品是否合适，仍以您的感受为准。
+
+不妨按自己的节奏考虑，想继续了解时随时告诉我。",""
+"ML-014","recommend","CL-008","jasmin","jasmin","","","READY","READY","JAS-B01","true","demo-template-v1.2","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+Jasmin Étoilé的手镯：细窄硬镯，半开花形点缀，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的手镯为细窄硬镯，半开花形点缀，采用18K玫瑰金。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的手镯以18K玫瑰金呈现细窄硬镯，半开花形点缀，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-015","recommend","CL-007","jasmin","jasmin","","","READY","READY","JAS-B01","true","demo-template-v1.2","Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。
+
+Jasmin Étoilé的手镯：细窄硬镯，半开花形点缀，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的手镯为细窄硬镯，半开花形点缀，采用18K玫瑰金。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的手镯以18K玫瑰金呈现细窄硬镯，半开花形点缀，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-016","recommend","CL-UNKNOWN","jasmin","jasmin","","","NEEDS_REVIEW","NEEDS_REVIEW","","true","","","","",""
+"ML-017","greeting","CL-002","jasmin","jasmin","","","READY","READY","","true","demo-template-v1.2","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+想为您送上一份3月的生日祝福。愿日常自在从容，也有值得珍藏的小小欢喜。
+
+愿这份祝福，为您的日常添一份从容。","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+想为您3月的生日送上一份 Maison Lioré 的心意。愿忙碌之外，也有安静的片刻留给自己；愿生活中的温柔与美好，都有时间被细细感受，成为日后轻轻想起的记忆。
+
+若您愿意分享近来的美好片刻，我很乐意听。","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+为您3月的生日寄上一份轻轻的祝愿。愿光影温柔，心意明亮，每一个值得珍藏的片刻，都在记忆里留下从容的光。
+
+愿值得珍藏的小小欢喜，常伴您左右。",""
+"ML-018","greeting","CL-001","jasmin","jasmin","","","READY","READY","","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+想为您送上一份11月的生日祝福。愿日常自在从容，也有值得珍藏的小小欢喜。
+
+愿这份祝福，为您的日常添一份从容。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+想为您11月的生日送上一份 Maison Lioré 的心意。愿忙碌之外，也有安静的片刻留给自己；愿生活中的温柔与美好，都有时间被细细感受，成为日后轻轻想起的记忆。
+
+若您愿意分享近来的美好片刻，我很乐意听。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+为您11月的生日寄上一份轻轻的祝愿。愿光影温柔，心意明亮，每一个值得珍藏的片刻，都在记忆里留下从容的光。
+
+愿值得珍藏的小小欢喜，常伴您左右。",""
+"ML-019","greeting","CL-001","jasmin","jasmin","","","READY","READY","","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+想为您送上一份11月的生日祝福。愿日常自在从容，也有值得珍藏的小小欢喜。
+
+愿这份祝福，为您的日常添一份从容。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+想为您11月的生日送上一份 Maison Lioré 的心意。愿忙碌之外，也有安静的片刻留给自己；愿生活中的温柔与美好，都有时间被细细感受，成为日后轻轻想起的记忆。
+
+若您愿意分享近来的美好片刻，我很乐意听。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+为您11月的生日寄上一份轻轻的祝愿。愿光影温柔，心意明亮，每一个值得珍藏的片刻，都在记忆里留下从容的光。
+
+愿值得珍藏的小小欢喜，常伴您左右。",""
+"ML-020","greeting","CL-002","jasmin","jasmin","","","READY","READY","","true","demo-template-v1.2","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+想为您送上一份元旦祝福。愿日常自在从容，也有值得珍藏的小小欢喜。
+
+愿这份祝福，为您的日常添一份从容。","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+想为您元旦送上一份 Maison Lioré 的心意。愿忙碌之外，也有安静的片刻留给自己；愿生活中的温柔与美好，都有时间被细细感受，成为日后轻轻想起的记忆。
+
+若您愿意分享近来的美好片刻，我很乐意听。","Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。
+
+为您元旦寄上一份轻轻的祝愿。愿光影温柔，心意明亮，每一个值得珍藏的片刻，都在记忆里留下从容的光。
+
+愿值得珍藏的小小欢喜，常伴您左右。",""
+"ML-021","greeting","CL-001","jasmin","jasmin","","","NEEDS_REVIEW","NEEDS_REVIEW","","true","","","","",""
+"ML-022","greeting","CL-001","jasmin","jasmin","","","READY","READY","","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+想为您送上一份元旦祝福。愿日常自在从容，也有值得珍藏的小小欢喜。
+
+愿这份祝福，为您的日常添一份从容。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+想为您元旦送上一份 Maison Lioré 的心意。愿忙碌之外，也有安静的片刻留给自己；愿生活中的温柔与美好，都有时间被细细感受，成为日后轻轻想起的记忆。
+
+若您愿意分享近来的美好片刻，我很乐意听。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+为您元旦寄上一份轻轻的祝愿。愿光影温柔，心意明亮，每一个值得珍藏的片刻，都在记忆里留下从容的光。
+
+愿值得珍藏的小小欢喜，常伴您左右。",""
+"ML-023","event","CL-004","muguet","clochette","","","READY","READY","MUG-C-N01","true","demo-template-v1.2","Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。
+
+想邀请您了解「自然意象 · 珠宝设计分享」，时间是2026-12-12 14:00，地点在虚构体验空间 · 上海示例路 18 号。主题聚焦自然与珠宝设计。
+
+如果您有兴趣，欢迎告诉我您的参与意向。","Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。
+
+「自然意象 · 珠宝设计分享」定于2026-12-12 14:00在虚构体验空间 · 上海示例路 18 号举行。分享聚焦自然意象与珠宝设计，例如Clochette Royale的项链：多花冠错落垂坠项链，采用18K白金。将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。
+
+若这场分享与您的兴趣相合，欢迎与我沟通参与想法。","Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。
+
+想邀您留意一次自然与珠宝的相遇。「自然意象 · 珠宝设计分享」将于2026-12-12 14:00在虚构体验空间 · 上海示例路 18 号举行，把一个安静的片刻留给设计与细节。
+
+您若愿意留意这次相聚，方便时告诉我就好。",""
+"ML-024","event","CL-004","jasmin","jasmin","","","NEEDS_REVIEW","NEEDS_REVIEW","JAS-N01","true","","","","",""
+"ML-025","event","CL-007","jasmin","jasmin","","","READY","READY","JAS-B01","true","demo-template-v1.2","Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。
+
+想邀请您了解「自然意象 · 珠宝设计分享」，时间是2026-12-12 14:00，地点在虚构体验空间 · 上海示例路 18 号。主题聚焦自然与珠宝设计。
+
+如果您有兴趣，欢迎告诉我您的参与意向。","Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。
+
+「自然意象 · 珠宝设计分享」定于2026-12-12 14:00在虚构体验空间 · 上海示例路 18 号举行。分享聚焦自然意象与珠宝设计，例如Jasmin Étoilé的手镯：细窄硬镯，半开花形点缀，采用18K玫瑰金。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。
+
+若这场分享与您的兴趣相合，欢迎与我沟通参与想法。","Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。
+
+想邀您留意一次自然与珠宝的相遇。「自然意象 · 珠宝设计分享」将于2026-12-12 14:00在虚构体验空间 · 上海示例路 18 号举行，把一个安静的片刻留给设计与细节。
+
+您若愿意留意这次相聚，方便时告诉我就好。",""
+"ML-026","reactivate","CL-001","jasmin","jasmin","","","READY","READY","JAS-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+想与您重新聊聊自然意象的设计。Jasmin Étoilé的戒指：五瓣茉莉开口戒，花心小钻，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如果您愿意，欢迎随时和我聊聊珠宝想法。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+这次想轻轻问候，也分享一段作品的设计来由：一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的戒指为五瓣茉莉开口戒，花心小钻，采用18K玫瑰金；与您最近提到的18K玫瑰金偏好相呼应。
+
+若您想继续了解这些设计，方便时联系我就好。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+借一份自然的意象，送上一声问候。黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的戒指以18K玫瑰金呈现五瓣茉莉开口戒，花心小钻，将自然的一瞬留在可以珍藏的日常里。
+
+您若有想分享或了解的，随时可以告诉我。",""
+"ML-027","reactivate","CL-001","jasmin","jasmin","","","READY","READY","JAS-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+想与您重新聊聊自然意象的设计。Jasmin Étoilé的戒指：五瓣茉莉开口戒，花心小钻，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如果您愿意，欢迎随时和我聊聊珠宝想法。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+这次想轻轻问候，也分享一段作品的设计来由：一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的戒指为五瓣茉莉开口戒，花心小钻，采用18K玫瑰金；与您最近提到的18K玫瑰金偏好相呼应。
+
+若您想继续了解这些设计，方便时联系我就好。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+借一份自然的意象，送上一声问候。黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的戒指以18K玫瑰金呈现五瓣茉莉开口戒，花心小钻，将自然的一瞬留在可以珍藏的日常里。
+
+您若有想分享或了解的，随时可以告诉我。",""
+"ML-028","reactivate","CL-008","jasmin","jasmin","","","READY","READY","JAS-B01","true","demo-template-v1.2","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+想与您重新聊聊自然意象的设计。Jasmin Étoilé的手镯：细窄硬镯，半开花形点缀，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如果您愿意，欢迎随时和我聊聊珠宝想法。","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+这次想轻轻问候，也分享一段作品的设计来由：一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的手镯为细窄硬镯，半开花形点缀，采用18K玫瑰金。
+
+若您想继续了解这些设计，方便时联系我就好。","Bonjour，顾女士，我是 Maison Lioré 的珠宝顾问 Anaïs。
+
+借一份自然的意象，送上一声问候。黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的手镯以18K玫瑰金呈现细窄硬镯，半开花形点缀，将自然的一瞬留在可以珍藏的日常里。
+
+您若有想分享或了解的，随时可以告诉我。",""
+"ML-029","price","CL-001","jasmin","jasmin","JAS-R01","","NEEDS_REVIEW","NEEDS_REVIEW","JAS-R01","true","","","","",""
+"ML-030","price","CL-001","jasmin","jasmin","","","NEEDS_REVIEW","NEEDS_REVIEW","JAS-R01","true","","","","",""
+"ML-031","price","CL-001","jasmin","jasmin","JAS-R01","","READY","READY","JAS-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+理解价格高于您的预期，需要仔细衡量，Jasmin Étoilé的戒指：五瓣茉莉开口戒，花心小钻，采用18K玫瑰金，呼应茉莉初绽时的安静自信。模拟建议零售价为¥18,800。
+
+您若愿意，可告诉我更在意哪些材质或设计细节。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+理解价格高于您的预期，需要仔细衡量，一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的戒指为五瓣茉莉开口戒，花心小钻，采用18K玫瑰金；与您最近提到的18K玫瑰金偏好相呼应；模拟建议零售价为¥18,800，这些是可供从容比较的具体信息。
+
+若还有想了解的价格与设计信息，欢迎随时与我沟通。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+理解价格高于您的预期，需要仔细衡量，黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的戒指以18K玫瑰金呈现五瓣茉莉开口戒，花心小钻，将自然的一瞬留在可以珍藏的日常里。作品是否合适，仍以您的感受为准。
+
+不妨按自己的节奏考虑，想继续了解时随时告诉我。",""
+"ML-032","recommend","CL-001","jasmin","jasmin","","","BLOCKED","BLOCKED","JAS-R01","true","","","","",""
+"ML-033","recommend","CL-001","jasmin","jasmin","","","BLOCKED","BLOCKED","JAS-R01","true","","","","",""
+"ML-034","recommend","CL-001","jasmin","jasmin","","","BLOCKED","BLOCKED","JAS-R01","true","","","","",""
+"ML-035","recommend","CL-001","jasmin","jasmin","","","BLOCKED","BLOCKED","JAS-R01","true","","","","",""
+"ML-036","recommend","CL-001","jasmin","jasmin","","","BLOCKED","BLOCKED","JAS-R01","true","","","","",""
+"ML-037","recommend","CL-001","jasmin","jasmin","","","READY","READY","JAS-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+Jasmin Étoilé的戒指：五瓣茉莉开口戒，花心小钻，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的戒指为五瓣茉莉开口戒，花心小钻，采用18K玫瑰金；与您最近提到的18K玫瑰金偏好相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的戒指以18K玫瑰金呈现五瓣茉莉开口戒，花心小钻，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-038","recommend","CL-001","jasmin","aqua","","","BLOCKED","BLOCKED","","true","","","","",""
+"ML-039","recommend","CL-001","jasmin","jasmin","FEU-A-R01","","BLOCKED","BLOCKED","","true","","","","",""
+"ML-040","recommend","CL-001","jasmin","jasmin","JAS-FAKE","","BLOCKED","BLOCKED","","true","","","","",""
+"ML-041","recommend","CL-001","","jasmin","","","BLOCKED","BLOCKED","JAS-R01","true","","","","",""
+"ML-042","recommend","CL-001","jasmin","","JAS-R01","","BLOCKED","BLOCKED","JAS-R01","true","","","","",""
+"ML-043","recommend","CL-001","jasmin","jasmin","","wedding","READY","READY","JAS-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+Jasmin Étoilé的戒指：五瓣茉莉开口戒，花心小钻，采用18K玫瑰金，呼应茉莉初绽时的安静自信。放在婚礼场合，这份自然意象可与庆祝的片刻相连。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的戒指为五瓣茉莉开口戒，花心小钻，采用18K玫瑰金；用于婚礼场合，重在将作品的自然寓意与仪式、庆祝和纪念片刻相连，不限定佩戴者的身份。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的戒指以18K玫瑰金呈现五瓣茉莉开口戒，花心小钻，让庆祝的片刻，多一份可以珍藏的心意。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-044","recommend","CL-005","muguet","rosee","","gift","READY","READY","MUG-R-B01","true","demo-template-v1.2","Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。
+
+Rosée du Matin的手镯：细链手镯，铃兰与露珠双吊饰，采用18K白金，呼应晨光落在铃兰露珠上的轻盈祝愿。作为礼物，可借作品的自然寓意传达一份值得珍藏的心意。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。
+
+铃兰低垂的花冠像把祝福轻轻递到掌心。清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。Rosée du Matin的手镯为细链手镯，铃兰与露珠双吊饰，采用18K白金；作为礼赠之选，以作品的象征与情感意义传达心意，同时为收礼人的个人偏好留下空间。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。
+
+清晨第一缕光落在铃兰露珠上，轻轻托起新篇章的祝愿。Rosée du Matin的手镯以18K白金呈现细链手镯，铃兰与露珠双吊饰，让送出的心意，有一份可以珍藏的形状。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-045","recommend","CL-001","jasmin","","","","READY","READY","JAS-R01","true","demo-template-v1.2","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+Jasmin Étoilé的戒指：五瓣茉莉开口戒，花心小钻，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的戒指为五瓣茉莉开口戒，花心小钻，采用18K玫瑰金；与您最近提到的18K玫瑰金偏好相呼应。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的戒指以18K玫瑰金呈现五瓣茉莉开口戒，花心小钻，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-046","recommend","CL-003","jasmin","jasmin","JAS-R01","","READY","READY","JAS-R01","true","demo-template-v1.2","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+Jasmin Étoilé的戒指：五瓣茉莉开口戒，花心小钻，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的戒指为五瓣茉莉开口戒，花心小钻，采用18K玫瑰金。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的戒指以18K玫瑰金呈现五瓣茉莉开口戒，花心小钻，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-047","recommend","CL-003","jasmin","jasmin","JAS-B01","","READY","READY","JAS-B01","true","demo-template-v1.2","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+Jasmin Étoilé的手镯：细窄硬镯，半开花形点缀，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的手镯为细窄硬镯，半开花形点缀，采用18K玫瑰金。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的手镯以18K玫瑰金呈现细窄硬镯，半开花形点缀，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-048","recommend","CL-002","jasmin","jasmin","","","BLOCKED","BLOCKED","JAS-N01","true","","","","",""
+"ML-049","recommend","CL-009","jasmin","jasmin","","","READY","READY","JAS-B01","true","demo-template-v1.2","Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。
+
+Jasmin Étoilé的手镯：细窄硬镯，半开花形点缀，采用18K玫瑰金，呼应茉莉初绽时的安静自信。
+
+如您感兴趣，欢迎随时与我聊聊作品细节。","Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。
+
+一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。Jasmin Étoilé的手镯为细窄硬镯，半开花形点缀，采用18K玫瑰金。
+
+您若想了解更多材质与设计细节，随时可以告诉我。","Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。
+
+黄昏中，茉莉缓缓舒展，微光留在花心。Jasmin Étoilé的手镯以18K玫瑰金呈现细窄硬镯，半开花形点缀，将自然的一瞬留在可以珍藏的日常里。
+
+如果您愿意，我很乐意继续为您介绍这件作品。",""
+"ML-050","recommend","CL-001","jasmin","jasmin","","investment","BLOCKED","BLOCKED","JAS-R01","true","","","","",""
