@@ -222,7 +222,9 @@ function App() {
     [recordError, setRecordError] = useState(""),
     [calendarEpoch, setCalendarEpoch] = useState(0);
   const revision = useRef(0),
-    latest = useRef(task);
+    latest = useRef(task),
+    validationRevision = useRef(0),
+    generationInFlight = useRef(false);
   latest.current = task;
   const notify = (message) => setToast(message);
   useEffect(() => {
@@ -252,13 +254,26 @@ function App() {
   useEffect(() => {
     if (!data) return;
     const controller = new AbortController();
+    const checkRevision = ++validationRevision.current;
     setValidating(true);
     setValidation(null);
     const timer = setTimeout(() => {
       api("validate", task, controller.signal)
-        .then(setValidation)
+        .then((value) => {
+          if (
+            !controller.signal.aborted &&
+            checkRevision === validationRevision.current &&
+            latest.current === task
+          )
+            setValidation(value);
+        })
         .catch((e) => {
-          if (e.name !== "AbortError") setError("输入检查暂时不可用，请重试。");
+          if (
+            !controller.signal.aborted &&
+            checkRevision === validationRevision.current &&
+            e.name !== "AbortError"
+          )
+            setError("输入检查暂时不可用，请重试。");
         })
         .finally(() => {
           if (!controller.signal.aborted) setValidating(false);
@@ -293,7 +308,8 @@ function App() {
     if (view === "records") loadRecords();
   }, [view]);
   async function generate() {
-    if (busy) return;
+    if (generationInFlight.current) return;
+    generationInFlight.current = true;
     setBusy(true);
     setError("");
     setResult(null);
@@ -311,6 +327,7 @@ function App() {
         if (e.data?.status) setValidation(e.data);
       }
     } finally {
+      generationInFlight.current = false;
       setBusy(false);
     }
   }
@@ -1085,7 +1102,9 @@ function App() {
                       <Flower2 />
                     </div>
                     <h3>把了解，化作恰好的语言</h3>
-                    <p>正在整理信息与核实表达，请稍候…</p>
+                    <p>
+                      正在整理信息与核实表达；遇到暂时问题会自动重试，请稍候…
+                    </p>
                     {styleLabels.map((s, i) => (
                       <div className="skeleton-card" key={s[0]}>
                         <span>

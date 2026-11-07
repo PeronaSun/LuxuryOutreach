@@ -2,7 +2,7 @@ import { motifs, lines, products } from "../data/catalog.mjs";
 import { festivalContext } from "./application-calendar.mjs";
 
 export const MESSAGE_FORMAT_VERSION = "three-paragraph-v1";
-export const DEMO_MODEL = "demo-template-v1.3";
+export const DEMO_MODEL = "demo-template-v1.4";
 
 export function greetingFor(client) {
   if (!client?.name || !client.assignedAdvisor)
@@ -21,8 +21,16 @@ export function splitParagraphs(text) {
     : [];
 }
 
-export function storyFor(product) {
-  if (!product) return null;
+export function storyFor(product, grounding = null) {
+  if (!product)
+    return grounding?.motif
+      ? {
+          source: grounding.source,
+          motif: grounding.motif,
+          line: grounding.line,
+          product: null,
+        }
+      : null;
   const sku = products.find((p) => p.sku === product.sku);
   if (!sku) throw new Error("作品资料不存在。");
   const motif = motifs.find((m) => m.id === sku.motif);
@@ -88,10 +96,13 @@ export function messagePlan(input, context) {
   return {
     version: MESSAGE_FORMAT_VERSION,
     greeting: greetingFor(context.client),
-    story: storyFor(context.resolved?.product),
-    occasion: input.occasion
-      ? { id: input.occasion, direction: occasionDirections[input.occasion] }
-      : null,
+    story: storyFor(context.resolved?.product, context.normalized?.grounding),
+    grounding: context.normalized?.grounding || null,
+    selection: context.normalized?.selection || null,
+    occasion:
+      input.occasion && ["recommend", "price"].includes(input.scenario)
+        ? { id: input.occasion, direction: occasionDirections[input.occasion] }
+        : null,
     communicationContext: context.communicationContext ? safeContext : null,
     greetingContext:
       input.scenario === "greeting"
@@ -105,7 +116,15 @@ export function messagePlan(input, context) {
                 : null,
           }
         : null,
-    styles: styleDirections,
+    styles: context.resolved?.product
+      ? styleDirections
+      : {
+          concise: "更简洁：直接回应当前场景与主要背景，不填充单品细节。",
+          detailed:
+            "更丰富：展开真实沟通背景、已知活动或所选意象/系列；没有明确单品就不编造规格。",
+          elegant:
+            "更优雅：以克制自然的语言回应场景，可浓缩已选故事，不推断私人生活或商品事实。",
+        },
     ctaOptions: ctas[input.scenario] || [],
   };
 }
@@ -120,7 +139,9 @@ export function assembleCandidates(parts, input, context) {
       part?.style !== styles[i] ||
       typeof part.main !== "string" ||
       !part.main.trim() ||
-      !plan.ctaOptions.includes(part.cta)
+      typeof part.cta !== "string" ||
+      !part.cta.trim() ||
+      part.cta.trim().length > 100
     )
       throw new Error("模型返回格式无效，请重试。");
     return {
@@ -128,7 +149,7 @@ export function assembleCandidates(parts, input, context) {
       text: [
         plan.greeting,
         part.main.replace(/\s+/gu, " ").trim(),
-        part.cta,
+        part.cta.replace(/\s+/gu, " ").trim(),
       ].join("\n\n"),
     };
   });

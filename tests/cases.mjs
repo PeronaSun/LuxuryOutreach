@@ -311,7 +311,7 @@ export const cases = [
       eventId: "EV-DEMO-01",
     },
     expectedStatus: "READY",
-    expectedSku: "MUG-C-N01",
+    expectedSku: null,
   },
   {
     id: "ML-024",
@@ -325,7 +325,7 @@ export const cases = [
       eventId: "EV-UNKNOWN",
     },
     expectedStatus: "NEEDS_REVIEW",
-    expectedSku: "JAS-N01",
+    expectedSku: null,
   },
   {
     id: "ML-025",
@@ -339,7 +339,7 @@ export const cases = [
       eventId: "EV-DEMO-01",
     },
     expectedStatus: "READY",
-    expectedSku: "JAS-B01",
+    expectedSku: null,
   },
   {
     id: "ML-026",
@@ -353,7 +353,7 @@ export const cases = [
       reconnectReason: "分享已记录的茉莉设计细节。",
     },
     expectedStatus: "READY",
-    expectedSku: "JAS-R01",
+    expectedSku: null,
   },
   {
     id: "ML-027",
@@ -366,7 +366,7 @@ export const cases = [
       notes: "",
     },
     expectedStatus: "READY",
-    expectedSku: "JAS-R01",
+    expectedSku: null,
   },
   {
     id: "ML-028",
@@ -380,7 +380,7 @@ export const cases = [
       reconnectReason: "分享设计细节。",
     },
     expectedStatus: "READY",
-    expectedSku: "JAS-B01",
+    expectedSku: null,
   },
   {
     id: "ML-029",
@@ -398,7 +398,8 @@ export const cases = [
   },
   {
     id: "ML-030",
-    title: "Price objection needs explicit SKU",
+    title:
+      "Ambiguous price objection remains general without invented product facts",
     input: {
       clientId: "CL-001",
       scenario: "price",
@@ -407,8 +408,8 @@ export const cases = [
       notes: "",
       concern: "价格比预期高。",
     },
-    expectedStatus: "NEEDS_REVIEW",
-    expectedSku: "JAS-R01",
+    expectedStatus: "READY",
+    expectedSku: null,
   },
   {
     id: "ML-031",

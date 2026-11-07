@@ -128,6 +128,7 @@ test("wrong birthday month blocks generation before any model call and gives a f
   await assert.rejects(
     generate(input, ctx, {
       demo: false,
+      recovery: { maxOutputRepairs: 0, maxTransientRetries: 0 },
       key: "mock",
       fetchImpl: async () => {
         calls++;
@@ -446,7 +447,7 @@ test("live request and audit both receive raw notes, context priority, authorita
   });
   assert.equal(calls.length, 2);
   assert.equal(result.model, "mock-model");
-  assert.equal(PROMPT_VERSION, "advisor-1.3.1");
+  assert.match(PROMPT_VERSION, /^advisor-\d+\.\d+\.\d+$/);
   for (const call of calls) {
     const data = JSON.parse(call.input);
     assert.equal(data.untrusted_context.notes, input.notes);
@@ -472,6 +473,7 @@ test("live outputs ignoring recognized context are withheld by mandatory semanti
   await assert.rejects(
     generate(input, ctx, {
       demo: false,
+      recovery: { maxOutputRepairs: 0, maxTransientRetries: 0 },
       key: "mock",
       fetchImpl: async () => {
         calls++;
@@ -515,6 +517,7 @@ test("unrecognized relevant notes fail clearly in demo and remain subject to liv
   await assert.rejects(
     generate(unknown, unknownCtx, {
       demo: false,
+      recovery: { maxOutputRepairs: 0, maxTransientRetries: 0 },
       key: "mock",
       fetchImpl: async (_url, options) => {
         const body = JSON.parse(options.body);

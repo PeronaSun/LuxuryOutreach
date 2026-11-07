@@ -16,6 +16,7 @@ import { evaluateRequest, PROMPT_VERSION } from "./rules.mjs";
 import { generate } from "./generation.mjs";
 import { applicationCalendar } from "./application-calendar.mjs";
 import { providerConfig } from "./provider-config.mjs";
+import { recoveryConfig } from "./recovery-policy.mjs";
 import { GenerationError, diagnosticEvent } from "./generation-errors.mjs";
 import {
   messagePlan,
@@ -43,7 +44,9 @@ export function createApp({
     await mkdir(recordDir, { recursive: true });
     await appendFile(
       resolve(recordDir, "records.jsonl"),
-      JSON.stringify(record) + "\n",
+      (provider.key
+        ? JSON.stringify(record).replaceAll(provider.key, "[REDACTED]")
+        : JSON.stringify(record)) + "\n",
     );
   };
   return http.createServer(async (req, res) => {
@@ -147,6 +150,7 @@ export function createApp({
             resolvedProduct: context.resolved?.product || null,
             reason: context.resolved?.reason || "",
             calendar: context.calendar || null,
+            selectionDepth: context.normalized?.selection.depth ?? 0,
           };
           if (url.pathname === "/api/validate")
             return send(res, 200, validation);
@@ -185,6 +189,7 @@ export function createApp({
             conversationHistory: context.client?.history || [],
             eventContext: context.event || null,
             selectedPurchase: context.purchase || null,
+            normalizedContext: context.normalized || null,
             applicationCalendar: context.calendar || null,
             communicationContext: context.communicationContext || null,
             resolvedProductSku: context.resolved?.product?.sku || null,
@@ -210,8 +215,17 @@ export function createApp({
               ...provider,
               requestId: record.id,
             });
+            Object.assign(safe, {
+              scenario: scenarios.some(
+                (scenario) => scenario.id === task.scenario,
+              )
+                ? task.scenario
+                : "invalid",
+              selectionDepth: context.normalized?.selection.depth ?? 0,
+              resolvedSku: context.resolved?.product?.sku || null,
+            });
+            diagnostics.push(safe);
             if (diagnosticsEnabled) {
-              diagnostics.push(safe);
               diagnosticLogger(safe);
             }
           };
@@ -231,6 +245,7 @@ export function createApp({
               result = await generator(task, context, {
                 ...provider,
                 onDiagnostic,
+                recovery: recoveryConfig(env),
               });
             } catch (e) {
               const known = e instanceof GenerationError;
@@ -248,9 +263,11 @@ export function createApp({
                 ...record,
                 validationStatus: "NEEDS_REVIEW",
                 error: "GENERATION_FAILED",
+                errorCode: known ? e.code : "GENERATION_FAILED",
                 failureStage: known ? e.stage : "generation",
                 failedRuleIds: known ? e.ruleIds : ["GENERATION_FAILED"],
-                ...(diagnosticsEnabled ? { diagnostics } : {}),
+                diagnostics,
+                recovery: e.recovery || null,
               });
               const safeMessages = [
                 "实时模式尚未配置服务器 API 密钥。",
@@ -277,12 +294,14 @@ export function createApp({
               stage: "generation.complete",
               status: "passed",
               candidateCount: result.candidates.length,
+              retryCount: result.recovery?.retryCount || 0,
+              apiCallCount: result.recovery?.providerCalls || 0,
               ruleIds: result.warnings?.map((warning) => warning.ruleId) || [],
             });
             const complete = {
               ...record,
               ...result,
-              ...(diagnosticsEnabled ? { diagnostics } : {}),
+              diagnostics,
             };
             await save(complete);
             return send(res, 200, {

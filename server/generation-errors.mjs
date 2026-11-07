@@ -1,4 +1,8 @@
 const messages = {
+  API_CONFIG: "模型服务地址配置无效，请检查服务器配置。",
+  API_KEY_MISSING: "实时模式尚未配置服务器 API 密钥。",
+  RECOVERY_BUDGET:
+    "本次生成已达到自动重试上限，暂未展示未核实内容。请稍后重试。",
   API_AUTH: "模型服务认证失败，请检查服务器 API 密钥与权限。",
   API_BALANCE: "模型服务余额不足，请充值后重试。",
   API_RATE_LIMIT: "模型服务请求过于频繁，请稍后重试。",
@@ -37,7 +41,7 @@ export function diagnosticEvent(
     provider,
     model,
     source: demo ? "demo" : "live",
-    retryCount: 0,
+    retryCount: event.retryCount || 0,
     stage: event.stage,
     status: event.status,
     ruleIds: event.ruleIds || [],
@@ -49,6 +53,14 @@ export function diagnosticEvent(
     "schemaSuccess",
     "reason",
     "candidateCount",
+    "repairCount",
+    "apiCallCount",
+    "retryAfterMs",
+    "finishReason",
+    "scenario",
+    "selectionDepth",
+    "resolvedSku",
+    "candidateIndexes",
   ])
     if (event[field] !== undefined) safe[field] = event[field];
   return JSON.parse(
@@ -85,6 +97,12 @@ export function matchesSchema(value, schema) {
       Number.isInteger(value) &&
       value >= (schema.minimum ?? -Infinity) &&
       value <= (schema.maximum ?? Infinity)
+    );
+  if (schema.type === "string")
+    return (
+      typeof value === "string" &&
+      value.length >= (schema.minLength ?? 0) &&
+      value.length <= (schema.maxLength ?? Infinity)
     );
   return typeof value === schema.type;
 }

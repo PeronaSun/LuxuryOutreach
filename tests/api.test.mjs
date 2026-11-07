@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { createApp } from "./test-clock.mjs";
 import { demoCandidates } from "../server/generation.mjs";
+import { PROMPT_VERSION } from "../server/rules.mjs";
 import { splitParagraphs } from "../server/message-contract.mjs";
 const input = {
   clientId: "CL-001",
@@ -269,7 +270,7 @@ test("API birthday gating uses server China time, ignores caller date overrides,
   const record = records.find((r) => r.input.notes === notes);
   assert.equal(record.applicationCalendar.timeZone, "Asia/Shanghai");
   assert.equal(record.communicationContext.primaryFacet, "project_rest");
-  assert.equal(record.promptVersion, "advisor-1.3.1");
+  assert.equal(record.promptVersion, PROMPT_VERSION);
   assert.equal(record.candidates.length, 3);
   const storedBirthday = records.find(
     (r) => r.clientId === "CL-001" && r.candidates.length,

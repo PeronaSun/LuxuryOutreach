@@ -53,6 +53,7 @@ export function communicationContext(input, product = null) {
   const add = (id, meaning, anchors, phrases) =>
     facets.push({ id, meaning, anchors, phrases });
   const daily = /通勤|日常(?:佩戴|搭配|穿搭)|每天佩戴|工作日/.test(notes);
+  const dailyLabel = /通勤|工作日/.test(notes) ? "日常通勤" : "日常佩戴";
   const understated =
     /低调|简约|克制|不(?:太)?(?:喜欢|想要).{0,5}夸张|不.{0,3}太夸张|不要.{0,3}夸张/.test(
       notes,
@@ -136,15 +137,15 @@ export function communicationContext(input, product = null) {
   )
     add(
       "understated_daily",
-      "日常通勤且不喜欢夸张设计；不保证具体作品舒适或适合每个人",
+      `${dailyLabel}且不喜欢夸张设计；不保证具体作品舒适或适合每个人`,
       [
         ["通勤", "日常", "工作日"],
         ["低调", "克制", "简约", "不张扬", "夸张"],
       ],
       [
-        "您希望通勤时低调自然，这份方向我记下了。",
-        "您提到希望用于日常通勤、不喜欢过于夸张的设计，因此这里更关注轮廓与日常风格的呼应。",
-        "通勤的日常里，您偏爱的克制线条，也可以有细细品味的光。",
+        `您希望${dailyLabel}低调自然，这份方向我记下了。`,
+        `您提到希望用于${dailyLabel}、不喜欢过于夸张的设计，因此这里更关注轮廓与日常风格的呼应。`,
+        `${dailyLabel}里，您偏爱的克制线条，也可以有细细品味的光。`,
       ],
     );
   if (
@@ -173,9 +174,9 @@ export function communicationContext(input, product = null) {
       "客户关注通勤或日常佩戴",
       [["通勤", "日常", "工作日"]],
       [
-        "您希望用于日常通勤，这份需求我记下了。",
-        "您提到关注日常通勤的佩戴场景，这次就从作品与日常风格之间的关系来介绍。",
-        "日常通勤里的一点自然意象，也可以是个人风格的轻声表达。",
+        `您希望用于${dailyLabel}，这份需求我记下了。`,
+        `您提到关注${dailyLabel}的场景，这次就从作品与日常风格之间的关系来介绍。`,
+        `${dailyLabel}里的一点自然意象，也可以是个人风格的轻声表达。`,
       ],
     );
   if (!facets.length && busy)

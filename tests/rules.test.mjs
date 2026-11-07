@@ -211,6 +211,7 @@ test("failing independent audit withholds all candidates", async () => {
   await assert.rejects(
     generate(cases[0].input, ctx, {
       key: "fake",
+      recovery: { maxOutputRepairs: 0, maxTransientRetries: 0 },
       demo: false,
       fetchImpl: async () => ({
         ok: true,

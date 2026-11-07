@@ -1,4 +1,4 @@
-import { validateCandidates } from "./rules.mjs";
+import { validateCandidates, validateMessage } from "./rules.mjs";
 
 // Existing factual validators stay active. Only explicit mechanical quality
 // checks become warnings; semantic context coverage is still audited as hard.
@@ -7,6 +7,7 @@ const softRules = {
   "更丰富版本需要提供比简洁版本更多的正文信息。": "STYLE_DETAIL",
   "请为三种表达使用适当变化的收尾。": "CTA_VARIATION",
   "正文未体现本次补充沟通背景中的主要需求。": "CONTEXT_LEXICAL_CHECK",
+  "收尾不符合当前场景的克制表达。": "CTA_WORDING",
 };
 const hardRules = {
   "必须恰好返回三条候选消息。": "CANDIDATE_COUNT",
@@ -21,6 +22,9 @@ const hardRules = {
   "此版本默认不使用表情。": "EMOJI_POLICY",
   "输出引用范围外 SKU。": "WRONG_SKU",
   "输出材质与产品不符。": "FACT_MATERIAL",
+  "输出品类与产品不符。": "FACT_CATEGORY",
+  "客户消息包含内部SKU标识。": "INTERNAL_IDENTIFIER",
+  "收尾包含不合场景的行动或语言。": "CTA_UNSAFE",
   "输出宝石与 SKU 不符。": "FACT_GEMSTONE",
   "输出宝石未获 SKU 描述支持。": "FACT_GEMSTONE",
   "输出引用范围外系列。": "WRONG_LINE",
@@ -41,6 +45,14 @@ export function assessCandidates(
   { allowSemanticContextCheck = false } = {},
 ) {
   const errors = validateCandidates(candidates, context);
+  const indexes = (error) =>
+    Array.isArray(candidates)
+      ? candidates.flatMap((candidate, index) =>
+          validateMessage(candidate?.text, context).includes(error)
+            ? [index]
+            : [],
+        )
+      : [];
   const isSoft = (error) =>
     softRules[error] &&
     (softRules[error] !== "CONTEXT_LEXICAL_CHECK" || allowSemanticContextCheck);
@@ -53,9 +65,12 @@ export function assessCandidates(
             ? "CONTEXT_MISSING"
             : hardRules[error] || "OUTPUT_POLICY",
         severity: "hard",
+        candidateIndexes: indexes(error),
       })),
-    warnings: errors
-      .filter(isSoft)
-      .map((error) => ({ ruleId: softRules[error], severity: "soft" })),
+    warnings: errors.filter(isSoft).map((error) => ({
+      ruleId: softRules[error],
+      severity: "soft",
+      candidateIndexes: indexes(error),
+    })),
   };
 }

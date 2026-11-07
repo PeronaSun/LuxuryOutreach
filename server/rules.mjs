@@ -1,6 +1,7 @@
 import { products, lines, scenarios, occasions } from "../data/catalog.mjs";
 import { clients, events, clientProfile } from "../data/clients.mjs";
 import { messagePlan, splitParagraphs } from "./message-contract.mjs";
+import { normalizeTask, normalizedContext } from "./generation-context.mjs";
 import {
   applicationCalendar,
   festivalContext,
@@ -10,7 +11,7 @@ import {
   currentPreferenceScore,
   contextCoverageErrors,
 } from "./communication-context.mjs";
-export const PROMPT_VERSION = "advisor-1.3.1";
+export const PROMPT_VERSION = "advisor-1.4.1";
 export const productScenarios = new Set([
   "recommend",
   "reactivate",
@@ -30,6 +31,15 @@ export function resolveProduct(input, client) {
   }
   if (!productScenarios.has(input.scenario))
     return { product: null, reason: "此场景无需产品。", scope: [] };
+  if (input.scenario !== "recommend" && !input.sku)
+    return {
+      product: null,
+      reason:
+        input.scenario === "price"
+          ? "作品尚未明确，仅回应实际价格顾虑，不引用单品规格或价格。"
+          : "保留已选意象或系列作为可选背景，不自动推荐单品。",
+      scope: [],
+    };
   const scope = products.filter(
     (p) =>
       (!input.motif || p.motif === input.motif) &&
@@ -76,6 +86,7 @@ export function resolveProduct(input, client) {
   };
 }
 export function evaluateRequest(input, { now = new Date() } = {}) {
+  input = normalizeTask(input);
   const calendar = applicationCalendar(now);
   const issues = [];
   const add = (status, message, code) => issues.push({ status, message, code });
@@ -85,6 +96,22 @@ export function evaluateRequest(input, { now = new Date() } = {}) {
       issues: [{ status: "BLOCKED", message: "请求格式无效。", code: "input" }],
     };
   const client = clients.find((c) => c.id === input.clientId);
+  for (const field of [
+    "clientId",
+    "scenario",
+    "motif",
+    "line",
+    "sku",
+    "occasion",
+    "purchaseId",
+    "eventId",
+    "greetingKind",
+  ])
+    if (
+      input[field] != null &&
+      (typeof input[field] !== "string" || input[field].length > 100)
+    )
+      add("BLOCKED", "选择值格式无效。", "selection-format");
   if (!client) add("NEEDS_REVIEW", "请选择有效的示例客户。", "client");
   if (!scenarios.some((s) => s.id === input.scenario))
     add("NEEDS_REVIEW", "请选择沟通场景。", "scenario");
@@ -168,13 +195,11 @@ export function evaluateRequest(input, { now = new Date() } = {}) {
       );
   }
   if (input.scenario === "price") {
-    if (!input.sku)
-      add("NEEDS_REVIEW", "价格沟通需要明确选择产品。", "price-sku");
     if (!input.concern?.trim())
       add("NEEDS_REVIEW", "请记录客户实际表达的价格顾虑。", "concern");
   }
   const resolved = resolveProduct(input, client);
-  if (productScenarios.has(input.scenario) && !resolved.product)
+  if (input.scenario === "recommend" && !resolved.product)
     add("NEEDS_REVIEW", "请重新选择有效的产品范围。", "scope");
   const notesContext = communicationContext(input, resolved.product);
   const notices = [];
@@ -195,7 +220,7 @@ export function evaluateRequest(input, { now = new Date() } = {}) {
     : issues.length
       ? "NEEDS_REVIEW"
       : "READY";
-  return {
+  const context = {
     status,
     issues,
     notices,
@@ -206,6 +231,8 @@ export function evaluateRequest(input, { now = new Date() } = {}) {
     calendar,
     communicationContext: notesContext,
   };
+  context.normalized = normalizedContext(input, context);
+  return context;
 }
 export const styles = ["concise", "detailed", "elegant"];
 export function validateMessage(t, context, { enforceCta = true } = {}) {
@@ -235,6 +262,14 @@ export function validateMessage(t, context, { enforceCta = true } = {}) {
   )
     errors.push("收尾不符合当前场景的克制表达。");
   if (
+    paragraphs.length === 3 &&
+    (!/[\u4e00-\u9fff]/.test(paragraphs[2]) ||
+      /必须|赶紧|立刻购买|立即下单/.test(paragraphs[2]) ||
+      (context.input?.scenario === "greeting" &&
+        /购买|选购|预约|到店|款式推荐/.test(paragraphs[2])))
+  )
+    errors.push("收尾包含不合场景的行动或语言。");
+  if (
     /(?:^|\n)(?:Greeting|Main(?: Message)?|Product Story|CTA|正文|第一段|第二段|第三段|行动邀请|产品故事)\s*[:：]/i.test(
       t,
     )
@@ -249,21 +284,83 @@ export function validateMessage(t, context, { enforceCta = true } = {}) {
   if (/\p{Extended_Pictographic}/u.test(t))
     errors.push("此版本默认不使用表情。");
   const allowed = context.resolved?.product;
-  const skuMatches = t.match(/(?:JAS|MUG-[RC]|FEU-[VA])-[RBN]01/g) || [];
+  const grounding = context.normalized?.grounding;
+  const story = plan.story;
+  const factText = t
+    .normalize("NFKC")
+    .replace(/\s+/g, "")
+    .replace(/18k/gi, "18K");
+  const skuMatches =
+    factText.match(/(?:JAS|MUG-[A-Z]|FEU-[A-Z])-[A-Z]\d{2}/g) || [];
   if (skuMatches.some((s) => s !== allowed?.sku))
     errors.push("输出引用范围外 SKU。");
+  if (skuMatches.some((s) => s === allowed?.sku))
+    errors.push("客户消息包含内部SKU标识。");
+  const clauses = factText.split(/[。！？；，]/);
+  const affirmative = (word) =>
+    clauses.some(
+      (clause) =>
+        clause.includes(word) &&
+        !new RegExp(`(?:不含|没有|未镶嵌|无|并非|不是).{0,4}${word}`).test(
+          clause,
+        ),
+    );
+  const knownMaterials = new Set(
+    [
+      context.client?.latestPreference?.material,
+      ...(context.client?.interests || []).map((interest) => interest.material),
+      context.communicationContext?.preferences?.material,
+    ].filter(Boolean),
+  );
   for (const material of ["18K玫瑰金", "18K白金", "18K黄金"])
-    if (t.includes(material) && material !== allowed?.material)
+    if (
+      affirmative(material) &&
+      material !== allowed?.material &&
+      !clauses
+        .filter((clause) => clause.includes(material))
+        .every(
+          (clause) =>
+            knownMaterials.has(material) &&
+            /您.{0,8}(?:偏好|偏爱|喜欢|关注)/.test(clause) &&
+            !/这款|作品采用|镶嵌/.test(clause),
+        )
+    )
       errors.push("输出材质与产品不符。");
-  if (t.includes("海蓝宝") && allowed?.gemstone !== "海蓝宝")
+  if (
+    affirmative("海蓝宝") &&
+    allowed?.gemstone !== "海蓝宝" &&
+    !(
+      !allowed &&
+      `${story?.motif?.story || ""}${story?.line?.story || ""}`.includes(
+        "海蓝宝",
+      )
+    )
+  )
     errors.push("输出宝石与 SKU 不符。");
-  if (t.includes("钻石") && allowed?.gemstone !== "钻石")
+  if (affirmative("钻石") && allowed?.gemstone !== "钻石")
     errors.push("输出宝石未获 SKU 描述支持。");
+  if (
+    allowed &&
+    paragraphs[1] &&
+    ["戒指", "项链", "手镯"].some(
+      (category) =>
+        category !== allowed.category &&
+        new RegExp(
+          `(?:这款|这枚|这条|这件|这只|该款|所选).{0,8}${category}`,
+        ).test(paragraphs[1]),
+    )
+  )
+    errors.push("输出品类与产品不符。");
   for (const line of lines)
-    if (t.includes(line.name) && line.id !== allowed?.line)
+    if (
+      t.includes(line.name) &&
+      line.id !== allowed?.line &&
+      line.id !== story?.line?.id &&
+      line.name !== story?.motif?.name
+    )
       errors.push("输出引用范围外系列。");
-  const prices = [...t.matchAll(/[¥￥]\s*([\d,]+)|([\d,]+)\s*元/g)].map((m) =>
-    Number((m[1] || m[2]).replaceAll(",", "")),
+  const prices = [...factText.matchAll(/[¥￥]\s*([\d,]+)|([\d,]+)\s*元/g)].map(
+    (m) => Number((m[1] || m[2]).replaceAll(",", "")),
   );
   if (prices.some((p) => p !== allowed?.price))
     errors.push("输出价格与档案不符。");
@@ -326,7 +423,7 @@ export function validateMessage(t, context, { enforceCta = true } = {}) {
         errors.push("正文混用了未选择的节日氛围。");
     }
   }
-  const allowedMotif = context.resolved?.product?.motif;
+  const allowedMotif = context.resolved?.product?.motif || grounding?.motif?.id;
   if (allowedMotif) {
     const imagery = {
       jasmin: ["茉莉"],

@@ -41,7 +41,9 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
     lastTask = null,
     generateCount = 0;
   let delayNextGeneration = null,
-    nextGenerationError = null;
+    nextGenerationError = null,
+    holdNextValidation = false,
+    releaseHeldValidation = null;
   Object.defineProperty(navigator, "clipboard", {
     value: {
       writeText: async (text) => {
@@ -83,6 +85,13 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
       resolvedProduct: ctx.resolved?.product || null,
       reason: ctx.resolved?.reason,
     };
+    if (url === "/api/validate" && holdNextValidation) {
+      holdNextValidation = false;
+      return new Promise((resolve) => {
+        releaseHeldValidation = () =>
+          resolve({ ok: true, json: async () => validation });
+      });
+    }
     if (url === "/api/validate")
       return { ok: true, json: async () => validation };
     if (url === "/api/generate") {
@@ -108,7 +117,7 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
         createdAt: new Date().toISOString(),
         clientId: task.clientId,
         scenario: task.scenario,
-        model: "demo-template-v1.3",
+        model: "demo-template-v1.4",
         validationStatus: "READY",
         candidates: result.candidates,
         promptVersion: "advisor-1.0.0",
@@ -283,7 +292,12 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
   delayNextGeneration = new Promise((resolve) => {
     releaseGeneration = resolve;
   });
-  await click(find("重新生成"));
+  await act(async () => {
+    const regenerate = find("重新生成");
+    regenerate.click();
+    regenerate.click();
+  });
+  await settle();
   assert.ok(document.querySelector(".loading-results"));
   assertProfile("林女士", "Sophie", 11);
   assert.ok(find("正在细心构思…").disabled);
@@ -329,6 +343,29 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
   await click(find("生成微信消息"));
   assert.equal(document.querySelectorAll(".message-card").length, 3);
 
+  // An old generation may finish after the CA changes scope. Its candidates stay hidden.
+  let releaseObsoleteGeneration;
+  delayNextGeneration = new Promise((resolve) => {
+    releaseObsoleteGeneration = resolve;
+  });
+  await click(find("重新生成"));
+  await click(group("自然意象").children[0]);
+  await act(async () => releaseObsoleteGeneration());
+  await settle();
+  assert.equal(document.querySelectorAll(".message-card").length, 0);
+  await click(find("生成微信消息"));
+  assert.equal(document.querySelectorAll(".message-card").length, 3);
+
+  // A late response from an obsolete validation must not replace the new state.
+  holdNextValidation = true;
+  await click(find("购买后关怀"));
+  assert.ok(releaseHeldValidation);
+  await click(find("产品推荐"));
+  assert.equal(find("生成微信消息").disabled, false);
+  await act(async () => releaseHeldValidation());
+  await settle();
+  assert.equal(find("生成微信消息").disabled, false);
+  assert.equal(group("关怀购买记录"), null);
   await click(find("购买后关怀"));
   assert.equal(group("自然意象"), null);
   assert.equal(group("购买场合"), null);
@@ -478,5 +515,5 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
     ),
   );
   assert.ok(document.querySelector(".record-list"));
-  assert.ok(document.body.textContent.includes("demo-template-v1.3"));
+  assert.ok(document.body.textContent.includes("demo-template-v1.4"));
 });

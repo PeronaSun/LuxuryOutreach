@@ -228,6 +228,7 @@ test("development diagnostics correlate stages/rule IDs and expose only safe act
     generator: (input, context, options) =>
       generate(input, context, {
         ...options,
+        recovery: { maxOutputRepairs: 0, maxTransientRetries: 0 },
         fetchImpl: async () =>
           reply(
             ++call === 1
