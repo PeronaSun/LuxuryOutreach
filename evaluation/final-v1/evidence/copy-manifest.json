@@ -1,0 +1,87 @@
+[
+  {
+    "source": "runtime/performance/before-2026-11-07T18-28-21-718Z/records.json",
+    "copy": "evaluation/final-v1/evidence/before/records.json",
+    "sha256": "eae9507dd857bf8cca789011b7318056d02b13c0cfdce52dc6742ea64a6785b8"
+  },
+  {
+    "source": "runtime/performance/before-2026-11-07T18-28-21-718Z/summary.json",
+    "copy": "evaluation/final-v1/evidence/before/summary.json",
+    "sha256": "4b41982680c44382955ce1d12a86d6cb0fb603e151920503c9d98f7a8eebbd98"
+  },
+  {
+    "source": "runtime/performance/after-2026-11-07T18-32-22-675Z/records.json",
+    "copy": "evaluation/final-v1/evidence/after/records.json",
+    "sha256": "2ad9feb6d9fa8944e8c0165837bb8add54696a8dfe64061506f884794db13505"
+  },
+  {
+    "source": "runtime/performance/after-2026-11-07T18-32-22-675Z/summary.json",
+    "copy": "evaluation/final-v1/evidence/after/summary.json",
+    "sha256": "29d8ff9d24695c7b48153a8ea23767463008d0660b4484a8bc648c22052f806d"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T18-55-30-087Z-c3bda738/records.json",
+    "copy": "evaluation/final-v1/evidence/judge/records.json",
+    "sha256": "1f914cdda074851f8eb14202b12a4adc05aec4d68bdcc94d23a0239cf7069d05"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T18-55-30-087Z-c3bda738/records.jsonl",
+    "copy": "evaluation/final-v1/evidence/judge/records.jsonl",
+    "sha256": "7e68b8b21911458860a59dd8dfbc5ba7028ef4e83d48c89d712b878813df4ce1"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T18-55-30-087Z-c3bda738/messages.csv",
+    "copy": "evaluation/final-v1/evidence/judge/messages.csv",
+    "sha256": "aedcc6c22b51ce0724219b97a2397b779793183bded756e2147dc75a93b914bb"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T18-55-30-087Z-c3bda738/summary.json",
+    "copy": "evaluation/final-v1/evidence/judge/summary.json",
+    "sha256": "59458f3a293353a6a918e4b4fa4d7f56643545b68a0915ffa37a6e50b32eb200"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T18-55-30-087Z-c3bda738/provider-traces.json",
+    "copy": "evaluation/final-v1/evidence/judge/provider-traces.json",
+    "sha256": "d6a396661a9e100ed276e4f5b2db88ad8c4aa72f23fd09e1541ee55184f5ade8"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T18-55-30-087Z-c3bda738/defects.json",
+    "copy": "evaluation/final-v1/evidence/judge/defects.json",
+    "sha256": "66e8aaf9d1ed5a7601f8b0e7f2f40419840c850fd6356c8c3fcfb0ce794c6724"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T18-55-30-087Z-c3bda738/human-review.json",
+    "copy": "evaluation/final-v1/evidence/judge/human-review.json",
+    "sha256": "b5080279329336637bec89b3a47cca4de6427dbbec9a9ced6d82507b60fcc9d6"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T18-55-30-087Z-c3bda738/human-review.csv",
+    "copy": "evaluation/final-v1/evidence/judge/human-review.csv",
+    "sha256": "57539980e61e6fd075634f6ae3d2c998e4081087de458f5d87d4b1722df96c9b"
+  },
+  {
+    "source": "runtime/performance/render-2026-11-07T19-00-20-886Z/summary.json",
+    "copy": "evaluation/final-v1/evidence/render-before/summary.json",
+    "sha256": "e3a8f78f9a6581d02318f32aa6299f4eb52defbe0e4f9c6adddece6cc92291b1"
+  },
+  {
+    "source": "runtime/performance/render-2026-11-07T19-03-30-011Z/summary.json",
+    "copy": "evaluation/final-v1/evidence/render-after/summary.json",
+    "sha256": "68f56f772b77677bc44e2bf6bc3afb36368cc5797b42e7f7a1922b00321205e0"
+  },
+  {
+    "source": "runtime/final-evaluation/plan-2026-11-07T19-07-59-209Z-c194b7ee/manifest.json",
+    "copy": "evaluation/final-v1/evidence/plan/manifest.json",
+    "sha256": "592aec6c2f02ee5f7f0b3903f60a223a80c59d295496e936c7773c91215cb053"
+  },
+  {
+    "source": "runtime/final-evaluation/mock-2026-11-07T19-07-59-296Z-5d7785c7/summary.json",
+    "copy": "evaluation/final-v1/evidence/mock/summary.json",
+    "sha256": "d2e2bb1ef543a3b9ec8c9f49d0cf18aaa8ea6572ca4dc99d4892ffdd22e1c411"
+  },
+  {
+    "source": "runtime/final-evaluation/offline-judge-sample-2026-11-07T19-08-10-923Z-67440f8e/summary.json",
+    "copy": "evaluation/final-v1/evidence/resume/summary.json",
+    "sha256": "b2628e49d2e5db16fcb3c9c1289ba40c880eaf16d8892dcbadd87edb8ad916ed"
+  }
+]

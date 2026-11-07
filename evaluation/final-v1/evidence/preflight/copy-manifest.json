@@ -1,0 +1,12 @@
+[
+  {
+    "source": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/plan-2026-11-07T19-13-08-094Z-d423ec0c/manifest.json",
+    "copy": "evaluation/final-v1/evidence/preflight/manifest.json",
+    "sha256": "b24fe15f8aa00b2dde611f6c62974d2a6b8aafb9d03f0c305f200175cc8bbd34"
+  },
+  {
+    "source": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/mock-2026-11-07T19-13-08-178Z-039bf75a/summary.json",
+    "copy": "evaluation/final-v1/evidence/preflight/mock-summary.json",
+    "sha256": "22d29fedefab3444eba6298308aa2013f042e51a2c6b7aad4bcbc1829d1c1e00"
+  }
+]

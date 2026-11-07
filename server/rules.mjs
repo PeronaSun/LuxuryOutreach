@@ -11,7 +11,7 @@ import {
   currentPreferenceScore,
   contextCoverageErrors,
 } from "./communication-context.mjs";
-export const PROMPT_VERSION = "advisor-1.4.1";
+export const PROMPT_VERSION = "advisor-1.5.0";
 export const productScenarios = new Set([
   "recommend",
   "reactivate",
@@ -86,7 +86,9 @@ export function resolveProduct(input, client) {
   };
 }
 export function evaluateRequest(input, { now = new Date() } = {}) {
+  const started = performance.now();
   input = normalizeTask(input);
+  const normalizationMs = performance.now() - started;
   const calendar = applicationCalendar(now);
   const issues = [];
   const add = (status, message, code) => issues.push({ status, message, code });
@@ -198,6 +200,7 @@ export function evaluateRequest(input, { now = new Date() } = {}) {
     if (!input.concern?.trim())
       add("NEEDS_REVIEW", "请记录客户实际表达的价格顾虑。", "concern");
   }
+  const resolutionStarted = performance.now();
   const resolved = resolveProduct(input, client);
   if (input.scenario === "recommend" && !resolved.product)
     add("NEEDS_REVIEW", "请重新选择有效的产品范围。", "scope");
@@ -232,6 +235,11 @@ export function evaluateRequest(input, { now = new Date() } = {}) {
     communicationContext: notesContext,
   };
   context.normalized = normalizedContext(input, context);
+  context.timings = {
+    normalizationMs,
+    resolutionMs: performance.now() - resolutionStarted,
+    totalMs: performance.now() - started,
+  };
   return context;
 }
 export const styles = ["concise", "detailed", "elegant"];

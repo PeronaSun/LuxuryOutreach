@@ -1,0 +1,115 @@
+{
+  "mode": "offline-judge-sample",
+  "caseSetVersion": "final-50-v1",
+  "caseSetSha256": "95dcc4aedcb82f0fc92ff3165b2782739e5ab6759ca6eafc729e93352de16ed5",
+  "promptVersion": "advisor-1.5.0",
+  "brandSourceSha256": "ce4be633ea9f8b85f012a59088a188592a257141e7e9efd62fffabcdf7f82669",
+  "judgeVersion": "offline-judge-v1",
+  "rubricVersion": "quality-rubric-v1",
+  "model": "deepseek-flash",
+  "judgeModel": "deepseek-flash",
+  "evaluationTime": "2026-11-07T04:00:00Z",
+  "createdAt": "2026-11-07T18:55:30.089Z",
+  "maxApiCalls": 4,
+  "actualProviderCalls": 4,
+  "cases": 4,
+  "generatedMessages": 12,
+  "generationCompleted": 4,
+  "generationSuccessRate": 1,
+  "deterministicPassed": 4,
+  "scored": 4,
+  "softPassed": 1,
+  "softPassRate": 0.25,
+  "judgeReviewFlags": 0,
+  "human": {
+    "status": "PENDING_HUMAN_REVIEW",
+    "reviewedCases": 0,
+    "scoreComparisons": 0,
+    "meanAbsoluteDifference": null,
+    "setMeanAbsoluteDifference": null,
+    "flags": [],
+    "automaticScoreAdjustment": false
+  },
+  "byScenario": {
+    "greeting": {
+      "cases": 1,
+      "generated": 1,
+      "hardPassed": 1,
+      "scored": 1,
+      "meanSoftScore": 4.080000000000001,
+      "latency": {
+        "n": 1,
+        "median": 2902.458167,
+        "p95": 2902.458167,
+        "min": 2902.458167,
+        "max": 2902.458167,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "recommend": {
+      "cases": 1,
+      "generated": 1,
+      "hardPassed": 1,
+      "scored": 1,
+      "meanSoftScore": 3.9733333333333336,
+      "latency": {
+        "n": 1,
+        "median": 4107.7676249999995,
+        "p95": 4107.7676249999995,
+        "min": 4107.7676249999995,
+        "max": 4107.7676249999995,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "care": {
+      "cases": 1,
+      "generated": 1,
+      "hardPassed": 1,
+      "scored": 1,
+      "meanSoftScore": 3.866666666666667,
+      "latency": {
+        "n": 1,
+        "median": 3790.846749999999,
+        "p95": 3790.846749999999,
+        "min": 3790.846749999999,
+        "max": 3790.846749999999,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "price": {
+      "cases": 1,
+      "generated": 1,
+      "hardPassed": 1,
+      "scored": 1,
+      "meanSoftScore": 3.9733333333333336,
+      "latency": {
+        "n": 1,
+        "median": 3244.3136250000007,
+        "p95": 3244.3136250000007,
+        "min": 3244.3136250000007,
+        "max": 3244.3136250000007,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    }
+  },
+  "latency": {
+    "n": 4,
+    "median": 3517.5801874999997,
+    "p95": 4107.7676249999995,
+    "min": 2902.458167,
+    "max": 4107.7676249999995,
+    "p95Method": "nearest-rank; exploratory when n<20",
+    "adequateTailSample": false
+  },
+  "acceptance": {
+    "criteria": "Project-defined, not employer requirements",
+    "completion": false,
+    "quality": false,
+    "humanCalibration": false,
+    "finalPaidRunPerformed": false
+  }
+}

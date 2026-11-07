@@ -1,0 +1,20 @@
+{
+  "source": "runtime/performance/before-2026-11-07T18-28-21-718Z",
+  "additionalProviderCalls": 0,
+  "method": "Four DOM replays of the saved real bracelet result",
+  "renderCommitMs": {
+    "n": 4,
+    "median": 13.46412549999991,
+    "p95": 18.126166000000012,
+    "min": 13.043957999999748,
+    "max": 18.126166000000012,
+    "p95Method": "nearest-rank; exploratory when n<20",
+    "adequateTailSample": false
+  },
+  "samples": [
+    13.043957999999748,
+    13.29445899999996,
+    13.633791999999858,
+    18.126166000000012
+  ]
+}

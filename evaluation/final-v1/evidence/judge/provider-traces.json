@@ -1,0 +1,86 @@
+[
+  {
+    "index": 1,
+    "stage": "offline_quality_judge",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T18:55:30.121Z",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2592,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2858
+    },
+    "status": "completed",
+    "durationMs": 2755.3685
+  },
+  {
+    "index": 2,
+    "stage": "offline_quality_judge",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T18:55:32.878Z",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2857,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 250,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3107
+    },
+    "status": "completed",
+    "durationMs": 2175.245083
+  },
+  {
+    "index": 3,
+    "stage": "offline_quality_judge",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T18:55:35.055Z",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2915,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 263,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3178
+    },
+    "status": "completed",
+    "durationMs": 2553.563542
+  },
+  {
+    "index": 4,
+    "stage": "offline_quality_judge",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T18:55:37.611Z",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2635,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2882
+    },
+    "status": "completed",
+    "durationMs": 2074.839708999999
+  }
+]

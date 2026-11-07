@@ -1,0 +1,166 @@
+[
+  {
+    "caseId": "F-004",
+    "reviewer": null,
+    "reviewedAt": null,
+    "assignedCalibration": false,
+    "candidates": [
+      {
+        "style": "concise",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      },
+      {
+        "style": "detailed",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      },
+      {
+        "style": "elegant",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      }
+    ],
+    "differentiationScore": null,
+    "confirmedHardRules": [],
+    "notes": ""
+  },
+  {
+    "caseId": "F-010",
+    "reviewer": null,
+    "reviewedAt": null,
+    "assignedCalibration": true,
+    "candidates": [
+      {
+        "style": "concise",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      },
+      {
+        "style": "detailed",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      },
+      {
+        "style": "elegant",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      }
+    ],
+    "differentiationScore": null,
+    "confirmedHardRules": [],
+    "notes": ""
+  },
+  {
+    "caseId": "F-028",
+    "reviewer": null,
+    "reviewedAt": null,
+    "assignedCalibration": true,
+    "candidates": [
+      {
+        "style": "concise",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      },
+      {
+        "style": "detailed",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      },
+      {
+        "style": "elegant",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      }
+    ],
+    "differentiationScore": null,
+    "confirmedHardRules": [],
+    "notes": ""
+  },
+  {
+    "caseId": "F-044",
+    "reviewer": null,
+    "reviewedAt": null,
+    "assignedCalibration": true,
+    "candidates": [
+      {
+        "style": "concise",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      },
+      {
+        "style": "detailed",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      },
+      {
+        "style": "elegant",
+        "scores": {
+          "brandConsistency": null,
+          "naturalness": null,
+          "personalization": null,
+          "scenarioRelevance": null,
+          "ctaQuality": null
+        }
+      }
+    ],
+    "differentiationScore": null,
+    "confirmedHardRules": [],
+    "notes": ""
+  }
+]

@@ -1,0 +1,410 @@
+{
+  "gitBase": "d66c54bf70f2681efce74eb7b8b72a8838bb8ccd",
+  "baselinePrompt": "advisor-1.4.1",
+  "optimizedPrompt": "advisor-1.5.0",
+  "model": "deepseek-flash",
+  "before": {
+    "label": "before",
+    "promptVersion": "advisor-1.4.1",
+    "clock": "2026-11-07T04:00:00Z",
+    "createdAt": "2026-11-07T18:28:38.562Z",
+    "attempted": 4,
+    "succeeded": 4,
+    "failed": 0,
+    "latency": {
+      "httpTotalMs": {
+        "n": 4,
+        "median": 4204.538895999999,
+        "p95": 4678.693541999999,
+        "min": 3739.718708,
+        "max": 4678.693541999999,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "pipelineMs": {
+        "n": 4,
+        "median": 4200.1922915,
+        "p95": 4674.801708000001,
+        "min": 3584.831458,
+        "max": 4674.801708000001,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "normalizationMs": {
+        "n": 4,
+        "median": 0.041375000000243745,
+        "p95": 0.086749999999995,
+        "min": 0.0073749999992287485,
+        "max": 0.086749999999995,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "resolutionMs": {
+        "n": 4,
+        "median": 0.30966699999999037,
+        "p95": 0.8839590000000044,
+        "min": 0.08537500000056752,
+        "max": 0.8839590000000044,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "contextBuildMs": {
+        "n": 4,
+        "median": 0.0437499999998181,
+        "p95": 0.20141699999999219,
+        "min": 0.031124999999519787,
+        "max": 0.20141699999999219,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "generationApiMs": {
+        "n": 4,
+        "median": 2547.2268750000003,
+        "p95": 2742.7252500000013,
+        "min": 2522.5468329999985,
+        "max": 2742.7252500000013,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "auditApiMs": {
+        "n": 4,
+        "median": 1639.1116250000005,
+        "p95": 1953.432167,
+        "min": 1052.335,
+        "max": 1953.432167,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "jsonParseMs": {
+        "n": 4,
+        "median": 0.02908300000035524,
+        "p95": 0.035208000000238826,
+        "min": 0.0224160000016127,
+        "max": 0.035208000000238826,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "schemaMs": {
+        "n": 4,
+        "median": 0.07554199999867706,
+        "p95": 0.10762600000043676,
+        "min": 0.05137500000273576,
+        "max": 0.10762600000043676,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "validationMs": {
+        "n": 4,
+        "median": 2.3023750000004384,
+        "p95": 3.1043749999989814,
+        "min": 0.6033750000005966,
+        "max": 3.1043749999989814,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "providerCalls": 8,
+    "retries": 0,
+    "tokens": {
+      "input": 46840,
+      "cached": 21376,
+      "output": 1382
+    }
+  },
+  "after": {
+    "label": "after",
+    "promptVersion": "advisor-1.5.0",
+    "clock": "2026-11-07T04:00:00Z",
+    "createdAt": "2026-11-07T18:32:36.729Z",
+    "attempted": 4,
+    "succeeded": 4,
+    "failed": 0,
+    "latency": {
+      "httpTotalMs": {
+        "n": 4,
+        "median": 3517.5801874999997,
+        "p95": 4107.7676249999995,
+        "min": 2902.458167,
+        "max": 4107.7676249999995,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "pipelineMs": {
+        "n": 4,
+        "median": 3513.6416039999995,
+        "p95": 4101.639875000001,
+        "min": 2874.579209,
+        "max": 4101.639875000001,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "normalizationMs": {
+        "n": 4,
+        "median": 0.027187499999399733,
+        "p95": 0.06758400000000364,
+        "min": 0.006584000000657397,
+        "max": 0.06758400000000364,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "resolutionMs": {
+        "n": 4,
+        "median": 0.23227100000053724,
+        "p95": 0.8735420000000005,
+        "min": 0.08774999999968713,
+        "max": 0.8735420000000005,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "contextBuildMs": {
+        "n": 4,
+        "median": 0.05085400000007212,
+        "p95": 0.19229099999999733,
+        "min": 0.04820899999867834,
+        "max": 0.19229099999999733,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "generationApiMs": {
+        "n": 4,
+        "median": 2480.3017710000004,
+        "p95": 2734.369583999999,
+        "min": 1965.268291,
+        "max": 2734.369583999999,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "auditApiMs": {
+        "n": 4,
+        "median": 976.8432709999996,
+        "p95": 1487.1494169999996,
+        "min": 889.9833750000016,
+        "max": 1487.1494169999996,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "jsonParseMs": {
+        "n": 4,
+        "median": 0.02274950000037279,
+        "p95": 0.029250000001411536,
+        "min": 0.014666000000033819,
+        "max": 0.029250000001411536,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "schemaMs": {
+        "n": 4,
+        "median": 0.06962499999917782,
+        "p95": 0.11170899999956418,
+        "min": 0.05625000000145519,
+        "max": 0.11170899999956418,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      },
+      "validationMs": {
+        "n": 4,
+        "median": 1.8204169999999067,
+        "p95": 3.3651669999999285,
+        "min": 0.5980429999999615,
+        "max": 3.3651669999999285,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "providerCalls": 8,
+    "retries": 0,
+    "tokens": {
+      "input": 27527,
+      "cached": 5760,
+      "output": 960
+    }
+  },
+  "renderBefore": {
+    "source": "runtime/performance/before-2026-11-07T18-28-21-718Z",
+    "additionalProviderCalls": 0,
+    "method": "Four DOM replays of the saved real bracelet result",
+    "renderCommitMs": {
+      "n": 4,
+      "median": 13.46412549999991,
+      "p95": 18.126166000000012,
+      "min": 13.043957999999748,
+      "max": 18.126166000000012,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "samples": [
+      13.043957999999748,
+      13.29445899999996,
+      13.633791999999858,
+      18.126166000000012
+    ]
+  },
+  "renderAfter": {
+    "source": "runtime/performance/after-2026-11-07T18-32-22-675Z",
+    "additionalProviderCalls": 0,
+    "method": "Four DOM replays of the saved real bracelet result",
+    "renderCommitMs": {
+      "n": 4,
+      "median": 14.979708500000015,
+      "p95": 17.670208999999886,
+      "min": 13.033665999999812,
+      "max": 17.670208999999886,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "samples": [
+      13.033665999999812,
+      13.191916999999876,
+      16.767500000000155,
+      17.670208999999886
+    ]
+  },
+  "judgeSample": {
+    "mode": "offline-judge-sample",
+    "caseSetVersion": "final-50-v1",
+    "caseSetSha256": "95dcc4aedcb82f0fc92ff3165b2782739e5ab6759ca6eafc729e93352de16ed5",
+    "promptVersion": "advisor-1.5.0",
+    "brandSourceSha256": "ce4be633ea9f8b85f012a59088a188592a257141e7e9efd62fffabcdf7f82669",
+    "judgeVersion": "offline-judge-v1",
+    "rubricVersion": "quality-rubric-v1",
+    "model": "deepseek-flash",
+    "judgeModel": "deepseek-flash",
+    "evaluationTime": "2026-11-07T04:00:00Z",
+    "createdAt": "2026-11-07T18:55:30.089Z",
+    "maxApiCalls": 4,
+    "actualProviderCalls": 4,
+    "cases": 4,
+    "generatedMessages": 12,
+    "generationCompleted": 4,
+    "generationSuccessRate": 1,
+    "deterministicPassed": 4,
+    "scored": 4,
+    "softPassed": 1,
+    "softPassRate": 0.25,
+    "judgeReviewFlags": 0,
+    "human": {
+      "status": "PENDING_HUMAN_REVIEW",
+      "reviewedCases": 0,
+      "scoreComparisons": 0,
+      "meanAbsoluteDifference": null,
+      "setMeanAbsoluteDifference": null,
+      "flags": [],
+      "automaticScoreAdjustment": false
+    },
+    "byScenario": {
+      "greeting": {
+        "cases": 1,
+        "generated": 1,
+        "hardPassed": 1,
+        "scored": 1,
+        "meanSoftScore": 4.080000000000001,
+        "latency": {
+          "n": 1,
+          "median": 2902.458167,
+          "p95": 2902.458167,
+          "min": 2902.458167,
+          "max": 2902.458167,
+          "p95Method": "nearest-rank; exploratory when n<20",
+          "adequateTailSample": false
+        }
+      },
+      "recommend": {
+        "cases": 1,
+        "generated": 1,
+        "hardPassed": 1,
+        "scored": 1,
+        "meanSoftScore": 3.9733333333333336,
+        "latency": {
+          "n": 1,
+          "median": 4107.7676249999995,
+          "p95": 4107.7676249999995,
+          "min": 4107.7676249999995,
+          "max": 4107.7676249999995,
+          "p95Method": "nearest-rank; exploratory when n<20",
+          "adequateTailSample": false
+        }
+      },
+      "care": {
+        "cases": 1,
+        "generated": 1,
+        "hardPassed": 1,
+        "scored": 1,
+        "meanSoftScore": 3.866666666666667,
+        "latency": {
+          "n": 1,
+          "median": 3790.846749999999,
+          "p95": 3790.846749999999,
+          "min": 3790.846749999999,
+          "max": 3790.846749999999,
+          "p95Method": "nearest-rank; exploratory when n<20",
+          "adequateTailSample": false
+        }
+      },
+      "price": {
+        "cases": 1,
+        "generated": 1,
+        "hardPassed": 1,
+        "scored": 1,
+        "meanSoftScore": 3.9733333333333336,
+        "latency": {
+          "n": 1,
+          "median": 3244.3136250000007,
+          "p95": 3244.3136250000007,
+          "min": 3244.3136250000007,
+          "max": 3244.3136250000007,
+          "p95Method": "nearest-rank; exploratory when n<20",
+          "adequateTailSample": false
+        }
+      }
+    },
+    "latency": {
+      "n": 4,
+      "median": 3517.5801874999997,
+      "p95": 4107.7676249999995,
+      "min": 2902.458167,
+      "max": 4107.7676249999995,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "acceptance": {
+      "criteria": "Project-defined, not employer requirements",
+      "completion": false,
+      "quality": false,
+      "humanCalibration": false,
+      "finalPaidRunPerformed": false
+    }
+  },
+  "judgeTokens": {
+    "input": 10999,
+    "cached": 2688,
+    "output": 1026
+  },
+  "providerCallsThisTask": 20,
+  "generationCallsThisTask": 16,
+  "offlineJudgeCallsThisTask": 4,
+  "fullFiftyPaidRunPerformed": false,
+  "medianReductionPercent": 16.338502877296236,
+  "p95ReductionPercent": 12.202678202256134,
+  "inputReductionPercent": 41.231853116994024,
+  "projectedFiftyCaseTokens": {
+    "input": 481575.0,
+    "cached": 105600.0,
+    "output": 24825.0
+  },
+  "estimatedUsd": {
+    "fiftyPeakWithObservedCache": 0.1432161,
+    "fiftyPeakAllCacheMiss": 0.1742625,
+    "fiftyOffPeakWithObservedCache": 0.07160805,
+    "fiftyOffPeakAllCacheMiss": 0.08713125,
+    "thisTaskPeakEstimate": 0.020883144,
+    "thisTaskOffPeakEstimate": 0.010441572
+  },
+  "costCaveat": "Token-based estimates using published Flash rates as verified 2026-11-07, not account invoices. Four-case average is exploratory. Does not include retries, repairs or unusually long cases.",
+  "methodCaveats": [
+    "Four matched cases per phase; not a controlled statistical benchmark.",
+    "Nearest-rank p95 at n=4 is maximum; no stable tail claim.",
+    "Cache hits, response content and provider load vary.",
+    "DOM replays use JSDOM, not a real-browser paint measurement.",
+    "Before/after samples do not contain retries or repairs, so recovery latency is unmeasured."
+  ]
+}

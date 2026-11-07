@@ -61,6 +61,12 @@ export function diagnosticEvent(
     "selectionDepth",
     "resolvedSku",
     "candidateIndexes",
+    "durationMs",
+    "elapsedMs",
+    "inputTokens",
+    "cachedInputTokens",
+    "outputTokens",
+    "returnedModel",
   ])
     if (event[field] !== undefined) safe[field] = event[field];
   return JSON.parse(

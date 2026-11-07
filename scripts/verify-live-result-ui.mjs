@@ -41,6 +41,8 @@ Object.defineProperty(globalThis, "navigator", {
   value: dom.window.navigator,
 });
 let replayRequests = 0;
+let responseReadyAt = null,
+  committedAt = null;
 const bootstrap = {
   products,
   motifs,
@@ -87,7 +89,13 @@ globalThis.fetch = async (url, options) => {
       "notes",
     ])
       assert.equal(task[key], report.task[key], key);
-    return { ok: true, json: async () => report.result };
+    return {
+      ok: true,
+      json: async () => {
+        responseReadyAt = performance.now();
+        return report.result;
+      },
+    };
   }
   throw new Error("Unexpected local API request");
 };
@@ -137,6 +145,19 @@ try {
     (b) => b.textContent.trim() === "生成微信消息",
   );
   assert.equal(generate.disabled, false);
+  const observer = new dom.window.MutationObserver(() => {
+    if (
+      responseReadyAt !== null &&
+      document.querySelectorAll(".message-card").length === 3
+    ) {
+      committedAt = performance.now();
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.getElementById("root"), {
+    childList: true,
+    subtree: true,
+  });
   await click(generate);
   const displayed = [...document.querySelectorAll(".message-text")].map(
     (node) => node.textContent,
@@ -150,12 +171,16 @@ try {
   assert.ok(document.body.textContent.includes("实时 AI · deepseek-flash"));
   assert.equal(document.querySelector(".error-banner"), null);
   assert.equal(replayRequests, 1);
+  assert.ok(committedAt !== null && committedAt >= responseReadyAt);
   const evidence = {
     passed: true,
     verification: "Existing React UI replay of captured real DeepSeek response",
     displayedCandidates: displayed.length,
     liveModeLabel: "实时 AI · deepseek-flash",
     additionalLiveProviderCalls: 0,
+    renderCommitMs: committedAt - responseReadyAt,
+    timingMethod:
+      "JSDOM response-JSON-ready to React DOM commit; excludes scripted waits and is not a visual-browser measurement",
     sourceReport: reportPath,
     verifiedAt: new Date().toISOString(),
   };

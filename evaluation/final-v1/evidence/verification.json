@@ -1,0 +1,46 @@
+{
+  "createdAt": "2026-11-07T19:20:21.882835+00:00",
+  "gitHead": "d66c54bf70f2681efce74eb7b8b72a8838bb8ccd",
+  "optimizedWorktreeCommitted": false,
+  "nodeVersion": "v24.16.0",
+  "tests": {
+    "passed": 609,
+    "failed": 0,
+    "command": "npm test",
+    "log": "/private/tmp/maison-final-performance-closeout-tests.log",
+    "restrictedRerun": "Native Node async callback assertions affected three HTTP-related test processes; full outside-sandbox rerun passed without code changes."
+  },
+  "productionBuild": "PASS: npm run build",
+  "productionHttpSmoke": "PASS: node scripts/smoke.mjs (demo; zero paid calls)",
+  "gitDiffCheck": "PASS",
+  "envIgnoredByGit": true,
+  "protectedPreexistingFiles": 1049,
+  "protectedFilesChanged": [],
+  "copiedEvidenceFilesVerified": 19,
+  "preflightSourceFingerprintsMatch": true,
+  "matchedLiveProfiles": {
+    "before": 4,
+    "after": 4,
+    "sameInputs": true,
+    "allThreeChineseMessagesAndParagraphs": true,
+    "allHttp200": true,
+    "requestedAndReturnedModel": "deepseek-flash"
+  },
+  "actualProviderCalls": 20,
+  "fullFiftyPaidRunPerformed": false,
+  "finalPlanReadyInputs": 50,
+  "fixtureExecution": {
+    "cases": 50,
+    "messages": 150,
+    "deterministicPasses": 50,
+    "providerCalls": 0,
+    "liveQualityEvidence": false
+  },
+  "zeroCallJudgeResume": "PASS: four saved judgments reused, zero generations and zero API calls",
+  "keyScan": {
+    "configuredSecretPresent": true,
+    "filesScannedBeforeCloseout": 32,
+    "credentialLeaks": 0
+  },
+  "humanCalibration": "PENDING_HUMAN_REVIEW"
+}

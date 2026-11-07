@@ -1,0 +1,108 @@
+{
+  "label": "after",
+  "promptVersion": "advisor-1.5.0",
+  "clock": "2026-11-07T04:00:00Z",
+  "createdAt": "2026-11-07T18:32:36.729Z",
+  "attempted": 4,
+  "succeeded": 4,
+  "failed": 0,
+  "latency": {
+    "httpTotalMs": {
+      "n": 4,
+      "median": 3517.5801874999997,
+      "p95": 4107.7676249999995,
+      "min": 2902.458167,
+      "max": 4107.7676249999995,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "pipelineMs": {
+      "n": 4,
+      "median": 3513.6416039999995,
+      "p95": 4101.639875000001,
+      "min": 2874.579209,
+      "max": 4101.639875000001,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "normalizationMs": {
+      "n": 4,
+      "median": 0.027187499999399733,
+      "p95": 0.06758400000000364,
+      "min": 0.006584000000657397,
+      "max": 0.06758400000000364,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "resolutionMs": {
+      "n": 4,
+      "median": 0.23227100000053724,
+      "p95": 0.8735420000000005,
+      "min": 0.08774999999968713,
+      "max": 0.8735420000000005,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "contextBuildMs": {
+      "n": 4,
+      "median": 0.05085400000007212,
+      "p95": 0.19229099999999733,
+      "min": 0.04820899999867834,
+      "max": 0.19229099999999733,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "generationApiMs": {
+      "n": 4,
+      "median": 2480.3017710000004,
+      "p95": 2734.369583999999,
+      "min": 1965.268291,
+      "max": 2734.369583999999,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "auditApiMs": {
+      "n": 4,
+      "median": 976.8432709999996,
+      "p95": 1487.1494169999996,
+      "min": 889.9833750000016,
+      "max": 1487.1494169999996,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "jsonParseMs": {
+      "n": 4,
+      "median": 0.02274950000037279,
+      "p95": 0.029250000001411536,
+      "min": 0.014666000000033819,
+      "max": 0.029250000001411536,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "schemaMs": {
+      "n": 4,
+      "median": 0.06962499999917782,
+      "p95": 0.11170899999956418,
+      "min": 0.05625000000145519,
+      "max": 0.11170899999956418,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    },
+    "validationMs": {
+      "n": 4,
+      "median": 1.8204169999999067,
+      "p95": 3.3651669999999285,
+      "min": 0.5980429999999615,
+      "max": 3.3651669999999285,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": false
+    }
+  },
+  "providerCalls": 8,
+  "retries": 0,
+  "tokens": {
+    "input": 27527,
+    "cached": 5760,
+    "output": 960
+  }
+}
