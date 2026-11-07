@@ -1,0 +1,29 @@
+{
+  "name": "maison-liore-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "vite build",
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "format": "prettier --write src server data scripts tests docs/*.md README.md vite.config.js package.json index.html",
+    "smoke": "node scripts/smoke.mjs",
+    "evaluate": "node scripts/evaluate.mjs",
+    "evaluate:live": "node --env-file-if-exists=.env scripts/evaluate.mjs --live"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3",
+    "prettier": "^3.9.10",
+    "vite": "^6.0.0"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  }
+}

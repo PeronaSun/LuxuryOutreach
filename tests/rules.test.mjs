@@ -1,7 +1,8 @@
+import { evaluateRequest } from "./test-clock.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { evaluateRequest, validateCandidates } from "../server/rules.mjs";
+import { validateCandidates } from "../server/rules.mjs";
 import {
   demoCandidates,
   generate,
@@ -160,7 +161,7 @@ test("live generator uses structured generation and separate audit, never demo f
                 text: JSON.stringify(
                   calls === 1
                     ? { candidates: modelParts(candidates) }
-                    : { passed: true, reasons: [] },
+                    : { passed: true, reasons: [], findings: [] },
                 ),
               },
             ],
@@ -223,7 +224,17 @@ test("failing independent audit withholds all candidates", async () => {
                   text: JSON.stringify(
                     ++calls === 1
                       ? { candidates: modelParts(candidates) }
-                      : { passed: false, reasons: ["测试拒绝"] },
+                      : {
+                          passed: false,
+                          reasons: ["测试拒绝"],
+                          findings: [
+                            {
+                              ruleId: "FACT_PRODUCT",
+                              candidateIndexes: [0],
+                              reason: "测试拒绝",
+                            },
+                          ],
+                        },
                   ),
                 },
               ],
@@ -256,6 +267,9 @@ test("all fictional clients can use all six scenarios with relevant facts and no
       const input = {
         clientId: client.id,
         scenario,
+        ...(scenario === "greeting"
+          ? { greetingKind: "festival", greetingName: "圣诞节" }
+          : {}),
         ...(scenario === "care" ? { purchaseId: client.purchases[0].id } : {}),
         ...(scenario === "event" ? { eventId: "EV-DEMO-01" } : {}),
         ...(scenario === "price"

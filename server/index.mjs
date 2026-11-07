@@ -14,6 +14,9 @@ import {
 import { clients, events, clientProfile } from "../data/clients.mjs";
 import { evaluateRequest, PROMPT_VERSION } from "./rules.mjs";
 import { generate } from "./generation.mjs";
+import { applicationCalendar } from "./application-calendar.mjs";
+import { providerConfig } from "./provider-config.mjs";
+import { GenerationError, diagnosticEvent } from "./generation-errors.mjs";
 import {
   messagePlan,
   MESSAGE_FORMAT_VERSION,
@@ -24,7 +27,10 @@ export function createApp({
   recordDir = resolve(root, "runtime"),
   generator = generate,
   env = process.env,
+  clock = () => new Date(),
+  diagnosticLogger = (event) => console.info(JSON.stringify(event)),
 } = {}) {
+  const provider = providerConfig(env);
   let busy = false;
   const send = (res, status, data) => {
     res.writeHead(status, {
@@ -70,12 +76,10 @@ export function createApp({
             })),
             events,
             brandVersion: BRAND_VERSION,
-            mode:
-              env.DEMO_MODE === "true" ||
-              (!env.OPENAI_API_KEY && env.DEMO_MODE !== "false")
-                ? "demo"
-                : "live",
-            model: env.OPENAI_MODEL || "gpt-4.1-mini",
+            calendar: applicationCalendar(clock()),
+            mode: provider.demo ? "demo" : "live",
+            provider: provider.provider,
+            model: provider.model,
           });
         if (req.method === "GET" && url.pathname === "/api/records") {
           let records = [];
@@ -135,13 +139,14 @@ export function createApp({
               .filter((f) => Object.hasOwn(input, f))
               .map((f) => [f, input[f]]),
           );
-          const context = evaluateRequest(task);
+          const context = evaluateRequest(task, { now: clock() });
           const validation = {
             status: context.status,
             issues: context.issues,
             notices: context.notices || [],
             resolvedProduct: context.resolved?.product || null,
             reason: context.resolved?.reason || "",
+            calendar: context.calendar || null,
           };
           if (url.pathname === "/api/validate")
             return send(res, 200, validation);
@@ -180,6 +185,8 @@ export function createApp({
             conversationHistory: context.client?.history || [],
             eventContext: context.event || null,
             selectedPurchase: context.purchase || null,
+            applicationCalendar: context.calendar || null,
+            communicationContext: context.communicationContext || null,
             resolvedProductSku: context.resolved?.product?.sku || null,
             resolutionReason: context.resolved?.reason || null,
             brandBibleVersion: BRAND_VERSION,
@@ -191,12 +198,29 @@ export function createApp({
                 : null,
             validationStatus: context.status,
             candidates: [],
-            model:
-              env.DEMO_MODE === "true" ||
-              (!env.OPENAI_API_KEY && env.DEMO_MODE !== "false")
-                ? DEMO_MODEL
-                : env.OPENAI_MODEL || "gpt-4.1-mini",
+            provider: provider.provider,
+            model: provider.demo ? DEMO_MODEL : provider.model,
           };
+          const diagnostics = [];
+          const diagnosticsEnabled =
+            env.GENERATION_DIAGNOSTICS === "true" ||
+            env.NODE_ENV === "development";
+          const onDiagnostic = (event) => {
+            const safe = diagnosticEvent(event, {
+              ...provider,
+              requestId: record.id,
+            });
+            if (diagnosticsEnabled) {
+              diagnostics.push(safe);
+              diagnosticLogger(safe);
+            }
+          };
+          onDiagnostic({
+            stage: "request.validation",
+            status: context.status === "READY" ? "passed" : "failed",
+            ruleIds: context.issues.map((issue) => issue.code),
+            reason: context.status,
+          });
           try {
             if (context.status !== "READY") {
               await save({ ...record, issues: context.issues });
@@ -205,21 +229,34 @@ export function createApp({
             let result;
             try {
               result = await generator(task, context, {
-                key: env.OPENAI_API_KEY,
-                model: env.OPENAI_MODEL || "gpt-4.1-mini",
-                demo:
-                  env.DEMO_MODE === "true" ||
-                  (!env.OPENAI_API_KEY && env.DEMO_MODE !== "false"),
+                ...provider,
+                onDiagnostic,
               });
             } catch (e) {
+              const known = e instanceof GenerationError;
+              onDiagnostic({
+                stage: known ? e.stage : "generation",
+                status: "failed",
+                ruleIds: known ? e.ruleIds : ["GENERATION_FAILED"],
+                reason: known ? e.code : "GENERATION_FAILED",
+                ...(e.stage?.endsWith(".parse") ? { parseSuccess: false } : {}),
+                ...(e.stage?.endsWith(".schema")
+                  ? { schemaSuccess: false }
+                  : {}),
+              });
               await save({
                 ...record,
                 validationStatus: "NEEDS_REVIEW",
                 error: "GENERATION_FAILED",
+                failureStage: known ? e.stage : "generation",
+                failedRuleIds: known ? e.ruleIds : ["GENERATION_FAILED"],
+                ...(diagnosticsEnabled ? { diagnostics } : {}),
               });
               const safeMessages = [
                 "实时模式尚未配置服务器 API 密钥。",
+                "示例模式暂不能可靠理解这段背景；请简化为明确需求或启用实时 AI。",
                 "模型服务暂时不可用，请稍后重试或检查服务器配置。",
+                "模型服务地址配置无效，请检查服务器配置。",
                 "模型未完成生成，请重试。",
                 "模型未能为此请求生成候选，请修改输入。",
                 "模型返回格式无效，请重试。",
@@ -227,12 +264,26 @@ export function createApp({
                 "候选需要进一步核实，暂未展示。请补充信息或重新生成。",
               ];
               return send(res, 502, {
-                error: safeMessages.includes(e.message)
-                  ? e.message
-                  : "生成暂时失败，请稍后重试。",
+                error:
+                  known || safeMessages.includes(e.message)
+                    ? e.message
+                    : "生成暂时失败，请稍后重试。",
+                code: known ? e.code : "GENERATION_FAILED",
+                stage: known ? e.stage : "generation",
+                requestId: record.id,
               });
             }
-            const complete = { ...record, ...result };
+            onDiagnostic({
+              stage: "generation.complete",
+              status: "passed",
+              candidateCount: result.candidates.length,
+              ruleIds: result.warnings?.map((warning) => warning.ruleId) || [],
+            });
+            const complete = {
+              ...record,
+              ...result,
+              ...(diagnosticsEnabled ? { diagnostics } : {}),
+            };
             await save(complete);
             return send(res, 200, {
               ...result,

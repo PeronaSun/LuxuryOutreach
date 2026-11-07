@@ -1,13 +1,10 @@
+import { evaluateRequest } from "./test-clock.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { clients } from "../data/clients.mjs";
 import { motifs, lines, products } from "../data/catalog.mjs";
-import {
-  evaluateRequest,
-  validateCandidates,
-  validateMessage,
-} from "../server/rules.mjs";
+import { validateCandidates, validateMessage } from "../server/rules.mjs";
 import {
   demoCandidates,
   buildPrompt,
@@ -41,7 +38,12 @@ test("A/B: all candidates have exactly three paragraphs and the correct dedicate
     assert.ok(client.assignedAdvisor);
     if (required[client.id])
       assert.equal(client.assignedAdvisor, required[client.id]);
-    const input = { clientId: client.id, scenario: "greeting" },
+    const input = {
+        clientId: client.id,
+        scenario: "greeting",
+        greetingKind: "festival",
+        greetingName: "圣诞节",
+      },
       ctx = evaluateRequest(input);
     for (const c of demoCandidates(input, ctx)) {
       const p = splitParagraphs(c.text);
@@ -220,7 +222,7 @@ test("live generation uses structured main/CTA fields, trusted introduction, ret
               return { style: c.style, main, cta };
             }),
           }
-        : { passed: true, reasons: [] };
+        : { passed: true, reasons: [], findings: [] };
     return {
       ok: true,
       json: async () => ({
@@ -255,10 +257,11 @@ test("live generation uses structured main/CTA fields, trusted introduction, ret
   );
 });
 
-test("live mode withholds output if a model puts extra paragraphs into its main", async () => {
+test("live mode normalizes internal body whitespace while preserving the trusted three paragraphs", async () => {
   const input = selected("JAS-R01"),
     ctx = evaluateRequest(input),
     out = demoCandidates(input, ctx);
+  let calls = 0;
   const fetchImpl = async () => ({
     ok: true,
     json: async () => ({
@@ -268,21 +271,36 @@ test("live mode withholds output if a model puts extra paragraphs into its main"
           content: [
             {
               type: "output_text",
-              text: JSON.stringify({
-                candidates: out.map((c) => ({
-                  style: c.style,
-                  main: "正文一\n正文二",
-                  cta: splitParagraphs(c.text)[2],
-                })),
-              }),
+              text: JSON.stringify(
+                ++calls === 2
+                  ? { passed: true, reasons: [], findings: [] }
+                  : {
+                      candidates: out.map((c) => ({
+                        style: c.style,
+                        main: splitParagraphs(c.text)[1].replace(
+                          "。",
+                          "。\r\n\n  ",
+                        ),
+                        cta: splitParagraphs(c.text)[2],
+                      })),
+                    },
+              ),
             },
           ],
         },
       ],
     }),
   });
-  await assert.rejects(
-    generate(input, ctx, { demo: false, key: "test", fetchImpl }),
-    /格式无效/,
+  const result = await generate(input, ctx, {
+    demo: false,
+    key: "test",
+    fetchImpl,
+  });
+  assert.equal(calls, 2);
+  assert.ok(
+    result.candidates.every((c) => splitParagraphs(c.text).length === 3),
+  );
+  assert.ok(
+    result.candidates.every((c) => !splitParagraphs(c.text)[1].includes("\n")),
   );
 });

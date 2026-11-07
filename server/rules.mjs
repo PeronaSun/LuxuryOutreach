@@ -1,7 +1,16 @@
 import { products, lines, scenarios, occasions } from "../data/catalog.mjs";
 import { clients, events, clientProfile } from "../data/clients.mjs";
 import { messagePlan, splitParagraphs } from "./message-contract.mjs";
-export const PROMPT_VERSION = "advisor-1.2.0";
+import {
+  applicationCalendar,
+  festivalContext,
+} from "./application-calendar.mjs";
+import {
+  communicationContext,
+  currentPreferenceScore,
+  contextCoverageErrors,
+} from "./communication-context.mjs";
+export const PROMPT_VERSION = "advisor-1.3.1";
 export const productScenarios = new Set([
   "recommend",
   "reactivate",
@@ -46,20 +55,28 @@ export function resolveProduct(input, client) {
     (lines.find((l) => l.id === p.line).occasions.includes(input.occasion)
       ? 2
       : 0);
+  const currentContext = communicationContext(input);
   const ranked = [...scope].sort(
-    (a, b) => score(b) - score(a) || a.sku.localeCompare(b.sku),
+    (a, b) =>
+      currentPreferenceScore(b, currentContext) -
+        currentPreferenceScore(a, currentContext) ||
+      score(b) - score(a) ||
+      a.sku.localeCompare(b.sku),
   );
   return {
     product: ranked[0],
     scope,
     reason: input.sku
       ? "采用顾问明确选择的 SKU。"
-      : score(ranked[0]) > 0
-        ? "在当前范围内匹配已有偏好；同分按 SKU 字母顺序。"
-        : "无明确偏好匹配，按 SKU 字母顺序选择；未推断客户偏好。",
+      : currentPreferenceScore(ranked[0], currentContext) > 0
+        ? "在当前选择范围内优先匹配本次明确表达的偏好。"
+        : score(ranked[0]) > 0
+          ? "在当前范围内匹配已有偏好；同分按 SKU 字母顺序。"
+          : "无明确偏好匹配，按 SKU 字母顺序选择；未推断客户偏好。",
   };
 }
-export function evaluateRequest(input) {
+export function evaluateRequest(input, { now = new Date() } = {}) {
+  const calendar = applicationCalendar(now);
   const issues = [];
   const add = (status, message, code) => issues.push({ status, message, code });
   if (!input || typeof input !== "object" || Array.isArray(input))
@@ -118,6 +135,15 @@ export function evaluateRequest(input) {
     add("BLOCKED", "购买场合无效。", "occasion");
   if (input.scenario === "greeting") {
     if (
+      input.greetingKind !== "festival" &&
+      client.birthMonth !== calendar.month
+    )
+      add(
+        "NEEDS_REVIEW",
+        `温馨提示：${client.name}的生日月为 ${client.birthMonth} 月，当前为 ${calendar.month} 月，暂不适合发送生日祝福。可改选节日问候。`,
+        "birthday-month",
+      );
+    if (
       input.greetingKind &&
       !["birthday", "festival"].includes(input.greetingKind)
     )
@@ -150,15 +176,18 @@ export function evaluateRequest(input) {
   const resolved = resolveProduct(input, client);
   if (productScenarios.has(input.scenario) && !resolved.product)
     add("NEEDS_REVIEW", "请重新选择有效的产品范围。", "scope");
+  const notesContext = communicationContext(input, resolved.product);
   const notices = [];
+  const effectiveMaterial =
+    notesContext.preferences.material || client.latestPreference?.material;
   if (
     productScenarios.has(input.scenario) &&
     resolved.product &&
-    client.latestPreference?.material &&
-    resolved.product.material !== client.latestPreference.material
+    effectiveMaterial &&
+    resolved.product.material !== effectiveMaterial
   ) {
     notices.push(
-      `本次采用${resolved.product.material}作品；客户近期偏好为${client.latestPreference.material}。当前选择优先，历史偏好保持原记录。`,
+      `本次采用${resolved.product.material}作品；客户近期偏好为${effectiveMaterial}。当前选择优先，历史偏好保持原记录。`,
     );
   }
   const status = issues.some((i) => i.status === "BLOCKED")
@@ -174,6 +203,8 @@ export function evaluateRequest(input) {
     resolved,
     event,
     purchase,
+    calendar,
+    communicationContext: notesContext,
   };
 }
 export const styles = ["concise", "detailed", "elegant"];
@@ -258,6 +289,43 @@ export function validateMessage(t, context, { enforceCta = true } = {}) {
   }
   if (context.input?.scenario !== "greeting" && /生日快乐|节日快乐/.test(t))
     errors.push("问候与当前场景不符。");
+  if (paragraphs.length === 3) {
+    const main = paragraphs[1];
+    errors.push(
+      ...contextCoverageErrors(
+        main,
+        context.communicationContext ||
+          communicationContext(context.input || {}, context.resolved?.product),
+      ),
+    );
+    if (
+      context.input?.scenario === "greeting" &&
+      context.input?.greetingKind === "festival"
+    ) {
+      const festival = festivalContext(
+        context.input.greetingName,
+        context.calendar,
+      );
+      if (
+        /今天|今日|当天|大年初一|正月初一|\d{1,2}月\d{1,2}[日号]|\d{4}-\d{2}-\d{2}/.test(
+          main,
+        )
+      )
+        errors.push("节日问候不能自行断言今天过节或编造具体日期。");
+      if (festival.kind === "christmas" && !/圣诞/.test(main))
+        errors.push("三种表达的正文都需要明确体现圣诞氛围。");
+      if (festival.kind === "spring" && !/新春|春节|新年/.test(main))
+        errors.push("三种表达的正文都需要明确体现新春氛围。");
+      const allowMix = context.communicationContext?.allowFestivalMix;
+      if (
+        !allowMix &&
+        ((festival.kind === "christmas" &&
+          /春节|新春|农历|大年初/.test(main)) ||
+          (festival.kind === "spring" && /圣诞/.test(main)))
+      )
+        errors.push("正文混用了未选择的节日氛围。");
+    }
+  }
   const allowedMotif = context.resolved?.product?.motif;
   if (allowedMotif) {
     const imagery = {

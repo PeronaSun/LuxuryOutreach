@@ -1,7 +1,8 @@
 import { motifs, lines, products } from "../data/catalog.mjs";
+import { festivalContext } from "./application-calendar.mjs";
 
 export const MESSAGE_FORMAT_VERSION = "three-paragraph-v1";
-export const DEMO_MODEL = "demo-template-v1.2";
+export const DEMO_MODEL = "demo-template-v1.3";
 
 export function greetingFor(client) {
   if (!client?.name || !client.assignedAdvisor)
@@ -82,6 +83,8 @@ export const styleDirections = {
 };
 
 export function messagePlan(input, context) {
+  const { demoPhrases, secondaryDemoPhrases, ...safeContext } =
+    context.communicationContext || {};
   return {
     version: MESSAGE_FORMAT_VERSION,
     greeting: greetingFor(context.client),
@@ -89,6 +92,19 @@ export function messagePlan(input, context) {
     occasion: input.occasion
       ? { id: input.occasion, direction: occasionDirections[input.occasion] }
       : null,
+    communicationContext: context.communicationContext ? safeContext : null,
+    greetingContext:
+      input.scenario === "greeting"
+        ? {
+            kind: input.greetingKind || "birthday",
+            calendar: context.calendar,
+            birthMonth: context.client.birthMonth,
+            festival:
+              input.greetingKind === "festival"
+                ? festivalContext(input.greetingName, context.calendar)
+                : null,
+          }
+        : null,
     styles: styleDirections,
     ctaOptions: ctas[input.scenario] || [],
   };
@@ -104,13 +120,16 @@ export function assembleCandidates(parts, input, context) {
       part?.style !== styles[i] ||
       typeof part.main !== "string" ||
       !part.main.trim() ||
-      /[\r\n]/.test(part.main.trim()) ||
       !plan.ctaOptions.includes(part.cta)
     )
       throw new Error("模型返回格式无效，请重试。");
     return {
       style: part.style,
-      text: [plan.greeting, part.main.trim(), part.cta].join("\n\n"),
+      text: [
+        plan.greeting,
+        part.main.replace(/\s+/gu, " ").trim(),
+        part.cta,
+      ].join("\n\n"),
     };
   });
 }

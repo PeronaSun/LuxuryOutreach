@@ -1,0 +1,302 @@
+[
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/baseline-version.json",
+    "sha256": "f4f789c19ed2740a03f26af190d3a5e78f8acb125a63b8dbcd41e7e304a86b7d"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/baseline-version.md",
+    "sha256": "e15fdba291bc0ad7a6783d5e652e6ba6c60a06363d085e1011b8cb00af8c4980"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/case-set-version.json",
+    "sha256": "4b5da6af7320a8d51a0c7b1e913779693694fa0814f1d0cc21ce154fc256c84c"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/cases.json",
+    "sha256": "f4cc59a8ed2ba17c6c35e469999e33a284d3378a6e2d17bbdae2eadd231d819e"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/cases.md",
+    "sha256": "64c50bbd5ed2c4491811fbdb44432e8da88548c87eaf457cc2968b1fea05fe27"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/initial-evaluation-report.md",
+    "sha256": "740fa8871ed5e5745b5a9b802dfbe806d2784769a3104059c5dd53dd1296f05a"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/integrity-report.json",
+    "sha256": "e02f813c72168a815b37330d767df93260331a25a3f0f9395542832bee02b33d"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/pipeline-audit.md",
+    "sha256": "6db977e99d61823a22d4f40f2324a1b6f9085b5b8d77f8e7afac4e6352aabb6b"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/prompt-instructions/care.txt",
+    "sha256": "13fca2607c51aa490b1cf698b6fbc57520e57419d18f8939c676554008a6ef13"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/prompt-instructions/event.txt",
+    "sha256": "5b6eb8d79ef0237e96fc159cbe32c396a081bb70ba4ad0282713c74fb3845a63"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/prompt-instructions/greeting.txt",
+    "sha256": "26c567e56e6388cc744729ba018cc8cb7b2cdcb8489d9dab1ada516806ce0a10"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/prompt-instructions/price.txt",
+    "sha256": "d5893ce858406c75e8d1aceab3960dc0a2dabb4e7f139190f7c6bab74e6dcf4a"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/prompt-instructions/reactivate.txt",
+    "sha256": "eda729ed25500695b142f150c82b175afeecbcbdab4bf0de6bf77583391dfdfd"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/prompt-instructions/recommend.txt",
+    "sha256": "3cb495ceaa8326e36b9819f62bf156e2333aff8682717abc2bdd09640124bc10"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/regression-check.json",
+    "sha256": "e550da1631e4fca6c1b31b3e19f3c40b1be57de61517f06e5e3a3ad5906c33e9"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/risks-and-next-steps.md",
+    "sha256": "e3046ded01e82c08ab6d6e254e615c53b4140df9b5727913bf140f1e7678fe0d"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/rubric.md",
+    "sha256": "f4bdc0f51cc809cfded2353e853fe009ef9e43accc5d32c5bb3c9fdd860f9456"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-16-40-718Z-validate-1bf432cb/human-review.csv",
+    "sha256": "37904c4e9570c6cb15d84126ddb1be5238390640bdf2fd08dab9d03c6f903fbe"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-16-40-718Z-validate-1bf432cb/records.json",
+    "sha256": "ed88318a804d9a57456bdb513d851ea53ea4af5c50225bffc3c734ab60beb4c5"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-16-40-718Z-validate-1bf432cb/records.jsonl",
+    "sha256": "7d23bf797ab6fdf5b82ce06b5caabc3c567f34db101994563219b10c66f756e5"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-16-40-718Z-validate-1bf432cb/run-report.md",
+    "sha256": "118a4fe3fb5907a7a69a93e4d331068e80d1f2cc996d00f24598fe0a4d7f2b03"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-16-40-718Z-validate-1bf432cb/run-start.json",
+    "sha256": "940e5672dbdc5558aff9c759d0b49e439df436063075a4527b9144ef599deb0c"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-16-40-718Z-validate-1bf432cb/summary.json",
+    "sha256": "7b8e6117bf8d0278e46d844fcc329be7de38697346f8ba6ded4ede923710931d"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-420Z-demo-34a25af4/human-review.csv",
+    "sha256": "635c4c19b086df2d2faad11a89d56217d041db2a40745b231c71e9a1edd96159"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-420Z-demo-34a25af4/records.json",
+    "sha256": "f2a29778c0d38ec6526878dcfd38c893382e1cb19fb6a21e8499cad795959a95"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-420Z-demo-34a25af4/records.jsonl",
+    "sha256": "1a81de4110f0a6c110560cc1a8711b64bec1681ee6669b46ef672dc94a25b77e"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-420Z-demo-34a25af4/run-report.md",
+    "sha256": "d3c50e7fb7a1cc53167ca5dc8e45c20ffa362a33d9e8447b0030f04ecc2bd70b"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-420Z-demo-34a25af4/run-start.json",
+    "sha256": "ea167f12033f02163fcffc7dd02557c3d0c1f38dd300db88e5bc8f796fc0b763"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-420Z-demo-34a25af4/summary.json",
+    "sha256": "8c50dd67e6e1ddee2fb49e5bfb3aa7aaf74e428e69d904a4abbd7019308b24b4"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-555Z-live-373784f2/human-review.csv",
+    "sha256": "9b1cce8e9dc5582dc90324710a32e83fb2be89c8b279d157ff1d4968021081f8"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-555Z-live-373784f2/records.json",
+    "sha256": "cd837c82a0f1613f5b938d686f1c44dd53703cc7e1c829513398f3585add55c1"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-555Z-live-373784f2/records.jsonl",
+    "sha256": "e12d05e15e04723d37991763d3b568efc490a2b0a7366e380c259831d1798216"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-555Z-live-373784f2/run-report.md",
+    "sha256": "5d952d740022074d73bb54ac514b3179af37472da5d652e017346476f7c7fce0"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-555Z-live-373784f2/run-start.json",
+    "sha256": "39cadc1e60fc6c6519e701a05b61974e146274866734d3f6af7d6fd5f3e5daec"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/runs/2026-11-06T18-18-04-555Z-live-373784f2/summary.json",
+    "sha256": "1423bd0413f65c13b61ad1f6b3cd06941345dfbd0d90dbaa60b3b71cf142e0e7"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/.env.example",
+    "sha256": "bd9f27ca91ab3aa7e1bcb2d7ef242f2cf427085acc94d873642b1442592169d7"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/.gitignore",
+    "sha256": "7c71c4f0869bda4bd2f67c53eaa67558c2b84e64c27bda44d68b5ac6847c0fb3"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/README.md",
+    "sha256": "d2fa10d9f2b05d6ef50556f7f6c425dcb5e16ffff58c3d9cf1d10ab84519b327"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/data/catalog.mjs",
+    "sha256": "69d130d4077dace07a4702e8f624c52c1a83436ea88ae6d8ac427a1d79205107"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/data/clients.mjs",
+    "sha256": "808e8d68e6d55d195fd7db17c3cdcc73c3e5f0db094fc627301a9176a560b2e4"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/docs/Maison_Liore_Fictional_Brand_Bible_v1.docx",
+    "sha256": "b5fc813bd4c314ed20447f3cd80187124e45d76150cd3b941e92d9c21e8d6fbb"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/docs/brand-bible-v1.txt",
+    "sha256": "ce4be633ea9f8b85f012a59088a188592a257141e7e9efd62fffabcdf7f82669"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/docs/evaluation/demo-results.csv",
+    "sha256": "597329eacb5730dafb63bdb631b168be32f92b300ab3ccfe301b0dfa81cf0678"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/docs/evaluation/demo-results.json",
+    "sha256": "e37212e342b245ba9dbf478f7ba8eb9ca96e3ea52d4d190dac245ddfffff337e"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/docs/evaluation-report.md",
+    "sha256": "416657aed3d6e533abde370699145b3147a1255c172af6dcae84bcd1bae4dc15"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/docs/implementation-log.md",
+    "sha256": "d126cfd654150892f02e1a8b4a42296bfb4b160a740e99e8696e8c06cda3203a"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/index.html",
+    "sha256": "8c67acc55d79d5d394c8ce3e005759848d95916edb568a96f752e563d53f0ca4"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/package-lock.json",
+    "sha256": "bbca1ff5bcb53d2569a9401c050960147204e9e84d0efc0c1bcecb543f58fe03"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/package.json",
+    "sha256": "7d6e8fa5604ec595fa87d91e3bd239c7600058554ba457758571a3c77d2c85b7"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/scripts/dev.mjs",
+    "sha256": "e390ab83e6ca3db78d4e1521b17357adab236f1b098e51284ff90ac1d835fccf"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/scripts/evaluate.mjs",
+    "sha256": "9d0f46d655880fb280f6b8944d9c99a44d441e50d46a98e54ffc291f72f0f646"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/scripts/smoke.mjs",
+    "sha256": "2c888f9cf5a62ac486d535f23a3d6ccee6a4caf5842d39527b748c993411d89c"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/server/generation.mjs",
+    "sha256": "0849a9ec660f86dcb370c80ab93d502e916e4ae0b8783896525042007654e556"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/server/index.mjs",
+    "sha256": "391fa0ac528a68e14802bccc6b98d259763920fcc584a8055c1823addc71dee5"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/server/message-contract.mjs",
+    "sha256": "0cc220c118a435a84c810f644330db3915728c773ffd4bb2e7bcf8651b831285"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/server/rules.mjs",
+    "sha256": "2b6a24a65123557cabd456bac29649329382918d7ff5b304ce3694648568aa8f"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/src/main.jsx",
+    "sha256": "a9941f16aec823e8174ba9cbd173f5d5637392f3b8fcde8b158b99337a13bdca"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/src/selection.mjs",
+    "sha256": "9abcb8ae0fff630aacb70bd8f103edbb6cc2be196301348890cc24b50e948b6b"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/src/styles.css",
+    "sha256": "658d1994dcdacf90b9de98ce457e1dcb1cd09b14fa60c6b775effcc1b4d1d85d"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/tests/api.test.mjs",
+    "sha256": "b12cc12086bc609d2325bb58fb3be6b3f5f2d7d962ce68114987f8ea23aabecc"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/tests/cases.mjs",
+    "sha256": "0679c8db91130d8627fee0f5dab57d995d58bfa5c0d94f18bf403a0a5b67a158"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/tests/message-structure.test.mjs",
+    "sha256": "1c512d1887c07e1e2d7c76a594fe957aad2be3c3d2ab9336e98a3e424efdae3b"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/tests/rules.test.mjs",
+    "sha256": "d9a94c62a47846e19e6db9e6f3e272e16dbca9635b26bf5ec03977053bbd2afa"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/tests/ui.test.mjs",
+    "sha256": "4f9f4b353c5be5b4a0bf73fa56f207ff92a399c30f4be44335dc0bf9221e8d9d"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/snapshot/vite.config.js",
+    "sha256": "7c4d87f537acd619d0deef728c01108b843d66e037cd3dbc521fc2f6af2f5a3e"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/tooling/capture-baseline.mjs",
+    "sha256": "70bcce26b51789820c82116e9253e6960b0d7a716172a03de162f6071fb156d1"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/tooling/check-evidence.mjs",
+    "sha256": "1ef4c3840fe5ba142c0d862a1832750953fe0320fbe8e1d0799697cbb531dc0d"
+  },
+  {
+    "path": "evaluation/baselines/baseline-2026-11-06-e5856af7/tooling/run-baseline.mjs",
+    "sha256": "316a66de5723a89d9aebdb8a16d30d7627e1351bc21e10732358dbecd9255df4"
+  },
+  {
+    "path": "evaluation/references/README.md",
+    "sha256": "78ab02a35f11757e409224179688745aa14b27785f229cbebdc90b2bb54b51e2"
+  },
+  {
+    "path": "evaluation/README.md",
+    "sha256": "93b2caa5a22ce9f1d804bc4c041876bddcf9fc50c463765e714f844c757bc3b7"
+  },
+  {
+    "path": "evaluation/methodology.md",
+    "sha256": "0b237ea4ec9c75224c0d430b4c92573e67969dbb5aff470d844790b58d5966a3"
+  },
+  {
+    "path": "evaluation/work-log.md",
+    "sha256": "77c85383caee50516bbfdfcb4e816bdcf295b77a972085b9a36648612e006721"
+  },
+  {
+    "path": "evaluation/tools/run-baseline.mjs",
+    "sha256": "316a66de5723a89d9aebdb8a16d30d7627e1351bc21e10732358dbecd9255df4"
+  },
+  {
+    "path": "evaluation/tools/capture-baseline.mjs",
+    "sha256": "70bcce26b51789820c82116e9253e6960b0d7a716172a03de162f6071fb156d1"
+  },
+  {
+    "path": "evaluation/tools/check-evidence.mjs",
+    "sha256": "1ef4c3840fe5ba142c0d862a1832750953fe0320fbe8e1d0799697cbb531dc0d"
+  }
+]

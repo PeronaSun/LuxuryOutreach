@@ -1,0 +1,39 @@
+{
+  "runId": "2026-11-06T18-18-04-420Z-demo-34a25af4",
+  "baselineId": "baseline-2026-11-06-e5856af7",
+  "mode": "demo",
+  "startedAt": "2026-11-06T18:18:04.421Z",
+  "finishedAt": "2026-11-06T18:18:04.469Z",
+  "runStatus": "COMPLETED",
+  "cases": 18,
+  "inputStatusCounts": {
+    "READY": 15,
+    "NEEDS_REVIEW": 1,
+    "BLOCKED": 2
+  },
+  "baselineExpectationMatches": 18,
+  "desiredBusinessMismatches": [
+    "B18"
+  ],
+  "templateGenerationCompleted": 15,
+  "liveGenerationCompleted": 0,
+  "providerCalls": 0,
+  "candidateTextsRecorded": 45,
+  "generationFailures": [],
+  "externalReviewFlags": [
+    {
+      "caseId": "B16",
+      "flags": [
+        "B16_STATED_WITHIN_BUDGET_BUT_OUTPUT_SAYS_ABOVE_EXPECTATION"
+      ]
+    },
+    {
+      "caseId": "B18",
+      "flags": [
+        "INPUT_GATE_DIFFERS_FROM_DESIRED_BEHAVIOR"
+      ]
+    }
+  ],
+  "qualityScoresAssigned": false,
+  "configError": null
+}

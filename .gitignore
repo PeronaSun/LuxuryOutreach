@@ -3,3 +3,5 @@ dist/
 .env
 runtime/
 .DS_Store
+.env.*
+!.env.example

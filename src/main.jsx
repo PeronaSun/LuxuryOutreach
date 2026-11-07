@@ -26,6 +26,8 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { selectMotif, selectLine, selectProduct } from "./selection.mjs";
+import ClientProfile from "./ClientProfile.jsx";
+import { resolvePurchaseDisplay } from "./product-display.mjs";
 import "./styles.css";
 const scenarioIcons = [
   Gift,
@@ -201,32 +203,6 @@ function JewelryArt({ p }) {
     </svg>
   );
 }
-function PurchaseHistory({ purchases }) {
-  return (
-    <section className="purchase-history" aria-label="历史购买">
-      <div className="purchase-history-heading">
-        <span>
-          历史购买 <small>Purchase History</small>
-        </span>
-        <span>{purchases.length} 件</span>
-      </div>
-      {purchases.map((p) => (
-        <div key={p.id} className="purchase-history-row">
-          <span className="timeline-dot" />
-          <div>
-            <strong>{p.productName}</strong>
-            <small>
-              {p.sku} · {p.purchaseDate}
-              {p.occasion
-                ? ` · ${{ personal: "自用", wedding: "婚礼", gift: "送礼" }[p.occasion]}`
-                : ""}
-            </small>
-          </div>
-        </div>
-      ))}
-    </section>
-  );
-}
 function App() {
   const [data, setData] = useState(null),
     [bootError, setBootError] = useState(""),
@@ -243,7 +219,8 @@ function App() {
     [toast, setToast] = useState(""),
     [view, setView] = useState("workspace"),
     [records, setRecords] = useState([]),
-    [recordError, setRecordError] = useState("");
+    [recordError, setRecordError] = useState(""),
+    [calendarEpoch, setCalendarEpoch] = useState(0);
   const revision = useRef(0),
     latest = useRef(task);
   latest.current = task;
@@ -252,6 +229,20 @@ function App() {
     api("bootstrap")
       .then(setData)
       .catch(() => setBootError("无法连接本地服务，请确认服务器正在运行。"));
+  }, []);
+  useEffect(() => {
+    const refresh = () => setCalendarEpoch((value) => value + 1);
+    const visible = () => {
+      if (!document.hidden) refresh();
+    };
+    const timer = setInterval(refresh, 60000);
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", visible);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", visible);
+    };
   }, []);
   useEffect(() => {
     if (!toast) return;
@@ -277,7 +268,7 @@ function App() {
       clearTimeout(timer);
       controller.abort();
     };
-  }, [task, data]);
+  }, [task, data, calendarEpoch]);
   const change = (updater) => {
     revision.current++;
     setTask((t) =>
@@ -576,44 +567,6 @@ function App() {
                     <ChevronRight size={13} className={more ? "rotate" : ""} />
                   </button>
                 </div>
-                <div className="client-profile">
-                  <div className="profile-top">
-                    <span>
-                      已存客户资料 <small>STORED PROFILE</small>
-                    </span>
-                    <span className="client-id">{client.id}</span>
-                  </div>
-                  <p className="profile-note">{client.note}</p>
-                  <p className="advisor-assignment">
-                    专属珠宝顾问 <strong>{client.assignedAdvisor}</strong>
-                  </p>
-                  <div className="profile-tags">
-                    {client.interests.map((i, n) => (
-                      <React.Fragment key={n}>
-                        {i.line && (
-                          <span>
-                            {data.lines.find((l) => l.id === i.line)?.name}
-                          </span>
-                        )}
-                        {i.category && <span>{i.category}</span>}
-                        {i.material && <span>{i.material}</span>}
-                        {i.gemstone && <span>{i.gemstone}</span>}
-                      </React.Fragment>
-                    ))}
-                    {!client.interests.length && <span>偏好尚未记录</span>}
-                  </div>
-                  {client.history.length > 0 && (
-                    <div className="history">
-                      <MessageSquare size={13} />
-                      <p>“{client.history.at(-1)}”</p>
-                    </div>
-                  )}
-                  <p className="birth-month">
-                    <CalendarDays size={13} />
-                    生日月 <strong>{client.birthMonth} 月</strong>
-                  </p>
-                  <PurchaseHistory purchases={client.purchases} />
-                </div>
               </div>
               <div className="form-section">
                 <SectionHeading
@@ -670,22 +623,16 @@ function App() {
                     </Choice>
                   </div>
                   {task.greetingKind === "birthday" ? (
-                    <div className="birthday-context">
-                      <CalendarDays size={20} />
-                      <div>
-                        <strong>
-                          为{client.birthMonth}月的生日，留一份心意
-                        </strong>
-                        <p>已自动带入客户生日月，以一份从容的祝福开启问候。</p>
-                      </div>
-                    </div>
+                    <p className="field-hint">
+                      按右侧客户资料中的生日月，构思一份从容的祝福。
+                    </p>
                   ) : (
                     <>
                       <div className="sub-label">
                         选择一个节日，或写下简短背景
                       </div>
                       <div className="chips" role="group" aria-label="节日">
-                        {["元旦", "春节", "中秋节"].map((name) => (
+                        {["圣诞节", "春节", "元旦", "中秋节"].map((name) => (
                           <Choice
                             key={name}
                             active={task.greetingName === name}
@@ -740,7 +687,9 @@ function App() {
                       >
                         <CheckCheck size={20} />
                         <span>
-                          <strong>{p.productName}</strong>
+                          <strong>
+                            {resolvePurchaseDisplay(p, data).label}
+                          </strong>
                           <small>
                             {p.sku} · {p.purchaseDate}
                           </small>
@@ -1034,12 +983,28 @@ function App() {
                       <strong>
                         {validation.status === "BLOCKED"
                           ? "此请求暂不可生成"
-                          : "还差一点沟通背景"}
+                          : validation.issues.some(
+                                (issue) => issue.code === "birthday-month",
+                              )
+                            ? "生日月提示"
+                            : "还差一点沟通背景"}
                       </strong>
                     </div>
                     {validation.issues.map((i, n) => (
                       <p key={n}>{i.message}</p>
                     ))}
+                    {validation.status !== "BLOCKED" &&
+                      validation.issues.some(
+                        (issue) => issue.code === "birthday-month",
+                      ) && (
+                        <button
+                          type="button"
+                          className="outline-button"
+                          onClick={() => change({ greetingKind: "festival" })}
+                        >
+                          改为节日问候
+                        </button>
+                      )}
                   </div>
                 )}
                 {validation?.notices?.map((notice, i) => (
@@ -1074,234 +1039,243 @@ function App() {
                 </div>
               </div>
             </section>
-            <aside className="results-panel" aria-label="AI 消息结果">
-              <div className="panel-top">
-                <div>
-                  <span className="tiny-eyebrow">
-                    WORDS, WITH CONSIDERATION
-                  </span>
-                  <h2>为您构思的三种表达</h2>
-                </div>
-                <Sparkles className="results-spark" size={20} />
-              </div>
-              <div className="results-meta">
-                <span>
-                  {client.name}
-                  <ChevronRight size={11} />
-                  {currentScenario.zh}
-                </span>
-                <span className="mode-label">
-                  {result ? "3 条候选消息" : "静候您的灵感"}
-                </span>
-              </div>
-              {data.mode === "demo" && (
-                <div className="demo-notice">
-                  <Info size={14} />
-                  <span>
-                    演示模板 · 用于体验流程，并非真实 AI
-                    生成。配置服务器密钥后可使用实时模式。
-                  </span>
-                </div>
-              )}
-              {error && (
-                <div className="error-banner" role="alert">
-                  <Info size={16} />
-                  <span>{error}</span>
-                  <button aria-label="关闭错误" onClick={() => setError("")}>
-                    <X size={14} />
-                  </button>
-                </div>
-              )}
-              {busy ? (
-                <div className="loading-results" role="status">
-                  <div className="loading-emblem">
-                    <Flower2 />
-                  </div>
-                  <h3>把了解，化作恰好的语言</h3>
-                  <p>正在整理信息与核实表达，请稍候…</p>
-                  {styleLabels.map((s, i) => (
-                    <div className="skeleton-card" key={s[0]}>
-                      <span>
-                        0{i + 1} — {s[0]}
-                      </span>
-                      <div />
-                      <div />
-                      <div />
-                    </div>
-                  ))}
-                </div>
-              ) : result ? (
-                <>
-                  <div className="message-cards">
-                    {result.candidates.map((c, i) => (
-                      <article
-                        className={
-                          "message-card " + (selected === i ? "selected" : "")
-                        }
-                        key={c.style}
-                      >
-                        <div className="message-heading">
-                          <div className="style-number">0{i + 1}</div>
-                          <div>
-                            <h3>{styleLabels[i][0]}</h3>
-                            <span>{styleLabels[i][1]}</span>
-                          </div>
-                          {selected === i ? (
-                            <span className="selected-tag">
-                              <Check size={11} />
-                              已选用
-                            </span>
-                          ) : (
-                            <span className="style-tag">
-                              {["自然 · 直接", "细节 · 周全", "含蓄 · 从容"][i]}
-                            </span>
-                          )}
-                        </div>
-                        <p className="message-text">{c.text}</p>
-                        <div className="message-actions">
-                          <span>{c.text.length} 字符</span>
-                          <div>
-                            <button
-                              className="text-button"
-                              onClick={() => copy(c.text)}
-                              aria-label={"复制" + styleLabels[i][0]}
-                            >
-                              <Copy size={13} />
-                              复制
-                            </button>
-                            <button
-                              className={
-                                "select-message " +
-                                (selected === i ? "chosen" : "")
-                              }
-                              onClick={() => selectCandidate(i)}
-                            >
-                              {selected === i ? (
-                                <Check size={13} />
-                              ) : (
-                                <PenLine size={13} />
-                              )}
-                              选用并编辑
-                            </button>
-                          </div>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                  <div className="result-controls">
-                    <span>
-                      <ShieldCheck size={13} />
-                      {result.checks}
+            <div className="right-column">
+              <ClientProfile client={client} catalog={data} />
+              <aside className="results-panel" aria-label="AI 消息结果">
+                <div className="panel-top">
+                  <div>
+                    <span className="tiny-eyebrow">
+                      WORDS, WITH CONSIDERATION
                     </span>
-                    <button
-                      className="text-button"
-                      onClick={generate}
-                      disabled={busy || validation?.status !== "READY"}
-                    >
-                      <RefreshCw size={13} />
-                      重新生成
+                    <h2>为您构思的三种表达</h2>
+                  </div>
+                  <Sparkles className="results-spark" size={20} />
+                </div>
+                <div className="results-meta">
+                  <span>
+                    {client.name}
+                    <ChevronRight size={11} />
+                    {currentScenario.zh}
+                  </span>
+                  <span className="mode-label">
+                    {result ? "3 条候选消息" : "静候您的灵感"}
+                  </span>
+                </div>
+                {data.mode === "demo" && (
+                  <div className="demo-notice">
+                    <Info size={14} />
+                    <span>
+                      演示模板 · 用于体验流程，并非真实 AI
+                      生成。配置服务器密钥后可使用实时模式。
+                    </span>
+                  </div>
+                )}
+                {error && (
+                  <div className="error-banner" role="alert">
+                    <Info size={16} />
+                    <span>{error}</span>
+                    <button aria-label="关闭错误" onClick={() => setError("")}>
+                      <X size={14} />
                     </button>
                   </div>
-                  {selected !== null && (
-                    <section className="editor">
-                      <div className="editor-title">
-                        <h3>
-                          <PenLine size={15} />
-                          您的最终表达
-                        </h3>
-                        <button
-                          className="clear-button"
-                          onClick={() => setSelected(null)}
-                        >
-                          收起编辑
-                        </button>
-                      </div>
-                      <label className="sr-only" htmlFor="final-message">
-                        编辑最终消息
-                      </label>
-                      <textarea
-                        id="final-message"
-                        value={edited}
-                        onChange={(e) => {
-                          setEdited(e.target.value);
-                          setEditReview(null);
-                        }}
-                        maxLength={600}
-                      />
-                      <div className="edit-warning">
-                        <Info size={13} />
-                        <span>
-                          {edited !== result.candidates[selected].text
-                            ? "已编辑 · 尚未重新审核"
-                            : "选用原始候选 · 仍需顾问确认"}
-                        </span>
-                      </div>
-                      {editReview && (
-                        <p role="status" className="edit-review">
-                          {editReview}
-                        </p>
-                      )}
-                      <div className="editor-actions">
-                        <button
-                          className="outline-button"
-                          onClick={reviewEdit}
-                          disabled={!edited.trim()}
-                        >
-                          基础检查
-                        </button>
-                        <button
-                          className="dark-button"
-                          onClick={() => copy(edited)}
-                          disabled={!edited.trim()}
-                        >
-                          <Copy size={13} />
-                          复制最终消息
-                        </button>
-                      </div>
-                    </section>
-                  )}
-                </>
-              ) : (
-                <div className="empty-results">
-                  <div className="empty-illustration">
-                    <div className="orbit orbit-one" />
-                    <div className="orbit orbit-two" />
-                    <Flower2 />
-                    <span className="illustration-star one">✧</span>
-                    <span className="illustration-star two">✧</span>
-                    <span className="illustration-label">A PERSONAL TOUCH</span>
-                  </div>
-                  <h3>好的表达，始于用心了解</h3>
-                  <p>
-                    选择客户与沟通场景，
-                    <br />
-                    我们将为您构思三种恰如其分的表达。
-                  </p>
-                  <div className="empty-styles">
+                )}
+                {busy ? (
+                  <div className="loading-results" role="status">
+                    <div className="loading-emblem">
+                      <Flower2 />
+                    </div>
+                    <h3>把了解，化作恰好的语言</h3>
+                    <p>正在整理信息与核实表达，请稍候…</p>
                     {styleLabels.map((s, i) => (
-                      <div key={s[0]}>
-                        <span>0{i + 1}</span>
-                        <strong>{s[0]}</strong>
-                        <small>{s[1]}</small>
+                      <div className="skeleton-card" key={s[0]}>
+                        <span>
+                          0{i + 1} — {s[0]}
+                        </span>
+                        <div />
+                        <div />
+                        <div />
                       </div>
                     ))}
                   </div>
-                  <div className="empty-note">
-                    <ShieldCheck size={15} />
+                ) : result ? (
+                  <>
+                    <div className="message-cards">
+                      {result.candidates.map((c, i) => (
+                        <article
+                          className={
+                            "message-card " + (selected === i ? "selected" : "")
+                          }
+                          key={c.style}
+                        >
+                          <div className="message-heading">
+                            <div className="style-number">0{i + 1}</div>
+                            <div>
+                              <h3>{styleLabels[i][0]}</h3>
+                              <span>{styleLabels[i][1]}</span>
+                            </div>
+                            {selected === i ? (
+                              <span className="selected-tag">
+                                <Check size={11} />
+                                已选用
+                              </span>
+                            ) : (
+                              <span className="style-tag">
+                                {
+                                  ["自然 · 直接", "细节 · 周全", "含蓄 · 从容"][
+                                    i
+                                  ]
+                                }
+                              </span>
+                            )}
+                          </div>
+                          <p className="message-text">{c.text}</p>
+                          <div className="message-actions">
+                            <span>{c.text.length} 字符</span>
+                            <div>
+                              <button
+                                className="text-button"
+                                onClick={() => copy(c.text)}
+                                aria-label={"复制" + styleLabels[i][0]}
+                              >
+                                <Copy size={13} />
+                                复制
+                              </button>
+                              <button
+                                className={
+                                  "select-message " +
+                                  (selected === i ? "chosen" : "")
+                                }
+                                onClick={() => selectCandidate(i)}
+                              >
+                                {selected === i ? (
+                                  <Check size={13} />
+                                ) : (
+                                  <PenLine size={13} />
+                                )}
+                                选用并编辑
+                              </button>
+                            </div>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                    <div className="result-controls">
+                      <span>
+                        <ShieldCheck size={13} />
+                        {result.checks}
+                      </span>
+                      <button
+                        className="text-button"
+                        onClick={generate}
+                        disabled={busy || validation?.status !== "READY"}
+                      >
+                        <RefreshCw size={13} />
+                        重新生成
+                      </button>
+                    </div>
+                    {selected !== null && (
+                      <section className="editor">
+                        <div className="editor-title">
+                          <h3>
+                            <PenLine size={15} />
+                            您的最终表达
+                          </h3>
+                          <button
+                            className="clear-button"
+                            onClick={() => setSelected(null)}
+                          >
+                            收起编辑
+                          </button>
+                        </div>
+                        <label className="sr-only" htmlFor="final-message">
+                          编辑最终消息
+                        </label>
+                        <textarea
+                          id="final-message"
+                          value={edited}
+                          onChange={(e) => {
+                            setEdited(e.target.value);
+                            setEditReview(null);
+                          }}
+                          maxLength={600}
+                        />
+                        <div className="edit-warning">
+                          <Info size={13} />
+                          <span>
+                            {edited !== result.candidates[selected].text
+                              ? "已编辑 · 尚未重新审核"
+                              : "选用原始候选 · 仍需顾问确认"}
+                          </span>
+                        </div>
+                        {editReview && (
+                          <p role="status" className="edit-review">
+                            {editReview}
+                          </p>
+                        )}
+                        <div className="editor-actions">
+                          <button
+                            className="outline-button"
+                            onClick={reviewEdit}
+                            disabled={!edited.trim()}
+                          >
+                            基础检查
+                          </button>
+                          <button
+                            className="dark-button"
+                            onClick={() => copy(edited)}
+                            disabled={!edited.trim()}
+                          >
+                            <Copy size={13} />
+                            复制最终消息
+                          </button>
+                        </div>
+                      </section>
+                    )}
+                  </>
+                ) : (
+                  <div className="empty-results">
+                    <div className="empty-illustration">
+                      <div className="orbit orbit-one" />
+                      <div className="orbit orbit-two" />
+                      <Flower2 />
+                      <span className="illustration-star one">✧</span>
+                      <span className="illustration-star two">✧</span>
+                      <span className="illustration-label">
+                        A PERSONAL TOUCH
+                      </span>
+                    </div>
+                    <h3>好的表达，始于用心了解</h3>
                     <p>
-                      基于品牌手册与已存客户资料
+                      选择客户与沟通场景，
                       <br />
-                      每一条消息，都由您作最后决定。
+                      我们将为您构思三种恰如其分的表达。
                     </p>
+                    <div className="empty-styles">
+                      {styleLabels.map((s, i) => (
+                        <div key={s[0]}>
+                          <span>0{i + 1}</span>
+                          <strong>{s[0]}</strong>
+                          <small>{s[1]}</small>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="empty-note">
+                      <ShieldCheck size={15} />
+                      <p>
+                        基于品牌手册与已存客户资料
+                        <br />
+                        每一条消息，都由您作最后决定。
+                      </p>
+                    </div>
                   </div>
+                )}
+                <div className="results-bottom">
+                  <span>温暖 · 自然 · 克制</span>
+                  <Flower2 size={15} />
+                  <span>THE MAISON LIORÉ VOICE</span>
                 </div>
-              )}
-              <div className="results-bottom">
-                <span>温暖 · 自然 · 克制</span>
-                <Flower2 size={15} />
-                <span>THE MAISON LIORÉ VOICE</span>
-              </div>
-            </aside>
+              </aside>
+            </div>
           </div>
         )}
         <footer>

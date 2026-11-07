@@ -12,7 +12,7 @@ import {
   occasions,
 } from "../data/catalog.mjs";
 import { clients, events, clientProfile } from "../data/clients.mjs";
-import { evaluateRequest } from "../server/rules.mjs";
+import { evaluateRequest } from "./test-clock.mjs";
 import { demoCandidates } from "../server/generation.mjs";
 import { splitParagraphs } from "../server/message-contract.mjs";
 test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, copy and records", async (t) => {
@@ -40,6 +40,8 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
   let copied = "",
     lastTask = null,
     generateCount = 0;
+  let delayNextGeneration = null,
+    nextGenerationError = null;
   Object.defineProperty(navigator, "clipboard", {
     value: {
       writeText: async (text) => {
@@ -58,6 +60,10 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
       ...clientProfile(c),
       initial: c.initial,
       note: c.note,
+      purchases: c.purchases.map((p) => ({
+        ...p,
+        productName: "旧系统缩写 / 非官方名称",
+      })),
     })),
     mode: "demo",
   };
@@ -81,6 +87,16 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
       return { ok: true, json: async () => validation };
     if (url === "/api/generate") {
       generateCount++;
+      if (delayNextGeneration) {
+        const pending = delayNextGeneration;
+        delayNextGeneration = null;
+        await pending;
+      }
+      if (nextGenerationError) {
+        const error = nextGenerationError;
+        nextGenerationError = null;
+        return { ok: false, json: async () => ({ error }) };
+      }
       const result = {
         ...validation,
         candidates: demoCandidates(task, ctx),
@@ -92,7 +108,7 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
         createdAt: new Date().toISOString(),
         clientId: task.clientId,
         scenario: task.scenario,
-        model: "demo-template-v1.2",
+        model: "demo-template-v1.3",
         validationStatus: "READY",
         candidates: result.candidates,
         promptVersion: "advisor-1.0.0",
@@ -145,6 +161,59 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
   const group = (name) =>
     document.querySelector(`[role="group"][aria-label="${name}"]`);
   assert.equal(document.querySelectorAll("select").length, 0);
+  const profile = () =>
+    document.querySelector(".right-column > .client-profile");
+  const assertProfile = (name, advisor, month) => {
+    const card = profile();
+    assert.ok(card);
+    assert.equal(card.querySelector("h2").textContent, name);
+    assert.ok(
+      card.querySelector(".advisor-assignment").textContent.includes(advisor),
+    );
+    assert.equal(
+      card.querySelector(".profile-birth-month strong").textContent,
+      month + " 月",
+    );
+    assert.equal(
+      card.querySelectorAll("button,input,select,textarea,[contenteditable]")
+        .length,
+      0,
+    );
+    assert.ok(!card.textContent.includes("旧系统缩写"));
+    assert.ok(!card.textContent.includes("CL-"));
+  };
+  assert.equal(document.querySelector(".input-panel .client-profile"), null);
+  const right = document.querySelector(".right-column");
+  assert.equal(right.children[0], profile());
+  assert.equal(right.children[1], document.querySelector(".results-panel"));
+  assertProfile("林女士", "Sophie", 11);
+  assert.equal(profile().querySelectorAll(".purchase-history-row").length, 2);
+  assert.ok(profile().textContent.includes("Jasmin Étoilé（星夜初绽）戒指"));
+  assert.ok(profile().textContent.includes("2026-09-18"));
+  assert.ok(!profile().textContent.includes(clients[0].history[0]));
+  await act(async () =>
+    buttons()
+      .find(
+        (b) =>
+          b.classList.contains("client-choice") &&
+          b.textContent.includes("陈女士"),
+      )
+      .click(),
+  );
+  // Profile updates immediately, before the asynchronous validation debounce.
+  assertProfile("陈女士", "Camille", 3);
+  assert.ok(profile().textContent.includes("Rosée du Matin（晨露）项链"));
+  assert.ok(profile().textContent.includes("Rosée du Matin（晨露）手镯"));
+  assert.ok(profile().textContent.includes("2026-08-22"));
+  await settle();
+  await click(
+    buttons().find(
+      (b) =>
+        b.classList.contains("client-choice") &&
+        b.textContent.includes("林女士"),
+    ),
+  );
+
   assert.equal(
     dom.window
       .getComputedStyle(document.documentElement)
@@ -206,6 +275,24 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
   await click(find("生成微信消息"));
   assert.equal(document.querySelectorAll(".message-card").length, 3);
   assert.equal(generateCount, 1);
+  assertProfile("林女士", "Sophie", 11);
+  const firstMessage = document.querySelector(".message-text").textContent;
+  await click(document.querySelector('[aria-label="复制更简洁"]'));
+  assert.equal(copied, firstMessage);
+  let releaseGeneration;
+  delayNextGeneration = new Promise((resolve) => {
+    releaseGeneration = resolve;
+  });
+  await click(find("重新生成"));
+  assert.ok(document.querySelector(".loading-results"));
+  assertProfile("林女士", "Sophie", 11);
+  assert.ok(find("正在细心构思…").disabled);
+  await act(async () => releaseGeneration());
+  await settle();
+  assert.equal(generateCount, 2);
+  assert.equal(document.querySelectorAll(".message-card").length, 3);
+  assertProfile("林女士", "Sophie", 11);
+
   assert.ok(
     [...document.querySelectorAll(".message-text")].every(
       (p) => splitParagraphs(p.textContent).length === 3,
@@ -231,10 +318,28 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
   );
   await click(find("基础检查"));
   assert.ok(document.body.textContent.includes("仍需顾问核实事实与语气"));
+  nextGenerationError = "测试生成失败";
+  await click(find("重新生成"));
+  assert.ok(
+    document
+      .querySelector(".error-banner")
+      .textContent.includes("测试生成失败"),
+  );
+  assertProfile("林女士", "Sophie", 11);
+  await click(find("生成微信消息"));
+  assert.equal(document.querySelectorAll(".message-card").length, 3);
+
   await click(find("购买后关怀"));
   assert.equal(group("自然意象"), null);
   assert.equal(group("购买场合"), null);
   assert.equal(group("关怀购买记录").children.length, 2);
+  assert.ok(
+    group("关怀购买记录").children[1].textContent.includes(
+      "Jasmin Étoilé（星夜初绽）项链",
+    ),
+  );
+  assert.ok(!group("关怀购买记录").textContent.includes("旧系统缩写"));
+
   assert.equal(
     group("关怀购买记录").querySelector('[aria-pressed="true"]'),
     null,
@@ -261,6 +366,68 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
     ),
   );
   await click(find("节日问候"));
+  assert.ok(find("圣诞节"));
+  assert.ok(find("春节"));
+  await click(find("生日月祝福"));
+  await click(
+    buttons().find(
+      (b) =>
+        b.classList.contains("client-choice") &&
+        b.textContent.includes("陈女士"),
+    ),
+  );
+  await click(find("生日 / 节日祝福"));
+  assert.equal(find("生成微信消息").disabled, true);
+  const birthdayWarning = document.querySelector(".input-panel .validation");
+  assert.ok(birthdayWarning);
+  assert.match(birthdayWarning.textContent, /3 月.*11 月/);
+  assert.equal(
+    profile().querySelector(".profile-birth-month strong").textContent,
+    "3 月",
+  );
+  const previousGenerations = generateCount;
+  await click(find("生成微信消息"));
+  assert.equal(generateCount, previousGenerations);
+  await click(find("改为节日问候"));
+  await click(find("圣诞节"));
+  assert.equal(find("生成微信消息").disabled, false);
+  const notesInput = document.getElementById("notes");
+  const holidayNotes = "客户最近刚完成了一个重要项目，最近工作比较忙。";
+  await act(async () => {
+    Object.getOwnPropertyDescriptor(
+      dom.window.HTMLTextAreaElement.prototype,
+      "value",
+    ).set.call(notesInput, holidayNotes);
+    notesInput.dispatchEvent(new dom.window.Event("input", { bubbles: true }));
+  });
+  await settle();
+  await click(find("生成微信消息"));
+  assert.equal(lastTask.notes, holidayNotes);
+  assert.ok(
+    [...document.querySelectorAll(".message-text")].every(
+      (p) =>
+        /圣诞/.test(p.textContent) &&
+        /项目/.test(splitParagraphs(p.textContent)[1]),
+    ),
+  );
+  await click(find("春节"));
+  await click(find("生成微信消息"));
+  assert.ok(
+    [...document.querySelectorAll(".message-text")].every(
+      (p) =>
+        /新春|春节/.test(p.textContent) &&
+        /项目/.test(splitParagraphs(p.textContent)[1]) &&
+        !p.textContent.includes("圣诞"),
+    ),
+  );
+  await act(async () => {
+    Object.getOwnPropertyDescriptor(
+      dom.window.HTMLTextAreaElement.prototype,
+      "value",
+    ).set.call(notesInput, "");
+    notesInput.dispatchEvent(new dom.window.Event("input", { bubbles: true }));
+  });
+  await settle();
   await click(find("中秋节"));
   assert.equal(lastTask.greetingName, "中秋节");
   assert.equal(find("生成微信消息").disabled, false);
@@ -288,6 +455,12 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
       ),
     );
     assert.equal(find("生成微信消息").disabled, false, client.id);
+    assertProfile(client.name, client.assignedAdvisor, client.birthMonth);
+    assert.equal(
+      profile().querySelectorAll(".purchase-history-row").length,
+      client.purchases.length,
+    );
+
     assert.ok(
       document
         .querySelector(".advisor-assignment")
@@ -305,5 +478,5 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
     ),
   );
   assert.ok(document.querySelector(".record-list"));
-  assert.ok(document.body.textContent.includes("demo-template-v1.2"));
+  assert.ok(document.body.textContent.includes("demo-template-v1.3"));
 });

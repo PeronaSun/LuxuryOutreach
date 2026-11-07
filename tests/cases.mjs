@@ -216,7 +216,7 @@ export const cases = [
   },
   {
     id: "ML-017",
-    title: "Every demo client supports birthday month greetings",
+    title: "Wrong birthday month requires a different greeting subtype",
     input: {
       clientId: "CL-002",
       scenario: "greeting",
@@ -225,7 +225,7 @@ export const cases = [
       notes: "",
       greetingKind: "birthday",
     },
-    expectedStatus: "READY",
+    expectedStatus: "NEEDS_REVIEW",
     expectedSku: null,
   },
   {

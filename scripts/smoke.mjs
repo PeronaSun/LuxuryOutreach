@@ -6,7 +6,11 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import assert from "node:assert/strict";
 const dir = await mkdtemp(join(tmpdir(), "maison-smoke-"));
-const app = createApp({ recordDir: dir, env: { DEMO_MODE: "true" } });
+const app = createApp({
+  recordDir: dir,
+  env: { DEMO_MODE: "true" },
+  clock: () => new Date("2026-11-06T04:00:00Z"),
+});
 await new Promise((r) => app.listen(0, "127.0.0.1", r));
 const base = `http://127.0.0.1:${app.address().port}`;
 try {
@@ -52,13 +56,13 @@ try {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-  const birthday = await post({ clientId: "CL-008", scenario: "greeting" });
+  const birthday = await post({ clientId: "CL-001", scenario: "greeting" });
   assert.equal(birthday.status, 200);
   const greeting = await birthday.json();
   assert.equal(greeting.candidates.length, 3);
   assert.ok(
     greeting.candidates.every(
-      (c) => c.text.includes("6月") && !c.text.includes("今天"),
+      (c) => c.text.includes("11月") && !c.text.includes("今天"),
     ),
   );
   const care = await post({

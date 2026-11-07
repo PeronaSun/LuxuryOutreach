@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-06T18:38:57.807Z",
+  "status": "PASS",
+  "sourceFilesUnchanged": 30,
+  "protectedOutputsUnchanged": 8,
+  "evaluationCases": 18,
+  "scenarios": 6,
+  "validatedRunDirectories": 3,
+  "providerCallsRecorded": 0,
+  "notes": "Integrity and evidence-state checks only; not a subjective quality score."
+}

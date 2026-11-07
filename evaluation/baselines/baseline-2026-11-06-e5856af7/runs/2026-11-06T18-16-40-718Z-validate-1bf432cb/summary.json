@@ -1,0 +1,33 @@
+{
+  "runId": "2026-11-06T18-16-40-718Z-validate-1bf432cb",
+  "baselineId": "baseline-2026-11-06-e5856af7",
+  "mode": "validate",
+  "startedAt": "2026-11-06T18:16:40.719Z",
+  "finishedAt": "2026-11-06T18:16:40.738Z",
+  "runStatus": "VALIDATION_ONLY",
+  "cases": 18,
+  "inputStatusCounts": {
+    "READY": 15,
+    "NEEDS_REVIEW": 1,
+    "BLOCKED": 2
+  },
+  "baselineExpectationMatches": 18,
+  "desiredBusinessMismatches": [
+    "B18"
+  ],
+  "templateGenerationCompleted": 0,
+  "liveGenerationCompleted": 0,
+  "providerCalls": 0,
+  "candidateTextsRecorded": 0,
+  "generationFailures": [],
+  "externalReviewFlags": [
+    {
+      "caseId": "B18",
+      "flags": [
+        "INPUT_GATE_DIFFERS_FROM_DESIRED_BEHAVIOR"
+      ]
+    }
+  ],
+  "qualityScoresAssigned": false,
+  "configError": null
+}

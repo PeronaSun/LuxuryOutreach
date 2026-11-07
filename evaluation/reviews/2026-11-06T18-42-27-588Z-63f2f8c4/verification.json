@@ -1,0 +1,54 @@
+{
+  "verifiedAt": "2026-11-06T18:42:27.571Z",
+  "status": "PASS",
+  "baseline": "baseline-2026-11-06-e5856af7",
+  "baselineCommit": "e5856af7bd5dc85541677a8af7aed30e6722953d",
+  "currentCommit": "e5856af7bd5dc85541677a8af7aed30e6722953d",
+  "sourceFilesUnchanged": 30,
+  "priorApplicationOutputsUnchanged": 8,
+  "completedEvaluationFilesPreserved": 75,
+  "scenarioInstructionHashesVerified": 6,
+  "frozenCases": 18,
+  "scenarios": 6,
+  "recordsReconciled": 54,
+  "reviewRowsReconciled": 162,
+  "markdownDocumentsChecked": 10,
+  "localLinksVerified": 33,
+  "runs": [
+    {
+      "runId": "2026-11-06T18-16-40-718Z-validate-1bf432cb",
+      "mode": "validate",
+      "status": "VALIDATION_ONLY",
+      "records": 18,
+      "candidateTexts": 0,
+      "liveGenerations": 0,
+      "providerCalls": 0
+    },
+    {
+      "runId": "2026-11-06T18-18-04-420Z-demo-34a25af4",
+      "mode": "demo",
+      "status": "COMPLETED",
+      "records": 18,
+      "candidateTexts": 45,
+      "liveGenerations": 0,
+      "providerCalls": 0
+    },
+    {
+      "runId": "2026-11-06T18-18-04-555Z-live-373784f2",
+      "mode": "live",
+      "status": "CONFIGURATION_BLOCKED",
+      "records": 18,
+      "candidateTexts": 0,
+      "liveGenerations": 0,
+      "providerCalls": 0
+    }
+  ],
+  "newGenerationsPerformed": 0,
+  "newProviderCalls": 0,
+  "subjectiveScoresAssigned": false,
+  "pending": [
+    "Live-model baseline execution: API key is not configured.",
+    "Human rubric scoring: not performed; real-model outputs are unavailable."
+  ],
+  "note": "Read-only integrity and artifact checks; this is not a new generation run or a language-quality score."
+}

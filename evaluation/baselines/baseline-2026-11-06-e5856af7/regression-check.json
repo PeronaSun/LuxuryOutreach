@@ -1,0 +1,11 @@
+{
+  "recordedAt": "2026-11-06T18:38:57.808Z",
+  "command": "npm test",
+  "exitCode": 0,
+  "tests": 79,
+  "passed": 79,
+  "failed": 0,
+  "durationMs": 8521.536958,
+  "evidenceType": "Observed command summary from this audit session; full raw stdout was not saved.",
+  "scope": "Unchanged existing regression suite; provider tests use mocks. This is not a live-language-quality result."
+}

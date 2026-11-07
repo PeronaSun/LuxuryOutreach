@@ -1,0 +1,290 @@
+{
+  "schemaVersion": "baseline-record-v1",
+  "id": "baseline-2026-11-06-e5856af7",
+  "capturedAt": "2026-11-06T18:13:13.234Z",
+  "clientDate": "2026-11-06",
+  "clientTimezone": "America/New_York",
+  "git": {
+    "commit": "e5856af7bd5dc85541677a8af7aed30e6722953d",
+    "branch": "main",
+    "subject": "Initial Maison Liore MVP",
+    "statusBeforeCapture": "",
+    "scope": "tracked working-tree bytes; original production files were clean before evaluation artifacts were added"
+  },
+  "applicationVersion": "1.0.0",
+  "node": "v24.16.0",
+  "npm": "11.13.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "versions": {
+    "prompt": "advisor-1.2.0",
+    "brandBible": "1.0 · 2026-11",
+    "messageFormat": "three-paragraph-v1",
+    "demoModel": "demo-template-v1.2"
+  },
+  "config": {
+    "apiKeyConfigured": false,
+    "envFilePresent": false,
+    "demoModeEnv": null,
+    "effectiveApplicationMode": "demo",
+    "configuredModel": "gpt-4.1-mini",
+    "modelIsAliasOrSnapshot": "Recorded configured identifier; actual provider-returned model is unknown until a live request",
+    "endpoint": "https://api.openai.com/v1/responses",
+    "store": false,
+    "strictJsonSchema": true,
+    "maxOutputTokensPerCall": 1800,
+    "timeoutMsPerCall": 45000,
+    "generationAndAuditUseSameModel": true,
+    "maxProviderCallsPerReadyCase": 2,
+    "retryCount": 0,
+    "temperature": "not sent",
+    "seed": "not sent",
+    "observation": "Configuration only; no API key or other secret is copied into artifacts."
+  },
+  "dependencies": {
+    "lucide-react": {
+      "declared": "^0.468.0",
+      "locked": "0.468.0",
+      "installed": "0.468.0"
+    },
+    "react": {
+      "declared": "^19.0.0",
+      "locked": "19.3.1",
+      "installed": "19.3.1"
+    },
+    "react-dom": {
+      "declared": "^19.0.0",
+      "locked": "19.3.1",
+      "installed": "19.3.1"
+    },
+    "jsdom": {
+      "declared": "^30.1.3",
+      "locked": "30.1.3",
+      "installed": "30.1.3"
+    },
+    "prettier": {
+      "declared": "^3.9.10",
+      "locked": "3.9.10",
+      "installed": "3.9.10"
+    },
+    "vite": {
+      "declared": "^6.0.0",
+      "locked": "6.4.5",
+      "installed": "6.4.5"
+    }
+  },
+  "promptFingerprints": {
+    "greeting": {
+      "instructionsSha256": "26c567e56e6388cc744729ba018cc8cb7b2cdcb8489d9dab1ada516806ce0a10",
+      "characters": 6471
+    },
+    "recommend": {
+      "instructionsSha256": "3cb495ceaa8326e36b9819f62bf156e2333aff8682717abc2bdd09640124bc10",
+      "characters": 6402
+    },
+    "care": {
+      "instructionsSha256": "13fca2607c51aa490b1cf698b6fbc57520e57419d18f8939c676554008a6ef13",
+      "characters": 6434
+    },
+    "reactivate": {
+      "instructionsSha256": "eda729ed25500695b142f150c82b175afeecbcbdab4bf0de6bf77583391dfdfd",
+      "characters": 6413
+    },
+    "event": {
+      "instructionsSha256": "5b6eb8d79ef0237e96fc159cbe32c396a081bb70ba4ad0282713c74fb3845a63",
+      "characters": 6403
+    },
+    "price": {
+      "instructionsSha256": "d5893ce858406c75e8d1aceab3960dc0a2dabb4e7f139190f7c6bab74e6dcf4a",
+      "characters": 6406
+    }
+  },
+  "sourceFingerprint": "5cd61fb492464eba5cdce9b78dfc457b2a5bf035f3512e0b644320b7696a01a3",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "bd9f27ca91ab3aa7e1bcb2d7ef242f2cf427085acc94d873642b1442592169d7",
+      "bytes": 214
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "7c71c4f0869bda4bd2f67c53eaa67558c2b84e64c27bda44d68b5ac6847c0fb3",
+      "bytes": 44
+    },
+    {
+      "path": "README.md",
+      "sha256": "d2fa10d9f2b05d6ef50556f7f6c425dcb5e16ffff58c3d9cf1d10ab84519b327",
+      "bytes": 15128
+    },
+    {
+      "path": "data/catalog.mjs",
+      "sha256": "69d130d4077dace07a4702e8f624c52c1a83436ea88ae6d8ac427a1d79205107",
+      "bytes": 5312
+    },
+    {
+      "path": "data/clients.mjs",
+      "sha256": "808e8d68e6d55d195fd7db17c3cdcc73c3e5f0db094fc627301a9176a560b2e4",
+      "bytes": 6848
+    },
+    {
+      "path": "docs/Maison_Liore_Fictional_Brand_Bible_v1.docx",
+      "sha256": "b5fc813bd4c314ed20447f3cd80187124e45d76150cd3b941e92d9c21e8d6fbb",
+      "bytes": 45888
+    },
+    {
+      "path": "docs/brand-bible-v1.txt",
+      "sha256": "ce4be633ea9f8b85f012a59088a188592a257141e7e9efd62fffabcdf7f82669",
+      "bytes": 12567
+    },
+    {
+      "path": "docs/evaluation-report.md",
+      "sha256": "416657aed3d6e533abde370699145b3147a1255c172af6dcae84bcd1bae4dc15",
+      "bytes": 10205
+    },
+    {
+      "path": "docs/evaluation/demo-results.csv",
+      "sha256": "597329eacb5730dafb63bdb631b168be32f92b300ab3ccfe301b0dfa81cf0678",
+      "bytes": 38637
+    },
+    {
+      "path": "docs/evaluation/demo-results.json",
+      "sha256": "e37212e342b245ba9dbf478f7ba8eb9ca96e3ea52d4d190dac245ddfffff337e",
+      "bytes": 72085
+    },
+    {
+      "path": "docs/implementation-log.md",
+      "sha256": "d126cfd654150892f02e1a8b4a42296bfb4b160a740e99e8696e8c06cda3203a",
+      "bytes": 11672
+    },
+    {
+      "path": "index.html",
+      "sha256": "8c67acc55d79d5d394c8ce3e005759848d95916edb568a96f752e563d53f0ca4",
+      "bytes": 461
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "bbca1ff5bcb53d2569a9401c050960147204e9e84d0efc0c1bcecb543f58fe03",
+      "bytes": 55217
+    },
+    {
+      "path": "package.json",
+      "sha256": "7d6e8fa5604ec595fa87d91e3bd239c7600058554ba457758571a3c77d2c85b7",
+      "bytes": 854
+    },
+    {
+      "path": "scripts/dev.mjs",
+      "sha256": "e390ab83e6ca3db78d4e1521b17357adab236f1b098e51284ff90ac1d835fccf",
+      "bytes": 578
+    },
+    {
+      "path": "scripts/evaluate.mjs",
+      "sha256": "9d0f46d655880fb280f6b8944d9c99a44d441e50d46a98e54ffc291f72f0f646",
+      "bytes": 2956
+    },
+    {
+      "path": "scripts/smoke.mjs",
+      "sha256": "2c888f9cf5a62ac486d535f23a3d6ccee6a4caf5842d39527b748c993411d89c",
+      "bytes": 3278
+    },
+    {
+      "path": "server/generation.mjs",
+      "sha256": "0849a9ec660f86dcb370c80ab93d502e916e4ae0b8783896525042007654e556",
+      "bytes": 16659
+    },
+    {
+      "path": "server/index.mjs",
+      "sha256": "391fa0ac528a68e14802bccc6b98d259763920fcc584a8055c1823addc71dee5",
+      "bytes": 10711
+    },
+    {
+      "path": "server/message-contract.mjs",
+      "sha256": "0cc220c118a435a84c810f644330db3915728c773ffd4bb2e7bcf8651b831285",
+      "bytes": 4633
+    },
+    {
+      "path": "server/rules.mjs",
+      "sha256": "2b6a24a65123557cabd456bac29649329382918d7ff5b304ce3694648568aa8f",
+      "bytes": 12427
+    },
+    {
+      "path": "src/main.jsx",
+      "sha256": "a9941f16aec823e8174ba9cbd173f5d5637392f3b8fcde8b158b99337a13bdca",
+      "bytes": 48492
+    },
+    {
+      "path": "src/selection.mjs",
+      "sha256": "9abcb8ae0fff630aacb70bd8f103edbb6cc2be196301348890cc24b50e948b6b",
+      "bytes": 407
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "658d1994dcdacf90b9de98ce457e1dcb1cd09b14fa60c6b775effcc1b4d1d85d",
+      "bytes": 36502
+    },
+    {
+      "path": "tests/api.test.mjs",
+      "sha256": "b12cc12086bc609d2325bb58fb3be6b3f5f2d7d962ce68114987f8ea23aabecc",
+      "bytes": 6967
+    },
+    {
+      "path": "tests/cases.mjs",
+      "sha256": "0679c8db91130d8627fee0f5dab57d995d58bfa5c0d94f18bf403a0a5b67a158",
+      "bytes": 14897
+    },
+    {
+      "path": "tests/message-structure.test.mjs",
+      "sha256": "1c512d1887c07e1e2d7c76a594fe957aad2be3c3d2ab9336e98a3e424efdae3b",
+      "bytes": 9741
+    },
+    {
+      "path": "tests/rules.test.mjs",
+      "sha256": "d9a94c62a47846e19e6db9e6f3e272e16dbca9635b26bf5ec03977053bbd2afa",
+      "bytes": 11783
+    },
+    {
+      "path": "tests/ui.test.mjs",
+      "sha256": "4f9f4b353c5be5b4a0bf73fa56f207ff92a399c30f4be44335dc0bf9221e8d9d",
+      "bytes": 10478
+    },
+    {
+      "path": "vite.config.js",
+      "sha256": "7c4d87f537acd619d0deef728c01108b843d66e037cd3dbc521fc2f6af2f5a3e",
+      "bytes": 269
+    }
+  ],
+  "protectedOutputs": [
+    {
+      "path": "runtime/evaluation-demo.csv",
+      "sha256": "597329eacb5730dafb63bdb631b168be32f92b300ab3ccfe301b0dfa81cf0678"
+    },
+    {
+      "path": "runtime/evaluation-demo.json",
+      "sha256": "e37212e342b245ba9dbf478f7ba8eb9ca96e3ea52d4d190dac245ddfffff337e"
+    },
+    {
+      "path": "runtime/records.jsonl",
+      "sha256": "a87516ea6c802a69c7a657d85ec44ab08a9874fb73d1aa4eb2bb9fcd9eaafaa3"
+    },
+    {
+      "path": "dist/assets/index-DV6mh1T7.js",
+      "sha256": "2bfce0086fbd7af57aeaa03dbef2fdd1ad6d0bcc84b11925e2f040ab2543ad87"
+    },
+    {
+      "path": "dist/assets/index-P6mBbTJ3.css",
+      "sha256": "4c187db1183255f157b8ab914cf5eb67323c823abcfaabb2414508beddb51523"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "d3257600bbd539e61911b3325781bce979dc02f5d07d60f0edb32c458222984d"
+    },
+    {
+      "path": "docs/evaluation/demo-results.csv",
+      "sha256": "597329eacb5730dafb63bdb631b168be32f92b300ab3ccfe301b0dfa81cf0678"
+    },
+    {
+      "path": "docs/evaluation/demo-results.json",
+      "sha256": "e37212e342b245ba9dbf478f7ba8eb9ca96e3ea52d4d190dac245ddfffff337e"
+    }
+  ],
+  "auditPromptFingerprintNote": "Audit prompt is inline in server/generation.mjs; the frozen source hash covers it. Actual audit requests/reasons will be retained by the isolated runner if live execution occurs."
+}

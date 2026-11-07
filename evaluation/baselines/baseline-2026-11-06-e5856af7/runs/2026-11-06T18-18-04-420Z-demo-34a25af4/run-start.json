@@ -1,0 +1,17 @@
+{
+  "runId": "2026-11-06T18-18-04-420Z-demo-34a25af4",
+  "baselineId": "baseline-2026-11-06-e5856af7",
+  "mode": "demo",
+  "startedAt": "2026-11-06T18:18:04.421Z",
+  "commit": "e5856af7bd5dc85541677a8af7aed30e6722953d",
+  "sourceFingerprint": "5cd61fb492464eba5cdce9b78dfc457b2a5bf035f3512e0b644320b7696a01a3",
+  "baselineVersionSha256": "f4f789c19ed2740a03f26af190d3a5e78f8acb125a63b8dbcd41e7e304a86b7d",
+  "casesSha256": "f4cc59a8ed2ba17c6c35e469999e33a284d3378a6e2d17bbdae2eadd231d819e",
+  "runnerSha256": "316a66de5723a89d9aebdb8a16d30d7627e1351bc21e10732358dbecd9255df4",
+  "configuredModel": "gpt-4.1-mini",
+  "keyConfigured": false,
+  "configError": null,
+  "productionEntryPoint": "Frozen snapshot generate(); this is a core-pipeline evaluation, not an HTTP/UI end-to-end run.",
+  "modeOverride": "Explicit demo:true; no model requests.",
+  "scoring": "Human review pending; no subjective scores assigned."
+}
