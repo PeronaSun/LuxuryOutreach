@@ -1,0 +1,452 @@
+{
+  "id": "F-016",
+  "input": {
+    "clientId": "CL-004",
+    "scenario": "recommend",
+    "motif": "muguet",
+    "line": "clochette",
+    "sku": "MUG-C-N01",
+    "occasion": "wedding"
+  },
+  "normalizedInput": {
+    "clientId": "CL-004",
+    "scenario": "recommend",
+    "motif": "muguet",
+    "line": "clochette",
+    "sku": "MUG-C-N01",
+    "occasion": "wedding"
+  },
+  "expectedBehavior": "Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-004",
+      "name": "周女士",
+      "assignedAdvisor": "Nora",
+      "interests": [
+        {
+          "motif": "muguet",
+          "line": "clochette",
+          "category": "项链"
+        }
+      ],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-004-01",
+          "sku": "MUG-C-N01",
+          "productName": "多花冠错落垂坠项链",
+          "motif": "muguet",
+          "line": "clochette",
+          "category": "项链",
+          "purchaseDate": "2026-09-06",
+          "purchasePrice": 118000
+        }
+      ],
+      "history": [
+        "正在了解适合婚礼场合佩戴的项链，尚未选定。"
+      ],
+      "birthMonth": 9
+    },
+    "resolved": {
+      "product": {
+        "sku": "MUG-C-N01",
+        "line": "clochette",
+        "motif": "muguet",
+        "category": "项链",
+        "name": "多花冠错落垂坠项链",
+        "material": "18K白金",
+        "gemstone": null,
+        "price": 118000
+      },
+      "scope": [
+        {
+          "sku": "MUG-C-N01",
+          "line": "clochette",
+          "motif": "muguet",
+          "category": "项链",
+          "name": "多花冠错落垂坠项链",
+          "material": "18K白金",
+          "gemstone": null,
+          "price": 118000
+        }
+      ],
+      "reason": "采用顾问明确选择的 SKU。"
+    },
+    "event": null,
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-004",
+        "scenario": "recommend",
+        "motif": "muguet",
+        "line": "clochette",
+        "sku": "MUG-C-N01",
+        "occasion": "wedding"
+      },
+      "clientId": "CL-004",
+      "assignedAdvisor": "Nora",
+      "scenario": "recommend",
+      "selection": {
+        "depth": 4,
+        "motif": {
+          "state": "explicit",
+          "value": "muguet",
+          "applicable": true
+        },
+        "line": {
+          "state": "explicit",
+          "value": "clochette",
+          "applicable": true
+        },
+        "sku": {
+          "state": "explicit",
+          "value": "MUG-C-N01",
+          "applicable": true
+        },
+        "occasion": {
+          "state": "explicit",
+          "value": "wedding",
+          "applicable": true
+        }
+      },
+      "conversationHistory": [
+        "正在了解适合婚礼场合佩戴的项链，尚未选定。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "sku",
+        "mode": "explicit_sku",
+        "motif": {
+          "id": "muguet",
+          "name": "Muguet de Lumière",
+          "zh": "光之铃兰",
+          "story": "铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。"
+        },
+        "line": {
+          "id": "clochette",
+          "motif": "muguet",
+          "name": "Clochette Royale",
+          "zh": "典礼铃音",
+          "occasions": [
+            "gift"
+          ],
+          "story": "将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。"
+        },
+        "product": {
+          "sku": "MUG-C-N01",
+          "line": "clochette",
+          "motif": "muguet",
+          "category": "项链",
+          "name": "多花冠错落垂坠项链",
+          "material": "18K白金",
+          "gemstone": null,
+          "price": 118000
+        },
+        "storyRequired": true,
+        "productFactsAllowed": true,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.013417000009212643,
+      "resolutionMs": 0.46145799999067094,
+      "totalMs": 1.5840420000022277
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n您正在为婚礼场合寻找项链，铃兰垂落的小钟形花冠恰好像把祝福轻轻递到掌心。这款多花冠错落垂坠项链以18K白金呈现层叠花序，安静而适合仪式与庆祝的片刻。\n\n如您感兴趣，欢迎随时与我聊聊作品细节。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n光之铃兰的意象，是低垂的花冠把祝福轻轻递到掌心；Clochette Royale 典礼铃音将这私密祝愿放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。这款多花冠错落垂坠项链以18K白金打造，多朵花冠错落垂落，正适合婚礼场合的仪式与庆祝氛围。您此前关注铃兰系列项链，这件作品延续了同一份含蓄的祝愿。\n\n您若想了解更多材质与设计细节，随时可以告诉我。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n铃兰低垂，像把祝福轻轻递到掌心；层叠花序如一串静默的钟声，为婚礼的仪式与庆祝留下温柔回响。这款多花冠错落垂坠项链以18K白金承托错落花冠，让那一刻安静地陪伴在侧。\n\n如果您愿意，我很乐意继续为您介绍这件作品。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:58:25.310Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 4524.974666999988,
+    "contextTimings": {
+      "normalizationMs": 0.013417000009212643,
+      "resolutionMs": 0.46145799999067094,
+      "totalMs": 1.5840420000022277
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.035499999998137355,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.1093329999857815
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 3174.951291999998,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3175.1250829999917
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.1315000000031432,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3175.2635829999927
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 3175.099125000008,
+        "inputTokens": 3644,
+        "cachedInputTokens": 1792,
+        "outputTokens": 297,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3175.270749999996
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.0065420000028098,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3175.300916999986
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.01983400000608526,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3175.323041999989
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.46712500001012813,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3175.848207999996
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1348.6275419999874,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4524.5773749999935
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.32274999999208376,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4524.907999999996
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1348.9674169999926,
+        "inputTokens": 3706,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4524.915624999994
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.009874999988824129,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4524.950666999997
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.01087500000721775,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4524.963916999986
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.003708000003825873,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4524.973207999996
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 4525.502124999999,
+  "completedAt": "2026-11-07T19:58:29.836Z",
+  "providerAttempts": [
+    {
+      "index": 33,
+      "caseId": "F-016",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:58:25.310Z",
+      "promptSha256": "0202fdb6446b5e8bf0b99b6bf6ee8e4a7b28c304f18a6bb7d0cbf82f52afe50d",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3644,
+        "input_tokens_details": {
+          "cached_tokens": 1792
+        },
+        "output_tokens": 297,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3941
+      },
+      "status": "completed",
+      "durationMs": 3173.243000000002,
+      "completedAt": "2026-11-07T19:58:28.484Z"
+    },
+    {
+      "index": 34,
+      "caseId": "F-016",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:58:28.486Z",
+      "promptSha256": "0847fa4fb2b096bf660348ec21f0c354bbfebb14780de5e2068a485fa88a2bc2",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3706,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3721
+      },
+      "status": "completed",
+      "durationMs": 1346.7461659999972,
+      "completedAt": "2026-11-07T19:58:29.833Z"
+    }
+  ],
+  "apiLatencyMs": 4519.989165999999,
+  "tokenUsage": {
+    "input": 7350,
+    "cached": 2688,
+    "output": 312,
+    "callsWithoutUsage": 0
+  }
+}

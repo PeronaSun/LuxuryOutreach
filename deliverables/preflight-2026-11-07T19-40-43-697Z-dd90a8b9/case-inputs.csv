@@ -1,0 +1,4079 @@
+﻿"Case ID","Scenario","Client information","Conversation history","Product information","Output 1","Output 2","Output 3"
+"F-001","生日 / 节日祝福","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": ""birthday"",
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-002","生日 / 节日祝福","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户刚完成一个项目，最近比较忙。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": ""birthday"",
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-003","生日 / 节日祝福","{
+  ""id"": ""CL-002"",
+  ""name"": ""陈女士"",
+  ""assignedAdvisor"": ""Camille"",
+  ""interests"": [
+    {
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""gemstone"": ""海蓝宝"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-002-01"",
+      ""sku"": ""MUG-R-N01"",
+      ""productName"": ""单枝铃兰垂坠式吊坠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-08-22"",
+      ""purchasePrice"": 29800,
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    },
+    {
+      ""id"": ""PUR-002-02"",
+      ""sku"": ""MUG-R-B01"",
+      ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""手镯"",
+      ""purchaseDate"": ""2026-04-15"",
+      ""purchasePrice"": 19800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    }
+  ],
+  ""history"": [
+    ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+  ],
+  ""birthMonth"": 3,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": ""festival"",
+  ""greetingName"": ""圣诞节"",
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.""
+}","[
+  ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-004","生日 / 节日祝福","{
+  ""id"": ""CL-002"",
+  ""name"": ""陈女士"",
+  ""assignedAdvisor"": ""Camille"",
+  ""interests"": [
+    {
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""gemstone"": ""海蓝宝"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-002-01"",
+      ""sku"": ""MUG-R-N01"",
+      ""productName"": ""单枝铃兰垂坠式吊坠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-08-22"",
+      ""purchasePrice"": 29800,
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    },
+    {
+      ""id"": ""PUR-002-02"",
+      ""sku"": ""MUG-R-B01"",
+      ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""手镯"",
+      ""purchaseDate"": ""2026-04-15"",
+      ""purchasePrice"": 19800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    }
+  ],
+  ""history"": [
+    ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+  ],
+  ""birthMonth"": 3,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户刚完成一个项目，最近比较忙。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": ""festival"",
+  ""greetingName"": ""圣诞节"",
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.""
+}","[
+  ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-005","生日 / 节日祝福","{
+  ""id"": ""CL-009"",
+  ""name"": ""黎女士"",
+  ""assignedAdvisor"": ""Juliette"",
+  ""interests"": [],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-009-01"",
+      ""sku"": ""MUG-R-R01"",
+      ""productName"": ""双花苞开口戒与梨形钻石露珠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-25"",
+      ""purchasePrice"": 24800
+    }
+  ],
+  ""history"": [],
+  ""birthMonth"": 10,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": ""festival"",
+  ""greetingName"": ""春节"",
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.""
+}","[]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-006","生日 / 节日祝福","{
+  ""id"": ""CL-005"",
+  ""name"": ""许先生"",
+  ""assignedAdvisor"": ""Claire"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""category"": ""手镯""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-005-01"",
+      ""sku"": ""FEU-A-N01"",
+      ""productName"": ""梨形海蓝宝吊坠与叶片光环"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-10-10"",
+      ""purchasePrice"": 138000,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    },
+    {
+      ""id"": ""PUR-005-02"",
+      ""sku"": ""FEU-A-R01"",
+      ""productName"": ""椭圆海蓝宝主石与叶片托镶"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-07-06"",
+      ""purchasePrice"": 68800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    }
+  ],
+  ""history"": [
+    ""想挑一份礼物，收礼人的偏好还需要确认。""
+  ],
+  ""birthMonth"": 12,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户最近比较忙。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": ""festival"",
+  ""greetingName"": ""春节"",
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.""
+}","[
+  ""想挑一份礼物，收礼人的偏好还需要确认。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-007","生日 / 节日祝福","{
+  ""id"": ""CL-006"",
+  ""name"": ""沈女士"",
+  ""assignedAdvisor"": ""Élise"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""material"": ""18K白金""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-006-01"",
+      ""sku"": ""MUG-R-B01"",
+      ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""手镯"",
+      ""purchaseDate"": ""2026-10-12"",
+      ""purchasePrice"": 19800
+    }
+  ],
+  ""history"": [
+    ""已购晨露手镯，想聊聊最近的佩戴体验。""
+  ],
+  ""birthMonth"": 5,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": ""festival"",
+  ""greetingName"": ""中秋节"",
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.""
+}","[
+  ""已购晨露手镯，想聊聊最近的佩戴体验。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-008","生日 / 节日祝福","{
+  ""id"": ""CL-003"",
+  ""name"": ""吴女士"",
+  ""assignedAdvisor"": ""Amélie"",
+  ""interests"": [
+    {
+      ""material"": ""18K白金"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K白金"",
+    ""text"": ""最近明确表示只考虑白金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-003-01"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-07-20"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal""
+    }
+  ],
+  ""history"": [
+    ""日常佩戴更喜欢白金项链，线条希望简洁。""
+  ],
+  ""birthMonth"": 7,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": ""festival"",
+  ""greetingName"": ""元旦"",
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.""
+}","[
+  ""日常佩戴更喜欢白金项链，线条希望简洁。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-009","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""sku"": ""JAS-B01"",
+    ""purchaseOccasion"": ""personal"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户喜欢低调、适合日常佩戴的珠宝，不喜欢过于夸张的设计。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-B01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""手镯"",
+    ""name"": ""细窄硬镯，半开花形点缀"",
+    ""material"": ""18K玫瑰金"",
+    ""gemstone"": null,
+    ""price"": 26800,
+    ""displayedPrice"": ""¥26,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-010","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""sku"": ""JAS-B01"",
+    ""purchaseOccasion"": ""wedding"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户喜欢低调、适合日常佩戴的珠宝，不喜欢过于夸张的设计。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-B01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""手镯"",
+    ""name"": ""细窄硬镯，半开花形点缀"",
+    ""material"": ""18K玫瑰金"",
+    ""gemstone"": null,
+    ""price"": 26800,
+    ""displayedPrice"": ""¥26,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-011","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""sku"": ""JAS-B01"",
+    ""purchaseOccasion"": ""gift"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户喜欢低调、适合日常佩戴的珠宝，不喜欢过于夸张的设计。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-B01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""手镯"",
+    ""name"": ""细窄硬镯，半开花形点缀"",
+    ""material"": ""18K玫瑰金"",
+    ""gemstone"": null,
+    ""price"": 26800,
+    ""displayedPrice"": ""¥26,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-012","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""sku"": ""JAS-R01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-R01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""戒指"",
+    ""name"": ""五瓣茉莉开口戒，花心小钻"",
+    ""material"": ""18K玫瑰金"",
+    ""gemstone"": ""钻石"",
+    ""price"": 18800,
+    ""displayedPrice"": ""¥18,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-013","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": ""rosee"",
+    ""sku"": ""MUG-R-R01"",
+    ""purchaseOccasion"": ""personal"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""name"": ""Rosée du Matin"",
+    ""zh"": ""晨露"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。""
+  },
+  ""product"": {
+    ""sku"": ""MUG-R-R01"",
+    ""line"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""category"": ""戒指"",
+    ""name"": ""双花苞开口戒与梨形钻石露珠"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""钻石"",
+    ""price"": 24800,
+    ""displayedPrice"": ""¥24,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-014","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": ""clochette"",
+    ""sku"": ""MUG-C-R01"",
+    ""purchaseOccasion"": ""gift"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""clochette"",
+    ""motif"": ""muguet"",
+    ""name"": ""Clochette Royale"",
+    ""zh"": ""典礼铃音"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。""
+  },
+  ""product"": {
+    ""sku"": ""MUG-C-R01"",
+    ""line"": ""clochette"",
+    ""motif"": ""muguet"",
+    ""category"": ""戒指"",
+    ""name"": ""三朵铃兰簇状戒，密镶钻石"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""钻石"",
+    ""price"": 56800,
+    ""displayedPrice"": ""¥56,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-015","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": ""clochette"",
+    ""sku"": ""MUG-C-B01"",
+    ""purchaseOccasion"": ""gift"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""clochette"",
+    ""motif"": ""muguet"",
+    ""name"": ""Clochette Royale"",
+    ""zh"": ""典礼铃音"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。""
+  },
+  ""product"": {
+    ""sku"": ""MUG-C-B01"",
+    ""line"": ""clochette"",
+    ""motif"": ""muguet"",
+    ""category"": ""手镯"",
+    ""name"": ""半硬镯，沿腕延展铃兰花序"",
+    ""material"": ""18K白金"",
+    ""gemstone"": null,
+    ""price"": 78800,
+    ""displayedPrice"": ""¥78,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-016","产品推荐","{
+  ""id"": ""CL-004"",
+  ""name"": ""周女士"",
+  ""assignedAdvisor"": ""Nora"",
+  ""interests"": [
+    {
+      ""motif"": ""muguet"",
+      ""line"": ""clochette"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-004-01"",
+      ""sku"": ""MUG-C-N01"",
+      ""productName"": ""多花冠错落垂坠项链"",
+      ""motif"": ""muguet"",
+      ""line"": ""clochette"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-09-06"",
+      ""purchasePrice"": 118000
+    }
+  ],
+  ""history"": [
+    ""正在了解适合婚礼场合佩戴的项链，尚未选定。""
+  ],
+  ""birthMonth"": 9,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": ""clochette"",
+    ""sku"": ""MUG-C-N01"",
+    ""purchaseOccasion"": ""wedding"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""正在了解适合婚礼场合佩戴的项链，尚未选定。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""clochette"",
+    ""motif"": ""muguet"",
+    ""name"": ""Clochette Royale"",
+    ""zh"": ""典礼铃音"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。""
+  },
+  ""product"": {
+    ""sku"": ""MUG-C-N01"",
+    ""line"": ""clochette"",
+    ""motif"": ""muguet"",
+    ""category"": ""项链"",
+    ""name"": ""多花冠错落垂坠项链"",
+    ""material"": ""18K白金"",
+    ""gemstone"": null,
+    ""price"": 118000,
+    ""displayedPrice"": ""¥118,000""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-017","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""vive"",
+    ""sku"": ""FEU-V-B01"",
+    ""purchaseOccasion"": ""personal"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""vive"",
+    ""motif"": ""feuille"",
+    ""name"": ""Feuille Vive"",
+    ""zh"": ""新生叶"",
+    ""occasions"": [
+      ""personal""
+    ],
+    ""story"": ""一片新叶舒展时，柔软的曲线孕育坚定的生命力：成长无须急促，自有方向。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-V-B01"",
+    ""line"": ""vive"",
+    ""motif"": ""feuille"",
+    ""category"": ""手镯"",
+    ""name"": ""交叠叶脉开口硬镯"",
+    ""material"": ""18K黄金"",
+    ""gemstone"": null,
+    ""price"": 38800,
+    ""displayedPrice"": ""¥38,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-018","产品推荐","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""vive"",
+    ""sku"": ""FEU-V-N01"",
+    ""purchaseOccasion"": ""personal"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""vive"",
+    ""motif"": ""feuille"",
+    ""name"": ""Feuille Vive"",
+    ""zh"": ""新生叶"",
+    ""occasions"": [
+      ""personal""
+    ],
+    ""story"": ""一片新叶舒展时，柔软的曲线孕育坚定的生命力：成长无须急促，自有方向。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-V-N01"",
+    ""line"": ""vive"",
+    ""motif"": ""feuille"",
+    ""category"": ""项链"",
+    ""name"": ""修长叶片吊坠，绿色珐琅"",
+    ""material"": ""18K黄金"",
+    ""gemstone"": ""绿色珐琅"",
+    ""price"": 25800,
+    ""displayedPrice"": ""¥25,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-019","产品推荐","{
+  ""id"": ""CL-005"",
+  ""name"": ""许先生"",
+  ""assignedAdvisor"": ""Claire"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""category"": ""手镯""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-005-01"",
+      ""sku"": ""FEU-A-N01"",
+      ""productName"": ""梨形海蓝宝吊坠与叶片光环"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-10-10"",
+      ""purchasePrice"": 138000,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    },
+    {
+      ""id"": ""PUR-005-02"",
+      ""sku"": ""FEU-A-R01"",
+      ""productName"": ""椭圆海蓝宝主石与叶片托镶"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-07-06"",
+      ""purchasePrice"": 68800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    }
+  ],
+  ""history"": [
+    ""想挑一份礼物，收礼人的偏好还需要确认。""
+  ],
+  ""birthMonth"": 12,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""aqua"",
+    ""sku"": ""FEU-A-B01"",
+    ""purchaseOccasion"": ""gift"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[
+  ""想挑一份礼物，收礼人的偏好还需要确认。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""name"": ""Aqua Héritage"",
+    ""zh"": ""澄蓝传承"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-A-B01"",
+    ""line"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""category"": ""手镯"",
+    ""name"": ""中央海蓝宝与两侧叶脉造型"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""海蓝宝"",
+    ""price"": 98800,
+    ""displayedPrice"": ""¥98,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-020","产品推荐","{
+  ""id"": ""CL-009"",
+  ""name"": ""黎女士"",
+  ""assignedAdvisor"": ""Juliette"",
+  ""interests"": [],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-009-01"",
+      ""sku"": ""MUG-R-R01"",
+      ""productName"": ""双花苞开口戒与梨形钻石露珠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-25"",
+      ""purchasePrice"": 24800
+    }
+  ],
+  ""history"": [],
+  ""birthMonth"": 10,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.""
+}","[]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""name"": ""Aqua Héritage"",
+    ""zh"": ""澄蓝传承"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-A-B01"",
+    ""line"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""category"": ""手镯"",
+    ""name"": ""中央海蓝宝与两侧叶脉造型"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""海蓝宝"",
+    ""price"": 98800,
+    ""displayedPrice"": ""¥98,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""deterministic_recommendation"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-021","购买后关怀","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": ""PUR-001-01""
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-R01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""戒指"",
+    ""name"": ""五瓣茉莉开口戒，花心小钻"",
+    ""material"": ""18K玫瑰金"",
+    ""gemstone"": ""钻石"",
+    ""price"": 18800,
+    ""displayedPrice"": ""¥18,800""
+  },
+  ""selectedHistoricalPurchase"": {
+    ""id"": ""PUR-001-01"",
+    ""sku"": ""JAS-R01"",
+    ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""category"": ""戒指"",
+    ""purchaseDate"": ""2026-09-18"",
+    ""purchasePrice"": 18800,
+    ""occasion"": ""personal"",
+    ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+  },
+  ""selectionMode"": ""verified_purchase"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-022","购买后关怀","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": ""PUR-001-02""
+  },
+  ""additionalCommunicationContext"": ""客户说项链佩戴很舒服，想了解日常搭配。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-N01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""项链"",
+    ""name"": ""单朵茉莉钻石吊坠"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""钻石"",
+    ""price"": 22800,
+    ""displayedPrice"": ""¥22,800""
+  },
+  ""selectedHistoricalPurchase"": {
+    ""id"": ""PUR-001-02"",
+    ""sku"": ""JAS-N01"",
+    ""productName"": ""单朵茉莉钻石吊坠"",
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""category"": ""项链"",
+    ""purchaseDate"": ""2026-06-12"",
+    ""purchasePrice"": 22800,
+    ""occasion"": ""personal"",
+    ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+  },
+  ""selectionMode"": ""verified_purchase"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-023","购买后关怀","{
+  ""id"": ""CL-002"",
+  ""name"": ""陈女士"",
+  ""assignedAdvisor"": ""Camille"",
+  ""interests"": [
+    {
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""gemstone"": ""海蓝宝"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-002-01"",
+      ""sku"": ""MUG-R-N01"",
+      ""productName"": ""单枝铃兰垂坠式吊坠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-08-22"",
+      ""purchasePrice"": 29800,
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    },
+    {
+      ""id"": ""PUR-002-02"",
+      ""sku"": ""MUG-R-B01"",
+      ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""手镯"",
+      ""purchaseDate"": ""2026-04-15"",
+      ""purchasePrice"": 19800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    }
+  ],
+  ""history"": [
+    ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+  ],
+  ""birthMonth"": 3,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": ""PUR-002-01""
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.""
+}","[
+  ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""name"": ""Rosée du Matin"",
+    ""zh"": ""晨露"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。""
+  },
+  ""product"": {
+    ""sku"": ""MUG-R-N01"",
+    ""line"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""category"": ""项链"",
+    ""name"": ""单枝铃兰垂坠式吊坠"",
+    ""material"": ""18K白金"",
+    ""gemstone"": null,
+    ""price"": 29800,
+    ""displayedPrice"": ""¥29,800""
+  },
+  ""selectedHistoricalPurchase"": {
+    ""id"": ""PUR-002-01"",
+    ""sku"": ""MUG-R-N01"",
+    ""productName"": ""单枝铃兰垂坠式吊坠"",
+    ""motif"": ""muguet"",
+    ""line"": ""rosee"",
+    ""category"": ""项链"",
+    ""purchaseDate"": ""2026-08-22"",
+    ""purchasePrice"": 29800,
+    ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+  },
+  ""selectionMode"": ""verified_purchase"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-024","购买后关怀","{
+  ""id"": ""CL-002"",
+  ""name"": ""陈女士"",
+  ""assignedAdvisor"": ""Camille"",
+  ""interests"": [
+    {
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""gemstone"": ""海蓝宝"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-002-01"",
+      ""sku"": ""MUG-R-N01"",
+      ""productName"": ""单枝铃兰垂坠式吊坠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-08-22"",
+      ""purchasePrice"": 29800,
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    },
+    {
+      ""id"": ""PUR-002-02"",
+      ""sku"": ""MUG-R-B01"",
+      ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""手镯"",
+      ""purchaseDate"": ""2026-04-15"",
+      ""purchasePrice"": 19800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    }
+  ],
+  ""history"": [
+    ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+  ],
+  ""birthMonth"": 3,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": ""PUR-002-02""
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.""
+}","[
+  ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""name"": ""Rosée du Matin"",
+    ""zh"": ""晨露"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。""
+  },
+  ""product"": {
+    ""sku"": ""MUG-R-B01"",
+    ""line"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""category"": ""手镯"",
+    ""name"": ""细链手镯，铃兰与露珠双吊饰"",
+    ""material"": ""18K白金"",
+    ""gemstone"": null,
+    ""price"": 19800,
+    ""displayedPrice"": ""¥19,800""
+  },
+  ""selectedHistoricalPurchase"": {
+    ""id"": ""PUR-002-02"",
+    ""sku"": ""MUG-R-B01"",
+    ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+    ""motif"": ""muguet"",
+    ""line"": ""rosee"",
+    ""category"": ""手镯"",
+    ""purchaseDate"": ""2026-04-15"",
+    ""purchasePrice"": 19800,
+    ""occasion"": ""gift"",
+    ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+  },
+  ""selectionMode"": ""verified_purchase"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-025","购买后关怀","{
+  ""id"": ""CL-005"",
+  ""name"": ""许先生"",
+  ""assignedAdvisor"": ""Claire"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""category"": ""手镯""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-005-01"",
+      ""sku"": ""FEU-A-N01"",
+      ""productName"": ""梨形海蓝宝吊坠与叶片光环"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-10-10"",
+      ""purchasePrice"": 138000,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    },
+    {
+      ""id"": ""PUR-005-02"",
+      ""sku"": ""FEU-A-R01"",
+      ""productName"": ""椭圆海蓝宝主石与叶片托镶"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-07-06"",
+      ""purchasePrice"": 68800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    }
+  ],
+  ""history"": [
+    ""想挑一份礼物，收礼人的偏好还需要确认。""
+  ],
+  ""birthMonth"": 12,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": ""PUR-005-01""
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.""
+}","[
+  ""想挑一份礼物，收礼人的偏好还需要确认。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""name"": ""Aqua Héritage"",
+    ""zh"": ""澄蓝传承"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-A-N01"",
+    ""line"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""category"": ""项链"",
+    ""name"": ""梨形海蓝宝吊坠与叶片光环"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""海蓝宝"",
+    ""price"": 138000,
+    ""displayedPrice"": ""¥138,000""
+  },
+  ""selectedHistoricalPurchase"": {
+    ""id"": ""PUR-005-01"",
+    ""sku"": ""FEU-A-N01"",
+    ""productName"": ""梨形海蓝宝吊坠与叶片光环"",
+    ""motif"": ""feuille"",
+    ""line"": ""aqua"",
+    ""category"": ""项链"",
+    ""purchaseDate"": ""2026-10-10"",
+    ""purchasePrice"": 138000,
+    ""occasion"": ""gift"",
+    ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+  },
+  ""selectionMode"": ""verified_purchase"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-026","购买后关怀","{
+  ""id"": ""CL-005"",
+  ""name"": ""许先生"",
+  ""assignedAdvisor"": ""Claire"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""category"": ""手镯""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-005-01"",
+      ""sku"": ""FEU-A-N01"",
+      ""productName"": ""梨形海蓝宝吊坠与叶片光环"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-10-10"",
+      ""purchasePrice"": 138000,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    },
+    {
+      ""id"": ""PUR-005-02"",
+      ""sku"": ""FEU-A-R01"",
+      ""productName"": ""椭圆海蓝宝主石与叶片托镶"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-07-06"",
+      ""purchasePrice"": 68800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    }
+  ],
+  ""history"": [
+    ""想挑一份礼物，收礼人的偏好还需要确认。""
+  ],
+  ""birthMonth"": 12,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": ""PUR-005-02""
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.""
+}","[
+  ""想挑一份礼物，收礼人的偏好还需要确认。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""name"": ""Aqua Héritage"",
+    ""zh"": ""澄蓝传承"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-A-R01"",
+    ""line"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""category"": ""戒指"",
+    ""name"": ""椭圆海蓝宝主石与叶片托镶"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""海蓝宝"",
+    ""price"": 68800,
+    ""displayedPrice"": ""¥68,800""
+  },
+  ""selectedHistoricalPurchase"": {
+    ""id"": ""PUR-005-02"",
+    ""sku"": ""FEU-A-R01"",
+    ""productName"": ""椭圆海蓝宝主石与叶片托镶"",
+    ""motif"": ""feuille"",
+    ""line"": ""aqua"",
+    ""category"": ""戒指"",
+    ""purchaseDate"": ""2026-07-06"",
+    ""purchasePrice"": 68800,
+    ""occasion"": ""gift"",
+    ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+  },
+  ""selectionMode"": ""verified_purchase"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-027","购买后关怀","{
+  ""id"": ""CL-003"",
+  ""name"": ""吴女士"",
+  ""assignedAdvisor"": ""Amélie"",
+  ""interests"": [
+    {
+      ""material"": ""18K白金"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K白金"",
+    ""text"": ""最近明确表示只考虑白金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-003-01"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-07-20"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal""
+    }
+  ],
+  ""history"": [
+    ""日常佩戴更喜欢白金项链，线条希望简洁。""
+  ],
+  ""birthMonth"": 7,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": ""PUR-003-01""
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.""
+}","[
+  ""日常佩戴更喜欢白金项链，线条希望简洁。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-N01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""项链"",
+    ""name"": ""单朵茉莉钻石吊坠"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""钻石"",
+    ""price"": 22800,
+    ""displayedPrice"": ""¥22,800""
+  },
+  ""selectedHistoricalPurchase"": {
+    ""id"": ""PUR-003-01"",
+    ""sku"": ""JAS-N01"",
+    ""productName"": ""单朵茉莉钻石吊坠"",
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""category"": ""项链"",
+    ""purchaseDate"": ""2026-07-20"",
+    ""purchasePrice"": 22800,
+    ""occasion"": ""personal""
+  },
+  ""selectionMode"": ""verified_purchase"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-028","购买后关怀","{
+  ""id"": ""CL-006"",
+  ""name"": ""沈女士"",
+  ""assignedAdvisor"": ""Élise"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""material"": ""18K白金""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-006-01"",
+      ""sku"": ""MUG-R-B01"",
+      ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""手镯"",
+      ""purchaseDate"": ""2026-10-12"",
+      ""purchasePrice"": 19800
+    }
+  ],
+  ""history"": [
+    ""已购晨露手镯，想聊聊最近的佩戴体验。""
+  ],
+  ""birthMonth"": 5,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": ""PUR-006-01""
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.""
+}","[
+  ""已购晨露手镯，想聊聊最近的佩戴体验。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""name"": ""Rosée du Matin"",
+    ""zh"": ""晨露"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。""
+  },
+  ""product"": {
+    ""sku"": ""MUG-R-B01"",
+    ""line"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""category"": ""手镯"",
+    ""name"": ""细链手镯，铃兰与露珠双吊饰"",
+    ""material"": ""18K白金"",
+    ""gemstone"": null,
+    ""price"": 19800,
+    ""displayedPrice"": ""¥19,800""
+  },
+  ""selectedHistoricalPurchase"": {
+    ""id"": ""PUR-006-01"",
+    ""sku"": ""MUG-R-B01"",
+    ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+    ""motif"": ""muguet"",
+    ""line"": ""rosee"",
+    ""category"": ""手镯"",
+    ""purchaseDate"": ""2026-10-12"",
+    ""purchasePrice"": 19800
+  },
+  ""selectionMode"": ""verified_purchase"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-029","客户重新联系","{
+  ""id"": ""CL-009"",
+  ""name"": ""黎女士"",
+  ""assignedAdvisor"": ""Juliette"",
+  ""interests"": [],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-009-01"",
+      ""sku"": ""MUG-R-R01"",
+      ""productName"": ""双花苞开口戒与梨形钻石露珠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-25"",
+      ""purchasePrice"": 24800
+    }
+  ],
+  ""history"": [],
+  ""birthMonth"": 10,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": ""自然问候，听听近来的珠宝想法。"",
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.""
+}","[]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-030","客户重新联系","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户最近比较忙。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-031","客户重新联系","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-032","客户重新联系","{
+  ""id"": ""CL-002"",
+  ""name"": ""陈女士"",
+  ""assignedAdvisor"": ""Camille"",
+  ""interests"": [
+    {
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""gemstone"": ""海蓝宝"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-002-01"",
+      ""sku"": ""MUG-R-N01"",
+      ""productName"": ""单枝铃兰垂坠式吊坠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-08-22"",
+      ""purchasePrice"": 29800,
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    },
+    {
+      ""id"": ""PUR-002-02"",
+      ""sku"": ""MUG-R-B01"",
+      ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""手镯"",
+      ""purchaseDate"": ""2026-04-15"",
+      ""purchasePrice"": 19800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    }
+  ],
+  ""history"": [
+    ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+  ],
+  ""birthMonth"": 3,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": ""rosee"",
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.""
+}","[
+  ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""rosee"",
+    ""motif"": ""muguet"",
+    ""name"": ""Rosée du Matin"",
+    ""zh"": ""晨露"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。""
+  },
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-033","客户重新联系","{
+  ""id"": ""CL-005"",
+  ""name"": ""许先生"",
+  ""assignedAdvisor"": ""Claire"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""category"": ""手镯""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-005-01"",
+      ""sku"": ""FEU-A-N01"",
+      ""productName"": ""梨形海蓝宝吊坠与叶片光环"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-10-10"",
+      ""purchasePrice"": 138000,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    },
+    {
+      ""id"": ""PUR-005-02"",
+      ""sku"": ""FEU-A-R01"",
+      ""productName"": ""椭圆海蓝宝主石与叶片托镶"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-07-06"",
+      ""purchasePrice"": 68800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    }
+  ],
+  ""history"": [
+    ""想挑一份礼物，收礼人的偏好还需要确认。""
+  ],
+  ""birthMonth"": 12,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""aqua"",
+    ""sku"": ""FEU-A-N01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.""
+}","[
+  ""想挑一份礼物，收礼人的偏好还需要确认。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""name"": ""Aqua Héritage"",
+    ""zh"": ""澄蓝传承"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-A-N01"",
+    ""line"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""category"": ""项链"",
+    ""name"": ""梨形海蓝宝吊坠与叶片光环"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""海蓝宝"",
+    ""price"": 138000,
+    ""displayedPrice"": ""¥138,000""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-034","客户重新联系","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""vive"",
+    ""sku"": ""FEU-V-R01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户最近比较忙。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""vive"",
+    ""motif"": ""feuille"",
+    ""name"": ""Feuille Vive"",
+    ""zh"": ""新生叶"",
+    ""occasions"": [
+      ""personal""
+    ],
+    ""story"": ""一片新叶舒展时，柔软的曲线孕育坚定的生命力：成长无须急促，自有方向。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-V-R01"",
+    ""line"": ""vive"",
+    ""motif"": ""feuille"",
+    ""category"": ""戒指"",
+    ""name"": ""双叶环抱式戒指，绿色珐琅"",
+    ""material"": ""18K黄金"",
+    ""gemstone"": ""绿色珐琅"",
+    ""price"": 21800,
+    ""displayedPrice"": ""¥21,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-035","客户重新联系","{
+  ""id"": ""CL-009"",
+  ""name"": ""黎女士"",
+  ""assignedAdvisor"": ""Juliette"",
+  ""interests"": [],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-009-01"",
+      ""sku"": ""MUG-R-R01"",
+      ""productName"": ""双花苞开口戒与梨形钻石露珠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-25"",
+      ""purchasePrice"": 24800
+    }
+  ],
+  ""history"": [],
+  ""birthMonth"": 10,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.""
+}","[]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-036","客户重新联系","{
+  ""id"": ""CL-007"",
+  ""name"": ""陆女士"",
+  ""assignedAdvisor"": ""Lucie"",
+  ""interests"": [],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-007-01"",
+      ""sku"": ""FEU-V-R01"",
+      ""productName"": ""双叶环抱式戒指，绿色珐琅"",
+      ""motif"": ""feuille"",
+      ""line"": ""vive"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-08-03"",
+      ""purchasePrice"": 21800
+    }
+  ],
+  ""history"": [],
+  ""birthMonth"": 2,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""vive"",
+    ""sku"": ""FEU-V-N01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.""
+}","[]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""vive"",
+    ""motif"": ""feuille"",
+    ""name"": ""Feuille Vive"",
+    ""zh"": ""新生叶"",
+    ""occasions"": [
+      ""personal""
+    ],
+    ""story"": ""一片新叶舒展时，柔软的曲线孕育坚定的生命力：成长无须急促，自有方向。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-V-N01"",
+    ""line"": ""vive"",
+    ""motif"": ""feuille"",
+    ""category"": ""项链"",
+    ""name"": ""修长叶片吊坠，绿色珐琅"",
+    ""material"": ""18K黄金"",
+    ""gemstone"": ""绿色珐琅"",
+    ""price"": 25800,
+    ""displayedPrice"": ""¥25,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-037","活动邀请","{
+  ""id"": ""CL-009"",
+  ""name"": ""黎女士"",
+  ""assignedAdvisor"": ""Juliette"",
+  ""interests"": [],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-009-01"",
+      ""sku"": ""MUG-R-R01"",
+      ""productName"": ""双花苞开口戒与梨形钻石露珠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-25"",
+      ""purchasePrice"": 24800
+    }
+  ],
+  ""history"": [],
+  ""birthMonth"": 10,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": {
+    ""id"": ""EV-DEMO-01"",
+    ""name"": ""自然意象 · 珠宝设计分享"",
+    ""date"": ""2026-12-12 14:00"",
+    ""location"": ""虚构体验空间 · 上海示例路 18 号"",
+    ""registration"": ""回复顾问表达参与意向"",
+    ""verified"": true,
+    ""fictional"": true
+  },
+  ""expectedScenarioBehavior"": ""Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.""
+}","[]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-038","活动邀请","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户最近比较忙。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": {
+    ""id"": ""EV-DEMO-01"",
+    ""name"": ""自然意象 · 珠宝设计分享"",
+    ""date"": ""2026-12-12 14:00"",
+    ""location"": ""虚构体验空间 · 上海示例路 18 号"",
+    ""registration"": ""回复顾问表达参与意向"",
+    ""verified"": true,
+    ""fictional"": true
+  },
+  ""expectedScenarioBehavior"": ""Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-039","活动邀请","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": {
+    ""id"": ""EV-DEMO-01"",
+    ""name"": ""自然意象 · 珠宝设计分享"",
+    ""date"": ""2026-12-12 14:00"",
+    ""location"": ""虚构体验空间 · 上海示例路 18 号"",
+    ""registration"": ""回复顾问表达参与意向"",
+    ""verified"": true,
+    ""fictional"": true
+  },
+  ""expectedScenarioBehavior"": ""Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-040","活动邀请","{
+  ""id"": ""CL-005"",
+  ""name"": ""许先生"",
+  ""assignedAdvisor"": ""Claire"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""category"": ""手镯""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-005-01"",
+      ""sku"": ""FEU-A-N01"",
+      ""productName"": ""梨形海蓝宝吊坠与叶片光环"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-10-10"",
+      ""purchasePrice"": 138000,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    },
+    {
+      ""id"": ""PUR-005-02"",
+      ""sku"": ""FEU-A-R01"",
+      ""productName"": ""椭圆海蓝宝主石与叶片托镶"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-07-06"",
+      ""purchasePrice"": 68800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    }
+  ],
+  ""history"": [
+    ""想挑一份礼物，收礼人的偏好还需要确认。""
+  ],
+  ""birthMonth"": 12,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""aqua"",
+    ""sku"": ""FEU-A-N01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户最近比较忙。"",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": {
+    ""id"": ""EV-DEMO-01"",
+    ""name"": ""自然意象 · 珠宝设计分享"",
+    ""date"": ""2026-12-12 14:00"",
+    ""location"": ""虚构体验空间 · 上海示例路 18 号"",
+    ""registration"": ""回复顾问表达参与意向"",
+    ""verified"": true,
+    ""fictional"": true
+  },
+  ""expectedScenarioBehavior"": ""Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.""
+}","[
+  ""想挑一份礼物，收礼人的偏好还需要确认。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""name"": ""Aqua Héritage"",
+    ""zh"": ""澄蓝传承"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-A-N01"",
+    ""line"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""category"": ""项链"",
+    ""name"": ""梨形海蓝宝吊坠与叶片光环"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""海蓝宝"",
+    ""price"": 138000,
+    ""displayedPrice"": ""¥138,000""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-041","活动邀请","{
+  ""id"": ""CL-004"",
+  ""name"": ""周女士"",
+  ""assignedAdvisor"": ""Nora"",
+  ""interests"": [
+    {
+      ""motif"": ""muguet"",
+      ""line"": ""clochette"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-004-01"",
+      ""sku"": ""MUG-C-N01"",
+      ""productName"": ""多花冠错落垂坠项链"",
+      ""motif"": ""muguet"",
+      ""line"": ""clochette"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-09-06"",
+      ""purchasePrice"": 118000
+    }
+  ],
+  ""history"": [
+    ""正在了解适合婚礼场合佩戴的项链，尚未选定。""
+  ],
+  ""birthMonth"": 9,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": ""clochette"",
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": {
+    ""id"": ""EV-DEMO-01"",
+    ""name"": ""自然意象 · 珠宝设计分享"",
+    ""date"": ""2026-12-12 14:00"",
+    ""location"": ""虚构体验空间 · 上海示例路 18 号"",
+    ""registration"": ""回复顾问表达参与意向"",
+    ""verified"": true,
+    ""fictional"": true
+  },
+  ""expectedScenarioBehavior"": ""Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.""
+}","[
+  ""正在了解适合婚礼场合佩戴的项链，尚未选定。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""clochette"",
+    ""motif"": ""muguet"",
+    ""name"": ""Clochette Royale"",
+    ""zh"": ""典礼铃音"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。""
+  },
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-042","活动邀请","{
+  ""id"": ""CL-009"",
+  ""name"": ""黎女士"",
+  ""assignedAdvisor"": ""Juliette"",
+  ""interests"": [],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-009-01"",
+      ""sku"": ""MUG-R-R01"",
+      ""productName"": ""双花苞开口戒与梨形钻石露珠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-25"",
+      ""purchasePrice"": 24800
+    }
+  ],
+  ""history"": [],
+  ""birthMonth"": 10,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": {
+    ""id"": ""EV-DEMO-01"",
+    ""name"": ""自然意象 · 珠宝设计分享"",
+    ""date"": ""2026-12-12 14:00"",
+    ""location"": ""虚构体验空间 · 上海示例路 18 号"",
+    ""registration"": ""回复顾问表达参与意向"",
+    ""verified"": true,
+    ""fictional"": true
+  },
+  ""expectedScenarioBehavior"": ""Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.""
+}","[]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""optional_story"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-043","活动邀请","{
+  ""id"": ""CL-002"",
+  ""name"": ""陈女士"",
+  ""assignedAdvisor"": ""Camille"",
+  ""interests"": [
+    {
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""gemstone"": ""海蓝宝"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-002-01"",
+      ""sku"": ""MUG-R-N01"",
+      ""productName"": ""单枝铃兰垂坠式吊坠"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-08-22"",
+      ""purchasePrice"": 29800,
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    },
+    {
+      ""id"": ""PUR-002-02"",
+      ""sku"": ""MUG-R-B01"",
+      ""productName"": ""细链手镯，铃兰与露珠双吊饰"",
+      ""motif"": ""muguet"",
+      ""line"": ""rosee"",
+      ""category"": ""手镯"",
+      ""purchaseDate"": ""2026-04-15"",
+      ""purchasePrice"": 19800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询纤细白金珠宝与有纪念意义的礼赠。""
+    }
+  ],
+  ""history"": [
+    ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+  ],
+  ""birthMonth"": 3,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""aqua"",
+    ""sku"": ""FEU-A-B01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": null,
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": {
+    ""id"": ""EV-DEMO-01"",
+    ""name"": ""自然意象 · 珠宝设计分享"",
+    ""date"": ""2026-12-12 14:00"",
+    ""location"": ""虚构体验空间 · 上海示例路 18 号"",
+    ""registration"": ""回复顾问表达参与意向"",
+    ""verified"": true,
+    ""fictional"": true
+  },
+  ""expectedScenarioBehavior"": ""Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.""
+}","[
+  ""想了解海蓝宝吊坠的设计，也在考虑价格。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""name"": ""Aqua Héritage"",
+    ""zh"": ""澄蓝传承"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-A-B01"",
+    ""line"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""category"": ""手镯"",
+    ""name"": ""中央海蓝宝与两侧叶脉造型"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""海蓝宝"",
+    ""price"": 98800,
+    ""displayedPrice"": ""¥98,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-044","价格异议","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": null,
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": ""价格偏高，正在比较其他品牌，希望慢慢考虑。"",
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Address the actual concern and any negation accurately. Use only allowed known facts and current selection; no unsupported discounts, valuation claims or disparagement of competitors.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": null,
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""general_price"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-045","价格异议","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": null,
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": ""为什么不同作品价格差异这么大？"",
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Address the actual concern and any negation accurately. Use only allowed known facts and current selection; no unsupported discounts, valuation claims or disparagement of competitors.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": null,
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""general_price"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-046","价格异议","{
+  ""id"": ""CL-004"",
+  ""name"": ""周女士"",
+  ""assignedAdvisor"": ""Nora"",
+  ""interests"": [
+    {
+      ""motif"": ""muguet"",
+      ""line"": ""clochette"",
+      ""category"": ""项链""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-004-01"",
+      ""sku"": ""MUG-C-N01"",
+      ""productName"": ""多花冠错落垂坠项链"",
+      ""motif"": ""muguet"",
+      ""line"": ""clochette"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-09-06"",
+      ""purchasePrice"": 118000
+    }
+  ],
+  ""history"": [
+    ""正在了解适合婚礼场合佩戴的项链，尚未选定。""
+  ],
+  ""birthMonth"": 9,
+  ""currentSelection"": {
+    ""motif"": ""muguet"",
+    ""line"": ""clochette"",
+    ""sku"": null,
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": ""想了解这个系列的价格考量，尚未选定具体作品。"",
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Address the actual concern and any negation accurately. Use only allowed known facts and current selection; no unsupported discounts, valuation claims or disparagement of competitors.""
+}","[
+  ""正在了解适合婚礼场合佩戴的项链，尚未选定。""
+]","{
+  ""motif"": {
+    ""id"": ""muguet"",
+    ""name"": ""Muguet de Lumière"",
+    ""zh"": ""光之铃兰"",
+    ""story"": ""铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。""
+  },
+  ""line"": {
+    ""id"": ""clochette"",
+    ""motif"": ""muguet"",
+    ""name"": ""Clochette Royale"",
+    ""zh"": ""典礼铃音"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。""
+  },
+  ""product"": null,
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""general_price"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-047","价格异议","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""sku"": ""JAS-B01"",
+    ""purchaseOccasion"": ""personal"",
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户说价格在预算内，更关心日常搭配。"",
+  ""concern"": ""没有超出预算，更关心设计与日常搭配。"",
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Address the actual concern and any negation accurately. Use only allowed known facts and current selection; no unsupported discounts, valuation claims or disparagement of competitors.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-B01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""手镯"",
+    ""name"": ""细窄硬镯，半开花形点缀"",
+    ""material"": ""18K玫瑰金"",
+    ""gemstone"": null,
+    ""price"": 26800,
+    ""displayedPrice"": ""¥26,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-048","价格异议","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""jasmin"",
+    ""line"": ""jasmin"",
+    ""sku"": ""JAS-R01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": ""客户觉得价格偏高，正在比较其他品牌。"",
+  ""concern"": ""价格偏高，想和其他品牌比较。"",
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Address the actual concern and any negation accurately. Use only allowed known facts and current selection; no unsupported discounts, valuation claims or disparagement of competitors.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜茉莉"",
+    ""story"": ""一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。""
+  },
+  ""line"": {
+    ""id"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""name"": ""Jasmin Étoilé"",
+    ""zh"": ""星夜初绽"",
+    ""occasions"": [
+      ""gift"",
+      ""personal""
+    ],
+    ""story"": ""茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。""
+  },
+  ""product"": {
+    ""sku"": ""JAS-R01"",
+    ""line"": ""jasmin"",
+    ""motif"": ""jasmin"",
+    ""category"": ""戒指"",
+    ""name"": ""五瓣茉莉开口戒，花心小钻"",
+    ""material"": ""18K玫瑰金"",
+    ""gemstone"": ""钻石"",
+    ""price"": 18800,
+    ""displayedPrice"": ""¥18,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-049","价格异议","{
+  ""id"": ""CL-005"",
+  ""name"": ""许先生"",
+  ""assignedAdvisor"": ""Claire"",
+  ""interests"": [
+    {
+      ""line"": ""rosee"",
+      ""category"": ""手镯""
+    }
+  ],
+  ""latestPreference"": null,
+  ""purchases"": [
+    {
+      ""id"": ""PUR-005-01"",
+      ""sku"": ""FEU-A-N01"",
+      ""productName"": ""梨形海蓝宝吊坠与叶片光环"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-10-10"",
+      ""purchasePrice"": 138000,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    },
+    {
+      ""id"": ""PUR-005-02"",
+      ""sku"": ""FEU-A-R01"",
+      ""productName"": ""椭圆海蓝宝主石与叶片托镶"",
+      ""motif"": ""feuille"",
+      ""line"": ""aqua"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-07-06"",
+      ""purchasePrice"": 68800,
+      ""occasion"": ""gift"",
+      ""advisorNotes"": ""曾咨询海蓝宝珠宝与纪念礼物。""
+    }
+  ],
+  ""history"": [
+    ""想挑一份礼物，收礼人的偏好还需要确认。""
+  ],
+  ""birthMonth"": 12,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""aqua"",
+    ""sku"": ""FEU-A-N01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": ""觉得价格很高，想知道已知材质和设计能说明什么。"",
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Address the actual concern and any negation accurately. Use only allowed known facts and current selection; no unsupported discounts, valuation claims or disparagement of competitors.""
+}","[
+  ""想挑一份礼物，收礼人的偏好还需要确认。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""name"": ""Aqua Héritage"",
+    ""zh"": ""澄蓝传承"",
+    ""occasions"": [
+      ""gift""
+    ],
+    ""story"": ""将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-A-N01"",
+    ""line"": ""aqua"",
+    ""motif"": ""feuille"",
+    ""category"": ""项链"",
+    ""name"": ""梨形海蓝宝吊坠与叶片光环"",
+    ""material"": ""18K白金"",
+    ""gemstone"": ""海蓝宝"",
+    ""price"": 138000,
+    ""displayedPrice"": ""¥138,000""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""
+"F-050","价格异议","{
+  ""id"": ""CL-001"",
+  ""name"": ""林女士"",
+  ""assignedAdvisor"": ""Sophie"",
+  ""interests"": [
+    {
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""sku"": ""JAS-R01"",
+      ""material"": ""18K玫瑰金""
+    }
+  ],
+  ""latestPreference"": {
+    ""material"": ""18K玫瑰金"",
+    ""text"": ""最近明确表示偏爱玫瑰金。""
+  },
+  ""purchases"": [
+    {
+      ""id"": ""PUR-001-01"",
+      ""sku"": ""JAS-R01"",
+      ""productName"": ""五瓣茉莉开口戒，花心小钻"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""戒指"",
+      ""purchaseDate"": ""2026-09-18"",
+      ""purchasePrice"": 18800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    },
+    {
+      ""id"": ""PUR-001-02"",
+      ""sku"": ""JAS-N01"",
+      ""productName"": ""单朵茉莉钻石吊坠"",
+      ""motif"": ""jasmin"",
+      ""line"": ""jasmin"",
+      ""category"": ""项链"",
+      ""purchaseDate"": ""2026-06-12"",
+      ""purchasePrice"": 22800,
+      ""occasion"": ""personal"",
+      ""advisorNotes"": ""曾表达对纤细花形设计与日常珠宝的偏好。""
+    }
+  ],
+  ""history"": [
+    ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+  ],
+  ""birthMonth"": 11,
+  ""currentSelection"": {
+    ""motif"": ""feuille"",
+    ""line"": ""vive"",
+    ""sku"": ""FEU-V-R01"",
+    ""purchaseOccasion"": null,
+    ""purchaseId"": null
+  },
+  ""additionalCommunicationContext"": """",
+  ""concern"": ""价格在预算内，主要关心绿色珐琅和设计。"",
+  ""reconnectReason"": null,
+  ""greetingKind"": null,
+  ""greetingName"": null,
+  ""event"": null,
+  ""expectedScenarioBehavior"": ""Address the actual concern and any negation accurately. Use only allowed known facts and current selection; no unsupported discounts, valuation claims or disparagement of competitors.""
+}","[
+  ""喜欢星夜茉莉的戒指，希望日常佩戴也自然。""
+]","{
+  ""motif"": {
+    ""id"": ""feuille"",
+    ""name"": ""Feuille d’Azur"",
+    ""zh"": ""蔚蓝叶语"",
+    ""story"": ""风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。""
+  },
+  ""line"": {
+    ""id"": ""vive"",
+    ""motif"": ""feuille"",
+    ""name"": ""Feuille Vive"",
+    ""zh"": ""新生叶"",
+    ""occasions"": [
+      ""personal""
+    ],
+    ""story"": ""一片新叶舒展时，柔软的曲线孕育坚定的生命力：成长无须急促，自有方向。""
+  },
+  ""product"": {
+    ""sku"": ""FEU-V-R01"",
+    ""line"": ""vive"",
+    ""motif"": ""feuille"",
+    ""category"": ""戒指"",
+    ""name"": ""双叶环抱式戒指，绿色珐琅"",
+    ""material"": ""18K黄金"",
+    ""gemstone"": ""绿色珐琅"",
+    ""price"": 21800,
+    ""displayedPrice"": ""¥21,800""
+  },
+  ""selectedHistoricalPurchase"": null,
+  ""selectionMode"": ""explicit_sku"",
+  ""canonicalSource"": ""Brand Bible v1.0 · section 04""
+}","","",""

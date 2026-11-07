@@ -1,0 +1,37 @@
+{
+  "preparedCases": 50,
+  "liveCasesExecuted": 50,
+  "completedValidCases": 50,
+  "successfulMessages": 150,
+  "allReturnedMessagesRetained": 150,
+  "failedOrIncompleteCases": 0,
+  "missingOutputCases": [],
+  "hardFailOutputSets": [],
+  "apiCalls": 127,
+  "paidCallCap": 200,
+  "tokens": {
+    "input": 446440,
+    "cachedInput": 193664,
+    "output": 18323
+  },
+  "estimatedCostUsd": 0.049491191999999996,
+  "callsWithoutUsage": 0,
+  "independentJudgeCases": 0,
+  "humanReviewedCases": 0,
+  "humanReviewStatus": "PENDING",
+  "formulaCellsVerified": 26,
+  "allMessageCellsMatchSource": true,
+  "workbook": "/Users/perona/Documents/LuxuryOutreach/deliverables/Maison_Liore_50_Cases_Evaluation_Retest_v2.xlsx",
+  "evidenceDirectory": "/Users/perona/Documents/LuxuryOutreach/deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06",
+  "xlsxSha256": "aa7b776e11bb8cbd4f5ef26dd4333de967487ccc6444ea8f725aa856c10b318c",
+  "previews": [
+    "cases-inputs.png",
+    "cases-outputs.png",
+    "scores-validation.png",
+    "scores-review.png",
+    "defects.png",
+    "summary.png",
+    "source-provenance.png",
+    "comparison.png"
+  ]
+}

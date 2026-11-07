@@ -1,0 +1,527 @@
+[
+  {
+    "index": 1,
+    "caseId": "F-014",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:19.802Z",
+    "requestSha256": "0a791650631f1d148e2f644d41d138934e35bc01141287ad509c4bd4aeb9a8e6",
+    "attemptFile": "attempts/F-014-001.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3678,
+      "input_tokens_details": {
+        "cached_tokens": 3456
+      },
+      "output_tokens": 288,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3966
+    },
+    "status": "completed",
+    "durationMs": 3250.028875,
+    "completedAt": "2026-11-07T20:46:23.052Z"
+  },
+  {
+    "index": 2,
+    "caseId": "F-014",
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:23.056Z",
+    "requestSha256": "daa30517f22523e3a4d35aeb6c0e419b941b89fea36050fcfa9f84f9ab4ba58f",
+    "attemptFile": "attempts/F-014-002.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3731,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3746
+    },
+    "status": "completed",
+    "durationMs": 1083.5514159999998,
+    "completedAt": "2026-11-07T20:46:24.140Z"
+  },
+  {
+    "index": 3,
+    "caseId": "F-017",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:24.145Z",
+    "requestSha256": "2ac20c40f511ecd1360430e973e7b54419fcbe2041343e7d1c27bb44c183920a",
+    "attemptFile": "attempts/F-017-003.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3610,
+      "input_tokens_details": {
+        "cached_tokens": 3456
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3918
+    },
+    "status": "completed",
+    "durationMs": 2626.693875,
+    "completedAt": "2026-11-07T20:46:26.772Z"
+  },
+  {
+    "index": 4,
+    "caseId": "F-017",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:26.777Z",
+    "requestSha256": "c1ca0a8ef5cb9d46403229d99d3b12751ad1b12361fc89b3adf50b89f37d5961",
+    "attemptFile": "attempts/F-017-004.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3932,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 132,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4064
+    },
+    "status": "completed",
+    "durationMs": 1533.2269999999999,
+    "completedAt": "2026-11-07T20:46:28.310Z"
+  },
+  {
+    "index": 5,
+    "caseId": "F-017",
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:28.312Z",
+    "requestSha256": "9951c1b32dad06f2c82e6f56c634c5a5ea7e0fa86a808cb374c739fea5ae6ba2",
+    "attemptFile": "attempts/F-017-005.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3677,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 146,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3823
+    },
+    "status": "completed",
+    "durationMs": 1916.3086249999997,
+    "completedAt": "2026-11-07T20:46:30.228Z"
+  },
+  {
+    "index": 6,
+    "caseId": "F-031",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:30.233Z",
+    "requestSha256": "05eee3105bc22e65ee9480b1084ec504e5f76a1fa4f74de9c79fdeb296c4cd3f",
+    "attemptFile": "attempts/F-031-006.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3194,
+      "input_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "output_tokens": 276,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3470
+    },
+    "status": "completed",
+    "durationMs": 2847.412457999999,
+    "completedAt": "2026-11-07T20:46:33.081Z"
+  },
+  {
+    "index": 7,
+    "caseId": "F-031",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:33.083Z",
+    "requestSha256": "0dd8d9e60eefe89f5eb4c850b8fbc9b53ae918bac3faee4f5610641ce524ffeb",
+    "attemptFile": "attempts/F-031-007.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3688,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 239,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3927
+    },
+    "status": "completed",
+    "durationMs": 2326.9036670000005,
+    "completedAt": "2026-11-07T20:46:35.410Z"
+  },
+  {
+    "index": 8,
+    "caseId": "F-031",
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:35.414Z",
+    "requestSha256": "0c59824b6e1b5a5837e33044a1593d7b8cf589601fec467044d698b36de6fb0e",
+    "attemptFile": "attempts/F-031-008.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3162,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3177
+    },
+    "status": "completed",
+    "durationMs": 817.4849169999998,
+    "completedAt": "2026-11-07T20:46:36.231Z"
+  },
+  {
+    "index": 9,
+    "caseId": "F-034",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:36.237Z",
+    "requestSha256": "0f01398b5a469ff23cd6e48e2684353d9f4ec758baed262085fcea30b0338ea8",
+    "attemptFile": "attempts/F-034-009.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3735,
+      "input_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4006
+    },
+    "status": "completed",
+    "durationMs": 2728.460833000001,
+    "completedAt": "2026-11-07T20:46:38.966Z"
+  },
+  {
+    "index": 10,
+    "caseId": "F-034",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:38.970Z",
+    "requestSha256": "eb2176d498cf8c8b2d8c12ae6af4ab43cbd6262ca258a28c1633e3198c0cd679",
+    "attemptFile": "attempts/F-034-010.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 4035,
+      "input_tokens_details": {
+        "cached_tokens": 640
+      },
+      "output_tokens": 112,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4147
+    },
+    "status": "completed",
+    "durationMs": 1493.9599579999995,
+    "completedAt": "2026-11-07T20:46:40.464Z"
+  },
+  {
+    "index": 11,
+    "caseId": "F-034",
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:40.468Z",
+    "requestSha256": "25e059e76fbc3a8f716f3e3594fef5616e689ee22b8a7726e62b10109fc72fd8",
+    "attemptFile": "attempts/F-034-011.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3731,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3746
+    },
+    "status": "completed",
+    "durationMs": 934.0565830000014,
+    "completedAt": "2026-11-07T20:46:41.402Z"
+  },
+  {
+    "index": 12,
+    "caseId": "F-039",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:41.407Z",
+    "requestSha256": "d526b35a8765d51a7957bfc959dce1bffc8cbc32e57d2564cf7d820cf20b5c3f",
+    "attemptFile": "attempts/F-039-012.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3518,
+      "input_tokens_details": {
+        "cached_tokens": 640
+      },
+      "output_tokens": 248,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3766
+    },
+    "status": "completed",
+    "durationMs": 2508.517,
+    "completedAt": "2026-11-07T20:46:43.915Z"
+  },
+  {
+    "index": 13,
+    "caseId": "F-039",
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:43.920Z",
+    "requestSha256": "bee03308a3271e8d44aefabda9461c887bae34048c0075022b96a83a376d930a",
+    "attemptFile": "attempts/F-039-013.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3425,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3440
+    },
+    "status": "completed",
+    "durationMs": 1405.1640000000007,
+    "completedAt": "2026-11-07T20:46:45.325Z"
+  },
+  {
+    "index": 14,
+    "caseId": "F-041",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:45.331Z",
+    "requestSha256": "d805ff3a9eb7c950872c8d7b2f8b6db76b123745d912e566e420f97c19da8ac3",
+    "attemptFile": "attempts/F-041-014.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3548,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 277,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3825
+    },
+    "status": "completed",
+    "durationMs": 2760.9001249999965,
+    "completedAt": "2026-11-07T20:46:48.092Z"
+  },
+  {
+    "index": 15,
+    "caseId": "F-041",
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:48.094Z",
+    "requestSha256": "7e039662e1040a373003cc0f1ede0ea916b538e4ae8a50d5d9935e3d4748b252",
+    "attemptFile": "attempts/F-041-015.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3484,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3499
+    },
+    "status": "completed",
+    "durationMs": 1085.752708,
+    "completedAt": "2026-11-07T20:46:49.180Z"
+  },
+  {
+    "index": 16,
+    "caseId": "F-042",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:49.185Z",
+    "requestSha256": "4580deb7dbe33c97b3cd344e74512c3eb85fb76d5aa234f794fcfbc14fefd8d9",
+    "attemptFile": "attempts/F-042-016.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3324,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 277,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3601
+    },
+    "status": "completed",
+    "durationMs": 2518.0027090000003,
+    "completedAt": "2026-11-07T20:46:51.703Z"
+  },
+  {
+    "index": 17,
+    "caseId": "F-042",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:51.707Z",
+    "requestSha256": "271e7934e89560fdccdc23a2f317727718c6fe78ae49aeb934593316443c3c16",
+    "attemptFile": "attempts/F-042-017.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3617,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 96,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3713
+    },
+    "status": "completed",
+    "durationMs": 1732.1482920000017,
+    "completedAt": "2026-11-07T20:46:53.439Z"
+  },
+  {
+    "index": 18,
+    "caseId": "F-042",
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:53.442Z",
+    "requestSha256": "f20faeafc33fe42f210b1ec266ebb379893f8b73f7b386b9b6cac6bef747ac8c",
+    "attemptFile": "attempts/F-042-018.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3265,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3280
+    },
+    "status": "completed",
+    "durationMs": 1231.0686669999996,
+    "completedAt": "2026-11-07T20:46:54.673Z"
+  },
+  {
+    "index": 19,
+    "caseId": "F-045",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:54.677Z",
+    "requestSha256": "8a0cfb144ba57f20ab6abdbf5326c88190dc81e5fbad12def70cf551c737d84b",
+    "attemptFile": "attempts/F-045-019.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3211,
+      "input_tokens_details": {
+        "cached_tokens": 3072
+      },
+      "output_tokens": 280,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3491
+    },
+    "status": "completed",
+    "durationMs": 3094.423499999997,
+    "completedAt": "2026-11-07T20:46:57.771Z"
+  },
+  {
+    "index": 20,
+    "caseId": "F-045",
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:46:57.774Z",
+    "requestSha256": "9866dda9d76abba0b2a0f4d5f82170e860cfe4427dca9e2e8d933542acf92e79",
+    "attemptFile": "attempts/F-045-020.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3625,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 212,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3837
+    },
+    "status": "completed",
+    "durationMs": 2269.5305829999998,
+    "completedAt": "2026-11-07T20:47:00.044Z"
+  },
+  {
+    "index": 21,
+    "caseId": "F-045",
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:47:00.046Z",
+    "requestSha256": "58dae25c8c82bb1e547feb2c5c8c3072b2d37e39e48c5a0f0a56147db81be895",
+    "attemptFile": "attempts/F-045-021.json",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3233,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3248
+    },
+    "status": "completed",
+    "durationMs": 754.4257500000022,
+    "completedAt": "2026-11-07T20:47:00.801Z"
+  }
+]

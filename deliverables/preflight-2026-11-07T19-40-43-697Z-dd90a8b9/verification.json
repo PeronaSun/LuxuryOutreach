@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-11-07T19:46:52.201Z",
+  "preflightPassed": true,
+  "preparedCases": 50,
+  "liveCasesThisTask": 0,
+  "liveMessagesThisTask": 0,
+  "externalApiCallsThisTask": 0,
+  "sourceFingerprintsMatch": true,
+  "testPasses": 616,
+  "testFailures": 0,
+  "exactFirstSheetColumns": true,
+  "noFabricatedOutputCells": true,
+  "independentJudgeConfigured": false,
+  "subjectiveScores": "PENDING",
+  "humanReview": "PENDING",
+  "workbookCreated": false,
+  "spreadsheetRuntime": "REQUIRED_DEPENDENCY_LOADER_UNAVAILABLE",
+  "alternativeWriterPermission": "NOT_YET_GRANTED",
+  "paidRunApproval": "NOT_YET_GRANTED"
+}

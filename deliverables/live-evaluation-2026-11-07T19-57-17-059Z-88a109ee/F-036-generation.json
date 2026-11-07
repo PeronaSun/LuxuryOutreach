@@ -1,0 +1,442 @@
+{
+  "id": "F-036",
+  "input": {
+    "clientId": "CL-007",
+    "scenario": "reactivate",
+    "motif": "feuille",
+    "line": "vive",
+    "sku": "FEU-V-N01",
+    "notes": ""
+  },
+  "normalizedInput": {
+    "clientId": "CL-007",
+    "scenario": "reactivate",
+    "motif": "feuille",
+    "line": "vive",
+    "sku": "FEU-V-N01",
+    "notes": ""
+  },
+  "expectedBehavior": "Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-007",
+      "name": "陆女士",
+      "assignedAdvisor": "Lucie",
+      "interests": [],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-007-01",
+          "sku": "FEU-V-R01",
+          "productName": "双叶环抱式戒指，绿色珐琅",
+          "motif": "feuille",
+          "line": "vive",
+          "category": "戒指",
+          "purchaseDate": "2026-08-03",
+          "purchasePrice": 21800
+        }
+      ],
+      "history": [],
+      "birthMonth": 2
+    },
+    "resolved": {
+      "product": {
+        "sku": "FEU-V-N01",
+        "line": "vive",
+        "motif": "feuille",
+        "category": "项链",
+        "name": "修长叶片吊坠，绿色珐琅",
+        "material": "18K黄金",
+        "gemstone": "绿色珐琅",
+        "price": 25800
+      },
+      "scope": [
+        {
+          "sku": "FEU-V-N01",
+          "line": "vive",
+          "motif": "feuille",
+          "category": "项链",
+          "name": "修长叶片吊坠，绿色珐琅",
+          "material": "18K黄金",
+          "gemstone": "绿色珐琅",
+          "price": 25800
+        }
+      ],
+      "reason": "采用顾问明确选择的 SKU。"
+    },
+    "event": null,
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-007",
+        "scenario": "reactivate",
+        "motif": "feuille",
+        "line": "vive",
+        "sku": "FEU-V-N01",
+        "notes": ""
+      },
+      "clientId": "CL-007",
+      "assignedAdvisor": "Lucie",
+      "scenario": "reactivate",
+      "selection": {
+        "depth": 3,
+        "motif": {
+          "state": "explicit",
+          "value": "feuille",
+          "applicable": true
+        },
+        "line": {
+          "state": "explicit",
+          "value": "vive",
+          "applicable": true
+        },
+        "sku": {
+          "state": "explicit",
+          "value": "FEU-V-N01",
+          "applicable": true
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "sku",
+        "mode": "explicit_sku",
+        "motif": {
+          "id": "feuille",
+          "name": "Feuille d’Azur",
+          "zh": "蔚蓝叶语",
+          "story": "风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。"
+        },
+        "line": {
+          "id": "vive",
+          "motif": "feuille",
+          "name": "Feuille Vive",
+          "zh": "新生叶",
+          "occasions": [
+            "personal"
+          ],
+          "story": "一片新叶舒展时，柔软的曲线孕育坚定的生命力：成长无须急促，自有方向。"
+        },
+        "product": {
+          "sku": "FEU-V-N01",
+          "line": "vive",
+          "motif": "feuille",
+          "category": "项链",
+          "name": "修长叶片吊坠，绿色珐琅",
+          "material": "18K黄金",
+          "gemstone": "绿色珐琅",
+          "price": 25800
+        },
+        "storyRequired": false,
+        "productFactsAllowed": true,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.02158399997279048,
+      "resolutionMs": 0.1416670000180602,
+      "totalMs": 0.5664169999945443
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。\n\n新生叶系列里有一款修长叶片吊坠，以18K黄金勾勒叶形，缀上绿色珐琅，线条舒展而安静。\n\n如果您愿意，欢迎随时和我聊聊珠宝想法。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。\n\n蔚蓝叶语从风掠过叶片的瞬间取意，新生叶系列则把新叶舒展的柔软曲线化为坚定的生命力。这款修长叶片吊坠以18K黄金打造，叶形修长，绿色珐琅添上一抹清润色泽，适合日常静静佩戴。\n\n若您想继续了解这些设计，方便时联系我就好。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，陆女士，我是 Maison Lioré 的珠宝顾问 Lucie。\n\n一片新叶舒展时，自有它的方向。新生叶系列的修长叶片吊坠以18K黄金与绿色珐琅留住这道柔和曲线，像把清晨的静谧轻轻收在颈间。\n\n您若有想分享或了解的，随时可以告诉我。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:59:55.238Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 3674.7060000000056,
+    "contextTimings": {
+      "normalizationMs": 0.02158399997279048,
+      "resolutionMs": 0.1416670000180602,
+      "totalMs": 0.5664169999945443
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.03820900002028793,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.10625000001164153
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2512.844291000016,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2513.022540999984
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.1698749999923166,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2513.199166000006
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2513.0304160000233,
+        "inputTokens": 3568,
+        "cachedInputTokens": 1920,
+        "outputTokens": 213,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2513.206333000009
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.00629100002697669,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2513.2377909999923
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.019542000023648143,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2513.2594999999856
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.4053340000100434,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2513.72866600001
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1160.546417000005,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3674.3909580000036
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.19954200001666322,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3674.597915999999
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1160.7657089999993,
+        "inputTokens": 3513,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3674.6059160000004
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.010332999983802438,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3674.645749999996
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.045707999990554526,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3674.6935829999857
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.005000000004656613,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3674.704457999993
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 3676.780625000014,
+  "completedAt": "2026-11-07T19:59:58.915Z",
+  "providerAttempts": [
+    {
+      "index": 75,
+      "caseId": "F-036",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:55.239Z",
+      "promptSha256": "baf5e239af299e8116694cbb1d2608719dd67a7f6c4082ae4fe3c01ac67d4104",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3568,
+        "input_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "output_tokens": 213,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3781
+      },
+      "status": "completed",
+      "durationMs": 2511.861208999995,
+      "completedAt": "2026-11-07T19:59:57.751Z"
+    },
+    {
+      "index": 76,
+      "caseId": "F-036",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:57.753Z",
+      "promptSha256": "faf527a222b7c349c402e165fc6282a1a460aae46828b946d50ea8fa9425d127",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3513,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3528
+      },
+      "status": "completed",
+      "durationMs": 1158.5712080000085,
+      "completedAt": "2026-11-07T19:59:58.911Z"
+    }
+  ],
+  "apiLatencyMs": 3670.4324170000036,
+  "tokenUsage": {
+    "input": 7081,
+    "cached": 2816,
+    "output": 228,
+    "callsWithoutUsage": 0
+  }
+}

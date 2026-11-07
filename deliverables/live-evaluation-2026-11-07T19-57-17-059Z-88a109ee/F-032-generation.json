@@ -1,0 +1,548 @@
+{
+  "id": "F-032",
+  "input": {
+    "clientId": "CL-002",
+    "scenario": "reactivate",
+    "motif": "muguet",
+    "line": "rosee",
+    "notes": ""
+  },
+  "normalizedInput": {
+    "clientId": "CL-002",
+    "scenario": "reactivate",
+    "motif": "muguet",
+    "line": "rosee",
+    "notes": ""
+  },
+  "expectedBehavior": "Reconnect naturally using known history/context and the current optional selection. No invented prior conversations, new arrivals, stock or pressure.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-002",
+      "name": "陈女士",
+      "assignedAdvisor": "Camille",
+      "interests": [
+        {
+          "motif": "feuille",
+          "line": "aqua",
+          "gemstone": "海蓝宝",
+          "category": "项链"
+        }
+      ],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-002-01",
+          "sku": "MUG-R-N01",
+          "productName": "单枝铃兰垂坠式吊坠",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "项链",
+          "purchaseDate": "2026-08-22",
+          "purchasePrice": 29800,
+          "advisorNotes": "曾咨询纤细白金珠宝与有纪念意义的礼赠。"
+        },
+        {
+          "id": "PUR-002-02",
+          "sku": "MUG-R-B01",
+          "productName": "细链手镯，铃兰与露珠双吊饰",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "手镯",
+          "purchaseDate": "2026-04-15",
+          "purchasePrice": 19800,
+          "occasion": "gift",
+          "advisorNotes": "曾咨询纤细白金珠宝与有纪念意义的礼赠。"
+        }
+      ],
+      "history": [
+        "想了解海蓝宝吊坠的设计，也在考虑价格。"
+      ],
+      "birthMonth": 3
+    },
+    "resolved": {
+      "product": null,
+      "reason": "保留已选意象或系列作为可选背景，不自动推荐单品。",
+      "scope": []
+    },
+    "event": null,
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-002",
+        "scenario": "reactivate",
+        "motif": "muguet",
+        "line": "rosee",
+        "notes": ""
+      },
+      "clientId": "CL-002",
+      "assignedAdvisor": "Camille",
+      "scenario": "reactivate",
+      "selection": {
+        "depth": 2,
+        "motif": {
+          "state": "explicit",
+          "value": "muguet",
+          "applicable": true
+        },
+        "line": {
+          "state": "explicit",
+          "value": "rosee",
+          "applicable": true
+        },
+        "sku": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [
+        "想了解海蓝宝吊坠的设计，也在考虑价格。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "line",
+        "mode": "optional_story",
+        "motif": {
+          "id": "muguet",
+          "name": "Muguet de Lumière",
+          "zh": "光之铃兰",
+          "story": "铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。"
+        },
+        "line": {
+          "id": "rosee",
+          "motif": "muguet",
+          "name": "Rosée du Matin",
+          "zh": "晨露",
+          "occasions": [
+            "gift",
+            "personal"
+          ],
+          "story": "清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。"
+        },
+        "product": null,
+        "storyRequired": false,
+        "productFactsAllowed": false,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.01425000000745058,
+      "resolutionMs": 0.046666999987792224,
+      "totalMs": 0.3740000000107102
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n最近想到晨露系列，铃兰低垂的花冠与露珠，像清晨第一缕光落在花瓣上，轻盈而安静。\n\n如果您愿意，欢迎随时和我聊聊珠宝想法。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n最近想到晨露系列，它取清晨第一缕光落在铃兰露珠上的意象，垂落的小钟形花与露珠构成轻盈的轮廓，象征新篇章与温柔的祝福。铃兰低垂的花冠像把祝愿轻轻递到掌心，不以声量取胜，却自有温柔的韧性。\n\n若您想继续了解这些设计，方便时联系我就好。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n晨露系列让我想起铃兰低垂的花冠，像把祝福轻轻递到掌心；清晨的光落在露珠上，轻盈、克制，也留有余地。\n\n您若有想分享或了解的，随时可以告诉我。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:59:36.741Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 3,
+    "transientRetries": 0,
+    "outputRepairs": 1,
+    "failures": [
+      {
+        "code": "OUTPUT_VALIDATION",
+        "stage": "output.validation",
+        "ruleIds": [
+          "FACT_GEMSTONE"
+        ],
+        "candidateIndexes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "retryCount": 1,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 6290.515458000009,
+    "contextTimings": {
+      "normalizationMs": 0.01425000000745058,
+      "resolutionMs": 0.046666999987792224,
+      "totalMs": 0.3740000000107102
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.03116700000828132,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.11966600001323968
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2844.0054579999996,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2844.181165999995
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.2324590000207536,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2844.4173330000194
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2844.2475409999897,
+        "inputTokens": 3349,
+        "cachedInputTokens": 1920,
+        "outputTokens": 260,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2844.4217910000007
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.002833999984432012,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2844.440499999997
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.010208000021521002,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2844.452707999997
+      },
+      {
+        "stage": "output.validation",
+        "status": "failed",
+        "candidateCount": 3,
+        "durationMs": 0.3149580000026617,
+        "ruleIds": [
+          "FACT_GEMSTONE"
+        ],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2844.8252499999944
+      },
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.048375000013038516,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 1,
+        "elapsedMs": 2844.9155829999945
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2450.1817089999968,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5295.180290999997
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.15249999999650754,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5295.340666000004
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2450.352666999999,
+        "inputTokens": 3796,
+        "cachedInputTokens": 3328,
+        "outputTokens": 207,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5295.349125000008
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.007917000009911135,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5295.384541000007
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.02350000001024455,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5295.410833000002
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.39170899998862296,
+        "ruleIds": [],
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5295.908625000011
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 994.1965829999826,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6290.270166000002
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.11483299999963492,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6290.393125000002
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 994.3550410000025,
+        "inputTokens": 3288,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6290.419374999998
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.010541999974520877,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6290.490458000015
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.011583000014070421,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6290.50445800001
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.003999999986262992,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6290.513915999996
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 6290.927874999994,
+  "completedAt": "2026-11-07T19:59:43.032Z",
+  "providerAttempts": [
+    {
+      "index": 66,
+      "caseId": "F-032",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:36.742Z",
+      "promptSha256": "21769e0d304a87e70b8d0eb190c04242432d42b6bd8ddb66689b744826c429b4",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3349,
+        "input_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "output_tokens": 260,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3609
+      },
+      "status": "completed",
+      "durationMs": 2842.1475830000127,
+      "completedAt": "2026-11-07T19:59:39.584Z"
+    },
+    {
+      "index": 67,
+      "caseId": "F-032",
+      "attempt": 2,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:39.586Z",
+      "promptSha256": "7f7001628c8c1c78eda0d9c505cffd2ed0df13d511fa4c7e1bb8b69129047260",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3796,
+        "input_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "output_tokens": 207,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4003
+      },
+      "status": "completed",
+      "durationMs": 2449.31029199998,
+      "completedAt": "2026-11-07T19:59:42.036Z"
+    },
+    {
+      "index": 68,
+      "caseId": "F-032",
+      "attempt": 3,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:42.038Z",
+      "promptSha256": "fbe395952d7856e313776852cf9a1d87cb48cf2705a97b8fbad22484f98c21bf",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3288,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3303
+      },
+      "status": "completed",
+      "durationMs": 992.9502919999941,
+      "completedAt": "2026-11-07T19:59:43.031Z"
+    }
+  ],
+  "apiLatencyMs": 6284.408166999987,
+  "tokenUsage": {
+    "input": 10433,
+    "cached": 6144,
+    "output": 482,
+    "callsWithoutUsage": 0
+  }
+}

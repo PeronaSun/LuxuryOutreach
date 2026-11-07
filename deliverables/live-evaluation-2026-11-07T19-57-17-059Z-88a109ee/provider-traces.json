@@ -1,0 +1,2602 @@
+[
+  {
+    "index": 1,
+    "caseId": "F-001",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:17.106Z",
+    "promptSha256": "30df2d5b06f6edb2a4854b6cfcf675f8d4110e6bdb39d7f863a806945331a4e1",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2926,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 161,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3087
+    },
+    "status": "completed",
+    "durationMs": 2285.081083,
+    "completedAt": "2026-11-07T19:57:19.391Z"
+  },
+  {
+    "index": 2,
+    "caseId": "F-001",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:19.394Z",
+    "promptSha256": "a56833d560f521c93057d779f2e0861f3903422d9b7b21c43b961e1d0b1b77c2",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2822,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2837
+    },
+    "status": "completed",
+    "durationMs": 985.196375,
+    "completedAt": "2026-11-07T19:57:20.379Z"
+  },
+  {
+    "index": 3,
+    "caseId": "F-002",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:20.384Z",
+    "promptSha256": "da0c8fa6bb02caae3e2ac1ea093096feb1584fd2161cb6cc6ce76a88036421e8",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3048,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 181,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3229
+    },
+    "status": "completed",
+    "durationMs": 2597.001542,
+    "completedAt": "2026-11-07T19:57:22.981Z"
+  },
+  {
+    "index": 4,
+    "caseId": "F-002",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:22.983Z",
+    "promptSha256": "bc4bad3aed873be59191554d81698f63ff58be474318a594e382f05f84cf72d0",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2964,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2979
+    },
+    "status": "completed",
+    "durationMs": 1345.6913750000003,
+    "completedAt": "2026-11-07T19:57:24.329Z"
+  },
+  {
+    "index": 5,
+    "caseId": "F-003",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:24.332Z",
+    "promptSha256": "0abdbac382d1e8c4f8523cdcd1e6ecfe7866cc700dce12b5ec79366df7fe8e16",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2975,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 175,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3150
+    },
+    "status": "completed",
+    "durationMs": 2721.128125,
+    "completedAt": "2026-11-07T19:57:27.053Z"
+  },
+  {
+    "index": 6,
+    "caseId": "F-003",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:27.057Z",
+    "promptSha256": "2c00f0f7f49ba7fe3e4b892b4dc7b30fc25baf3a228d3c3056689fdb78efa16f",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2888,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2903
+    },
+    "status": "completed",
+    "durationMs": 1348.559292,
+    "completedAt": "2026-11-07T19:57:28.405Z"
+  },
+  {
+    "index": 7,
+    "caseId": "F-004",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:28.408Z",
+    "promptSha256": "655b91227c8befaa29531401b056560ce14d06654468ff0fac8c2f69e473c248",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3097,
+      "input_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "output_tokens": 206,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3303
+    },
+    "status": "completed",
+    "durationMs": 3126.0992079999996,
+    "completedAt": "2026-11-07T19:57:31.534Z"
+  },
+  {
+    "index": 8,
+    "caseId": "F-004",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:31.537Z",
+    "promptSha256": "4dcf970012eaa2346116b0a688f7d30a4eb6cc2ecea0201a8ec2447ba6d61dc8",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3041,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3056
+    },
+    "status": "completed",
+    "durationMs": 1244.499667,
+    "completedAt": "2026-11-07T19:57:32.781Z"
+  },
+  {
+    "index": 9,
+    "caseId": "F-005",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:32.785Z",
+    "promptSha256": "1332c271245e27795b0db7a6961772ec1a7379330705869c9dca5899624dce68",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2996,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 189,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3185
+    },
+    "status": "completed",
+    "durationMs": 2727.3782500000016,
+    "completedAt": "2026-11-07T19:57:35.512Z"
+  },
+  {
+    "index": 10,
+    "caseId": "F-005",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:35.513Z",
+    "promptSha256": "1662a6ec379e95e82a176fa16a6a9111aa724a26c2c901ef098eeaa1391a2c64",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2923,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2938
+    },
+    "status": "completed",
+    "durationMs": 1282.7513749999998,
+    "completedAt": "2026-11-07T19:57:36.796Z"
+  },
+  {
+    "index": 11,
+    "caseId": "F-006",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:36.800Z",
+    "promptSha256": "40dd438cf44c42d9b71e7af61518654b8a9535ec2ec7bcdf8563232d3101f63a",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3087,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 188,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3275
+    },
+    "status": "completed",
+    "durationMs": 2790.7603329999984,
+    "completedAt": "2026-11-07T19:57:39.590Z"
+  },
+  {
+    "index": 12,
+    "caseId": "F-006",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:39.609Z",
+    "promptSha256": "aa7255bcf52b27ec0fa0e8b63776cfcebcc8f42f16b0d6997e25035abfd99e6f",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3010,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3025
+    },
+    "status": "completed",
+    "durationMs": 1333.605792000002,
+    "completedAt": "2026-11-07T19:57:40.943Z"
+  },
+  {
+    "index": 13,
+    "caseId": "F-007",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:40.947Z",
+    "promptSha256": "e7d6c2a8a0b58a717449c0b0392269687d5d8693e70cfd5ba102b4e24d18e53a",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2973,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3130
+    },
+    "status": "completed",
+    "durationMs": 2453.519708,
+    "completedAt": "2026-11-07T19:57:43.400Z"
+  },
+  {
+    "index": 14,
+    "caseId": "F-007",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:43.402Z",
+    "promptSha256": "82783bac6f15874930fc0daf652653e90dc4cfb66de86c9e9d67e071b87336b5",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2871,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2886
+    },
+    "status": "completed",
+    "durationMs": 1190.1043339999997,
+    "completedAt": "2026-11-07T19:57:44.592Z"
+  },
+  {
+    "index": 15,
+    "caseId": "F-008",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:44.593Z",
+    "promptSha256": "37c04ae3b4eed23aa381da33b57aeebd3d02eae522745b43ac711c358629ce29",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2973,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3132
+    },
+    "status": "completed",
+    "durationMs": 2014.2006249999977,
+    "completedAt": "2026-11-07T19:57:46.608Z"
+  },
+  {
+    "index": 16,
+    "caseId": "F-008",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:46.610Z",
+    "promptSha256": "72a2400697abb7094ef569e6a2198794ff13be3d534a36d849cd98dea9dbdf59",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2873,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2888
+    },
+    "status": "completed",
+    "durationMs": 1097.4959579999995,
+    "completedAt": "2026-11-07T19:57:47.707Z"
+  },
+  {
+    "index": 17,
+    "caseId": "F-009",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:47.711Z",
+    "promptSha256": "1bad9d09f0fdedb413986b764518c2beaffaa4908ebd1625992cf15192a5ec8a",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3783,
+      "input_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "output_tokens": 260,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4043
+    },
+    "status": "completed",
+    "durationMs": 2937.351542000004,
+    "completedAt": "2026-11-07T19:57:50.648Z"
+  },
+  {
+    "index": 18,
+    "caseId": "F-009",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:50.652Z",
+    "promptSha256": "a4f4afee46a60baa1f11d1536e6fb0ff1400bb09e6e6254c98ccb59bb1d65e57",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3808,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3823
+    },
+    "status": "completed",
+    "durationMs": 1320.8403340000004,
+    "completedAt": "2026-11-07T19:57:51.973Z"
+  },
+  {
+    "index": 19,
+    "caseId": "F-010",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:51.978Z",
+    "promptSha256": "be69ffd6f6bd8dca8b51a9c94d2472dcb38565967b8be7471a1de57fcc07564c",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3793,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 283,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4076
+    },
+    "status": "completed",
+    "durationMs": 3017.105875000001,
+    "completedAt": "2026-11-07T19:57:54.995Z"
+  },
+  {
+    "index": 20,
+    "caseId": "F-010",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:54.998Z",
+    "promptSha256": "c55aed5d77ba181a080786c94497628b13bfab3e6dc49d31832c1802d8077afc",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3841,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3856
+    },
+    "status": "completed",
+    "durationMs": 1085.0218339999992,
+    "completedAt": "2026-11-07T19:57:56.083Z"
+  },
+  {
+    "index": 21,
+    "caseId": "F-011",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:56.087Z",
+    "promptSha256": "8632c858ceb7a387e701784256e1f4929c64d1662edd770c0136a50c0c067c16",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3786,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4056
+    },
+    "status": "completed",
+    "durationMs": 3320.259124999997,
+    "completedAt": "2026-11-07T19:57:59.407Z"
+  },
+  {
+    "index": 22,
+    "caseId": "F-011",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:57:59.410Z",
+    "promptSha256": "0770835499bc27f7034d6b450b90c1fdc27ab718b2bddcea5107435d0f3df2c3",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3821,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3836
+    },
+    "status": "completed",
+    "durationMs": 1285.8057500000068,
+    "completedAt": "2026-11-07T19:58:00.696Z"
+  },
+  {
+    "index": 23,
+    "caseId": "F-012",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:00.700Z",
+    "promptSha256": "c01a3f9026f0c6bfe94dfc18b9baa36b46ee970dbc468728fe3f1015690e4981",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3609,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 304,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3913
+    },
+    "status": "completed",
+    "durationMs": 3575.3150000000023,
+    "completedAt": "2026-11-07T19:58:04.275Z"
+  },
+  {
+    "index": 24,
+    "caseId": "F-012",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:04.278Z",
+    "promptSha256": "269d317ceeca26262d1932eb038814d545d7209c0848384f834229fa77bdc3e8",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3675,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3690
+    },
+    "status": "completed",
+    "durationMs": 981.7659579999963,
+    "completedAt": "2026-11-07T19:58:05.260Z"
+  },
+  {
+    "index": 25,
+    "caseId": "F-013",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:05.264Z",
+    "promptSha256": "3303bbb59305cf5f529c8e8358d519fa54aa167c508e21c2485f07a270de219d",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3634,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 296,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3930
+    },
+    "status": "completed",
+    "durationMs": 3599.6189159999994,
+    "completedAt": "2026-11-07T19:58:08.863Z"
+  },
+  {
+    "index": 26,
+    "caseId": "F-013",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:08.868Z",
+    "promptSha256": "a117681ca0cfd5a144119193fc45067fde0251a8cb6da224967eabd99e984421",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3695,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3899
+    },
+    "status": "completed",
+    "durationMs": 2593.8175420000043,
+    "completedAt": "2026-11-07T19:58:11.462Z"
+  },
+  {
+    "index": 27,
+    "caseId": "F-013",
+    "attempt": 3,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:11.465Z",
+    "promptSha256": "c7b523aa9334337e2dc362f07ead11ae45269050079f270cc1367ec700c27173",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 4246,
+      "input_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "output_tokens": 323,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4569
+    },
+    "status": "completed",
+    "durationMs": 3160.1175000000003,
+    "completedAt": "2026-11-07T19:58:14.625Z"
+  },
+  {
+    "index": 28,
+    "caseId": "F-013",
+    "attempt": 4,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:14.630Z",
+    "promptSha256": "87e9b5213680ae400886dadcfcc731cb9d382548dddbbac42f8c0f523775357c",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3722,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3737
+    },
+    "status": "completed",
+    "durationMs": 1445.7965419999964,
+    "completedAt": "2026-11-07T19:58:16.076Z"
+  },
+  {
+    "index": 29,
+    "caseId": "F-014",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:16.099Z",
+    "promptSha256": "e2b766b9c30c68f76e6c9af164e37d30c7e170d8f0c9df4614a8923459c0a32b",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3678,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 287,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3965
+    },
+    "status": "completed",
+    "durationMs": 2976.8124580000003,
+    "completedAt": "2026-11-07T19:58:19.076Z"
+  },
+  {
+    "index": 30,
+    "caseId": "F-014",
+    "attempt": 2,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:19.078Z",
+    "promptSha256": "9cca66f5228e91e651e6ab20173b74b78812d97cac2970ae10eaa2dca1a5e609",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3965,
+      "input_tokens_details": {
+        "cached_tokens": 1664
+      },
+      "output_tokens": 130,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4095
+    },
+    "status": "completed",
+    "durationMs": 1686.2619169999962,
+    "completedAt": "2026-11-07T19:58:20.765Z"
+  },
+  {
+    "index": 31,
+    "caseId": "F-015",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:20.769Z",
+    "promptSha256": "97357ba4e2207bb4bccd4b5ab460909131f4af0b77e4c69e6e30feb386df8800",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3682,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3990
+    },
+    "status": "completed",
+    "durationMs": 3342.943999999996,
+    "completedAt": "2026-11-07T19:58:24.112Z"
+  },
+  {
+    "index": 32,
+    "caseId": "F-015",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:24.114Z",
+    "promptSha256": "894a86ea77e9ad8c3cbe8a98c56b51c2160edfaa8ffca206acf9785e09e62728",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3755,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3770
+    },
+    "status": "completed",
+    "durationMs": 1187.6109580000048,
+    "completedAt": "2026-11-07T19:58:25.302Z"
+  },
+  {
+    "index": 33,
+    "caseId": "F-016",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:25.310Z",
+    "promptSha256": "0202fdb6446b5e8bf0b99b6bf6ee8e4a7b28c304f18a6bb7d0cbf82f52afe50d",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3644,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 297,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3941
+    },
+    "status": "completed",
+    "durationMs": 3173.243000000002,
+    "completedAt": "2026-11-07T19:58:28.484Z"
+  },
+  {
+    "index": 34,
+    "caseId": "F-016",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:28.486Z",
+    "promptSha256": "0847fa4fb2b096bf660348ec21f0c354bbfebb14780de5e2068a485fa88a2bc2",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3706,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3721
+    },
+    "status": "completed",
+    "durationMs": 1346.7461659999972,
+    "completedAt": "2026-11-07T19:58:29.833Z"
+  },
+  {
+    "index": 35,
+    "caseId": "F-017",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:29.837Z",
+    "promptSha256": "38a96067878cb9806e85f878ee2dd5bb1e6e3de71da961eeb4c24c86fcfe576f",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3610,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3861
+    },
+    "status": "completed",
+    "durationMs": 3104.5972080000065,
+    "completedAt": "2026-11-07T19:58:32.942Z"
+  },
+  {
+    "index": 36,
+    "caseId": "F-017",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:32.943Z",
+    "promptSha256": "48df325fe0df57c22fd7f97be2f1c8ad8481ecbc5b04fd243e16a1150c08ccf7",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3626,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 112,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3738
+    },
+    "status": "completed",
+    "durationMs": 1715.510666000002,
+    "completedAt": "2026-11-07T19:58:34.658Z"
+  },
+  {
+    "index": 37,
+    "caseId": "F-017",
+    "attempt": 3,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:34.667Z",
+    "promptSha256": "33a28fbd751ec5a3257ae9941f0af52b2aac0d67f649d4a57eeb788fdf164261",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 4106,
+      "input_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4377
+    },
+    "status": "completed",
+    "durationMs": 2715.4611670000013,
+    "completedAt": "2026-11-07T19:58:37.382Z"
+  },
+  {
+    "index": 38,
+    "caseId": "F-018",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:37.388Z",
+    "promptSha256": "041ff54916112da03af0c77234ea060b1ed806a797ab118bfe2d58780b7e1a64",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3630,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 239,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3869
+    },
+    "status": "completed",
+    "durationMs": 2745.159375000003,
+    "completedAt": "2026-11-07T19:58:40.133Z"
+  },
+  {
+    "index": 39,
+    "caseId": "F-018",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:40.136Z",
+    "promptSha256": "0d6454b618fa4d8ac7dbfcd77426fee3ebb90878150f0603416e78490c52e8f6",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3634,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3649
+    },
+    "status": "completed",
+    "durationMs": 1242.168583999999,
+    "completedAt": "2026-11-07T19:58:41.378Z"
+  },
+  {
+    "index": 40,
+    "caseId": "F-019",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:41.381Z",
+    "promptSha256": "bf7fccb5cf113d45bb2d5c826be8b45ad1d2c4d6846add9b5402a7fd1d2d9be8",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3619,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 279,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3898
+    },
+    "status": "completed",
+    "durationMs": 3453.840082999988,
+    "completedAt": "2026-11-07T19:58:44.835Z"
+  },
+  {
+    "index": 41,
+    "caseId": "F-019",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:44.837Z",
+    "promptSha256": "df7c4336aef5f8cfb44433e2ae78f9a8f2a00803b798de96ceb107ad0ca65c4c",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3663,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3678
+    },
+    "status": "completed",
+    "durationMs": 1469.959458000012,
+    "completedAt": "2026-11-07T19:58:46.307Z"
+  },
+  {
+    "index": 42,
+    "caseId": "F-020",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:46.310Z",
+    "promptSha256": "6b6f892b0f4acc8d1d551700f8877453ba41c1f4efc588008ccd7d409602989c",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3526,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 274,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3800
+    },
+    "status": "completed",
+    "durationMs": 3485.3046250000043,
+    "completedAt": "2026-11-07T19:58:49.796Z"
+  },
+  {
+    "index": 43,
+    "caseId": "F-020",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:49.798Z",
+    "promptSha256": "d2110691470c845322290b12b75567d1d8d8b919194c95470db4f76115076901",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3565,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3580
+    },
+    "status": "completed",
+    "durationMs": 1315.7580410000082,
+    "completedAt": "2026-11-07T19:58:51.114Z"
+  },
+  {
+    "index": 44,
+    "caseId": "F-021",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:51.117Z",
+    "promptSha256": "d159fc99b4a0b9127353b5eed2a666bd985b4b6695107aaf1c717e0d4cf85e67",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3873,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 240,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4113
+    },
+    "status": "completed",
+    "durationMs": 3139.6205409999966,
+    "completedAt": "2026-11-07T19:58:54.257Z"
+  },
+  {
+    "index": 45,
+    "caseId": "F-021",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:54.259Z",
+    "promptSha256": "670fd159d1d96cc33e81dfe27059d435d35f9ebfedea9db9bdaddd9a77346170",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3859,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3874
+    },
+    "status": "completed",
+    "durationMs": 1231.2159170000086,
+    "completedAt": "2026-11-07T19:58:55.491Z"
+  },
+  {
+    "index": 46,
+    "caseId": "F-022",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:55.495Z",
+    "promptSha256": "26475a59f8b887f527ecede19a868baf1365056d7c666b3c6a7eefe3ce250d96",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3958,
+      "input_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "output_tokens": 238,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4196
+    },
+    "status": "completed",
+    "durationMs": 3377.2422090000036,
+    "completedAt": "2026-11-07T19:58:58.872Z"
+  },
+  {
+    "index": 47,
+    "caseId": "F-022",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:58.885Z",
+    "promptSha256": "7834461b3ded93e131e31bc497a39a8479a8a3b3791093ece6e7c04b23d06157",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3942,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3957
+    },
+    "status": "completed",
+    "durationMs": 1086.141374999992,
+    "completedAt": "2026-11-07T19:58:59.973Z"
+  },
+  {
+    "index": 48,
+    "caseId": "F-023",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:58:59.978Z",
+    "promptSha256": "e2eb1a95f4cfb010d771add0c357cc7f2285fac0d23a2265346b1556648fb482",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3819,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4064
+    },
+    "status": "completed",
+    "durationMs": 2545.6799579999933,
+    "completedAt": "2026-11-07T19:59:02.524Z"
+  },
+  {
+    "index": 49,
+    "caseId": "F-023",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:02.525Z",
+    "promptSha256": "85ffe81fbf994a1dac019168121e8919a5ec03e84e331f1525f12bd6460a704d",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3813,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3828
+    },
+    "status": "completed",
+    "durationMs": 1211.9977080000099,
+    "completedAt": "2026-11-07T19:59:03.737Z"
+  },
+  {
+    "index": 50,
+    "caseId": "F-024",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:03.741Z",
+    "promptSha256": "ce6be72992b7439895d888a3194acf77e440b8ffc286d6325c6a33eed86c0832",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3869,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4139
+    },
+    "status": "completed",
+    "durationMs": 2979.911666999993,
+    "completedAt": "2026-11-07T19:59:06.721Z"
+  },
+  {
+    "index": 51,
+    "caseId": "F-024",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:06.723Z",
+    "promptSha256": "37af15e5d3d5c2256080f1f44bd0af9e683a2600b4f348b038afb0f91ff2507f",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3888,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3903
+    },
+    "status": "completed",
+    "durationMs": 1139.650667000009,
+    "completedAt": "2026-11-07T19:59:07.862Z"
+  },
+  {
+    "index": 52,
+    "caseId": "F-025",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:07.864Z",
+    "promptSha256": "0b60929c0d367d6acd75c7827e354f4dac366b2594f7a07ab34210c5ae44bd88",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3842,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4088
+    },
+    "status": "completed",
+    "durationMs": 2478.624125000002,
+    "completedAt": "2026-11-07T19:59:10.343Z"
+  },
+  {
+    "index": 53,
+    "caseId": "F-025",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:10.345Z",
+    "promptSha256": "5fb1f46c0c3f67ab223b92e4c2c869b0cc10f9be8ece06df6dbe35c03d4f79a3",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3834,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3849
+    },
+    "status": "completed",
+    "durationMs": 1156.3800409999967,
+    "completedAt": "2026-11-07T19:59:11.501Z"
+  },
+  {
+    "index": 54,
+    "caseId": "F-026",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:11.504Z",
+    "promptSha256": "30e5201bbbc9d656d29ee4fa32f7457b892fa102045d2bdcf6e3e22cc82e1c54",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3842,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 216,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4058
+    },
+    "status": "completed",
+    "durationMs": 2705.291624999998,
+    "completedAt": "2026-11-07T19:59:14.209Z"
+  },
+  {
+    "index": 55,
+    "caseId": "F-026",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:14.211Z",
+    "promptSha256": "db2bccf5c032b257762da0080d271e9e4e92d514a6b460d54f5a5ee84a80eeef",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3804,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3819
+    },
+    "status": "completed",
+    "durationMs": 1229.234375,
+    "completedAt": "2026-11-07T19:59:15.441Z"
+  },
+  {
+    "index": 56,
+    "caseId": "F-027",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:15.445Z",
+    "promptSha256": "b82e0f5e546e505a62ba4980f10caf28d77346a2ce604f9083c8e4a4dc024479",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3771,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 253,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4024
+    },
+    "status": "completed",
+    "durationMs": 3008.658666000003,
+    "completedAt": "2026-11-07T19:59:18.454Z"
+  },
+  {
+    "index": 57,
+    "caseId": "F-027",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:18.456Z",
+    "promptSha256": "b32e166633998016033934e7f9c2869a809fad2aca87f88912c1ed1138e7c7be",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3776,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3791
+    },
+    "status": "completed",
+    "durationMs": 877.0567080000037,
+    "completedAt": "2026-11-07T19:59:19.333Z"
+  },
+  {
+    "index": 58,
+    "caseId": "F-028",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:19.337Z",
+    "promptSha256": "0886a5a512c53ffc3565df05034982e902ba5538df889456af1a2b89ce599ca2",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3797,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 283,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4080
+    },
+    "status": "completed",
+    "durationMs": 3182.522874999995,
+    "completedAt": "2026-11-07T19:59:22.520Z"
+  },
+  {
+    "index": 59,
+    "caseId": "F-028",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:22.523Z",
+    "promptSha256": "937ff3e4aa37df4de4e4ebd5939e9ca09ebd7470c579a9042083772f4b2f1ab4",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3832,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3847
+    },
+    "status": "completed",
+    "durationMs": 1166.267292000004,
+    "completedAt": "2026-11-07T19:59:23.690Z"
+  },
+  {
+    "index": 60,
+    "caseId": "F-029",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:23.696Z",
+    "promptSha256": "b5b8918f7e16e875bdfb03e6d305b7bcbbd5b7bd3291982a36f28a2604c1c842",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2907,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 182,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3089
+    },
+    "status": "completed",
+    "durationMs": 3122.502542000002,
+    "completedAt": "2026-11-07T19:59:26.820Z"
+  },
+  {
+    "index": 61,
+    "caseId": "F-029",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:26.822Z",
+    "promptSha256": "9eb05bd2f12dd4239ffa2419ab3d7f9deb779e1d5360a18f577ee9903048f469",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2822,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2837
+    },
+    "status": "completed",
+    "durationMs": 1323.356832999998,
+    "completedAt": "2026-11-07T19:59:28.146Z"
+  },
+  {
+    "index": 62,
+    "caseId": "F-030",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:28.150Z",
+    "promptSha256": "ed40763609e0fc7f44d5fad7cbb6bd84530c0343a7a41d72db3840ccb2445d67",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3039,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 193,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3232
+    },
+    "status": "completed",
+    "durationMs": 2647.146875000006,
+    "completedAt": "2026-11-07T19:59:30.797Z"
+  },
+  {
+    "index": 63,
+    "caseId": "F-030",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:30.799Z",
+    "promptSha256": "e4a9117317eb8e1a6444df6e263d7b7221e252a4f117947e89749f20330773b6",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2961,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2976
+    },
+    "status": "completed",
+    "durationMs": 1482.491000000009,
+    "completedAt": "2026-11-07T19:59:32.281Z"
+  },
+  {
+    "index": 64,
+    "caseId": "F-031",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:32.285Z",
+    "promptSha256": "ecfe0920f9d4ac1520e0cd0e4e96a664bdd89ac5606696a38f963f02317cc426",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3194,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3417
+    },
+    "status": "completed",
+    "durationMs": 2573.49979099998,
+    "completedAt": "2026-11-07T19:59:34.858Z"
+  },
+  {
+    "index": 65,
+    "caseId": "F-031",
+    "attempt": 2,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:34.861Z",
+    "promptSha256": "c30eca6752f7aeae42050a309ba9caa9eb2615a02da6c3ec2c8a261209787b7b",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3524,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 228,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3752
+    },
+    "status": "completed",
+    "durationMs": 1875.8757500000065,
+    "completedAt": "2026-11-07T19:59:36.737Z"
+  },
+  {
+    "index": 66,
+    "caseId": "F-032",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:36.742Z",
+    "promptSha256": "21769e0d304a87e70b8d0eb190c04242432d42b6bd8ddb66689b744826c429b4",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3349,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 260,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3609
+    },
+    "status": "completed",
+    "durationMs": 2842.1475830000127,
+    "completedAt": "2026-11-07T19:59:39.584Z"
+  },
+  {
+    "index": 67,
+    "caseId": "F-032",
+    "attempt": 2,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:39.586Z",
+    "promptSha256": "7f7001628c8c1c78eda0d9c505cffd2ed0df13d511fa4c7e1bb8b69129047260",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3796,
+      "input_tokens_details": {
+        "cached_tokens": 3328
+      },
+      "output_tokens": 207,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4003
+    },
+    "status": "completed",
+    "durationMs": 2449.31029199998,
+    "completedAt": "2026-11-07T19:59:42.036Z"
+  },
+  {
+    "index": 68,
+    "caseId": "F-032",
+    "attempt": 3,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:42.038Z",
+    "promptSha256": "fbe395952d7856e313776852cf9a1d87cb48cf2705a97b8fbad22484f98c21bf",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3288,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3303
+    },
+    "status": "completed",
+    "durationMs": 992.9502919999941,
+    "completedAt": "2026-11-07T19:59:43.031Z"
+  },
+  {
+    "index": 69,
+    "caseId": "F-033",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:43.035Z",
+    "promptSha256": "bb2f9d3394af19aa9cf1f38c42e58a55636eab58884eb82fad9bf054807595c1",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3624,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 291,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3915
+    },
+    "status": "completed",
+    "durationMs": 3077.1415840000263,
+    "completedAt": "2026-11-07T19:59:46.112Z"
+  },
+  {
+    "index": 70,
+    "caseId": "F-033",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:46.113Z",
+    "promptSha256": "9b963630643f84b7a0571997e10c05c6511abe1eac878b2eb501a3c1844874e5",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3644,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3659
+    },
+    "status": "completed",
+    "durationMs": 1269.759625000006,
+    "completedAt": "2026-11-07T19:59:47.383Z"
+  },
+  {
+    "index": 71,
+    "caseId": "F-034",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:47.386Z",
+    "promptSha256": "2224436b3d33047bee299ca70ee5d0a2f3749cde02dc30fd108cebff6eb45097",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3735,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 260,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3995
+    },
+    "status": "completed",
+    "durationMs": 2490.4772079999966,
+    "completedAt": "2026-11-07T19:59:49.877Z"
+  },
+  {
+    "index": 72,
+    "caseId": "F-034",
+    "attempt": 2,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:49.880Z",
+    "promptSha256": "241014c796a8896bc1f2f4299ac1513f1b6f5a4eb2290abc703778407ba3a1a7",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 4009,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 118,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4127
+    },
+    "status": "completed",
+    "durationMs": 1898.3053329999966,
+    "completedAt": "2026-11-07T19:59:51.779Z"
+  },
+  {
+    "index": 73,
+    "caseId": "F-035",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:51.783Z",
+    "promptSha256": "ea47af3313ce2d70db8fe2a9a0a3b8fc33e198176701776ab09782d459a4e529",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3126,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 203,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3329
+    },
+    "status": "completed",
+    "durationMs": 2357.291208999988,
+    "completedAt": "2026-11-07T19:59:54.140Z"
+  },
+  {
+    "index": 74,
+    "caseId": "F-035",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:54.143Z",
+    "promptSha256": "598c7fa27aef55cfe8f0740d73ee10e2d69257e12ce2b920694c6162054e58d2",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3061,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3076
+    },
+    "status": "completed",
+    "durationMs": 1091.2228749999776,
+    "completedAt": "2026-11-07T19:59:55.234Z"
+  },
+  {
+    "index": 75,
+    "caseId": "F-036",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:55.239Z",
+    "promptSha256": "baf5e239af299e8116694cbb1d2608719dd67a7f6c4082ae4fe3c01ac67d4104",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3568,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3781
+    },
+    "status": "completed",
+    "durationMs": 2511.861208999995,
+    "completedAt": "2026-11-07T19:59:57.751Z"
+  },
+  {
+    "index": 76,
+    "caseId": "F-036",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:57.753Z",
+    "promptSha256": "faf527a222b7c349c402e165fc6282a1a460aae46828b946d50ea8fa9425d127",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3513,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3528
+    },
+    "status": "completed",
+    "durationMs": 1158.5712080000085,
+    "completedAt": "2026-11-07T19:59:58.911Z"
+  },
+  {
+    "index": 77,
+    "caseId": "F-037",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T19:59:58.917Z",
+    "promptSha256": "1d6616b1de147d6bcb09e36e699facb4a0a509bd4a9a6d767737c1cc80e1a428",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2998,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3211
+    },
+    "status": "completed",
+    "durationMs": 2156.186874999985,
+    "completedAt": "2026-11-07T20:00:01.073Z"
+  },
+  {
+    "index": 78,
+    "caseId": "F-037",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:01.077Z",
+    "promptSha256": "c5b584268d8db3d887d921bc881d631a91747f0d0dc99999b18911103a614bd5",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2951,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2966
+    },
+    "status": "completed",
+    "durationMs": 1024.7225000000035,
+    "completedAt": "2026-11-07T20:00:02.102Z"
+  },
+  {
+    "index": 79,
+    "caseId": "F-038",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:02.104Z",
+    "promptSha256": "2895470204fac7ada41e5cc72791a9588cc1a9b634f7850c9c45c1ec86d3fe8f",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3336,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 263,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3599
+    },
+    "status": "completed",
+    "durationMs": 3170.067791999987,
+    "completedAt": "2026-11-07T20:00:05.274Z"
+  },
+  {
+    "index": 80,
+    "caseId": "F-038",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:05.277Z",
+    "promptSha256": "79c394d81c32d0bf418f1b553e6cabb1ae488da55a3526b8b1d2a92a0295fcd6",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3336,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3351
+    },
+    "status": "completed",
+    "durationMs": 1600.2261669999862,
+    "completedAt": "2026-11-07T20:00:06.877Z"
+  },
+  {
+    "index": 81,
+    "caseId": "F-039",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:06.882Z",
+    "promptSha256": "09d559f0f1274b5dab25e5c907fc4e7bd55a56dea1da5338d3108b1065cccde9",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3440,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 240,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3680
+    },
+    "status": "completed",
+    "durationMs": 2908.053042000014,
+    "completedAt": "2026-11-07T20:00:09.790Z"
+  },
+  {
+    "index": 82,
+    "caseId": "F-039",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:09.794Z",
+    "promptSha256": "57a809f1992014b5c32482b0fab96b65069cc1371454a9e33d94cd6fc8c48011",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3417,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3432
+    },
+    "status": "completed",
+    "durationMs": 1503.7847089999996,
+    "completedAt": "2026-11-07T20:00:11.298Z"
+  },
+  {
+    "index": 83,
+    "caseId": "F-040",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:11.302Z",
+    "promptSha256": "e97b4d59855fca26bd3412c4fcaa91aa3a950b3ba6182e55c86b494eb5a4ae21",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3803,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 276,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4079
+    },
+    "status": "completed",
+    "durationMs": 2874.5338749999937,
+    "completedAt": "2026-11-07T20:00:14.176Z"
+  },
+  {
+    "index": 84,
+    "caseId": "F-040",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:14.179Z",
+    "promptSha256": "6fcf905f5e41fc7d7bccf4f6b65afc06b7a1fa1a081c3d8f6f3fbc9f241e026b",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3816,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3831
+    },
+    "status": "completed",
+    "durationMs": 1425.6490420000046,
+    "completedAt": "2026-11-07T20:00:15.604Z"
+  },
+  {
+    "index": 85,
+    "caseId": "F-041",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:15.616Z",
+    "promptSha256": "82086ea6ed8073544b3c7f350bdcf88a68dbcfacdee51ccf66088d9d0abaf736",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3470,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 273,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3743
+    },
+    "status": "completed",
+    "durationMs": 2990.074458999996,
+    "completedAt": "2026-11-07T20:00:18.607Z"
+  },
+  {
+    "index": 86,
+    "caseId": "F-041",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:18.608Z",
+    "promptSha256": "45ad71423bb4a214636b9161f7e12ffe84a1535cde67d10b0967381794a81fc2",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3480,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3495
+    },
+    "status": "completed",
+    "durationMs": 1245.216333999997,
+    "completedAt": "2026-11-07T20:00:19.853Z"
+  },
+  {
+    "index": 87,
+    "caseId": "F-042",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:19.857Z",
+    "promptSha256": "09200533e5868dea107b248934a738d07ed34fe4fa23aa98785caedc94a9d974",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3246,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 244,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3490
+    },
+    "status": "completed",
+    "durationMs": 3096.5835829999996,
+    "completedAt": "2026-11-07T20:00:22.953Z"
+  },
+  {
+    "index": 88,
+    "caseId": "F-042",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:22.956Z",
+    "promptSha256": "1f63a111fd23ca5b4aff5d6b96c7681693265ab88775488c0cebf9da9da17575",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3230,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3245
+    },
+    "status": "completed",
+    "durationMs": 971.1652920000197,
+    "completedAt": "2026-11-07T20:00:23.928Z"
+  },
+  {
+    "index": 89,
+    "caseId": "F-043",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:23.937Z",
+    "promptSha256": "ce41c123500ae1809d0261efaf894e438ede20985addb63ac53daf3e70f5fc80",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3734,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 316,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4050
+    },
+    "status": "completed",
+    "durationMs": 3262.4827499999956,
+    "completedAt": "2026-11-07T20:00:27.199Z"
+  },
+  {
+    "index": 90,
+    "caseId": "F-043",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:27.200Z",
+    "promptSha256": "2a4b1b7f40f08f531cac07ecfdc18ac360360958f0b8d2f9875112fdd46ad5b2",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3790,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3805
+    },
+    "status": "completed",
+    "durationMs": 1257.8647919999785,
+    "completedAt": "2026-11-07T20:00:28.458Z"
+  },
+  {
+    "index": 91,
+    "caseId": "F-044",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:28.460Z",
+    "promptSha256": "b361e6d520b2ed484271bcef94bd6b84610d38d6b6283be70e3a4385b4e2ef89",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2978,
+      "input_tokens_details": {
+        "cached_tokens": 2816
+      },
+      "output_tokens": 230,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3208
+    },
+    "status": "completed",
+    "durationMs": 2636.5846250000177,
+    "completedAt": "2026-11-07T20:00:31.097Z"
+  },
+  {
+    "index": 92,
+    "caseId": "F-044",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:31.099Z",
+    "promptSha256": "7a06d3e631f8fc7e7aa26d24ecae0403b34e8238b0e5475fbc1d1fe6844f916a",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 2954,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2969
+    },
+    "status": "completed",
+    "durationMs": 1289.4467920000025,
+    "completedAt": "2026-11-07T20:00:32.388Z"
+  },
+  {
+    "index": 93,
+    "caseId": "F-045",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:32.394Z",
+    "promptSha256": "b00a9f4949971ef7a5c435ad6f1fd5c02a364cae29c4da986aba23f7d1825864",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3211,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3431
+    },
+    "status": "completed",
+    "durationMs": 2945.0613750000193,
+    "completedAt": "2026-11-07T20:00:35.339Z"
+  },
+  {
+    "index": 94,
+    "caseId": "F-045",
+    "attempt": 2,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:35.343Z",
+    "promptSha256": "34a6a391267f206f46824c7d2e7d92479d05ac76db7328efb3e03194f3463e70",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3608,
+      "input_tokens_details": {
+        "cached_tokens": 3200
+      },
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3828
+    },
+    "status": "completed",
+    "durationMs": 2050.174624999985,
+    "completedAt": "2026-11-07T20:00:37.393Z"
+  },
+  {
+    "index": 95,
+    "caseId": "F-046",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:37.395Z",
+    "promptSha256": "ec5890318e16b37b6dc12883245d53a8cb35ad26b32e8909ff485221b2275eee",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3406,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 280,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3686
+    },
+    "status": "completed",
+    "durationMs": 3377.4851659999986,
+    "completedAt": "2026-11-07T20:00:40.773Z"
+  },
+  {
+    "index": 96,
+    "caseId": "F-046",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:40.784Z",
+    "promptSha256": "916462f7e5b218fa80d5a69ccb4a84d710e073510bd74e7c08235ab4e42ebfbe",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3432,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3447
+    },
+    "status": "completed",
+    "durationMs": 1187.9113750000251,
+    "completedAt": "2026-11-07T20:00:41.972Z"
+  },
+  {
+    "index": 97,
+    "caseId": "F-047",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:41.978Z",
+    "promptSha256": "316326c4e024016e7f82393aacc66c30d0a7a03f1f50701548bc3e2d9e03ee1e",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3817,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4087
+    },
+    "status": "completed",
+    "durationMs": 3065.382083000004,
+    "completedAt": "2026-11-07T20:00:45.043Z"
+  },
+  {
+    "index": 98,
+    "caseId": "F-047",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:45.047Z",
+    "promptSha256": "b4b4f675e9176d8030af9f67508e8bc075712a51e9c16fdebec26267a98e3e9a",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3835,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3850
+    },
+    "status": "completed",
+    "durationMs": 1287.038166000013,
+    "completedAt": "2026-11-07T20:00:46.334Z"
+  },
+  {
+    "index": 99,
+    "caseId": "F-048",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:46.340Z",
+    "promptSha256": "8cb81048b5259fa2a05870a3b730ea42da8066bb5c9dabcdab2dca828453c1c0",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3800,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 301,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4101
+    },
+    "status": "completed",
+    "durationMs": 3108.45762500001,
+    "completedAt": "2026-11-07T20:00:49.448Z"
+  },
+  {
+    "index": 100,
+    "caseId": "F-048",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:49.451Z",
+    "promptSha256": "a3a712b1a58eb27e82dce3ee67fa27e97cabe27040b2bb659be84d0542fb07e4",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3843,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3858
+    },
+    "status": "completed",
+    "durationMs": 1103.8212500000081,
+    "completedAt": "2026-11-07T20:00:50.555Z"
+  },
+  {
+    "index": 101,
+    "caseId": "F-049",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:50.559Z",
+    "promptSha256": "ceae51cff6dfe61137993dc3779d8447133ecc0765afd320981f80602c350f0c",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3661,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 274,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3935
+    },
+    "status": "completed",
+    "durationMs": 3933.567167000001,
+    "completedAt": "2026-11-07T20:00:54.493Z"
+  },
+  {
+    "index": 102,
+    "caseId": "F-049",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:54.495Z",
+    "promptSha256": "9d7c45bae7e21ed4da27ed9e054e0c708b58db5e0ae2d7a2ccc87cdccc4635cc",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3682,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3697
+    },
+    "status": "completed",
+    "durationMs": 1291.536167000013,
+    "completedAt": "2026-11-07T20:00:55.786Z"
+  },
+  {
+    "index": 103,
+    "caseId": "F-050",
+    "attempt": 1,
+    "stage": "advisor_messages",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:55.792Z",
+    "promptSha256": "f235e5781cb5c073d406ae82d7374ba309d2b856f7248756ad13b2360a5ca5e1",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3682,
+      "input_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3987
+    },
+    "status": "completed",
+    "durationMs": 3329.7659580000036,
+    "completedAt": "2026-11-07T20:00:59.121Z"
+  },
+  {
+    "index": 104,
+    "caseId": "F-050",
+    "attempt": 2,
+    "stage": "brand_audit",
+    "requestedModel": "deepseek-flash",
+    "startedAt": "2026-11-07T20:00:59.123Z",
+    "promptSha256": "fae3055e88aa3b5ba36e0c91380d547c362e9dba81386f331cec9fdc62ee43a1",
+    "httpStatus": 200,
+    "returnedModel": "deepseek-flash",
+    "usage": {
+      "input_tokens": 3735,
+      "input_tokens_details": {
+        "cached_tokens": 896
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3750
+    },
+    "status": "completed",
+    "durationMs": 1119.3342080000148,
+    "completedAt": "2026-11-07T20:01:00.243Z"
+  }
+]

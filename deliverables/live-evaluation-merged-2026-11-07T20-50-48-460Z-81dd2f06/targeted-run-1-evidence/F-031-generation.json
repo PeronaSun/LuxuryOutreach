@@ -1,0 +1,812 @@
+{
+  "id": "F-031",
+  "input": {
+    "clientId": "CL-001",
+    "scenario": "reactivate",
+    "motif": "feuille",
+    "notes": ""
+  },
+  "normalizedInput": {
+    "clientId": "CL-001",
+    "scenario": "reactivate",
+    "motif": "feuille",
+    "notes": ""
+  },
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-001",
+      "name": "林女士",
+      "assignedAdvisor": "Sophie",
+      "interests": [
+        {
+          "motif": "jasmin",
+          "line": "jasmin",
+          "category": "戒指",
+          "sku": "JAS-R01",
+          "material": "18K玫瑰金"
+        }
+      ],
+      "latestPreference": {
+        "material": "18K玫瑰金",
+        "text": "最近明确表示偏爱玫瑰金。"
+      },
+      "purchases": [
+        {
+          "id": "PUR-001-01",
+          "sku": "JAS-R01",
+          "productName": "五瓣茉莉开口戒，花心小钻",
+          "motif": "jasmin",
+          "line": "jasmin",
+          "category": "戒指",
+          "purchaseDate": "2026-09-18",
+          "purchasePrice": 18800,
+          "occasion": "personal",
+          "advisorNotes": "曾表达对纤细花形设计与日常珠宝的偏好。"
+        },
+        {
+          "id": "PUR-001-02",
+          "sku": "JAS-N01",
+          "productName": "单朵茉莉钻石吊坠",
+          "motif": "jasmin",
+          "line": "jasmin",
+          "category": "项链",
+          "purchaseDate": "2026-06-12",
+          "purchasePrice": 22800,
+          "occasion": "personal",
+          "advisorNotes": "曾表达对纤细花形设计与日常珠宝的偏好。"
+        }
+      ],
+      "history": [
+        "喜欢星夜茉莉的戒指，希望日常佩戴也自然。"
+      ],
+      "birthMonth": 11
+    },
+    "resolved": {
+      "product": null,
+      "reason": "保留已选意象或系列作为可选背景，不自动推荐单品。",
+      "scope": []
+    },
+    "event": null,
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-001",
+        "scenario": "reactivate",
+        "motif": "feuille",
+        "notes": ""
+      },
+      "clientId": "CL-001",
+      "assignedAdvisor": "Sophie",
+      "scenario": "reactivate",
+      "selection": {
+        "depth": 1,
+        "motif": {
+          "state": "explicit",
+          "value": "feuille",
+          "applicable": true
+        },
+        "line": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "sku": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [
+        "喜欢星夜茉莉的戒指，希望日常佩戴也自然。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "motif",
+        "mode": "optional_story",
+        "motif": {
+          "id": "feuille",
+          "name": "Feuille d’Azur",
+          "zh": "蔚蓝叶语",
+          "story": "风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。"
+        },
+        "line": null,
+        "product": null,
+        "storyRequired": false,
+        "productFactsAllowed": false,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.06783299999915471,
+      "resolutionMs": 0.13466599999992468,
+      "totalMs": 0.42924999999922875
+    }
+  },
+  "source": "live",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "promptVersion": "advisor-1.5.1",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T20:46:30.233Z",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n最近想到蔚蓝叶语这个意象：叶脉舒展，水光在叶片间流动，安静而有韧性。您之前提过偏爱玫瑰金，这份温润的质感与它倒是相合。\n\n如果您愿意，欢迎随时和我聊聊珠宝想法。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n您之前提过偏爱玫瑰金，这份温润的质感我一直记着。最近整理品牌意象时想到蔚蓝叶语：风掠过叶片，水光在叶脉间流动，叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。它不急着成为某一件作品，更像一种可以慢慢聊起的审美方向。\n\n若您想继续了解这些设计，方便时联系我就好。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n近来想到蔚蓝叶语——风掠过叶片，水光在叶脉间流动，叶的线条里有成长与韧性，也有清晨般的宁静。您偏爱的玫瑰金温润含蓄，与这份意象恰好相合。\n\n您若有想分享或了解的，随时可以告诉我。"
+    }
+  ],
+  "generationPerformedInThisRun": true,
+  "sourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+  "originalRun": "runtime/final-evaluation/live-2026-11-07T19-57-17-059Z-88a109ee",
+  "sameInputAndCanonicalContext": true,
+  "recovery": {
+    "providerCalls": 3,
+    "transientRetries": 0,
+    "outputRepairs": 1,
+    "failures": [
+      {
+        "code": "OUTPUT_VALIDATION",
+        "stage": "output.validation",
+        "ruleIds": [
+          "WRONG_MOTIF"
+        ],
+        "candidateIndexes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "retryCount": 1,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 6001.435917000001,
+    "contextTimings": {
+      "normalizationMs": 0.06783299999915471,
+      "resolutionMs": 0.13466599999992468,
+      "totalMs": 0.42924999999922875
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.051833999999871594,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.13641699999971024
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2849.088291,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2849.327625
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.18791700000110723,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2849.5240839999988
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2849.3407910000005,
+        "inputTokens": 3194,
+        "cachedInputTokens": 2944,
+        "outputTokens": 276,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2849.540874999999
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.009667000000263215,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2849.5890839999993
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.10199999999895226,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2849.698875
+      },
+      {
+        "stage": "output.validation",
+        "status": "failed",
+        "candidateCount": 3,
+        "durationMs": 0.27183399999921676,
+        "ruleIds": [
+          "WRONG_MOTIF"
+        ],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2850.037875
+      },
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.04733300000043528,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 1,
+        "elapsedMs": 2850.120959
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2329.1526250000006,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5179.362625
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.14462499999899592,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5179.522208999999
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2329.3258750000005,
+        "inputTokens": 3688,
+        "cachedInputTokens": 0,
+        "outputTokens": 239,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5179.538708999999
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.008707999999387539,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5179.580334
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.01862499999879219,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5179.602041999999
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.7332920000008016,
+        "ruleIds": [],
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 2,
+        "elapsedMs": 5180.410875
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 820.3751660000016,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6001.0440419999995
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.24483299999701558,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6001.30925
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 820.674332999999,
+        "inputTokens": 3162,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6001.335541999999
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.014999999999417923,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6001.391583999999
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.014082999998208834,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6001.408167
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.008249999998952262,
+        "retryCount": 1,
+        "repairCount": 1,
+        "apiCallCount": 3,
+        "elapsedMs": 6001.428417000001
+      }
+    ]
+  },
+  "executionStatus": "LIVE_COMPLETED",
+  "deterministic": {
+    "version": "final-deterministic-v2",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 6002.245874999999,
+  "completedAt": "2026-11-07T20:46:36.235Z",
+  "providerAttempts": [
+    {
+      "index": 6,
+      "caseId": "F-031",
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T20:46:30.233Z",
+      "requestSha256": "05eee3105bc22e65ee9480b1084ec504e5f76a1fa4f74de9c79fdeb296c4cd3f",
+      "attemptFile": "attempts/F-031-006.json",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3194,
+        "input_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "output_tokens": 276,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3470
+      },
+      "status": "completed",
+      "durationMs": 2847.412457999999,
+      "completedAt": "2026-11-07T20:46:33.081Z"
+    },
+    {
+      "index": 7,
+      "caseId": "F-031",
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T20:46:33.083Z",
+      "requestSha256": "0dd8d9e60eefe89f5eb4c850b8fbc9b53ae918bac3faee4f5610641ce524ffeb",
+      "attemptFile": "attempts/F-031-007.json",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3688,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 239,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3927
+      },
+      "status": "completed",
+      "durationMs": 2326.9036670000005,
+      "completedAt": "2026-11-07T20:46:35.410Z"
+    },
+    {
+      "index": 8,
+      "caseId": "F-031",
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T20:46:35.414Z",
+      "requestSha256": "0c59824b6e1b5a5837e33044a1593d7b8cf589601fec467044d698b36de6fb0e",
+      "attemptFile": "attempts/F-031-008.json",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3162,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3177
+      },
+      "status": "completed",
+      "durationMs": 817.4849169999998,
+      "completedAt": "2026-11-07T20:46:36.231Z"
+    }
+  ],
+  "diagnostics": [
+    {
+      "stage": "context.build",
+      "status": "passed",
+      "durationMs": 0.051833999999871594,
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 0,
+      "elapsedMs": 0.13641699999971024
+    },
+    {
+      "stage": "advisor_messages.http",
+      "status": "passed",
+      "httpStatus": 200,
+      "apiSuccess": true,
+      "durationMs": 2849.088291,
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 1,
+      "elapsedMs": 2849.327625
+    },
+    {
+      "stage": "advisor_messages.body",
+      "status": "passed",
+      "durationMs": 0.18791700000110723,
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 1,
+      "elapsedMs": 2849.5240839999988
+    },
+    {
+      "stage": "advisor_messages.api",
+      "status": "passed",
+      "durationMs": 2849.3407910000005,
+      "inputTokens": 3194,
+      "cachedInputTokens": 2944,
+      "outputTokens": 276,
+      "returnedModel": "deepseek-flash",
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 1,
+      "elapsedMs": 2849.540874999999
+    },
+    {
+      "stage": "advisor_messages.completion",
+      "status": "passed",
+      "finishReason": "completed",
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 1,
+      "elapsedMs": 2849.547166999999
+    },
+    {
+      "stage": "advisor_messages.parse",
+      "status": "passed",
+      "parseSuccess": true,
+      "durationMs": 0.009667000000263215,
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 1,
+      "elapsedMs": 2849.5890839999993
+    },
+    {
+      "stage": "advisor_messages.schema",
+      "status": "passed",
+      "schemaSuccess": true,
+      "durationMs": 0.10199999999895226,
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 1,
+      "elapsedMs": 2849.698875
+    },
+    {
+      "stage": "output.validation",
+      "status": "failed",
+      "candidateCount": 3,
+      "durationMs": 0.27183399999921676,
+      "ruleIds": [
+        "WRONG_MOTIF"
+      ],
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 1,
+      "elapsedMs": 2850.037875
+    },
+    {
+      "stage": "output.validation",
+      "status": "failed",
+      "reason": "OUTPUT_VALIDATION",
+      "ruleIds": [
+        "WRONG_MOTIF"
+      ],
+      "retryCount": 0,
+      "repairCount": 0,
+      "apiCallCount": 1,
+      "elapsedMs": 2850.0629169999993
+    },
+    {
+      "stage": "recovery.repair",
+      "status": "retrying",
+      "reason": "OUTPUT_VALIDATION",
+      "ruleIds": [
+        "WRONG_MOTIF"
+      ],
+      "candidateIndexes": [
+        0,
+        1,
+        2
+      ],
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 1,
+      "elapsedMs": 2850.0709589999988
+    },
+    {
+      "stage": "context.build",
+      "status": "passed",
+      "durationMs": 0.04733300000043528,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 1,
+      "elapsedMs": 2850.120959
+    },
+    {
+      "stage": "advisor_messages.http",
+      "status": "passed",
+      "httpStatus": 200,
+      "apiSuccess": true,
+      "durationMs": 2329.1526250000006,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 2,
+      "elapsedMs": 5179.362625
+    },
+    {
+      "stage": "advisor_messages.body",
+      "status": "passed",
+      "durationMs": 0.14462499999899592,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 2,
+      "elapsedMs": 5179.522208999999
+    },
+    {
+      "stage": "advisor_messages.api",
+      "status": "passed",
+      "durationMs": 2329.3258750000005,
+      "inputTokens": 3688,
+      "cachedInputTokens": 0,
+      "outputTokens": 239,
+      "returnedModel": "deepseek-flash",
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 2,
+      "elapsedMs": 5179.538708999999
+    },
+    {
+      "stage": "advisor_messages.completion",
+      "status": "passed",
+      "finishReason": "completed",
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 2,
+      "elapsedMs": 5179.545042
+    },
+    {
+      "stage": "advisor_messages.parse",
+      "status": "passed",
+      "parseSuccess": true,
+      "durationMs": 0.008707999999387539,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 2,
+      "elapsedMs": 5179.580334
+    },
+    {
+      "stage": "advisor_messages.schema",
+      "status": "passed",
+      "schemaSuccess": true,
+      "durationMs": 0.01862499999879219,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 2,
+      "elapsedMs": 5179.602041999999
+    },
+    {
+      "stage": "output.validation",
+      "status": "passed",
+      "candidateCount": 3,
+      "durationMs": 0.7332920000008016,
+      "ruleIds": [],
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 2,
+      "elapsedMs": 5180.410875
+    },
+    {
+      "stage": "brand_audit.http",
+      "status": "passed",
+      "httpStatus": 200,
+      "apiSuccess": true,
+      "durationMs": 820.3751660000016,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 3,
+      "elapsedMs": 6001.0440419999995
+    },
+    {
+      "stage": "brand_audit.body",
+      "status": "passed",
+      "durationMs": 0.24483299999701558,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 3,
+      "elapsedMs": 6001.30925
+    },
+    {
+      "stage": "brand_audit.api",
+      "status": "passed",
+      "durationMs": 820.674332999999,
+      "inputTokens": 3162,
+      "cachedInputTokens": 896,
+      "outputTokens": 15,
+      "returnedModel": "deepseek-flash",
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 3,
+      "elapsedMs": 6001.335541999999
+    },
+    {
+      "stage": "brand_audit.completion",
+      "status": "passed",
+      "finishReason": "completed",
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 3,
+      "elapsedMs": 6001.342666999999
+    },
+    {
+      "stage": "brand_audit.parse",
+      "status": "passed",
+      "parseSuccess": true,
+      "durationMs": 0.014999999999417923,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 3,
+      "elapsedMs": 6001.391583999999
+    },
+    {
+      "stage": "brand_audit.schema",
+      "status": "passed",
+      "schemaSuccess": true,
+      "durationMs": 0.014082999998208834,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 3,
+      "elapsedMs": 6001.408167
+    },
+    {
+      "stage": "brand_audit.validation",
+      "status": "passed",
+      "ruleIds": [],
+      "durationMs": 0.008249999998952262,
+      "retryCount": 1,
+      "repairCount": 1,
+      "apiCallCount": 3,
+      "elapsedMs": 6001.428417000001
+    }
+  ],
+  "apiLatencyMs": 5991.801041999999,
+  "tokenUsage": {
+    "input": 10044,
+    "cached": 3840,
+    "output": 530,
+    "callsWithoutUsage": 0
+  },
+  "judgeStatus": "PENDING_INDEPENDENT_JUDGE_NOT_CONFIGURED"
+}

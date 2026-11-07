@@ -1,0 +1,573 @@
+{
+  "id": "F-020",
+  "input": {
+    "clientId": "CL-009",
+    "scenario": "recommend",
+    "notes": ""
+  },
+  "normalizedInput": {
+    "clientId": "CL-009",
+    "scenario": "recommend",
+    "notes": ""
+  },
+  "expectedBehavior": "Respect current selection and purchase occasion over historical interests. Ground product facts and Motif/Line story in the canonical resolved product; no invented specifications or discounts.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-009",
+      "name": "黎女士",
+      "assignedAdvisor": "Juliette",
+      "interests": [],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-009-01",
+          "sku": "MUG-R-R01",
+          "productName": "双花苞开口戒与梨形钻石露珠",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "戒指",
+          "purchaseDate": "2026-09-25",
+          "purchasePrice": 24800
+        }
+      ],
+      "history": [],
+      "birthMonth": 10
+    },
+    "resolved": {
+      "product": {
+        "sku": "FEU-A-B01",
+        "line": "aqua",
+        "motif": "feuille",
+        "category": "手镯",
+        "name": "中央海蓝宝与两侧叶脉造型",
+        "material": "18K白金",
+        "gemstone": "海蓝宝",
+        "price": 98800
+      },
+      "scope": [
+        {
+          "sku": "JAS-R01",
+          "line": "jasmin",
+          "motif": "jasmin",
+          "category": "戒指",
+          "name": "五瓣茉莉开口戒，花心小钻",
+          "material": "18K玫瑰金",
+          "gemstone": "钻石",
+          "price": 18800
+        },
+        {
+          "sku": "JAS-B01",
+          "line": "jasmin",
+          "motif": "jasmin",
+          "category": "手镯",
+          "name": "细窄硬镯，半开花形点缀",
+          "material": "18K玫瑰金",
+          "gemstone": null,
+          "price": 26800
+        },
+        {
+          "sku": "JAS-N01",
+          "line": "jasmin",
+          "motif": "jasmin",
+          "category": "项链",
+          "name": "单朵茉莉钻石吊坠",
+          "material": "18K白金",
+          "gemstone": "钻石",
+          "price": 22800
+        },
+        {
+          "sku": "MUG-R-R01",
+          "line": "rosee",
+          "motif": "muguet",
+          "category": "戒指",
+          "name": "双花苞开口戒与梨形钻石露珠",
+          "material": "18K白金",
+          "gemstone": "钻石",
+          "price": 24800
+        },
+        {
+          "sku": "MUG-R-B01",
+          "line": "rosee",
+          "motif": "muguet",
+          "category": "手镯",
+          "name": "细链手镯，铃兰与露珠双吊饰",
+          "material": "18K白金",
+          "gemstone": null,
+          "price": 19800
+        },
+        {
+          "sku": "MUG-R-N01",
+          "line": "rosee",
+          "motif": "muguet",
+          "category": "项链",
+          "name": "单枝铃兰垂坠式吊坠",
+          "material": "18K白金",
+          "gemstone": null,
+          "price": 29800
+        },
+        {
+          "sku": "MUG-C-R01",
+          "line": "clochette",
+          "motif": "muguet",
+          "category": "戒指",
+          "name": "三朵铃兰簇状戒，密镶钻石",
+          "material": "18K白金",
+          "gemstone": "钻石",
+          "price": 56800
+        },
+        {
+          "sku": "MUG-C-B01",
+          "line": "clochette",
+          "motif": "muguet",
+          "category": "手镯",
+          "name": "半硬镯，沿腕延展铃兰花序",
+          "material": "18K白金",
+          "gemstone": null,
+          "price": 78800
+        },
+        {
+          "sku": "MUG-C-N01",
+          "line": "clochette",
+          "motif": "muguet",
+          "category": "项链",
+          "name": "多花冠错落垂坠项链",
+          "material": "18K白金",
+          "gemstone": null,
+          "price": 118000
+        },
+        {
+          "sku": "FEU-V-R01",
+          "line": "vive",
+          "motif": "feuille",
+          "category": "戒指",
+          "name": "双叶环抱式戒指，绿色珐琅",
+          "material": "18K黄金",
+          "gemstone": "绿色珐琅",
+          "price": 21800
+        },
+        {
+          "sku": "FEU-V-B01",
+          "line": "vive",
+          "motif": "feuille",
+          "category": "手镯",
+          "name": "交叠叶脉开口硬镯",
+          "material": "18K黄金",
+          "gemstone": null,
+          "price": 38800
+        },
+        {
+          "sku": "FEU-V-N01",
+          "line": "vive",
+          "motif": "feuille",
+          "category": "项链",
+          "name": "修长叶片吊坠，绿色珐琅",
+          "material": "18K黄金",
+          "gemstone": "绿色珐琅",
+          "price": 25800
+        },
+        {
+          "sku": "FEU-A-R01",
+          "line": "aqua",
+          "motif": "feuille",
+          "category": "戒指",
+          "name": "椭圆海蓝宝主石与叶片托镶",
+          "material": "18K白金",
+          "gemstone": "海蓝宝",
+          "price": 68800
+        },
+        {
+          "sku": "FEU-A-B01",
+          "line": "aqua",
+          "motif": "feuille",
+          "category": "手镯",
+          "name": "中央海蓝宝与两侧叶脉造型",
+          "material": "18K白金",
+          "gemstone": "海蓝宝",
+          "price": 98800
+        },
+        {
+          "sku": "FEU-A-N01",
+          "line": "aqua",
+          "motif": "feuille",
+          "category": "项链",
+          "name": "梨形海蓝宝吊坠与叶片光环",
+          "material": "18K白金",
+          "gemstone": "海蓝宝",
+          "price": 138000
+        }
+      ],
+      "reason": "无明确偏好匹配，按 SKU 字母顺序选择；未推断客户偏好。"
+    },
+    "event": null,
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-009",
+        "scenario": "recommend",
+        "notes": ""
+      },
+      "clientId": "CL-009",
+      "assignedAdvisor": "Juliette",
+      "scenario": "recommend",
+      "selection": {
+        "depth": 0,
+        "motif": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "line": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "sku": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "occasion": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        }
+      },
+      "conversationHistory": [],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "sku",
+        "mode": "deterministic_recommendation",
+        "motif": {
+          "id": "feuille",
+          "name": "Feuille d’Azur",
+          "zh": "蔚蓝叶语",
+          "story": "风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。"
+        },
+        "line": {
+          "id": "aqua",
+          "motif": "feuille",
+          "name": "Aqua Héritage",
+          "zh": "澄蓝传承",
+          "occasions": [
+            "gift"
+          ],
+          "story": "将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。"
+        },
+        "product": {
+          "sku": "FEU-A-B01",
+          "line": "aqua",
+          "motif": "feuille",
+          "category": "手镯",
+          "name": "中央海蓝宝与两侧叶脉造型",
+          "material": "18K白金",
+          "gemstone": "海蓝宝",
+          "price": 98800
+        },
+        "storyRequired": true,
+        "productFactsAllowed": true,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.011208999989321455,
+      "resolutionMs": 0.08583399999770336,
+      "totalMs": 0.29204200000094716
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n这次想与您分享蔚蓝叶语手镯：中央一颗海蓝宝，两侧以叶脉造型轻轻托住，18K白金衬出清透的蓝色。叶象征成长与韧性，也把一份宁静留在腕间。\n\n如您感兴趣，欢迎随时与我聊聊作品细节。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n蔚蓝叶语把风掠过叶片的瞬间化作线条，水光仿佛在叶脉间流动；澄蓝传承系列则将澄澈的海蓝宝托于叶片之间，让宁静而坚定的力量有可传递的形状。这款手镯以18K白金打造，中央海蓝宝与两侧叶脉造型相映，清透蓝色与白金色泽彼此衬托。它适合作为一件陪伴日常、也值得珍藏的作品。\n\n您若想了解更多材质与设计细节，随时可以告诉我。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n风掠过叶片，水光在叶脉间流动，这是蔚蓝叶语想留住的清晨。中央海蓝宝被两侧叶脉轻轻托起，18K白金的清冷光泽让蓝色更显澄澈，也让一份宁静有了可以佩戴的形状。\n\n如果您愿意，我很乐意继续为您介绍这件作品。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:58:46.310Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 4805.229166000005,
+    "contextTimings": {
+      "normalizationMs": 0.011208999989321455,
+      "resolutionMs": 0.08583399999770336,
+      "totalMs": 0.29204200000094716
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.03195800000685267,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.10112500000104774
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 3486.224291999999,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3486.3958330000023
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.1854590000002645,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3486.587458000009
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 3486.4242090000043,
+        "inputTokens": 3526,
+        "cachedInputTokens": 1792,
+        "outputTokens": 274,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3486.5941659999953
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.005415999999968335,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3486.6227079999953
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.02158400000189431,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3486.6462500000052
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.40554199999314733,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3487.107625000004
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1317.740374999994,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4804.954540999999
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.20204099999682512,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4805.164375000008
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1317.9593749999913,
+        "inputTokens": 3565,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4805.171875
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.00933400000212714,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4805.206040999998
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.011459000001195818,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4805.219790999996
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.003292000008514151,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4805.227832999997
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 4805.943708999999,
+  "completedAt": "2026-11-07T19:58:51.116Z",
+  "providerAttempts": [
+    {
+      "index": 42,
+      "caseId": "F-020",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:58:46.310Z",
+      "promptSha256": "6b6f892b0f4acc8d1d551700f8877453ba41c1f4efc588008ccd7d409602989c",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3526,
+        "input_tokens_details": {
+          "cached_tokens": 1792
+        },
+        "output_tokens": 274,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3800
+      },
+      "status": "completed",
+      "durationMs": 3485.3046250000043,
+      "completedAt": "2026-11-07T19:58:49.796Z"
+    },
+    {
+      "index": 43,
+      "caseId": "F-020",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:58:49.798Z",
+      "promptSha256": "d2110691470c845322290b12b75567d1d8d8b919194c95470db4f76115076901",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3565,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3580
+      },
+      "status": "completed",
+      "durationMs": 1315.7580410000082,
+      "completedAt": "2026-11-07T19:58:51.114Z"
+    }
+  ],
+  "apiLatencyMs": 4801.0626660000125,
+  "tokenUsage": {
+    "input": 7091,
+    "cached": 2688,
+    "output": 289,
+    "callsWithoutUsage": 0
+  }
+}

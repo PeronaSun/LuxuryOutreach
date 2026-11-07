@@ -1,0 +1,423 @@
+{
+  "id": "F-046",
+  "input": {
+    "clientId": "CL-004",
+    "scenario": "price",
+    "motif": "muguet",
+    "line": "clochette",
+    "concern": "想了解这个系列的价格考量，尚未选定具体作品。",
+    "notes": ""
+  },
+  "normalizedInput": {
+    "clientId": "CL-004",
+    "scenario": "price",
+    "motif": "muguet",
+    "line": "clochette",
+    "notes": "",
+    "concern": "想了解这个系列的价格考量，尚未选定具体作品。"
+  },
+  "expectedBehavior": "Address the actual concern and any negation accurately. Use only allowed known facts and current selection; no unsupported discounts, valuation claims or disparagement of competitors.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-004",
+      "name": "周女士",
+      "assignedAdvisor": "Nora",
+      "interests": [
+        {
+          "motif": "muguet",
+          "line": "clochette",
+          "category": "项链"
+        }
+      ],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-004-01",
+          "sku": "MUG-C-N01",
+          "productName": "多花冠错落垂坠项链",
+          "motif": "muguet",
+          "line": "clochette",
+          "category": "项链",
+          "purchaseDate": "2026-09-06",
+          "purchasePrice": 118000
+        }
+      ],
+      "history": [
+        "正在了解适合婚礼场合佩戴的项链，尚未选定。"
+      ],
+      "birthMonth": 9
+    },
+    "resolved": {
+      "product": null,
+      "reason": "作品尚未明确，仅回应实际价格顾虑，不引用单品规格或价格。",
+      "scope": []
+    },
+    "event": null,
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-004",
+        "scenario": "price",
+        "motif": "muguet",
+        "line": "clochette",
+        "notes": "",
+        "concern": "想了解这个系列的价格考量，尚未选定具体作品。"
+      },
+      "clientId": "CL-004",
+      "assignedAdvisor": "Nora",
+      "scenario": "price",
+      "selection": {
+        "depth": 2,
+        "motif": {
+          "state": "explicit",
+          "value": "muguet",
+          "applicable": true
+        },
+        "line": {
+          "state": "explicit",
+          "value": "clochette",
+          "applicable": true
+        },
+        "sku": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "occasion": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        }
+      },
+      "conversationHistory": [
+        "正在了解适合婚礼场合佩戴的项链，尚未选定。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "想了解这个系列的价格考量，尚未选定具体作品。",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "line",
+        "mode": "general_price",
+        "motif": {
+          "id": "muguet",
+          "name": "Muguet de Lumière",
+          "zh": "光之铃兰",
+          "story": "铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。"
+        },
+        "line": {
+          "id": "clochette",
+          "motif": "muguet",
+          "name": "Clochette Royale",
+          "zh": "典礼铃音",
+          "occasions": [
+            "gift"
+          ],
+          "story": "将铃兰的私密祝福放大成值得纪念的庆典语言，层叠花序如一串静默的钟声。"
+        },
+        "product": null,
+        "storyRequired": false,
+        "productFactsAllowed": false,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.006457999988924712,
+      "resolutionMs": 0.018041999981505796,
+      "totalMs": 0.22454199998173863
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n价格确实是需要认真考虑的一环，您目前还在了解Clochette Royale系列、尚未选定具体作品，我可以先陪您把关注点理清，再谈价格会更有着落。\n\n您若愿意，可告诉我更在意哪些材质或设计细节。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n理解您想先了解Clochette Royale系列的价格考量。这个系列以铃兰垂落的小钟形花为意象，把私密的祝福延展成适合纪念时刻的庆典语言；不同作品的材质与设计层次不同，价格也会随之有别。您之前也在为婚礼场合寻找项链，尚未选定具体作品，不妨先从佩戴场合与设计偏好入手，我再为您逐一说明对应的价格构成。\n\n若还有想了解的价格与设计信息，欢迎随时与我沟通。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n价格的分量，值得被认真对待。Clochette Royale以铃兰低垂的花冠为形，像一串静默的钟声，把祝福轻轻留存；系列内每件作品的设计与材质各有不同，价格也随之有别。您尚未选定具体作品，我们可以先从您看重的部分慢慢谈起。\n\n不妨按自己的节奏考虑，想继续了解时随时告诉我。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T20:00:37.395Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 4578.207708000002,
+    "contextTimings": {
+      "normalizationMs": 0.006457999988924712,
+      "resolutionMs": 0.018041999981505796,
+      "totalMs": 0.22454199998173863
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.02766600000904873,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.08662499999627471
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 3385.1529169999994,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3385.300500000012
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.10691700002644211,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3385.4115410000086
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 3385.274166999996,
+        "inputTokens": 3406,
+        "cachedInputTokens": 1920,
+        "outputTokens": 280,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3385.4157500000147
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.0025409999943803996,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3385.441374999995
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.022250000009080395,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3385.464500000002
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.28491699998266995,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3385.779582999996
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1189.6233749999956,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4577.967375000007
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.11062500000116415,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4578.084333000006
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1189.74891699999,
+        "inputTokens": 3432,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4578.090790999995
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.02433400001609698,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4578.137541000004
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.046875,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4578.186458000011
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.01445899999816902,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4578.206458000001
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 4578.765082999977,
+  "completedAt": "2026-11-07T20:00:41.974Z",
+  "providerAttempts": [
+    {
+      "index": 95,
+      "caseId": "F-046",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T20:00:37.395Z",
+      "promptSha256": "ec5890318e16b37b6dc12883245d53a8cb35ad26b32e8909ff485221b2275eee",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3406,
+        "input_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "output_tokens": 280,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3686
+      },
+      "status": "completed",
+      "durationMs": 3377.4851659999986,
+      "completedAt": "2026-11-07T20:00:40.773Z"
+    },
+    {
+      "index": 96,
+      "caseId": "F-046",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T20:00:40.784Z",
+      "promptSha256": "916462f7e5b218fa80d5a69ccb4a84d710e073510bd74e7c08235ab4e42ebfbe",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3432,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3447
+      },
+      "status": "completed",
+      "durationMs": 1187.9113750000251,
+      "completedAt": "2026-11-07T20:00:41.972Z"
+    }
+  ],
+  "apiLatencyMs": 4565.396541000024,
+  "tokenUsage": {
+    "input": 6838,
+    "cached": 2816,
+    "output": 295,
+    "callsWithoutUsage": 0
+  }
+}

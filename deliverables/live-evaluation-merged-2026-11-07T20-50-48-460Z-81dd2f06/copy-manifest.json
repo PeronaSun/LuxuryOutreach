@@ -1,0 +1,287 @@
+[
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/workbook-data.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/workbook-data.json",
+    "sha256": "93c1caa1c9070bbc8e7d6a9adb9ecceb212cadcdad8b62cf8bfe0b41c6e176ae"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/summary.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/summary.json",
+    "sha256": "f23c1821b99adddff05fa5059ee4f3792ef1e0ae7ca3b7ff91cf0d1957da01a0"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/messages.csv",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/messages.csv",
+    "sha256": "d23b21501c33b003123ce027c7cb794be01a2a44c70a0631382f145caea56d2a"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/records.jsonl",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/records.jsonl",
+    "sha256": "8e1454e94d88ca3f4e6b97562271924dd3f91e2c8816af9fb293d6702157d4f5"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/provider-traces.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/provider-traces.json",
+    "sha256": "ae4e1296efd85c445165fddf8a7da5aec4724dd67207a081625771e6aad9d094"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/manifest.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/manifest.json",
+    "sha256": "2660ce50f25b61b1af2088cf3dc501a58adecda7740a2d61dd37ea1e54e21271"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/records.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/records.json",
+    "sha256": "a6571b4145f0d8a2dccfe18c527ebc5e6859d2b6e53aa356788033d655e59496"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/summary.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/summary.json",
+    "sha256": "8fbf5a9ebc4036b6cd8bd60a90e3154d7601b85bc1890ad3b01286bbf32fa5d9"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/F-017-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/F-017-generation.json",
+    "sha256": "bff4267cacaec2cc31f146a32d5b711f46cce14f15c6b4ed29d5d19ad2d7d9bd"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/records.jsonl",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/records.jsonl",
+    "sha256": "510aad105b2d022d727216c547e9fc5962196b9ffaa2c88a223cc92ec9961b23"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/provider-traces.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/provider-traces.json",
+    "sha256": "ec81b814d9c228ad01b1519d9a07e8b7f479fd7d4cbdc14283db8f10b83f6828"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/manifest.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/manifest.json",
+    "sha256": "297a863416e88b1272c22159bc1b943d3da835c00ea5685f62b4ffdb62bef1b3"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/records.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/records.json",
+    "sha256": "02b11ee0f5bcfefacdb393c4be2175819896ea77c426d536c2e619a4fd3e68d9"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/provider-traces.jsonl",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/provider-traces.jsonl",
+    "sha256": "976ee4c97d5361eca475015cefc543dbb8b3c08a41356db5f64ec74d29e636ab"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/attempts/F-017-001.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/attempts/F-017-001.json",
+    "sha256": "88dec17897fecfd6ad88a9f06b7ed3deeb97ddee281b26612bb5b3d5339a996b"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/attempts/F-017-002.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-2-evidence/attempts/F-017-002.json",
+    "sha256": "93390fffaadc49a6e2d7fb0a7719677bd0df8ec2fb0f062373eff7b0b4187ae1"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/summary.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/summary.json",
+    "sha256": "e5a3bc41c9e646685f1eed4a0a677166377e03506d318e6d24883c0936779654"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/records.jsonl",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/records.jsonl",
+    "sha256": "f32bfc577a15c2379a8034b616f2a76758b35a0bbf81f13bf5ac36b9dd8dc0db"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/provider-traces.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/provider-traces.json",
+    "sha256": "c7f2d36466a178e35cdcfa4b35d11e63af7347069da88abf01bc5911bf70b54b"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/manifest.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/manifest.json",
+    "sha256": "ec3e8fbac5a6444050740d9e788afc8becd8cab1a55ec8eae4903cc26a32339e"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/records.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/records.json",
+    "sha256": "704567e0577fe8cf1741f8eef7f8601fd19611e7e543b0c0bfc077bffb318b1b"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/provider-traces.jsonl",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/original-run-reference/provider-traces.jsonl",
+    "sha256": "50a94a5ad5b0c6849327a700774be29b48ff8572676948feaa1428d94ad295be"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/summary.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/summary.json",
+    "sha256": "e5d5515f35b7994b975d58958ff1ac7357ce7e0371a54cb7a730bf36a6ea1572"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-034-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-034-generation.json",
+    "sha256": "50c81f7a30d690aaf0f9012afec2da55558ce9f05fa26b882afe81c01c00ecc5"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-041-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-041-generation.json",
+    "sha256": "90c4bafa3b48a673418ef22c3cf4688d7d9cd185f96fabf46288a771ff7a66ac"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-017-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-017-generation.json",
+    "sha256": "0dccffe735ad64641cad26f0c31cfd38cf2897785ec33e69e893bc051172e76f"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-045-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-045-generation.json",
+    "sha256": "3d266de4a7c5af57e67e30b4b9483ba812d0bd099d327fc2b6443d53d34eaf66"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-014-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-014-generation.json",
+    "sha256": "dcee711f97d0e97cc4124654981f9046a8404338d802d86ea17ea460ecc8095b"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/records.jsonl",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/records.jsonl",
+    "sha256": "29db1f8013cc19ea56185f49a35e85fc0c701bd24bddfb34f747cdb33eb12ac1"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/provider-traces.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/provider-traces.json",
+    "sha256": "18537b6123dc35bbefd668a74146b78cef2d8638ebfaa972fbd12627a4c86e8a"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/manifest.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/manifest.json",
+    "sha256": "f364ddf7c8494df5673df5927cae86b1333d9dfcd94359bcd3d8d236251f20db"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-042-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-042-generation.json",
+    "sha256": "3b13087584e8756d7ff3409073490a6773e4c7b5b216e1cc525210c527ab8bc5"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/records.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/records.json",
+    "sha256": "8d8561991157a001cb7c04013c6dffbd590cba7525f246874889b9fb1e1b4592"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-039-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-039-generation.json",
+    "sha256": "67f5a3b04a06e61f000408cdd1da76756eb93e008b33d377b579b69f7099e61f"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/provider-traces.jsonl",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/provider-traces.jsonl",
+    "sha256": "1423ef63bb367f5c4abb38202587d9d43ca949911c79284a19a063a0635342e5"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-031-generation.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/F-031-generation.json",
+    "sha256": "7bc2d41d5e9bde63088182672f6870cb4070922e02a094a0c6abd73321caabae"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-034-011.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-034-011.json",
+    "sha256": "eafa2fd2b8d10b45bd999b5a3d20c69e73e35984f85fcff3a10b5fc0f1ae52b3"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-045-020.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-045-020.json",
+    "sha256": "d110387f4a2c021092b9309ad9ab4e42abb70620ec42d499a3de04ef15fe0a34"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-041-014.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-041-014.json",
+    "sha256": "b2c24177110a0b22d022f7706d839ff5e1c72c835f188d508e32c678a4df9646"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-014-002.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-014-002.json",
+    "sha256": "73df54828d466e5d9fdbde462767f3cdc7e2f999f40aae30255d2e7b42e9b828"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-041-015.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-041-015.json",
+    "sha256": "24b6234cf1601a46af30bbfc8f0da9e1460a8f1eb629e83bcf3b07d5e303e78c"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-045-021.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-045-021.json",
+    "sha256": "c878794e965657fe2eb885bfa1e6c50f3b102c567d20b18f0b9dbcaca7e6344c"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-034-010.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-034-010.json",
+    "sha256": "8b654712fc53928ed6f8289b2daaa857dc174be0a2b544cc7e8cc62cf97d03bc"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-031-008.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-031-008.json",
+    "sha256": "852f7413cb8daf29f5fca6236666f7cbdf53400452565c8401fc447162e2611c"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-042-017.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-042-017.json",
+    "sha256": "d0c328b62404d3c170cabee81da684f86b19e1c29fc5366fba0729bc6ec25fb3"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-042-016.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-042-016.json",
+    "sha256": "b05b59447d85dfe2183a801bf7132072b379bc49155ba6de60e1dc58feab41b3"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-039-012.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-039-012.json",
+    "sha256": "6deeaa39f3c6bdd9b085fe1dc45c3ae1df3b211ebbb4e9b1fd255619257f837c"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-017-003.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-017-003.json",
+    "sha256": "e212e656f673f9244c10076364903854fcaccfa7c5b4768b1c708f10d48ac573"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-039-013.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-039-013.json",
+    "sha256": "8b01f29a36ad9da8fa47c529537977ea067f2529c89661c4e1b3af699eb64205"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-042-018.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-042-018.json",
+    "sha256": "024e2b14cec453663fdf77426f685904a65df1cddd22164097a737330dd605d8"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-017-004.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-017-004.json",
+    "sha256": "4d96c9080e0d99c2ec26679c17841114dd742323df560063deb202a88098eda0"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-034-009.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-034-009.json",
+    "sha256": "23230ae10383a619280a4a14240e13c1916bd532df300405844d878e8ab80676"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-014-001.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-014-001.json",
+    "sha256": "879ee5b4fd55db2504f43490d757f0735edbf756007c76df565a0aa802142186"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-031-007.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-031-007.json",
+    "sha256": "bcdafcda7c2b2d0cffe2ac6fcf73947956993a5945a443a0c876c82978d80384"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-031-006.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-031-006.json",
+    "sha256": "0adc0db411d0d5c2d2780473241e098d1200308197e10afce66857731d919fc1"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-045-019.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-045-019.json",
+    "sha256": "edba684ca2bae4cb9d0b1210b8d02530768b278ed17b710cda18be0d9624c8d5"
+  },
+  {
+    "source": "runtime/final-evaluation/merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-017-005.json",
+    "copy": "deliverables/live-evaluation-merged-2026-11-07T20-50-48-460Z-81dd2f06/targeted-run-1-evidence/attempts/F-017-005.json",
+    "sha256": "f701767e2f7153af5294b5825fe398ba0e8e7d08e57ba4bbf03d07e95c46c749"
+  }
+]

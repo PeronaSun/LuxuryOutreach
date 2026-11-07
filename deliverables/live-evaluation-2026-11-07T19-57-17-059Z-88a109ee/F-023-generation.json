@@ -1,0 +1,470 @@
+{
+  "id": "F-023",
+  "input": {
+    "clientId": "CL-002",
+    "scenario": "care",
+    "purchaseId": "PUR-002-01",
+    "notes": ""
+  },
+  "normalizedInput": {
+    "clientId": "CL-002",
+    "scenario": "care",
+    "purchaseId": "PUR-002-01",
+    "notes": ""
+  },
+  "expectedBehavior": "Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-002",
+      "name": "陈女士",
+      "assignedAdvisor": "Camille",
+      "interests": [
+        {
+          "motif": "feuille",
+          "line": "aqua",
+          "gemstone": "海蓝宝",
+          "category": "项链"
+        }
+      ],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-002-01",
+          "sku": "MUG-R-N01",
+          "productName": "单枝铃兰垂坠式吊坠",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "项链",
+          "purchaseDate": "2026-08-22",
+          "purchasePrice": 29800,
+          "advisorNotes": "曾咨询纤细白金珠宝与有纪念意义的礼赠。"
+        },
+        {
+          "id": "PUR-002-02",
+          "sku": "MUG-R-B01",
+          "productName": "细链手镯，铃兰与露珠双吊饰",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "手镯",
+          "purchaseDate": "2026-04-15",
+          "purchasePrice": 19800,
+          "occasion": "gift",
+          "advisorNotes": "曾咨询纤细白金珠宝与有纪念意义的礼赠。"
+        }
+      ],
+      "history": [
+        "想了解海蓝宝吊坠的设计，也在考虑价格。"
+      ],
+      "birthMonth": 3
+    },
+    "resolved": {
+      "product": {
+        "sku": "MUG-R-N01",
+        "line": "rosee",
+        "motif": "muguet",
+        "category": "项链",
+        "name": "单枝铃兰垂坠式吊坠",
+        "material": "18K白金",
+        "gemstone": null,
+        "price": 29800
+      },
+      "reason": "使用本次选定的历史购买记录。",
+      "scope": []
+    },
+    "event": null,
+    "purchase": {
+      "id": "PUR-002-01",
+      "sku": "MUG-R-N01",
+      "productName": "单枝铃兰垂坠式吊坠",
+      "motif": "muguet",
+      "line": "rosee",
+      "category": "项链",
+      "purchaseDate": "2026-08-22",
+      "purchasePrice": 29800,
+      "advisorNotes": "曾咨询纤细白金珠宝与有纪念意义的礼赠。"
+    },
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-002",
+        "scenario": "care",
+        "purchaseId": "PUR-002-01",
+        "notes": ""
+      },
+      "clientId": "CL-002",
+      "assignedAdvisor": "Camille",
+      "scenario": "care",
+      "selection": {
+        "depth": 0,
+        "motif": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        },
+        "line": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        },
+        "sku": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [
+        "想了解海蓝宝吊坠的设计，也在考虑价格。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": {
+          "id": "PUR-002-01",
+          "sku": "MUG-R-N01",
+          "productName": "单枝铃兰垂坠式吊坠",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "项链",
+          "purchaseDate": "2026-08-22",
+          "purchasePrice": 29800,
+          "advisorNotes": "曾咨询纤细白金珠宝与有纪念意义的礼赠。"
+        },
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "sku",
+        "mode": "verified_purchase",
+        "motif": {
+          "id": "muguet",
+          "name": "Muguet de Lumière",
+          "zh": "光之铃兰",
+          "story": "铃兰低垂的花冠像把祝福轻轻递到掌心。它不以声量取胜，而以回归春日的姿态承载希望、祝愿与温柔的韧性。核心造型为垂落的小钟形花与露珠。"
+        },
+        "line": {
+          "id": "rosee",
+          "motif": "muguet",
+          "name": "Rosée du Matin",
+          "zh": "晨露",
+          "occasions": [
+            "gift",
+            "personal"
+          ],
+          "story": "清晨第一缕光落在铃兰露珠上，象征新篇章与轻盈的祝福。"
+        },
+        "product": {
+          "sku": "MUG-R-N01",
+          "line": "rosee",
+          "motif": "muguet",
+          "category": "项链",
+          "name": "单枝铃兰垂坠式吊坠",
+          "material": "18K白金",
+          "gemstone": null,
+          "price": 29800
+        },
+        "storyRequired": true,
+        "productFactsAllowed": true,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.027915999991819263,
+      "resolutionMs": 0.07350000001315493,
+      "totalMs": 0.8451249999925494
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n您八月选的那枚单枝铃兰垂坠式吊坠，18K白金的垂落花冠，佩戴起来还轻盈顺手吗？\n\n若有想交流的佩戴感受，欢迎随时告诉我。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n您八月选的那枚单枝铃兰垂坠式吊坠，以18K白金勾勒低垂的小钟形花与露珠，像把祝福轻轻递到掌心。晨露系列本就取清晨第一缕光落在铃兰上的意象，也贴合您曾咨询的纤细白金与有纪念意义的礼赠。不知这段时间佩戴下来，垂坠的线条是否合您心意？\n\n如果您有佩戴方面的疑问，欢迎随时与我沟通。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n那枚单枝铃兰垂坠式吊坠，18K白金的花冠低垂，像清晨露珠停在光里，安静却有自己的韧性。您曾提到纤细白金与有纪念意义的礼赠，这份心意如今随佩戴慢慢沉淀。\n\n您若愿意分享与这件作品相伴的片刻，我很乐意听。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:58:59.977Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 3761.912375,
+    "contextTimings": {
+      "normalizationMs": 0.027915999991819263,
+      "resolutionMs": 0.07350000001315493,
+      "totalMs": 0.8451249999925494
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.14037500000267755,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.43674999999348074
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2546.5885419999977,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2547.2390419999865
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.1053329999995185,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2547.350582999992
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2546.7087919999904,
+        "inputTokens": 3819,
+        "cachedInputTokens": 1792,
+        "outputTokens": 245,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2547.3577919999952
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.008958000005804934,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2547.3924169999955
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.017334000003756955,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2547.4118749999907
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.3764999999984866,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2547.8416249999864
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1213.5941250000033,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3761.529957999999
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.17787500000849832,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3761.718499999988
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1213.7954579999932,
+        "inputTokens": 3813,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3761.729291999989
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.012290999991819263,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3761.7730829999928
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.016124999994644895,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3761.7929999999906
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.11062500000116415,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3761.910707999996
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 3762.683791999996,
+  "completedAt": "2026-11-07T19:59:03.740Z",
+  "providerAttempts": [
+    {
+      "index": 48,
+      "caseId": "F-023",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:58:59.978Z",
+      "promptSha256": "e2eb1a95f4cfb010d771add0c357cc7f2285fac0d23a2265346b1556648fb482",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3819,
+        "input_tokens_details": {
+          "cached_tokens": 1792
+        },
+        "output_tokens": 245,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4064
+      },
+      "status": "completed",
+      "durationMs": 2545.6799579999933,
+      "completedAt": "2026-11-07T19:59:02.524Z"
+    },
+    {
+      "index": 49,
+      "caseId": "F-023",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:02.525Z",
+      "promptSha256": "85ffe81fbf994a1dac019168121e8919a5ec03e84e331f1525f12bd6460a704d",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3813,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3828
+      },
+      "status": "completed",
+      "durationMs": 1211.9977080000099,
+      "completedAt": "2026-11-07T19:59:03.737Z"
+    }
+  ],
+  "apiLatencyMs": 3757.6776660000032,
+  "tokenUsage": {
+    "input": 7632,
+    "cached": 2688,
+    "output": 260,
+    "callsWithoutUsage": 0
+  }
+}

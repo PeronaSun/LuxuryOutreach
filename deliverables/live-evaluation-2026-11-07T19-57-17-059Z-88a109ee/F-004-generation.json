@@ -1,0 +1,460 @@
+{
+  "id": "F-004",
+  "input": {
+    "clientId": "CL-002",
+    "scenario": "greeting",
+    "greetingKind": "festival",
+    "greetingName": "圣诞节",
+    "notes": "客户刚完成一个项目，最近比较忙。"
+  },
+  "normalizedInput": {
+    "clientId": "CL-002",
+    "scenario": "greeting",
+    "notes": "客户刚完成一个项目，最近比较忙。",
+    "greetingKind": "festival",
+    "greetingName": "圣诞节"
+  },
+  "expectedBehavior": "Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-002",
+      "name": "陈女士",
+      "assignedAdvisor": "Camille",
+      "interests": [
+        {
+          "motif": "feuille",
+          "line": "aqua",
+          "gemstone": "海蓝宝",
+          "category": "项链"
+        }
+      ],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-002-01",
+          "sku": "MUG-R-N01",
+          "productName": "单枝铃兰垂坠式吊坠",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "项链",
+          "purchaseDate": "2026-08-22",
+          "purchasePrice": 29800,
+          "advisorNotes": "曾咨询纤细白金珠宝与有纪念意义的礼赠。"
+        },
+        {
+          "id": "PUR-002-02",
+          "sku": "MUG-R-B01",
+          "productName": "细链手镯，铃兰与露珠双吊饰",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "手镯",
+          "purchaseDate": "2026-04-15",
+          "purchasePrice": 19800,
+          "occasion": "gift",
+          "advisorNotes": "曾咨询纤细白金珠宝与有纪念意义的礼赠。"
+        }
+      ],
+      "history": [
+        "想了解海蓝宝吊坠的设计，也在考虑价格。"
+      ],
+      "birthMonth": 3
+    },
+    "resolved": {
+      "product": null,
+      "reason": "此场景无需产品。",
+      "scope": []
+    },
+    "event": null,
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": true,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [
+        {
+          "id": "project_rest",
+          "meaning": "客户刚完成项目，适度认可努力，祝愿休息；不推断情绪",
+          "anchors": [
+            [
+              "项目",
+              "工作成果",
+              "告一段落"
+            ],
+            [
+              "休息",
+              "放慢",
+              "从容",
+              "忙碌"
+            ]
+          ]
+        }
+      ],
+      "primaryFacet": "project_rest",
+      "demoPhrases": [
+        "完成项目后，也愿您有一点休息的时间。",
+        "知道您刚完成项目、这段时间也比较忙，想为您留一份问候，愿您有时间放慢脚步。",
+        "项目告一段落，愿有一段从容的时光留给自己。"
+      ],
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-002",
+        "scenario": "greeting",
+        "notes": "客户刚完成一个项目，最近比较忙。",
+        "greetingKind": "festival",
+        "greetingName": "圣诞节"
+      },
+      "clientId": "CL-002",
+      "assignedAdvisor": "Camille",
+      "scenario": "greeting",
+      "selection": {
+        "depth": 0,
+        "motif": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "line": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "sku": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [
+        "想了解海蓝宝吊坠的设计，也在考虑价格。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": true,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [
+          {
+            "id": "project_rest",
+            "meaning": "客户刚完成项目，适度认可努力，祝愿休息；不推断情绪",
+            "anchors": [
+              [
+                "项目",
+                "工作成果",
+                "告一段落"
+              ],
+              [
+                "休息",
+                "放慢",
+                "从容",
+                "忙碌"
+              ]
+            ]
+          }
+        ],
+        "primaryFacet": "project_rest",
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "festival",
+        "festival": "圣诞节",
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "none",
+        "mode": "optional_story",
+        "motif": null,
+        "line": null,
+        "product": null,
+        "storyRequired": false,
+        "productFactsAllowed": false,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.011500000000523869,
+      "resolutionMs": 0.0873329999994894,
+      "totalMs": 0.31545899999946414
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n圣诞将至，冬日的灯光渐次亮起。听说您刚完成一个项目，忙碌告一段落，愿这个圣诞为您带来温暖与安宁，也留一点时间给自己好好休息。\n\n愿这份祝福，为您的日常添一份从容。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n圣诞的灯光在冬日里格外温柔。想到您刚把一个项目忙完，这段时间的投入想必不少；节日正好是一个放慢脚步的契机，愿您在忙碌之后享受一段从容安宁的时光，让冬日的暖意慢慢沉淀下来。\n\n若您愿意分享近来的美好片刻，我很乐意听。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n圣诞的灯光映着冬日的安宁。您刚完成一个项目，忙碌之后，愿这个节日为您留出一段从容的间隙，让温暖与静谧轻轻相伴。\n\n愿值得珍藏的小小欢喜，常伴您左右。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:57:28.408Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 4374.714750000001,
+    "contextTimings": {
+      "normalizationMs": 0.011500000000523869,
+      "resolutionMs": 0.0873329999994894,
+      "totalMs": 0.31545899999946414
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.029708000000027823,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.10495799999989686
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 3127.8473749999994,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3128.024333000001
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.13554199999998673,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3128.166500000001
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 3128.0113330000004,
+        "inputTokens": 3097,
+        "cachedInputTokens": 2944,
+        "outputTokens": 206,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3128.182667000001
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.00908299999900919,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3128.2225
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.025499999999738066,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3128.2507920000007
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.44229099999938626,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3128.7895420000004
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1245.4781249999996,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4374.477500000001
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.11549999999988358,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4374.603167000001
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1245.6295410000002,
+        "inputTokens": 3041,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4374.630083
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.012875000000349246,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4374.674667000001
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.013584000000264496,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4374.691125000001
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.009540999999444466,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4374.706542
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 4375.289124999999,
+  "completedAt": "2026-11-07T19:57:32.783Z",
+  "providerAttempts": [
+    {
+      "index": 7,
+      "caseId": "F-004",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:57:28.408Z",
+      "promptSha256": "655b91227c8befaa29531401b056560ce14d06654468ff0fac8c2f69e473c248",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3097,
+        "input_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "output_tokens": 206,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3303
+      },
+      "status": "completed",
+      "durationMs": 3126.0992079999996,
+      "completedAt": "2026-11-07T19:57:31.534Z"
+    },
+    {
+      "index": 8,
+      "caseId": "F-004",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:57:31.537Z",
+      "promptSha256": "4dcf970012eaa2346116b0a688f7d30a4eb6cc2ecea0201a8ec2447ba6d61dc8",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3041,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3056
+      },
+      "status": "completed",
+      "durationMs": 1244.499667,
+      "completedAt": "2026-11-07T19:57:32.781Z"
+    }
+  ],
+  "apiLatencyMs": 4370.598875,
+  "tokenUsage": {
+    "input": 6138,
+    "cached": 3840,
+    "output": 221,
+    "callsWithoutUsage": 0
+  }
+}

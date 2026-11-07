@@ -31,7 +31,7 @@ export const scenarioInstructions = {
   reactivate:
     "自然、尊重地恢复沟通；无需推荐产品，未选SKU时不自行选品。已选Motif/Line仅作可选话题，已选SKU可轻提，不变成广告。使用正当联系原因，不推断多久未到店或后台标签。",
   event:
-    "只使用已核实活动的名称、时间、地点与报名方式。不承诺席位或到场礼。当前所选Motif/Line仅是CA交流背景，不是活动议程；不能声称本场专门围绕它展开或必定展示该作品。",
+    "每条main完整保留event的活动名称、日期时间、场地名和街道地址，不能只写地址省略场地名；场地与地址可调整语序。只使用已核实报名方式，不承诺席位或到场礼。当前所选Motif/Line仅是CA交流背景，不是活动议程；不能用‘会聊到、会介绍、会展示、会在交流中出现’承诺所选意象出现在本场活动中。可把品牌故事另作顾问可交流的话题。CA当前选择也不是客户曾表示兴趣的证据；client.interests/history为空时不得写‘您此前留意/之前有兴趣/一直喜欢’。",
   price:
     "首先回应实际价格顾虑和比较。product存在才可解释该产品的目录材质、设计与模拟价；product为空则只作一般价格沟通，请客户明确关注作品，不报任何价格或单品规格。不贬低竞品，不承诺折扣。",
 };
@@ -599,6 +599,16 @@ export async function generate(
           };
         const result = await call({
           ...prompt,
+          ...(repair
+            ? {
+                instructions:
+                  prompt.instructions.replace(
+                    "恰好三条，顺序concise、detailed、elegant。",
+                    `本次仅修复${requestedStyles.length}条候选，顺序${requestedStyles.join("、")}。`,
+                  ) +
+                  `\n本次为定向修复：仅返回${JSON.stringify(requestedStyles)}，候选数量必须为${requestedStyles.length}，不能返回未要求的风格；其余格式与事实约束不变。`,
+              }
+            : {}),
           input: JSON.stringify(payload),
           schema: candidateSchemaFor(input, ctx, requestedStyles),
         });

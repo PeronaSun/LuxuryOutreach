@@ -1,0 +1,514 @@
+{
+  "id": "F-040",
+  "input": {
+    "clientId": "CL-005",
+    "scenario": "event",
+    "motif": "feuille",
+    "line": "aqua",
+    "sku": "FEU-A-N01",
+    "eventId": "EV-DEMO-01",
+    "notes": "客户最近比较忙。"
+  },
+  "normalizedInput": {
+    "clientId": "CL-005",
+    "scenario": "event",
+    "motif": "feuille",
+    "line": "aqua",
+    "sku": "FEU-A-N01",
+    "eventId": "EV-DEMO-01",
+    "notes": "客户最近比较忙。"
+  },
+  "expectedBehavior": "Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-005",
+      "name": "许先生",
+      "assignedAdvisor": "Claire",
+      "interests": [
+        {
+          "line": "rosee",
+          "category": "手镯"
+        }
+      ],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-005-01",
+          "sku": "FEU-A-N01",
+          "productName": "梨形海蓝宝吊坠与叶片光环",
+          "motif": "feuille",
+          "line": "aqua",
+          "category": "项链",
+          "purchaseDate": "2026-10-10",
+          "purchasePrice": 138000,
+          "occasion": "gift",
+          "advisorNotes": "曾咨询海蓝宝珠宝与纪念礼物。"
+        },
+        {
+          "id": "PUR-005-02",
+          "sku": "FEU-A-R01",
+          "productName": "椭圆海蓝宝主石与叶片托镶",
+          "motif": "feuille",
+          "line": "aqua",
+          "category": "戒指",
+          "purchaseDate": "2026-07-06",
+          "purchasePrice": 68800,
+          "occasion": "gift",
+          "advisorNotes": "曾咨询海蓝宝珠宝与纪念礼物。"
+        }
+      ],
+      "history": [
+        "想挑一份礼物，收礼人的偏好还需要确认。"
+      ],
+      "birthMonth": 12
+    },
+    "resolved": {
+      "product": {
+        "sku": "FEU-A-N01",
+        "line": "aqua",
+        "motif": "feuille",
+        "category": "项链",
+        "name": "梨形海蓝宝吊坠与叶片光环",
+        "material": "18K白金",
+        "gemstone": "海蓝宝",
+        "price": 138000
+      },
+      "scope": [
+        {
+          "sku": "FEU-A-N01",
+          "line": "aqua",
+          "motif": "feuille",
+          "category": "项链",
+          "name": "梨形海蓝宝吊坠与叶片光环",
+          "material": "18K白金",
+          "gemstone": "海蓝宝",
+          "price": 138000
+        }
+      ],
+      "reason": "采用顾问明确选择的 SKU。"
+    },
+    "event": {
+      "id": "EV-DEMO-01",
+      "name": "自然意象 · 珠宝设计分享",
+      "date": "2026-12-12 14:00",
+      "location": "虚构体验空间 · 上海示例路 18 号",
+      "registration": "回复顾问表达参与意向",
+      "verified": true,
+      "fictional": true
+    },
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": true,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [
+        {
+          "id": "busy_rest",
+          "meaning": "客户近期工作忙；关怀休息，不推断压力或生活安排",
+          "anchors": [
+            [
+              "忙",
+              "休息",
+              "放慢",
+              "从容"
+            ]
+          ]
+        }
+      ],
+      "primaryFacet": "busy_rest",
+      "demoPhrases": [
+        "知道您这段时间比较忙，愿您也有一点休息的时间。",
+        "您提到这段时间比较忙，也想借这次问候，祝您忙碌之外有机会放慢脚步。",
+        "忙碌的日常之外，愿一段从容的片刻也能留给自己。"
+      ],
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-005",
+        "scenario": "event",
+        "motif": "feuille",
+        "line": "aqua",
+        "sku": "FEU-A-N01",
+        "eventId": "EV-DEMO-01",
+        "notes": "客户最近比较忙。"
+      },
+      "clientId": "CL-005",
+      "assignedAdvisor": "Claire",
+      "scenario": "event",
+      "selection": {
+        "depth": 3,
+        "motif": {
+          "state": "explicit",
+          "value": "feuille",
+          "applicable": true
+        },
+        "line": {
+          "state": "explicit",
+          "value": "aqua",
+          "applicable": true
+        },
+        "sku": {
+          "state": "explicit",
+          "value": "FEU-A-N01",
+          "applicable": true
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [
+        "想挑一份礼物，收礼人的偏好还需要确认。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": true,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [
+          {
+            "id": "busy_rest",
+            "meaning": "客户近期工作忙；关怀休息，不推断压力或生活安排",
+            "anchors": [
+              [
+                "忙",
+                "休息",
+                "放慢",
+                "从容"
+              ]
+            ]
+          }
+        ],
+        "primaryFacet": "busy_rest",
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": {
+          "id": "EV-DEMO-01",
+          "name": "自然意象 · 珠宝设计分享",
+          "date": "2026-12-12 14:00",
+          "location": "虚构体验空间 · 上海示例路 18 号",
+          "registration": "回复顾问表达参与意向",
+          "verified": true,
+          "fictional": true
+        },
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "sku",
+        "mode": "explicit_sku",
+        "motif": {
+          "id": "feuille",
+          "name": "Feuille d’Azur",
+          "zh": "蔚蓝叶语",
+          "story": "风掠过叶片，水光在叶脉间流动。叶象征成长与韧性，清澈蓝色象征自由与内心的宁静。蔚蓝叶语既可以是植物的线条，也可以是被一颗海蓝宝凝住的清晨。"
+        },
+        "line": {
+          "id": "aqua",
+          "motif": "feuille",
+          "name": "Aqua Héritage",
+          "zh": "澄蓝传承",
+          "occasions": [
+            "gift"
+          ],
+          "story": "将澄澈的海蓝宝托于叶片之间，记录宁静而坚定的力量，让一份记忆有了可以传递的形状。"
+        },
+        "product": {
+          "sku": "FEU-A-N01",
+          "line": "aqua",
+          "motif": "feuille",
+          "category": "项链",
+          "name": "梨形海蓝宝吊坠与叶片光环",
+          "material": "18K白金",
+          "gemstone": "海蓝宝",
+          "price": 138000
+        },
+        "storyRequired": false,
+        "productFactsAllowed": true,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.010542000003624707,
+      "resolutionMs": 0.03345799999078736,
+      "totalMs": 0.3747919999877922
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n知道您近来比较忙，12月12日14:00在虚构体验空间·上海示例路18号有一场“自然意象·珠宝设计分享”，或许是个放慢脚步的片刻。\n\n如果您有兴趣，欢迎告诉我您的参与意向。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n您最近比较忙，若想留一段从容的时间，12月12日14:00在虚构体验空间·上海示例路18号将举办“自然意象·珠宝设计分享”。蔚蓝叶语以风掠过叶片、水光在叶脉间流动为意象，梨形海蓝宝吊坠与叶片光环以18K白金承托海蓝宝，正好呼应这份清澈与宁静。\n\n若这场分享与您的兴趣相合，欢迎与我沟通参与想法。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n知您近来事务繁忙，12月12日14:00在虚构体验空间·上海示例路18号有一场“自然意象·珠宝设计分享”。风掠过叶片，水光在叶脉间流动，梨形海蓝宝吊坠与叶片光环以18K白金托起海蓝宝，也许能留一刻从容。\n\n您若愿意留意这次相聚，方便时告诉我就好。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T20:00:11.301Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 4311.558250000002,
+    "contextTimings": {
+      "normalizationMs": 0.010542000003624707,
+      "resolutionMs": 0.03345799999078736,
+      "totalMs": 0.3747919999877922
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.04670800000894815,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.1245000000053551
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2876.3979590000235,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2876.5991670000076
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.19550000000162981,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2876.800583000004
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2876.610209000006,
+        "inputTokens": 3803,
+        "cachedInputTokens": 1920,
+        "outputTokens": 276,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2876.8083329999936
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.002833000005921349,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2876.835625000007
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.027708000008715317,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2876.864249999984
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.29054200000246055,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2877.2274169999873
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1431.415875000006,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4308.737499999988
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 2.733583000022918,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4311.482874999987
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1434.1745420000225,
+        "inputTokens": 3816,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4311.493041999987
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.0094999999855645,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4311.533332999999
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.01224999999976717,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4311.547499999986
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.0043329999898560345,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4311.556416999985
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 4312.396166999999,
+  "completedAt": "2026-11-07T20:00:15.614Z",
+  "providerAttempts": [
+    {
+      "index": 83,
+      "caseId": "F-040",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T20:00:11.302Z",
+      "promptSha256": "e97b4d59855fca26bd3412c4fcaa91aa3a950b3ba6182e55c86b494eb5a4ae21",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3803,
+        "input_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "output_tokens": 276,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4079
+      },
+      "status": "completed",
+      "durationMs": 2874.5338749999937,
+      "completedAt": "2026-11-07T20:00:14.176Z"
+    },
+    {
+      "index": 84,
+      "caseId": "F-040",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T20:00:14.179Z",
+      "promptSha256": "6fcf905f5e41fc7d7bccf4f6b65afc06b7a1fa1a081c3d8f6f3fbc9f241e026b",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3816,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3831
+      },
+      "status": "completed",
+      "durationMs": 1425.6490420000046,
+      "completedAt": "2026-11-07T20:00:15.604Z"
+    }
+  ],
+  "apiLatencyMs": 4300.182916999998,
+  "tokenUsage": {
+    "input": 7619,
+    "cached": 2816,
+    "output": 291,
+    "callsWithoutUsage": 0
+  }
+}

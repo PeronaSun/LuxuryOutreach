@@ -1,0 +1,481 @@
+[
+  {
+    "caseId": "F-014",
+    "classification": "Original rejected text unavailable",
+    "evidenceAndFix": "Original WRONG_MOTIF status is preserved. Exact original wording/cause cannot be recovered; current same-input retest passed without repair.",
+    "originalError": {
+      "code": "OUTPUT_VALIDATION",
+      "stage": "output.validation",
+      "ruleIds": [
+        "WRONG_MOTIF"
+      ],
+      "providerStatus": null,
+      "candidateIndexes": [
+        1
+      ]
+    },
+    "originalDeterministic": null,
+    "finalProvenance": {
+      "kind": "LIVE_TARGETED_RETEST",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+      "generationPerformedInTargetedRetest": true,
+      "originalCaseId": "F-014",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": null,
+      "originalError": {
+        "code": "OUTPUT_VALIDATION",
+        "stage": "output.validation",
+        "ruleIds": [
+          "WRONG_MOTIF"
+        ],
+        "providerStatus": null,
+        "candidateIndexes": [
+          1
+        ]
+      },
+      "originalMessageCount": 0,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.1",
+      "selectedValidatorVersion": "final-deterministic-v2"
+    },
+    "selectedPromptVersion": "advisor-1.5.1",
+    "selectedValidatorVersion": "final-deterministic-v2",
+    "finalPassed": true,
+    "newGenerationPerformed": true,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  },
+  {
+    "caseId": "F-017",
+    "classification": "Confirmed validator false positives on reproduction",
+    "evidenceAndFix": "Captured first targeted generation accurately referenced known Jasmin history. After repair, audit falsely rejected the explicitly stored rose-gold latestPreference solely because notes were empty. Narrow history-rule and CRM-source audit fixes verified; advisor-1.5.2 case-only retest passed.",
+    "originalError": {
+      "code": "OUTPUT_VALIDATION",
+      "stage": "output.validation",
+      "ruleIds": [
+        "FACT_CUSTOMER"
+      ],
+      "providerStatus": null,
+      "candidateIndexes": [
+        2
+      ]
+    },
+    "originalDeterministic": null,
+    "finalProvenance": {
+      "kind": "LIVE_TARGETED_RETEST",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-49-14-537Z-7b8018d2",
+      "generationPerformedInTargetedRetest": true,
+      "originalCaseId": "F-017",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": null,
+      "originalError": {
+        "code": "OUTPUT_VALIDATION",
+        "stage": "output.validation",
+        "ruleIds": [
+          "FACT_CUSTOMER"
+        ],
+        "providerStatus": null,
+        "candidateIndexes": [
+          2
+        ]
+      },
+      "originalMessageCount": 0,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.2",
+      "selectedValidatorVersion": "final-deterministic-v2.1"
+    },
+    "selectedPromptVersion": "advisor-1.5.2",
+    "selectedValidatorVersion": "final-deterministic-v2.1",
+    "finalPassed": true,
+    "newGenerationPerformed": true,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  },
+  {
+    "caseId": "F-031",
+    "classification": "Schema contract defect + historic-Motif false positive reproduced",
+    "evidenceAndFix": "Original repair schema narrowed candidates while instructions still required three; original returned body is unavailable so exact schema violation is unknown. New captured response referenced verified Jasmin history rather than attributing it to the selected Motif. Retest passed within bounded repair.",
+    "originalError": {
+      "code": "OUTPUT_SCHEMA",
+      "stage": "advisor_messages.schema",
+      "ruleIds": [
+        "OUTPUT_SCHEMA"
+      ],
+      "providerStatus": null,
+      "candidateIndexes": []
+    },
+    "originalDeterministic": null,
+    "finalProvenance": {
+      "kind": "LIVE_TARGETED_RETEST",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+      "generationPerformedInTargetedRetest": true,
+      "originalCaseId": "F-031",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": null,
+      "originalError": {
+        "code": "OUTPUT_SCHEMA",
+        "stage": "advisor_messages.schema",
+        "ruleIds": [
+          "OUTPUT_SCHEMA"
+        ],
+        "providerStatus": null,
+        "candidateIndexes": []
+      },
+      "originalMessageCount": 0,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.1",
+      "selectedValidatorVersion": "final-deterministic-v2"
+    },
+    "selectedPromptVersion": "advisor-1.5.1",
+    "selectedValidatorVersion": "final-deterministic-v2",
+    "finalPassed": true,
+    "newGenerationPerformed": true,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  },
+  {
+    "caseId": "F-034",
+    "classification": "Historic-Motif false positive reproduced",
+    "evidenceAndFix": "New captured Detailed text accurately referred to prior Jasmin preference before describing the current leaf ring. Blanket foreign-Motif check overblocked that historic reference. Original withheld text remains unavailable; targeted output passed.",
+    "originalError": {
+      "code": "OUTPUT_VALIDATION",
+      "stage": "output.validation",
+      "ruleIds": [
+        "WRONG_MOTIF"
+      ],
+      "providerStatus": null,
+      "candidateIndexes": [
+        1
+      ]
+    },
+    "originalDeterministic": null,
+    "finalProvenance": {
+      "kind": "LIVE_TARGETED_RETEST",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+      "generationPerformedInTargetedRetest": true,
+      "originalCaseId": "F-034",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": null,
+      "originalError": {
+        "code": "OUTPUT_VALIDATION",
+        "stage": "output.validation",
+        "ruleIds": [
+          "WRONG_MOTIF"
+        ],
+        "providerStatus": null,
+        "candidateIndexes": [
+          1
+        ]
+      },
+      "originalMessageCount": 0,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.1",
+      "selectedValidatorVersion": "final-deterministic-v2"
+    },
+    "selectedPromptVersion": "advisor-1.5.1",
+    "selectedValidatorVersion": "final-deterministic-v2",
+    "finalPassed": true,
+    "newGenerationPerformed": true,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  },
+  {
+    "caseId": "F-037",
+    "classification": "Pure event-location validator false positive",
+    "evidenceAndFix": "All three original messages contain correct event name, date/time, venue and street address; only venue/address order differs. Original output reused verbatim after offline corrected validation. Zero new generation calls for this case.",
+    "originalError": null,
+    "originalDeterministic": {
+      "version": "final-deterministic-v1",
+      "passed": false,
+      "hard": [
+        {
+          "ruleId": "EVENT_REQUIRED_DETAILS",
+          "severity": "hard",
+          "candidateIndexes": [
+            0
+          ]
+        },
+        {
+          "ruleId": "EVENT_REQUIRED_DETAILS",
+          "severity": "hard",
+          "candidateIndexes": [
+            1
+          ]
+        },
+        {
+          "ruleId": "EVENT_REQUIRED_DETAILS",
+          "severity": "hard",
+          "candidateIndexes": [
+            2
+          ]
+        }
+      ],
+      "warnings": [],
+      "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+    },
+    "finalProvenance": {
+      "kind": "ORIGINAL_OFFLINE_REVALIDATED",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/live-2026-11-07T19-57-17-059Z-88a109ee",
+      "generationPerformedInTargetedRetest": false,
+      "originalCaseId": "F-037",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": {
+        "version": "final-deterministic-v1",
+        "passed": false,
+        "hard": [
+          {
+            "ruleId": "EVENT_REQUIRED_DETAILS",
+            "severity": "hard",
+            "candidateIndexes": [
+              0
+            ]
+          },
+          {
+            "ruleId": "EVENT_REQUIRED_DETAILS",
+            "severity": "hard",
+            "candidateIndexes": [
+              1
+            ]
+          },
+          {
+            "ruleId": "EVENT_REQUIRED_DETAILS",
+            "severity": "hard",
+            "candidateIndexes": [
+              2
+            ]
+          }
+        ],
+        "warnings": [],
+        "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+      },
+      "originalError": null,
+      "originalMessageCount": 3,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.0",
+      "selectedValidatorVersion": "final-deterministic-v2.1"
+    },
+    "selectedPromptVersion": "advisor-1.5.0",
+    "selectedValidatorVersion": "final-deterministic-v2.1",
+    "finalPassed": true,
+    "newGenerationPerformed": false,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  },
+  {
+    "caseId": "F-039",
+    "classification": "Mixed validator false positive and genuine generation defect",
+    "evidenceAndFix": "Venue/address order was valid, but original Concise promised the event would discuss jasmine without a verified agenda. New event contract removes that promise and preserves all event facts.",
+    "originalError": null,
+    "originalDeterministic": {
+      "version": "final-deterministic-v1",
+      "passed": false,
+      "hard": [
+        {
+          "ruleId": "EVENT_REQUIRED_DETAILS",
+          "severity": "hard",
+          "candidateIndexes": [
+            0
+          ]
+        },
+        {
+          "ruleId": "EVENT_REQUIRED_DETAILS",
+          "severity": "hard",
+          "candidateIndexes": [
+            1
+          ]
+        }
+      ],
+      "warnings": [],
+      "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+    },
+    "finalProvenance": {
+      "kind": "LIVE_TARGETED_RETEST",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+      "generationPerformedInTargetedRetest": true,
+      "originalCaseId": "F-039",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": {
+        "version": "final-deterministic-v1",
+        "passed": false,
+        "hard": [
+          {
+            "ruleId": "EVENT_REQUIRED_DETAILS",
+            "severity": "hard",
+            "candidateIndexes": [
+              0
+            ]
+          },
+          {
+            "ruleId": "EVENT_REQUIRED_DETAILS",
+            "severity": "hard",
+            "candidateIndexes": [
+              1
+            ]
+          }
+        ],
+        "warnings": [],
+        "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+      },
+      "originalError": null,
+      "originalMessageCount": 3,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.1",
+      "selectedValidatorVersion": "final-deterministic-v2"
+    },
+    "selectedPromptVersion": "advisor-1.5.1",
+    "selectedValidatorVersion": "final-deterministic-v2",
+    "finalPassed": true,
+    "newGenerationPerformed": true,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  },
+  {
+    "caseId": "F-041",
+    "classification": "Mixed validator false positive and genuine generation defect",
+    "evidenceAndFix": "Venue/address order was valid, but original Concise promised the selected lily-of-the-valley imagery would appear in the event. This was not supported by the verified event record; targeted generation corrected it.",
+    "originalError": null,
+    "originalDeterministic": {
+      "version": "final-deterministic-v1",
+      "passed": false,
+      "hard": [
+        {
+          "ruleId": "EVENT_REQUIRED_DETAILS",
+          "severity": "hard",
+          "candidateIndexes": [
+            0
+          ]
+        }
+      ],
+      "warnings": [],
+      "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+    },
+    "finalProvenance": {
+      "kind": "LIVE_TARGETED_RETEST",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+      "generationPerformedInTargetedRetest": true,
+      "originalCaseId": "F-041",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": {
+        "version": "final-deterministic-v1",
+        "passed": false,
+        "hard": [
+          {
+            "ruleId": "EVENT_REQUIRED_DETAILS",
+            "severity": "hard",
+            "candidateIndexes": [
+              0
+            ]
+          }
+        ],
+        "warnings": [],
+        "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+      },
+      "originalError": null,
+      "originalMessageCount": 3,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.1",
+      "selectedValidatorVersion": "final-deterministic-v2"
+    },
+    "selectedPromptVersion": "advisor-1.5.1",
+    "selectedValidatorVersion": "final-deterministic-v2",
+    "finalPassed": true,
+    "newGenerationPerformed": true,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  },
+  {
+    "caseId": "F-042",
+    "classification": "Genuine generation defects",
+    "evidenceAndFix": "Concise omitted venue name; Concise/Detailed asserted prior leaf interests despite empty CRM history/interests; Concise also promised an unverified event topic. Added narrow hard checks and explicit event guidance; retest passed after bounded repair.",
+    "originalError": null,
+    "originalDeterministic": {
+      "version": "final-deterministic-v1",
+      "passed": false,
+      "hard": [
+        {
+          "ruleId": "EVENT_REQUIRED_DETAILS",
+          "severity": "hard",
+          "candidateIndexes": [
+            0
+          ]
+        }
+      ],
+      "warnings": [],
+      "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+    },
+    "finalProvenance": {
+      "kind": "LIVE_TARGETED_RETEST",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+      "generationPerformedInTargetedRetest": true,
+      "originalCaseId": "F-042",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": {
+        "version": "final-deterministic-v1",
+        "passed": false,
+        "hard": [
+          {
+            "ruleId": "EVENT_REQUIRED_DETAILS",
+            "severity": "hard",
+            "candidateIndexes": [
+              0
+            ]
+          }
+        ],
+        "warnings": [],
+        "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+      },
+      "originalError": null,
+      "originalMessageCount": 3,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.1",
+      "selectedValidatorVersion": "final-deterministic-v2"
+    },
+    "selectedPromptVersion": "advisor-1.5.1",
+    "selectedValidatorVersion": "final-deterministic-v2",
+    "finalPassed": true,
+    "newGenerationPerformed": true,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  },
+  {
+    "caseId": "F-045",
+    "classification": "Historic-Motif false positive reproduced",
+    "evidenceAndFix": "Captured targeted Detailed/Elegant replies referenced genuine prior Jasmin preference while discussing selected leaf/general price context. Historic reference is not attribution to current product. Original rejected text unavailable; targeted case passed.",
+    "originalError": {
+      "code": "OUTPUT_VALIDATION",
+      "stage": "output.validation",
+      "ruleIds": [
+        "WRONG_MOTIF"
+      ],
+      "providerStatus": null,
+      "candidateIndexes": [
+        0,
+        1,
+        2
+      ]
+    },
+    "originalDeterministic": null,
+    "finalProvenance": {
+      "kind": "LIVE_TARGETED_RETEST",
+      "generationSourceRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+      "generationPerformedInTargetedRetest": true,
+      "originalCaseId": "F-045",
+      "originalPromptVersion": "advisor-1.5.0",
+      "originalDeterministic": null,
+      "originalError": {
+        "code": "OUTPUT_VALIDATION",
+        "stage": "output.validation",
+        "ruleIds": [
+          "WRONG_MOTIF"
+        ],
+        "providerStatus": null,
+        "candidateIndexes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "originalMessageCount": 0,
+      "originalPassed": false,
+      "selectedPromptVersion": "advisor-1.5.1",
+      "selectedValidatorVersion": "final-deterministic-v2"
+    },
+    "selectedPromptVersion": "advisor-1.5.1",
+    "selectedValidatorVersion": "final-deterministic-v2",
+    "finalPassed": true,
+    "newGenerationPerformed": true,
+    "humanReview": "PENDING; code/record inspection is not a human rating"
+  }
+]

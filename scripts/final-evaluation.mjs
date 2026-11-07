@@ -1,12 +1,13 @@
-import { mkdir, writeFile, readFile, readdir } from "node:fs/promises";
+import {
+  mkdir,
+  writeFile,
+  readFile,
+  readdir,
+  appendFile,
+} from "node:fs/promises";
 import { resolve } from "node:path";
 import { createHash, randomUUID } from "node:crypto";
 import { execFileSync } from "node:child_process";
-import {
-  finalCases,
-  EVALUATION_TIME,
-  CASESET_VERSION,
-} from "../evaluation/final-v1/cases.mjs";
 import {
   judgeMessages,
   judgePrompt,
@@ -25,16 +26,29 @@ import {
 import { normalizeTask } from "../server/generation-context.mjs";
 import { recoveryConfig } from "../server/recovery-policy.mjs";
 import { BRAND_SOURCE_SHA256 } from "../server/brand-context.mjs";
+import { BRAND_VERSION } from "../data/catalog.mjs";
+import { judgePolicy } from "../evaluation/final-v1/judge-policy.mjs";
 
 const args = process.argv.slice(2),
   get = (key, fallback) =>
     args.includes(key) ? args[args.indexOf(key) + 1] : fallback;
+const selectedCaseSet = get("--case-set", "v1");
+if (!["v1", "submission-v2"].includes(selectedCaseSet))
+  throw new Error("Unknown case set");
+const caseModulePath = `evaluation/final-v1/${selectedCaseSet === "v1" ? "cases.mjs" : "cases-submission-v2.mjs"}`;
+const { finalCases, EVALUATION_TIME, CASESET_VERSION } = await import(
+  new URL("../" + caseModulePath, import.meta.url)
+);
+const independentOnly =
+  selectedCaseSet === "submission-v2" ||
+  args.includes("--independent-judge-only");
 const live = args.includes("--live"),
   mock = args.includes("--mock"),
   judgeSource = get("--judge-existing", null),
   plan = !live && !mock && !judgeSource;
 const config = providerConfig(),
   recovery = recoveryConfig(),
+  judge = judgePolicy(config, process.env, independentOnly),
   maxCalls = Number(
     get("--max-api-calls", judgeSource ? "4" : live ? "0" : mock ? "0" : "250"),
   );
@@ -46,6 +60,12 @@ if (live && (!args.includes("--approve-paid-run") || maxCalls < 100))
   );
 if ((live || judgeSource) && (!config.key || config.demo))
   throw new Error("Live configuration required; no calls made");
+if (
+  live &&
+  selectedCaseSet === "submission-v2" &&
+  config.provider !== "deepseek"
+)
+  throw new Error("Submission live run requires DeepSeek; no calls made");
 if (judgeSource && maxCalls > 4 && !args.includes("--approve-paid-run"))
   throw new Error("Small offline judge sample is capped at four calls");
 const mode = plan
@@ -67,10 +87,13 @@ const metadata = {
   caseSetSha256: sha(JSON.stringify(finalCases)),
   promptVersion: PROMPT_VERSION,
   brandSourceSha256: BRAND_SOURCE_SHA256,
+  brandBibleVersion: BRAND_VERSION,
   judgeVersion: JUDGE_VERSION,
   rubricVersion: RUBRIC_VERSION,
   model: mock ? "mock-model" : config.model,
-  judgeModel: mock ? null : process.env.DEEPSEEK_JUDGE_MODEL || config.model,
+  provider: mock ? "fixture" : config.provider,
+  judgeModel: mock ? null : judge.model,
+  judgePolicy: judge,
   evaluationTime: EVALUATION_TIME,
   createdAt: new Date().toISOString(),
   maxApiCalls: maxCalls,
@@ -94,6 +117,8 @@ const metadata = {
         "server/audit-policy.mjs",
         "server/rules.mjs",
         "evaluation/final-v1/cases.mjs",
+        ...(selectedCaseSet === "v1" ? [] : [caseModulePath]),
+        "evaluation/final-v1/judge-policy.mjs",
         "evaluation/final-v1/rubric.mjs",
         "evaluation/final-v1/judge.mjs",
         "evaluation/final-v1/deterministic.mjs",
@@ -129,11 +154,12 @@ await save("manifest.json", {
   nominalApiCalls: {
     generation: 50,
     hardAudit: 50,
-    offlineJudge: 50,
-    total: 150,
+    offlineJudge: judge.enabled ? 50 : 0,
+    total: judge.enabled ? 150 : 100,
   },
-  maximumDefaultCalls: 250,
-  maximumConfiguredCalls: finalCases.length * (recovery.maxProviderCalls + 1),
+  maximumDefaultCalls: 50 * (4 + (judge.enabled ? 1 : 0)),
+  maximumConfiguredCalls:
+    finalCases.length * (recovery.maxProviderCalls + (judge.enabled ? 1 : 0)),
   cases: planCases,
 });
 console.log(
@@ -143,7 +169,8 @@ if (plan) {
   console.log("Plan prepared: 50 valid fictional cases; zero calls made.");
   process.exit(0);
 }
-let calls = 0;
+let calls = 0,
+  activeCaseId = null;
 const traces = [];
 const actualFetch = async (url, options) => {
   if (calls >= maxCalls) throw new Error("Global paid call budget exhausted");
@@ -151,9 +178,16 @@ const actualFetch = async (url, options) => {
   const request = JSON.parse(options.body),
     trace = {
       index: calls,
+      caseId: activeCaseId,
+      attempt: traces.filter((t) => t.caseId === activeCaseId).length + 1,
       stage: request.text.format.name,
       requestedModel: request.model,
       startedAt: new Date().toISOString(),
+      promptSha256: sha(
+        request.instructions +
+          request.input +
+          JSON.stringify(request.text.format.schema),
+      ),
     };
   traces.push(trace);
   const started = performance.now();
@@ -171,8 +205,18 @@ const actualFetch = async (url, options) => {
       }
     }
     return response;
+  } catch (error) {
+    trace.errorCategory = ["TimeoutError", "AbortError"].includes(error.name)
+      ? "API_TIMEOUT"
+      : "API_NETWORK";
+    throw error;
   } finally {
     trace.durationMs = performance.now() - started;
+    trace.completedAt = new Date().toISOString();
+    await appendFile(
+      resolve(directory, "provider-traces.jsonl"),
+      clean(trace).replace(/\n\s*/g, "") + "\n",
+    );
   }
 };
 let records = [];
@@ -237,12 +281,19 @@ if (judgeSource) {
     return {
       id: definition.id,
       input: definition.input,
+      normalizedInput: context.normalized?.task,
       context,
       source: profile ? "live-source-profile" : "live-source-evaluation",
       generationPerformedInThisRun: false,
       executionStatus:
         messages.length === 3 ? "LIVE_SOURCE_COMPLETED" : "NOT_COMPLETED",
       sourceRun: judgeSource,
+      provider: original.provider || config.provider,
+      brandBibleVersion:
+        original.brandBibleVersion ||
+        sourceMeta.brandBibleVersion ||
+        BRAND_VERSION,
+      generatedAt: original.generatedAt || null,
       messages,
       model: profile ? original.result.model : original.model,
       promptVersion:
@@ -258,7 +309,9 @@ if (judgeSource) {
         ? deterministicEvaluation(messages, context, definition.input)
         : null,
       ...(original.error ? { error: original.error } : {}),
-      ...(original.judge && !args.includes("--rejudge")
+      ...(original.judge &&
+      !args.includes("--rejudge") &&
+      (!independentOnly || original.judge.model !== original.model)
         ? { judge: original.judge }
         : {}),
     };
@@ -266,20 +319,26 @@ if (judgeSource) {
   const requiredCalls = records.filter(
     (record) => record.messages.length === 3 && !record.judge,
   ).length;
-  if (requiredCalls > maxCalls)
+  if (judge.enabled && requiredCalls > maxCalls)
     throw new Error("Judge budget insufficient; no calls made");
 } else {
   for (const definition of finalCases) {
+    activeCaseId = definition.id;
     const context = evaluateRequest(definition.input, { now: EVALUATION_TIME }),
       record = {
         id: definition.id,
         input: definition.input,
+        normalizedInput: context.normalized?.task,
+        expectedBehavior: definition.expectedBehavior || null,
         context,
         source: mock ? "mock" : "live",
         generationPerformedInThisRun: true,
         executionStatus: mock ? "MOCK_STARTED" : "LIVE_STARTED",
         messages: [],
         model: mock ? "mock-model" : config.model,
+        provider: mock ? "fixture" : config.provider,
+        brandBibleVersion: BRAND_VERSION,
+        generatedAt: new Date().toISOString(),
         promptVersion: PROMPT_VERSION,
       };
     const fixture = mock
@@ -338,6 +397,8 @@ if (judgeSource) {
         code: error.code || "GENERATION_FAILED",
         stage: error.stage || "generation",
         ruleIds: error.ruleIds || [],
+        providerStatus: error.providerStatus || null,
+        candidateIndexes: error.candidateIndexes || [],
       };
       record.recovery = error.recovery;
       record.performance = {
@@ -346,14 +407,30 @@ if (judgeSource) {
       };
     }
     record.generationMs = performance.now() - started;
+    record.completedAt = new Date().toISOString();
+    record.providerAttempts = traces.filter((t) => t.caseId === definition.id);
+    record.apiLatencyMs = record.providerAttempts.reduce(
+      (sum, t) => sum + t.durationMs,
+      0,
+    );
+    record.tokenUsage = record.providerAttempts.reduce(
+      (s, t) => ({
+        input: s.input + (t.usage?.input_tokens || 0),
+        cached: s.cached + (t.usage?.input_tokens_details?.cached_tokens || 0),
+        output: s.output + (t.usage?.output_tokens || 0),
+        callsWithoutUsage: s.callsWithoutUsage + (t.usage ? 0 : 1),
+      }),
+      { input: 0, cached: 0, output: 0, callsWithoutUsage: 0 },
+    );
     records.push(record);
     await save(definition.id + "-generation.json", record);
   }
 }
 // Judging is a distinct offline phase. It never delays customer-facing generation.
-if (!mock)
+if (!mock && judge.enabled)
   for (const record of records) {
     if (!record.messages.length || record.judge) continue;
+    activeCaseId = record.id;
     try {
       record.judgePromptSha256 = sha(
         judgePrompt(record.input, record.context, record.messages).instructions,
@@ -372,6 +449,17 @@ if (!mock)
     }
     await save(record.id + "-judge.json", record);
   }
+for (const record of records)
+  record.judgeStatus =
+    record.messages.length !== 3
+      ? "SKIPPED_INCOMPLETE_GENERATION"
+      : record.judge
+        ? "COMPLETED"
+        : mock
+          ? "NOT_RUN_FIXTURE"
+          : record.judgeError
+            ? "FAILED"
+            : judge.status;
 await save("provider-traces.json", traces);
 // The source contains no credentials; export only known data fields.
 let reviews = [];

@@ -1,0 +1,466 @@
+[
+  {
+    "caseId": "F-001",
+    "selectionReason": "representative/difficult",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "greeting",
+      "greetingKind": "birthday",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n十一月是您的生日月，愿这个月的光影与心情都格外柔和，日常里多一些从容与欢喜。\n\n愿这份祝福，为您的日常添一份从容。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n十一月是您的生日月，愿这个月里的每一天都带着一点温柔的光，忙碌之余也有属于自己的安静片刻，把喜欢的事慢慢做好。\n\n若您愿意分享近来的美好片刻，我很乐意听。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n十一月是您的生日月，愿这一段时光如晨光落在花瓣上，安静而明亮，值得珍藏的小小欢喜常伴左右。\n\n愿值得珍藏的小小欢喜，常伴您左右。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-009",
+    "selectionReason": "representative/difficult",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "recommend",
+      "motif": "jasmin",
+      "line": "jasmin",
+      "sku": "JAS-B01",
+      "occasion": "personal",
+      "notes": "客户喜欢低调、适合日常佩戴的珠宝，不喜欢过于夸张的设计。"
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n您提到喜欢低调、适合日常佩戴的珠宝，这款星夜茉莉细窄硬镯以18K玫瑰金打造，半开花形点缀含蓄不张扬，正合日常的分寸。\n\n如您感兴趣，欢迎随时与我聊聊作品细节。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n星夜茉莉的意象，是一朵茉莉在黄昏中缓缓舒展，无需宣告，靠近的人自然能感知。这款细窄硬镯延续了这份克制：18K玫瑰金，半开花形点缀，线条收得干净，不显夸张。您说过喜欢低调、适合日常佩戴的珠宝，这样的窄版设计在通勤与日常之间都留有余地，也与您偏爱的玫瑰金相合。\n\n您若想了解更多材质与设计细节，随时可以告诉我。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n茉莉初绽时，五瓣花冠围绕一点微光，不张扬，却自有恒久的优雅。这款细窄硬镯以18K玫瑰金承住半开花形，恰好呼应您对低调日常的偏爱，安静地陪伴每一个平常片刻。\n\n如果您愿意，我很乐意继续为您介绍这件作品。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-013",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "recommend",
+      "motif": "muguet",
+      "line": "rosee",
+      "sku": "MUG-R-R01",
+      "occasion": "personal"
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n光之铃兰的双花苞开口戒，以18K白金托起梨形钻石露珠，像清晨落在铃兰上的第一滴光。您最近提到偏爱玫瑰金，这次的18K白金是另一种清透表达，开口线条也适合日常自然佩戴。\n\n如您感兴趣，欢迎随时与我聊聊作品细节。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n光之铃兰的铃兰低垂如祝福轻递掌心，晨露系列则把清晨第一缕光落在露珠上的瞬间收进设计。这枚双花苞开口戒以18K白金塑出垂落的小钟形花，梨形钻石如露珠点缀其间，开口结构让线条显得轻巧。您最近提到偏爱玫瑰金，这次的18K白金呈现的是更清透的一面；若您看重日常佩戴的自然感，它的花苞造型与轻盈线条也值得细看。\n\n您若想了解更多材质与设计细节，随时可以告诉我。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n铃兰不争声量，只把祝福轻轻递到掌心；晨露落在花冠上的那一刻，被凝成这枚双花苞开口戒。18K白金与梨形钻石露珠相映，线条含蓄，适合在日常里安静陪伴。您最近偏爱玫瑰金，这次的18K白金是另一种清透光泽，也愿它合您日常佩戴的心意。\n\n如果您愿意，我很乐意继续为您介绍这件作品。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-014",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "recommend",
+      "motif": "muguet",
+      "line": "clochette",
+      "sku": "MUG-C-R01",
+      "occasion": "gift"
+    },
+    "messages": [],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-017",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "recommend",
+      "motif": "feuille",
+      "line": "vive",
+      "sku": "FEU-V-B01",
+      "occasion": "personal"
+    },
+    "messages": [],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-021",
+    "selectionReason": "representative/difficult",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "care",
+      "purchaseId": "PUR-001-01",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n您九月选的那枚五瓣茉莉开口戒，18K玫瑰金衬着花心小钻，纤细花形正适合日常自然佩戴。想问问这段时间戴起来是否顺手。\n\n若有想交流的佩戴感受，欢迎随时告诉我。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n星夜茉莉的灵感，是黄昏里一朵茉莉缓缓舒展，不必宣告，靠近的人自然能感知。您九月选下的这枚五瓣茉莉开口戒，以18K玫瑰金承托层叠五瓣与花心小钻，纤细花形也贴合您日常自然佩戴的心意。不知这段时间它与您的日常相处得如何。\n\n如果您有佩戴方面的疑问，欢迎随时与我沟通。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n茉莉在暮色中静静舒展，五瓣围拢一点微光，正如您九月带回的那枚开口戒，18K玫瑰金与花心小钻都收得含蓄。愿它陪您度过许多自然的日常片刻。\n\n您若愿意分享与这件作品相伴的片刻，我很乐意听。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-029",
+    "selectionReason": "representative/difficult",
+    "input": {
+      "clientId": "CL-009",
+      "scenario": "reactivate",
+      "reconnectReason": "自然问候，听听近来的珠宝想法。",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n近来可好？若您对珠宝有了新的想法或想看看不同的设计，我很乐意听您聊聊。\n\n如果您愿意，欢迎随时和我聊聊珠宝想法。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n想借这个机会问候您一声。珠宝的喜好常会随心境慢慢变化，若您近来对风格、搭配有了新的想法，或只是想随意看看不同的设计，都可以和我聊聊，我会按您的节奏来。\n\n若您想继续了解这些设计，方便时联系我就好。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n时光流转，愿您一切安好。珠宝于我们，是日常里一点安静的光；若您近来对某一种风格心生好奇，我很愿意陪您慢慢聊。\n\n您若有想分享或了解的，随时可以告诉我。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-031",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "reactivate",
+      "motif": "feuille",
+      "notes": ""
+    },
+    "messages": [],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-032",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-002",
+      "scenario": "reactivate",
+      "motif": "muguet",
+      "line": "rosee",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n最近想到晨露系列，铃兰低垂的花冠与露珠，像清晨第一缕光落在花瓣上，轻盈而安静。\n\n如果您愿意，欢迎随时和我聊聊珠宝想法。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n最近想到晨露系列，它取清晨第一缕光落在铃兰露珠上的意象，垂落的小钟形花与露珠构成轻盈的轮廓，象征新篇章与温柔的祝福。铃兰低垂的花冠像把祝愿轻轻递到掌心，不以声量取胜，却自有温柔的韧性。\n\n若您想继续了解这些设计，方便时联系我就好。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，陈女士，我是 Maison Lioré 的珠宝顾问 Camille。\n\n晨露系列让我想起铃兰低垂的花冠，像把祝福轻轻递到掌心；清晨的光落在露珠上，轻盈、克制，也留有余地。\n\n您若有想分享或了解的，随时可以告诉我。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-034",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "reactivate",
+      "motif": "feuille",
+      "line": "vive",
+      "sku": "FEU-V-R01",
+      "notes": "客户最近比较忙。"
+    },
+    "messages": [],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-037",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-009",
+      "scenario": "event",
+      "eventId": "EV-DEMO-01",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n12月12日14:00，我们将在上海示例路18号的虚构体验空间举办“自然意象 · 珠宝设计分享”，围绕自然细节与设计灵感做一次安静交流。\n\n如果您有兴趣，欢迎告诉我您的参与意向。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n这次“自然意象 · 珠宝设计分享”定在12月12日14:00，地点是上海示例路18号的虚构体验空间，内容围绕自然中的细微变化与珠宝设计之间的连接展开，适合慢慢看、慢慢聊。\n\n若这场分享与您的兴趣相合，欢迎与我沟通参与想法。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n“自然意象 · 珠宝设计分享”将于12月12日14:00在上海示例路18号的虚构体验空间举行，从自然的光影与形态出发，聊一聊设计如何留住静谧片刻。\n\n您若愿意留意这次相聚，方便时告诉我就好。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-039",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "event",
+      "motif": "jasmin",
+      "line": "jasmin",
+      "eventId": "EV-DEMO-01",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n12月12日14:00，我们在上海示例路18号的虚构体验空间有一场“自然意象 · 珠宝设计分享”，会聊到茉莉初绽这类自然意象如何化为珠宝。\n\n如果您有兴趣，欢迎告诉我您的参与意向。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n12月12日14:00，我们将在上海示例路18号的虚构体验空间举办“自然意象 · 珠宝设计分享”。星夜初绽系列以茉莉初绽为灵感，五瓣花冠围绕一点微光，表达不张扬却恒久的优雅，与这场分享的自然意象主题颇为相合。\n\n若这场分享与您的兴趣相合，欢迎与我沟通参与想法。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n12月12日14:00，虚构体验空间 · 上海示例路18号将有一场“自然意象 · 珠宝设计分享”。星夜茉莉的灵感，来自黄昏里缓缓舒展的一朵茉莉——无需宣告，靠近的人自然感知。\n\n您若愿意留意这次相聚，方便时告诉我就好。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-041",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-004",
+      "scenario": "event",
+      "motif": "muguet",
+      "line": "clochette",
+      "eventId": "EV-DEMO-01",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n12月12日14:00，我们将在上海示例路18号的虚构体验空间举办“自然意象 · 珠宝设计分享”，您偏爱的铃兰意象也会在交流中自然出现。\n\n如果您有兴趣，欢迎告诉我您的参与意向。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n12月12日14:00，我们将在虚构体验空间 · 上海示例路18号举办“自然意象 · 珠宝设计分享”。您一直偏爱铃兰，Clochette Royale 将铃兰低垂的花冠化作层叠花序，像一串静默的钟声，把私密祝福延展成值得纪念的庆典语言；这场分享或许正合您的心意。\n\n若这场分享与您的兴趣相合，欢迎与我沟通参与想法。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，周女士，我是 Maison Lioré 的珠宝顾问 Nora。\n\n12月12日14:00，“自然意象 · 珠宝设计分享”将在虚构体验空间 · 上海示例路18号举行。铃兰低垂的花冠如祝福轻落掌心，Clochette Royale 以层叠花序留住这份静默的祝愿，愿与您在分享中一同细看。\n\n您若愿意留意这次相聚，方便时告诉我就好。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-042",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-009",
+      "scenario": "event",
+      "motif": "feuille",
+      "eventId": "EV-DEMO-01",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n12月12日下午两点，我们在上海示例路18号有一场“自然意象 · 珠宝设计分享”，会聊到叶片与自然线条的灵感。您之前对蔚蓝叶语的意象有兴趣，或许会觉得亲切。\n\n如果您有兴趣，欢迎告诉我您的参与意向。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n12月12日14:00，Maison Lioré 将在虚构体验空间（上海示例路18号）举办“自然意象 · 珠宝设计分享”。您此前留意过蔚蓝叶语的意象——风掠过叶片、水光在叶脉间流动，这场分享正适合从自然线条与光影出发慢慢聊起。\n\n若这场分享与您的兴趣相合，欢迎与我沟通参与想法。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n12月12日下午两点，虚构体验空间（上海示例路18号）将有一场“自然意象 · 珠宝设计分享”。蔚蓝叶语里叶脉与水光的意象，或许能在这样的午后被轻轻谈起。\n\n您若愿意留意这次相聚，方便时告诉我就好。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-044",
+    "selectionReason": "representative/difficult",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "price",
+      "concern": "价格偏高，正在比较其他品牌，希望慢慢考虑。",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n价格确实值得认真考虑，您愿意慢慢比较，我很理解。您之前提到喜欢星夜茉莉的戒指，也希望日常佩戴自然，这份偏好可以先留着，不必急着决定。\n\n您若愿意，可告诉我更在意哪些材质或设计细节。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n价格偏高时多看看、多比较是很自然的，您不必急着做决定。您之前提到喜欢星夜茉莉的戒指，也希望日常佩戴自然，还偏爱玫瑰金；这些偏好可以成为您比较时的参照，而不是催促。若您愿意，我们可以从材质与设计细节慢慢聊，帮您把关注点理清。\n\n若还有想了解的价格与设计信息，欢迎随时与我沟通。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n价格需要慎重，慢慢比较也是一种从容。您曾喜欢星夜茉莉的戒指，并希望它适合日常佩戴；这份对自然与克制的偏好，值得在考虑中保留。\n\n不妨按自己的节奏考虑，想继续了解时随时告诉我。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-045",
+    "selectionReason": "failure/recovery",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "price",
+      "motif": "feuille",
+      "concern": "为什么不同作品价格差异这么大？",
+      "notes": ""
+    },
+    "messages": [],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-047",
+    "selectionReason": "representative/difficult",
+    "input": {
+      "clientId": "CL-001",
+      "scenario": "price",
+      "motif": "jasmin",
+      "line": "jasmin",
+      "sku": "JAS-B01",
+      "occasion": "personal",
+      "concern": "没有超出预算，更关心设计与日常搭配。",
+      "notes": "客户说价格在预算内，更关心日常搭配。"
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n您提到价格在预算内、更在意日常搭配，这款细窄硬镯以18K玫瑰金打造，半开花形点缀不张扬，适合融入日常。\n\n您若愿意，可告诉我更在意哪些设计细节。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n您说价格在预算内，更关心日常搭配，这正好可以从设计上看：星夜茉莉以五瓣层叠花形与微光般的花心为标志，茉莉初绽的意象不张扬却耐看。这款细窄硬镯采用18K玫瑰金，半开花形点缀，模拟价26800元，窄版轮廓与您偏爱的玫瑰金相合，日常佩戴也自然。\n\n若还有想了解的价格与设计信息，欢迎随时与我沟通。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，林女士，我是 Maison Lioré 的珠宝顾问 Sophie。\n\n您提到价格在预算内，更在意日常搭配。星夜茉莉像黄昏里缓缓舒展的一朵花，无需宣告，靠近的人自然感知；这款细窄硬镯以18K玫瑰金承托半开花形，把那份安静的自信留在腕间，也贴近您偏爱的玫瑰金与日常自然。\n\n不妨按自己的节奏考虑，想继续了解时随时告诉我。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  {
+    "caseId": "F-049",
+    "selectionReason": "representative/difficult",
+    "input": {
+      "clientId": "CL-005",
+      "scenario": "price",
+      "motif": "feuille",
+      "line": "aqua",
+      "sku": "FEU-A-N01",
+      "concern": "觉得价格很高，想知道已知材质和设计能说明什么。",
+      "notes": ""
+    },
+    "messages": [
+      {
+        "style": "concise",
+        "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n理解您对价格的考量。这款梨形海蓝宝吊坠以18K白金承托叶片光环，设计围绕海蓝宝的清澈光泽展开，模拟价138,000元。\n\n您若愿意，可告诉我更在意哪些材质或设计细节。"
+      },
+      {
+        "style": "detailed",
+        "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n理解您觉得价格偏高，也明白您想先弄清已知材质与设计究竟说明了什么。这款项链来自澄蓝传承系列，以蔚蓝叶语的叶脉线条为灵感，用18K白金托起梨形海蓝宝，让清澈蓝色与叶片光环相互映衬，模拟价为138,000元。您此前提到想挑一份礼物、收礼人的偏好还需确认，因此不妨先从材质与设计是否符合心意入手。\n\n若还有想了解的价格与设计信息，欢迎随时与我沟通。"
+      },
+      {
+        "style": "elegant",
+        "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n价格上的顾虑，我明白。蔚蓝叶语把风过叶脉、水光流动的一刻收进设计里，这款吊坠以18K白金环绕梨形海蓝宝，让清澈的蓝色有了可被珍藏的形状，模拟价138,000元。\n\n不妨按自己的节奏考虑，想继续了解时随时告诉我。"
+      }
+    ],
+    "reviewer": null,
+    "reviewedAt": null,
+    "scores": null,
+    "status": "PENDING_HUMAN_REVIEW"
+  }
+]

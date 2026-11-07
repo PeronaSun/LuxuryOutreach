@@ -1,0 +1,10 @@
+{
+  "method": "Code/record inspection; no new model calls and not human review",
+  "originalValidationChanged": false,
+  "findings": {
+    "F-037": "Likely validator false positive: venue and street address are both present, in reversed word order. Original FAIL retained; requires adjudication, not regeneration.",
+    "F-039": "Likely validator false positive: venue and street address are both present, in reversed word order. Original FAIL retained; requires adjudication, not regeneration.",
+    "F-041": "Likely validator false positive: venue and street address are both present, in reversed word order. Original FAIL retained; requires adjudication, not regeneration.",
+    "F-042": "Concise omits the verified venue name. Its claim about prior interest also lacks support in this sparse profile/history. Preserve output and review; no automatic acceptance."
+  }
+}

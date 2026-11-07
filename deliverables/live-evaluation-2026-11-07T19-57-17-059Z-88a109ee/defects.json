@@ -1,0 +1,130 @@
+[
+  {
+    "caseId": "F-014",
+    "type": "GENERATION",
+    "code": "OUTPUT_VALIDATION",
+    "stage": "output.validation",
+    "ruleIds": [
+      "WRONG_MOTIF"
+    ],
+    "providerStatus": null,
+    "candidateIndexes": [
+      1
+    ]
+  },
+  {
+    "caseId": "F-017",
+    "type": "GENERATION",
+    "code": "OUTPUT_VALIDATION",
+    "stage": "output.validation",
+    "ruleIds": [
+      "FACT_CUSTOMER"
+    ],
+    "providerStatus": null,
+    "candidateIndexes": [
+      2
+    ]
+  },
+  {
+    "caseId": "F-031",
+    "type": "GENERATION",
+    "code": "OUTPUT_SCHEMA",
+    "stage": "advisor_messages.schema",
+    "ruleIds": [
+      "OUTPUT_SCHEMA"
+    ],
+    "providerStatus": null,
+    "candidateIndexes": []
+  },
+  {
+    "caseId": "F-034",
+    "type": "GENERATION",
+    "code": "OUTPUT_VALIDATION",
+    "stage": "output.validation",
+    "ruleIds": [
+      "WRONG_MOTIF"
+    ],
+    "providerStatus": null,
+    "candidateIndexes": [
+      1
+    ]
+  },
+  {
+    "caseId": "F-037",
+    "type": "HARD",
+    "ruleId": "EVENT_REQUIRED_DETAILS",
+    "severity": "hard",
+    "candidateIndexes": [
+      0
+    ]
+  },
+  {
+    "caseId": "F-037",
+    "type": "HARD",
+    "ruleId": "EVENT_REQUIRED_DETAILS",
+    "severity": "hard",
+    "candidateIndexes": [
+      1
+    ]
+  },
+  {
+    "caseId": "F-037",
+    "type": "HARD",
+    "ruleId": "EVENT_REQUIRED_DETAILS",
+    "severity": "hard",
+    "candidateIndexes": [
+      2
+    ]
+  },
+  {
+    "caseId": "F-039",
+    "type": "HARD",
+    "ruleId": "EVENT_REQUIRED_DETAILS",
+    "severity": "hard",
+    "candidateIndexes": [
+      0
+    ]
+  },
+  {
+    "caseId": "F-039",
+    "type": "HARD",
+    "ruleId": "EVENT_REQUIRED_DETAILS",
+    "severity": "hard",
+    "candidateIndexes": [
+      1
+    ]
+  },
+  {
+    "caseId": "F-041",
+    "type": "HARD",
+    "ruleId": "EVENT_REQUIRED_DETAILS",
+    "severity": "hard",
+    "candidateIndexes": [
+      0
+    ]
+  },
+  {
+    "caseId": "F-042",
+    "type": "HARD",
+    "ruleId": "EVENT_REQUIRED_DETAILS",
+    "severity": "hard",
+    "candidateIndexes": [
+      0
+    ]
+  },
+  {
+    "caseId": "F-045",
+    "type": "GENERATION",
+    "code": "OUTPUT_VALIDATION",
+    "stage": "output.validation",
+    "ruleIds": [
+      "WRONG_MOTIF"
+    ],
+    "providerStatus": null,
+    "candidateIndexes": [
+      0,
+      1,
+      2
+    ]
+  }
+]

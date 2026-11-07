@@ -1,0 +1,1078 @@
+{
+  "createdAt": "2026-11-07T19:40:44.206Z",
+  "caseSetVersion": "final-50-submission-v2",
+  "gitCommit": "61c6ddfd5688ee0ce1dada2b85c81b042ad85f6b",
+  "promptVersion": "advisor-1.5.0",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "brandSourceSha256": "ce4be633ea9f8b85f012a59088a188592a257141e7e9efd62fffabcdf7f82669",
+  "status": "PREFLIGHT_PASSED_AWAITING_USER_APPROVAL",
+  "preparedCases": 50,
+  "targetMessages": 150,
+  "scenarioDistribution": {
+    "greeting": 8,
+    "recommend": 12,
+    "care": 8,
+    "reactivate": 8,
+    "event": 7,
+    "price": 7
+  },
+  "skuCoverage": [
+    "FEU-A-B01",
+    "FEU-A-N01",
+    "FEU-A-R01",
+    "FEU-V-B01",
+    "FEU-V-N01",
+    "FEU-V-R01",
+    "JAS-B01",
+    "JAS-N01",
+    "JAS-R01",
+    "MUG-C-B01",
+    "MUG-C-N01",
+    "MUG-C-R01",
+    "MUG-R-B01",
+    "MUG-R-N01",
+    "MUG-R-R01"
+  ],
+  "selectionDepths": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "apiCallsThisPreflight": 0,
+  "liveCasesExecutedThisPreflight": 0,
+  "liveProvider": {
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "keyConfigured": true,
+    "demo": false,
+    "endpointValidated": true,
+    "envIgnoredByGit": true,
+    "networkVerifiedThisPreflight": false,
+    "previousLiveEvidence": "evaluation/final-v1/evidence/after/records.json"
+  },
+  "judgePolicy": {
+    "enabled": false,
+    "model": null,
+    "provider": null,
+    "independent": false,
+    "status": "PENDING_INDEPENDENT_JUDGE_NOT_CONFIGURED",
+    "method": "pending-independent-judge"
+  },
+  "proposedCalls": {
+    "generation": 50,
+    "factualAudit": 50,
+    "offlineJudge": 0,
+    "nominal": 100,
+    "maximum": 200,
+    "concurrency": 1
+  },
+  "recovery": {
+    "maxProviderCalls": 4,
+    "maxTransientRetries": 1,
+    "maxOutputRepairs": 1,
+    "timeoutMs": 45000,
+    "outputTokens": 2400,
+    "backoffMs": 1000,
+    "maxBackoffMs": 10000,
+    "temperature": 0.2
+  },
+  "cost": {
+    "currency": "USD",
+    "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "ratesChecked": "2026-11-07",
+    "basis": "Scale four actual optimized generation+audit requests; excludes subjective judge",
+    "projectedTokens": {
+      "input": 344087.5,
+      "cached": 72000,
+      "output": 12000
+    },
+    "nominalOffPeak": 0.048229125,
+    "nominalOffPeakNoCache": 0.058813125,
+    "nominalPeak": 0.09645825,
+    "nominalPeakNoCache": 0.11762625,
+    "sameAverageWithMaximumCallsPeak": 0.2352525,
+    "conservativePeakEnvelope": 4.416,
+    "caveat": "Estimates, not invoices or enforced dollar limits. Conservative input size is an assumption, not an application cap. Retry/repair content can differ. API call count is enforced.",
+    "judgeCost": "0; no independent judge configured; leave subjective scores pending",
+    "optionalUnconfiguredProJudge": {
+      "approved": false,
+      "extraCalls": 50,
+      "estimatedUsdOffPeakToPeakNoCache": [
+        0.11613525,
+        0.2322705
+      ],
+      "basis": "Prior four judge requests scaled to 50 at published DeepSeek V4 Pro rates, all cache misses. Illustrative only; not configured or included in this run."
+    }
+  },
+  "caseAudits": [
+    {
+      "caseId": "F-001",
+      "scenario": "greeting",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-002",
+      "scenario": "greeting",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-003",
+      "scenario": "greeting",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-004",
+      "scenario": "greeting",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-005",
+      "scenario": "greeting",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-006",
+      "scenario": "greeting",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-007",
+      "scenario": "greeting",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-008",
+      "scenario": "greeting",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-009",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "JAS-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-010",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "JAS-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-011",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "JAS-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-012",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "JAS-R01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-013",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "MUG-R-R01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-014",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "MUG-C-R01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-015",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "MUG-C-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-016",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "MUG-C-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-017",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "FEU-V-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-018",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "FEU-V-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-019",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "FEU-A-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-020",
+      "scenario": "recommend",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "FEU-A-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-021",
+      "scenario": "care",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "JAS-R01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-022",
+      "scenario": "care",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "JAS-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-023",
+      "scenario": "care",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "MUG-R-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-024",
+      "scenario": "care",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "MUG-R-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-025",
+      "scenario": "care",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "FEU-A-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-026",
+      "scenario": "care",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "FEU-A-R01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-027",
+      "scenario": "care",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "JAS-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-028",
+      "scenario": "care",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": "MUG-R-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-029",
+      "scenario": "reactivate",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-030",
+      "scenario": "reactivate",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-031",
+      "scenario": "reactivate",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 1,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-032",
+      "scenario": "reactivate",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 2,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-033",
+      "scenario": "reactivate",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "FEU-A-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-034",
+      "scenario": "reactivate",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "FEU-V-R01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-035",
+      "scenario": "reactivate",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 1,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-036",
+      "scenario": "reactivate",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "FEU-V-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-037",
+      "scenario": "event",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-038",
+      "scenario": "event",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 1,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-039",
+      "scenario": "event",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 2,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-040",
+      "scenario": "event",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "FEU-A-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-041",
+      "scenario": "event",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 2,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-042",
+      "scenario": "event",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 1,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-043",
+      "scenario": "event",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "FEU-A-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-044",
+      "scenario": "price",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 0,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-045",
+      "scenario": "price",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 1,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-046",
+      "scenario": "price",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 2,
+      "resolvedSku": null,
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-047",
+      "scenario": "price",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 4,
+      "resolvedSku": "JAS-B01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-048",
+      "scenario": "price",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "JAS-R01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-049",
+      "scenario": "price",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "FEU-A-N01",
+      "inputIssues": []
+    },
+    {
+      "caseId": "F-050",
+      "scenario": "price",
+      "status": "PASS",
+      "checks": {
+        "uniqueId": true,
+        "fictional": true,
+        "knownClient": true,
+        "ready": true,
+        "expectedBehavior": true,
+        "canonicalSkuRelationship": true,
+        "selectedPurchase": true,
+        "verifiedFictionalEvent": true,
+        "scenarioRequiredFields": true
+      },
+      "selectionDepth": 3,
+      "resolvedSku": "FEU-V-R01",
+      "inputIssues": []
+    }
+  ],
+  "humanReview": "PENDING; prepare representative cases, all failures, difficult objections and measured low scores after execution",
+  "spreadsheetExport": {
+    "target": "deliverables/Maison_Liore_50_Cases_Evaluation.xlsx",
+    "sheets": [
+      "50 Test Cases",
+      "Evaluation Scores",
+      "Defects & Iteration",
+      "Summary"
+    ],
+    "status": "PENDING_LIVE_OUTPUTS_AND_AUTHORIZED_WRITER",
+    "blocker": "Required artifact-tool dependency loader unavailable in this session. No workbook created. Alternative writer requires explicit user authorization."
+  },
+  "preservation": {
+    "filesChecked": 1406,
+    "changed": 0
+  },
+  "runtimePlanDirectory": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/plan-2026-11-07T19-40-44-046Z-8c71b403"
+}

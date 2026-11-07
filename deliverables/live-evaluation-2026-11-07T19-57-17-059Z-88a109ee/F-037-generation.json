@@ -1,0 +1,431 @@
+{
+  "id": "F-037",
+  "input": {
+    "clientId": "CL-009",
+    "scenario": "event",
+    "eventId": "EV-DEMO-01",
+    "notes": ""
+  },
+  "normalizedInput": {
+    "clientId": "CL-009",
+    "scenario": "event",
+    "eventId": "EV-DEMO-01",
+    "notes": ""
+  },
+  "expectedBehavior": "Invite to the verified fictional event, including its exact name, date/time and location. Optional product selection stays in scope; do not promise reserved seats or services.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-009",
+      "name": "黎女士",
+      "assignedAdvisor": "Juliette",
+      "interests": [],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-009-01",
+          "sku": "MUG-R-R01",
+          "productName": "双花苞开口戒与梨形钻石露珠",
+          "motif": "muguet",
+          "line": "rosee",
+          "category": "戒指",
+          "purchaseDate": "2026-09-25",
+          "purchasePrice": 24800
+        }
+      ],
+      "history": [],
+      "birthMonth": 10
+    },
+    "resolved": {
+      "product": null,
+      "reason": "保留已选意象或系列作为可选背景，不自动推荐单品。",
+      "scope": []
+    },
+    "event": {
+      "id": "EV-DEMO-01",
+      "name": "自然意象 · 珠宝设计分享",
+      "date": "2026-12-12 14:00",
+      "location": "虚构体验空间 · 上海示例路 18 号",
+      "registration": "回复顾问表达参与意向",
+      "verified": true,
+      "fictional": true
+    },
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-009",
+        "scenario": "event",
+        "eventId": "EV-DEMO-01",
+        "notes": ""
+      },
+      "clientId": "CL-009",
+      "assignedAdvisor": "Juliette",
+      "scenario": "event",
+      "selection": {
+        "depth": 0,
+        "motif": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "line": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "sku": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": {
+          "id": "EV-DEMO-01",
+          "name": "自然意象 · 珠宝设计分享",
+          "date": "2026-12-12 14:00",
+          "location": "虚构体验空间 · 上海示例路 18 号",
+          "registration": "回复顾问表达参与意向",
+          "verified": true,
+          "fictional": true
+        },
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "none",
+        "mode": "optional_story",
+        "motif": null,
+        "line": null,
+        "product": null,
+        "storyRequired": false,
+        "productFactsAllowed": false,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.013500000000931323,
+      "resolutionMs": 0.028749999997671694,
+      "totalMs": 0.23308299999916926
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n12月12日14:00，我们将在上海示例路18号的虚构体验空间举办“自然意象 · 珠宝设计分享”，围绕自然细节与设计灵感做一次安静交流。\n\n如果您有兴趣，欢迎告诉我您的参与意向。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n这次“自然意象 · 珠宝设计分享”定在12月12日14:00，地点是上海示例路18号的虚构体验空间，内容围绕自然中的细微变化与珠宝设计之间的连接展开，适合慢慢看、慢慢聊。\n\n若这场分享与您的兴趣相合，欢迎与我沟通参与想法。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，黎女士，我是 Maison Lioré 的珠宝顾问 Juliette。\n\n“自然意象 · 珠宝设计分享”将于12月12日14:00在上海示例路18号的虚构体验空间举行，从自然的光影与形态出发，聊一聊设计如何留住静谧片刻。\n\n您若愿意留意这次相聚，方便时告诉我就好。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:59:58.917Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 3185.411375000025,
+    "contextTimings": {
+      "normalizationMs": 0.013500000000931323,
+      "resolutionMs": 0.028749999997671694,
+      "totalMs": 0.23308299999916926
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.042833999992581084,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.13741600001230836
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2158.308250000002,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2158.514374999999
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.1785000000090804,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2158.7047910000256
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2158.522457999992,
+        "inputTokens": 2998,
+        "cachedInputTokens": 1920,
+        "outputTokens": 213,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2158.713000000018
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.006916999991517514,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2158.745708000002
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.06904199998825788,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2158.817291000014
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.7311249999911524,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2159.6335410000174
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1025.4661669999768,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3185.2987500000163
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.07662499998696148,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3185.378916000016
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1025.5514169999806,
+        "inputTokens": 2951,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3185.382958000002
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.004333999997470528,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3185.3995830000204
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.005583000020124018,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3185.4061660000007
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.0019580000080168247,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3185.410791000002
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": false,
+    "hard": [
+      {
+        "ruleId": "EVENT_REQUIRED_DETAILS",
+        "severity": "hard",
+        "candidateIndexes": [
+          0
+        ]
+      },
+      {
+        "ruleId": "EVENT_REQUIRED_DETAILS",
+        "severity": "hard",
+        "candidateIndexes": [
+          1
+        ]
+      },
+      {
+        "ruleId": "EVENT_REQUIRED_DETAILS",
+        "severity": "hard",
+        "candidateIndexes": [
+          2
+        ]
+      }
+    ],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 3186.5463750000054,
+  "completedAt": "2026-11-07T20:00:02.103Z",
+  "providerAttempts": [
+    {
+      "index": 77,
+      "caseId": "F-037",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:58.917Z",
+      "promptSha256": "1d6616b1de147d6bcb09e36e699facb4a0a509bd4a9a6d767737c1cc80e1a428",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 2998,
+        "input_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "output_tokens": 213,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3211
+      },
+      "status": "completed",
+      "durationMs": 2156.186874999985,
+      "completedAt": "2026-11-07T20:00:01.073Z"
+    },
+    {
+      "index": 78,
+      "caseId": "F-037",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T20:00:01.077Z",
+      "promptSha256": "c5b584268d8db3d887d921bc881d631a91747f0d0dc99999b18911103a614bd5",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 2951,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2966
+      },
+      "status": "completed",
+      "durationMs": 1024.7225000000035,
+      "completedAt": "2026-11-07T20:00:02.102Z"
+    }
+  ],
+  "apiLatencyMs": 3180.9093749999884,
+  "tokenUsage": {
+    "input": 5949,
+    "cached": 2816,
+    "output": 228,
+    "callsWithoutUsage": 0
+  }
+}

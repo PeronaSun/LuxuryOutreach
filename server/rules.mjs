@@ -2,6 +2,7 @@ import { products, lines, scenarios, occasions } from "../data/catalog.mjs";
 import { clients, events, clientProfile } from "../data/clients.mjs";
 import { messagePlan, splitParagraphs } from "./message-contract.mjs";
 import { normalizeTask, normalizedContext } from "./generation-context.mjs";
+import { scenarioFactErrors } from "./scenario-facts.mjs";
 import {
   applicationCalendar,
   festivalContext,
@@ -11,7 +12,7 @@ import {
   currentPreferenceScore,
   contextCoverageErrors,
 } from "./communication-context.mjs";
-export const PROMPT_VERSION = "advisor-1.5.0";
+export const PROMPT_VERSION = "advisor-1.5.2";
 export const productScenarios = new Set([
   "recommend",
   "reactivate",
@@ -396,6 +397,7 @@ export function validateMessage(t, context, { enforceCta = true } = {}) {
     errors.push("问候与当前场景不符。");
   if (paragraphs.length === 3) {
     const main = paragraphs[1];
+    errors.push(...scenarioFactErrors(main, context));
     errors.push(
       ...contextCoverageErrors(
         main,
@@ -438,9 +440,40 @@ export function validateMessage(t, context, { enforceCta = true } = {}) {
       muguet: ["铃兰"],
       feuille: ["叶脉", "叶片"],
     };
-    for (const [motif, words] of Object.entries(imagery))
-      if (motif !== allowedMotif && words.some((word) => t.includes(word)))
+    for (const [motif, words] of Object.entries(imagery)) {
+      if (motif === allowedMotif) continue;
+      const knownHistory = (context.client?.interests || []).some(
+        (interest) =>
+          interest.motif === motif ||
+          lines.some(
+            (line) => line.id === interest.line && line.motif === motif,
+          ) ||
+          products.some(
+            (product) =>
+              product.sku === interest.sku && product.motif === motif,
+          ),
+      );
+      const foreignClauses = t
+        .split(/[。！？；，]/)
+        .filter((clause) => words.some((word) => clause.includes(word)));
+      // A verified historic preference is not a claim about the currently selected product.
+      // Unknown history or any attribution to this product/story remains a hard failure.
+      if (
+        foreignClauses.some(
+          (clause) =>
+            !(
+              knownHistory &&
+              /您(?:此前|之前|曾经|曾)?(?:提到|表示|喜欢|偏爱|关注|留意)/.test(
+                clause,
+              ) &&
+              !/这款|这件|这枚|这只|这条|所选|该款|灵感|采用|呈现|呼应|象征/.test(
+                clause,
+              )
+            ),
+        )
+      )
         errors.push("正文引用了其他自然意象的故事。");
+    }
   }
   return [...new Set(errors)];
 }

@@ -1,0 +1,449 @@
+{
+  "id": "F-006",
+  "input": {
+    "clientId": "CL-005",
+    "scenario": "greeting",
+    "greetingKind": "festival",
+    "greetingName": "春节",
+    "notes": "客户最近比较忙。"
+  },
+  "normalizedInput": {
+    "clientId": "CL-005",
+    "scenario": "greeting",
+    "notes": "客户最近比较忙。",
+    "greetingKind": "festival",
+    "greetingName": "春节"
+  },
+  "expectedBehavior": "Use the requested birthday month or festival. Keep wishes warm and noncommercial; no product promotion or invented birthday day/date.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-005",
+      "name": "许先生",
+      "assignedAdvisor": "Claire",
+      "interests": [
+        {
+          "line": "rosee",
+          "category": "手镯"
+        }
+      ],
+      "latestPreference": null,
+      "purchases": [
+        {
+          "id": "PUR-005-01",
+          "sku": "FEU-A-N01",
+          "productName": "梨形海蓝宝吊坠与叶片光环",
+          "motif": "feuille",
+          "line": "aqua",
+          "category": "项链",
+          "purchaseDate": "2026-10-10",
+          "purchasePrice": 138000,
+          "occasion": "gift",
+          "advisorNotes": "曾咨询海蓝宝珠宝与纪念礼物。"
+        },
+        {
+          "id": "PUR-005-02",
+          "sku": "FEU-A-R01",
+          "productName": "椭圆海蓝宝主石与叶片托镶",
+          "motif": "feuille",
+          "line": "aqua",
+          "category": "戒指",
+          "purchaseDate": "2026-07-06",
+          "purchasePrice": 68800,
+          "occasion": "gift",
+          "advisorNotes": "曾咨询海蓝宝珠宝与纪念礼物。"
+        }
+      ],
+      "history": [
+        "想挑一份礼物，收礼人的偏好还需要确认。"
+      ],
+      "birthMonth": 12
+    },
+    "resolved": {
+      "product": null,
+      "reason": "此场景无需产品。",
+      "scope": []
+    },
+    "event": null,
+    "purchase": null,
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": true,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [
+        {
+          "id": "busy_rest",
+          "meaning": "客户近期工作忙；关怀休息，不推断压力或生活安排",
+          "anchors": [
+            [
+              "忙",
+              "休息",
+              "放慢",
+              "从容"
+            ]
+          ]
+        }
+      ],
+      "primaryFacet": "busy_rest",
+      "demoPhrases": [
+        "知道您这段时间比较忙，愿您也有一点休息的时间。",
+        "您提到这段时间比较忙，也想借这次问候，祝您忙碌之外有机会放慢脚步。",
+        "忙碌的日常之外，愿一段从容的片刻也能留给自己。"
+      ],
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-005",
+        "scenario": "greeting",
+        "notes": "客户最近比较忙。",
+        "greetingKind": "festival",
+        "greetingName": "春节"
+      },
+      "clientId": "CL-005",
+      "assignedAdvisor": "Claire",
+      "scenario": "greeting",
+      "selection": {
+        "depth": 0,
+        "motif": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "line": {
+          "state": "unselected",
+          "value": null,
+          "applicable": true
+        },
+        "sku": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [
+        "想挑一份礼物，收礼人的偏好还需要确认。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": true,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [
+          {
+            "id": "busy_rest",
+            "meaning": "客户近期工作忙；关怀休息，不推断压力或生活安排",
+            "anchors": [
+              [
+                "忙",
+                "休息",
+                "放慢",
+                "从容"
+              ]
+            ]
+          }
+        ],
+        "primaryFacet": "busy_rest",
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": null,
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "festival",
+        "festival": "春节",
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "none",
+        "mode": "optional_story",
+        "motif": null,
+        "line": null,
+        "product": null,
+        "storyRequired": false,
+        "productFactsAllowed": false,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.01599999999962165,
+      "resolutionMs": 0.05212500000197906,
+      "totalMs": 0.4089170000006561
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n春节将至，知道您近来事务繁忙，愿新春的灯火为您添一份安宁，也愿您在忙碌之余留一点时间给自己。\n\n愿这份祝福，为您的日常添一份从容。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n春节将至，知道您最近比较忙，新春的暖光与万象更新的气息，正适合放慢一点脚步。愿新岁平安喜乐，也愿您在繁忙之间，仍能为自己留出从容的片刻。\n\n若您愿意分享近来的美好片刻，我很乐意听。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，许先生，我是 Maison Lioré 的珠宝顾问 Claire。\n\n春节将至，念及您近来忙碌，愿新岁的灯火与暖意，为您留出一隅安静；万象更新之际，也愿从容与平安常随。\n\n愿值得珍藏的小小欢喜，常伴您左右。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:57:36.799Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 4145.469874999999,
+    "contextTimings": {
+      "normalizationMs": 0.01599999999962165,
+      "resolutionMs": 0.05212500000197906,
+      "totalMs": 0.4089170000006561
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.0632499999992433,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.2139580000002752
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 2808.968958999998,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2809.3180829999983
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.20908300000155577,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2809.5340829999986
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 2809.1982500000013,
+        "inputTokens": 3087,
+        "cachedInputTokens": 1920,
+        "outputTokens": 188,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2809.545249999999
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.008875000003172318,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2809.5936249999977
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.020375000000058208,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2809.6161250000005
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.3416250000009313,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 2810.0354579999985
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 1335.1162499999991,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4145.2591250000005
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.11608300000079907,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4145.3825
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 1335.2491249999985,
+        "inputTokens": 3010,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4145.390082999998
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.00933400000212714,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4145.422291999999
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.011082999997597653,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4145.435582999999
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.014333999999507796,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 4145.462667
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 4145.877125000003,
+  "completedAt": "2026-11-07T19:57:40.945Z",
+  "providerAttempts": [
+    {
+      "index": 11,
+      "caseId": "F-006",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:57:36.800Z",
+      "promptSha256": "40dd438cf44c42d9b71e7af61518654b8a9535ec2ec7bcdf8563232d3101f63a",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3087,
+        "input_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "output_tokens": 188,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3275
+      },
+      "status": "completed",
+      "durationMs": 2790.7603329999984,
+      "completedAt": "2026-11-07T19:57:39.590Z"
+    },
+    {
+      "index": 12,
+      "caseId": "F-006",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:57:39.609Z",
+      "promptSha256": "aa7255bcf52b27ec0fa0e8b63776cfcebcc8f42f16b0d6997e25035abfd99e6f",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3010,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3025
+      },
+      "status": "completed",
+      "durationMs": 1333.605792000002,
+      "completedAt": "2026-11-07T19:57:40.943Z"
+    }
+  ],
+  "apiLatencyMs": 4124.3661250000005,
+  "tokenUsage": {
+    "input": 6097,
+    "cached": 2816,
+    "output": 203,
+    "callsWithoutUsage": 0
+  }
+}

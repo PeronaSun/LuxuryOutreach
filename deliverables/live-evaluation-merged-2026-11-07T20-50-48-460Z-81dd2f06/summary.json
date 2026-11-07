@@ -1,0 +1,340 @@
+{
+  "cases": 50,
+  "generatedMessages": 150,
+  "generationCompleted": 50,
+  "generationSuccessRate": 1,
+  "deterministicPassed": 50,
+  "hardPassRate": 1,
+  "generationFailures": 0,
+  "hardFailedCases": 0,
+  "scored": 0,
+  "softPassed": 0,
+  "softPassRate": null,
+  "softPassRateAllCases": 0,
+  "unscoredCases": 50,
+  "styleMetrics": {
+    "concise": {
+      "scoredCases": 0,
+      "criteriaMeans": {
+        "brandConsistency": null,
+        "naturalness": null,
+        "personalization": null,
+        "scenarioRelevance": null,
+        "ctaQuality": null
+      }
+    },
+    "detailed": {
+      "scoredCases": 0,
+      "criteriaMeans": {
+        "brandConsistency": null,
+        "naturalness": null,
+        "personalization": null,
+        "scenarioRelevance": null,
+        "ctaQuality": null
+      }
+    },
+    "elegant": {
+      "scoredCases": 0,
+      "criteriaMeans": {
+        "brandConsistency": null,
+        "naturalness": null,
+        "personalization": null,
+        "scenarioRelevance": null,
+        "ctaQuality": null
+      }
+    }
+  },
+  "differentiation": {
+    "n": 0,
+    "median": null,
+    "p95": null,
+    "min": null,
+    "max": null,
+    "p95Method": "nearest-rank; exploratory when n<20",
+    "adequateTailSample": false
+  },
+  "generationRecoveryInEvidence": {
+    "providerCalls": 107,
+    "transientRetries": 0,
+    "outputRepairs": 6
+  },
+  "judgeReviewFlags": 0,
+  "human": {
+    "status": "PENDING_HUMAN_REVIEW",
+    "reviewedCases": 0,
+    "calibrationCasesReviewed": [],
+    "calibrationComplete": false,
+    "scoreComparisons": 0,
+    "meanAbsoluteDifference": null,
+    "setMeanAbsoluteDifference": null,
+    "flags": [],
+    "automaticScoreAdjustment": false
+  },
+  "byScenario": {
+    "greeting": {
+      "cases": 8,
+      "generated": 8,
+      "hardPassed": 8,
+      "scored": 0,
+      "meanSoftScore": null,
+      "latency": {
+        "n": 8,
+        "median": 3980.107104500001,
+        "p95": 4375.289124999999,
+        "min": 3116.232666,
+        "max": 4375.289124999999,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "recommend": {
+      "cases": 12,
+      "generated": 12,
+      "hardPassed": 12,
+      "scored": 0,
+      "meanSoftScore": null,
+      "latency": {
+        "n": 12,
+        "median": 4532.3945625000015,
+        "p95": 10820.554291,
+        "min": 3953.74025,
+        "max": 10820.554291,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "care": {
+      "cases": 8,
+      "generated": 8,
+      "hardPassed": 8,
+      "scored": 0,
+      "meanSoftScore": null,
+      "latency": {
+        "n": 8,
+        "median": 4030.4701664999957,
+        "p95": 4479.761541999993,
+        "min": 3638.4419170000037,
+        "max": 4479.761541999993,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "reactivate": {
+      "cases": 8,
+      "generated": 8,
+      "hardPassed": 8,
+      "scored": 0,
+      "meanSoftScore": null,
+      "latency": {
+        "n": 8,
+        "median": 4402.681541499995,
+        "p95": 6290.927874999994,
+        "min": 3452.9837919999845,
+        "max": 6290.927874999994,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "event": {
+      "cases": 7,
+      "generated": 7,
+      "hardPassed": 7,
+      "scored": 0,
+      "meanSoftScore": null,
+      "latency": {
+        "n": 7,
+        "median": 4312.396166999999,
+        "p95": 5490.720834,
+        "min": 3186.5463750000054,
+        "max": 5490.720834,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    },
+    "price": {
+      "cases": 7,
+      "generated": 7,
+      "hardPassed": 7,
+      "scored": 0,
+      "meanSoftScore": null,
+      "latency": {
+        "n": 7,
+        "median": 4453.073457999999,
+        "p95": 6125.4519999999975,
+        "min": 3931.351874999993,
+        "max": 6125.4519999999975,
+        "p95Method": "nearest-rank; exploratory when n<20",
+        "adequateTailSample": false
+      }
+    }
+  },
+  "latency": {
+    "n": 50,
+    "median": 4327.662646,
+    "p95": 6125.4519999999975,
+    "min": 3116.232666,
+    "max": 10820.554291,
+    "p95Method": "nearest-rank; exploratory when n<20",
+    "adequateTailSample": true
+  },
+  "failureLatency": {
+    "n": 0,
+    "median": null,
+    "p95": null,
+    "min": null,
+    "max": null,
+    "p95Method": "nearest-rank; exploratory when n<20",
+    "adequateTailSample": false
+  },
+  "allAttemptLatency": {
+    "n": 50,
+    "median": 4327.662646,
+    "p95": 6125.4519999999975,
+    "min": 3116.232666,
+    "max": 10820.554291,
+    "p95Method": "nearest-rank; exploratory when n<20",
+    "adequateTailSample": true
+  },
+  "stageLatency": {
+    "context.build": {
+      "n": 50,
+      "median": 0.04231299999446492,
+      "p95": 0.14849999999569263,
+      "min": 0.019582999986596406,
+      "max": 0.5316249999999911,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "advisor_messages.http": {
+      "n": 50,
+      "median": 3072.4497499999998,
+      "p95": 5294.187166999996,
+      "min": 2015.2401250000003,
+      "max": 6766.037250000001,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "advisor_messages.body": {
+      "n": 50,
+      "median": 0.16437499999665306,
+      "p95": 0.39887499999895226,
+      "min": 0.06300000000192085,
+      "max": 0.5717079999958514,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "advisor_messages.api": {
+      "n": 50,
+      "median": 3072.7099375000107,
+      "p95": 5294.600207999989,
+      "min": 2015.417207999999,
+      "max": 6766.5616669999945,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "advisor_messages.parse": {
+      "n": 50,
+      "median": 0.00652099999388156,
+      "p95": 0.018374999999650754,
+      "min": 0.0025409999943803996,
+      "max": 0.027333999998518266,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "advisor_messages.schema": {
+      "n": 50,
+      "median": 0.020604000019375235,
+      "p95": 0.12062499999774445,
+      "min": 0.009125000011408702,
+      "max": 0.22441600000001927,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "output.validation": {
+      "n": 50,
+      "median": 0.5035415000020294,
+      "p95": 2.576207999998587,
+      "min": 0.24366599999848404,
+      "max": 3.8590829999998277,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "brand_audit.http": {
+      "n": 50,
+      "median": 1222.0794795000038,
+      "p95": 1483.456291999988,
+      "min": 755.4674999999988,
+      "max": 4048.788001000001,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "brand_audit.body": {
+      "n": 50,
+      "median": 0.12427049999860174,
+      "p95": 0.33799999999973807,
+      "min": 0.042625000001862645,
+      "max": 2.733583000022918,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "brand_audit.api": {
+      "n": 50,
+      "median": 1222.2477709999948,
+      "p95": 1483.5662080000038,
+      "min": 755.5288750000036,
+      "max": 4049.040832999999,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "brand_audit.parse": {
+      "n": 50,
+      "median": 0.009395999994012527,
+      "p95": 0.01858400000492111,
+      "min": 0.0038340000028256327,
+      "max": 0.02433400001609698,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "brand_audit.schema": {
+      "n": 50,
+      "median": 0.01152100000763312,
+      "p95": 0.046875,
+      "min": 0.005166999995708466,
+      "max": 0.07087500000488944,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    },
+    "brand_audit.validation": {
+      "n": 50,
+      "median": 0.006333499994070735,
+      "p95": 0.12291699999968841,
+      "min": 0.001791999995475635,
+      "max": 0.5830829999999878,
+      "p95Method": "nearest-rank; exploratory when n<20",
+      "adequateTailSample": true
+    }
+  },
+  "acceptance": {
+    "criteria": "Project-defined, not employer requirements",
+    "completion": true,
+    "artifactSlotsComplete": true,
+    "completeLiveEvidence": true,
+    "quality": false,
+    "humanCalibration": false,
+    "finalPaidRunPerformed": false
+  },
+  "mode": "targeted-merged",
+  "actualProviderCalls": 127,
+  "originalProviderCalls": 104,
+  "additionalProviderCalls": 23,
+  "newLiveCasesExecuted": 8,
+  "offlineOnlyCases": [
+    "F-037"
+  ],
+  "unchangedOriginalCases": 41,
+  "fullFiftyRerun": false,
+  "originalCompletedValid": 41,
+  "cumulativeCap": 200,
+  "originalRecoveryActions": 7,
+  "retestRecoveryActions": 5
+}

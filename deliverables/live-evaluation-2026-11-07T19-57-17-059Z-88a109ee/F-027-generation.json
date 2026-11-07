@@ -1,0 +1,459 @@
+{
+  "id": "F-027",
+  "input": {
+    "clientId": "CL-003",
+    "scenario": "care",
+    "purchaseId": "PUR-003-01",
+    "notes": ""
+  },
+  "normalizedInput": {
+    "clientId": "CL-003",
+    "scenario": "care",
+    "purchaseId": "PUR-003-01",
+    "notes": ""
+  },
+  "expectedBehavior": "Follow up on exactly the selected historical purchase and its canonical facts. Never substitute historical preferences or another purchase; avoid unsupported service promises.",
+  "context": {
+    "status": "READY",
+    "issues": [],
+    "notices": [],
+    "client": {
+      "id": "CL-003",
+      "name": "吴女士",
+      "assignedAdvisor": "Amélie",
+      "interests": [
+        {
+          "material": "18K白金",
+          "category": "项链"
+        }
+      ],
+      "latestPreference": {
+        "material": "18K白金",
+        "text": "最近明确表示只考虑白金。"
+      },
+      "purchases": [
+        {
+          "id": "PUR-003-01",
+          "sku": "JAS-N01",
+          "productName": "单朵茉莉钻石吊坠",
+          "motif": "jasmin",
+          "line": "jasmin",
+          "category": "项链",
+          "purchaseDate": "2026-07-20",
+          "purchasePrice": 22800,
+          "occasion": "personal"
+        }
+      ],
+      "history": [
+        "日常佩戴更喜欢白金项链，线条希望简洁。"
+      ],
+      "birthMonth": 7
+    },
+    "resolved": {
+      "product": {
+        "sku": "JAS-N01",
+        "line": "jasmin",
+        "motif": "jasmin",
+        "category": "项链",
+        "name": "单朵茉莉钻石吊坠",
+        "material": "18K白金",
+        "gemstone": "钻石",
+        "price": 22800
+      },
+      "reason": "使用本次选定的历史购买记录。",
+      "scope": []
+    },
+    "event": null,
+    "purchase": {
+      "id": "PUR-003-01",
+      "sku": "JAS-N01",
+      "productName": "单朵茉莉钻石吊坠",
+      "motif": "jasmin",
+      "line": "jasmin",
+      "category": "项链",
+      "purchaseDate": "2026-07-20",
+      "purchasePrice": 22800,
+      "occasion": "personal"
+    },
+    "calendar": {
+      "timeZone": "Asia/Shanghai",
+      "date": "2026-11-07",
+      "year": 2026,
+      "month": 11,
+      "day": 7
+    },
+    "communicationContext": {
+      "version": "communication-context-v1",
+      "source": "CA notes (untrusted)",
+      "hasNotes": false,
+      "preferences": {},
+      "avoidedMaterials": [],
+      "relevantFacets": [],
+      "primaryFacet": null,
+      "demoPhrases": null,
+      "secondaryDemoPhrases": null,
+      "unsupportedRelevant": false,
+      "allowFestivalMix": false,
+      "ignoredReason": null
+    },
+    "normalized": {
+      "version": "generation-context-v2",
+      "task": {
+        "clientId": "CL-003",
+        "scenario": "care",
+        "purchaseId": "PUR-003-01",
+        "notes": ""
+      },
+      "clientId": "CL-003",
+      "assignedAdvisor": "Amélie",
+      "scenario": "care",
+      "selection": {
+        "depth": 0,
+        "motif": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        },
+        "line": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        },
+        "sku": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        },
+        "occasion": {
+          "state": "not_applicable",
+          "value": null,
+          "applicable": false
+        }
+      },
+      "conversationHistory": [
+        "日常佩戴更喜欢白金项链，线条希望简洁。"
+      ],
+      "additionalContext": {
+        "version": "communication-context-v1",
+        "source": "CA notes (untrusted)",
+        "hasNotes": false,
+        "preferences": {},
+        "avoidedMaterials": [],
+        "relevantFacets": [],
+        "primaryFacet": null,
+        "unsupportedRelevant": false,
+        "allowFestivalMix": false,
+        "ignoredReason": null
+      },
+      "scenarioContext": {
+        "purchase": {
+          "id": "PUR-003-01",
+          "sku": "JAS-N01",
+          "productName": "单朵茉莉钻石吊坠",
+          "motif": "jasmin",
+          "line": "jasmin",
+          "category": "项链",
+          "purchaseDate": "2026-07-20",
+          "purchasePrice": 22800,
+          "occasion": "personal"
+        },
+        "event": null,
+        "calendar": {
+          "timeZone": "Asia/Shanghai",
+          "date": "2026-11-07",
+          "year": 2026,
+          "month": 11,
+          "day": 7
+        },
+        "greetingKind": "birthday",
+        "festival": null,
+        "concern": "",
+        "reconnectReason": ""
+      },
+      "grounding": {
+        "source": "Brand Bible v1.0 · section 04",
+        "level": "sku",
+        "mode": "verified_purchase",
+        "motif": {
+          "id": "jasmin",
+          "name": "Jasmin Étoilé",
+          "zh": "星夜茉莉",
+          "story": "一朵茉莉在黄昏中缓缓舒展：无需宣告，靠近的人自然能感知它的存在。星夜茉莉象征安静的自信、细腻的情感与被珍藏的个人瞬间。标志性元素为五瓣层叠花形与微光般的花心。"
+        },
+        "line": {
+          "id": "jasmin",
+          "motif": "jasmin",
+          "name": "Jasmin Étoilé",
+          "zh": "星夜初绽",
+          "occasions": [
+            "gift",
+            "personal"
+          ],
+          "story": "茉莉初绽的那一刻，五瓣花冠围绕一点光，表达不张扬却恒久的优雅。"
+        },
+        "product": {
+          "sku": "JAS-N01",
+          "line": "jasmin",
+          "motif": "jasmin",
+          "category": "项链",
+          "name": "单朵茉莉钻石吊坠",
+          "material": "18K白金",
+          "gemstone": "钻石",
+          "price": 22800
+        },
+        "storyRequired": true,
+        "productFactsAllowed": true,
+        "exactPriceAllowed": false
+      }
+    },
+    "timings": {
+      "normalizationMs": 0.012041999987559393,
+      "resolutionMs": 0.027709000001777895,
+      "totalMs": 0.2979169999889564
+    }
+  },
+  "source": "live",
+  "generationPerformedInThisRun": true,
+  "executionStatus": "LIVE_COMPLETED",
+  "messages": [
+    {
+      "style": "concise",
+      "text": "Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。\n\n您七月选的那枚单朵茉莉钻石吊坠，18K白金配简洁线条，正合您日常偏爱的风格。近来佩戴还顺手吗？\n\n若有想交流的佩戴感受，欢迎随时告诉我。"
+    },
+    {
+      "style": "detailed",
+      "text": "Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。\n\n星夜茉莉的灵感，是黄昏里一朵茉莉缓缓舒展，五瓣层叠，花心带一点微光。您七月选的那枚单朵茉莉钻石吊坠，以18K白金勾勒简洁线条，一朵花安静停在颈间，不张扬，却耐看。记得您日常更偏爱白金与简洁线条，这件作品与您的习惯应当很合拍。近来佩戴起来感觉如何？\n\n如果您有佩戴方面的疑问，欢迎随时与我沟通。"
+    },
+    {
+      "style": "elegant",
+      "text": "Bonjour，吴女士，我是 Maison Lioré 的珠宝顾问 Amélie。\n\n茉莉在黄昏中舒展，无需宣告，靠近的人自然能感知它的存在。您七月带回的那枚单朵茉莉钻石吊坠，以18K白金与简洁线条留住这一刻，也贴合您一向偏爱的清简。愿它安静陪伴您的日常。\n\n您若愿意分享与这件作品相伴的片刻，我很乐意听。"
+    }
+  ],
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "generatedAt": "2026-11-07T19:59:15.445Z",
+  "promptVersion": "advisor-1.5.0",
+  "recovery": {
+    "providerCalls": 2,
+    "transientRetries": 0,
+    "outputRepairs": 0,
+    "failures": [],
+    "retryCount": 0,
+    "maxProviderCalls": 4
+  },
+  "performance": {
+    "totalMs": 3890.4911250000005,
+    "contextTimings": {
+      "normalizationMs": 0.012041999987559393,
+      "resolutionMs": 0.027709000001777895,
+      "totalMs": 0.2979169999889564
+    },
+    "measurements": [
+      {
+        "stage": "context.build",
+        "status": "passed",
+        "durationMs": 0.04304099999717437,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 0,
+        "elapsedMs": 0.1512079999956768
+      },
+      {
+        "stage": "advisor_messages.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 3009.62049999999,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3009.8677499999903
+      },
+      {
+        "stage": "advisor_messages.body",
+        "status": "passed",
+        "durationMs": 0.12866700001177378,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3010.018333
+      },
+      {
+        "stage": "advisor_messages.api",
+        "status": "passed",
+        "durationMs": 3009.7856670000037,
+        "inputTokens": 3771,
+        "cachedInputTokens": 1792,
+        "outputTokens": 253,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3010.0249170000025
+      },
+      {
+        "stage": "advisor_messages.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.0052500000019790605,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3010.0523749999993
+      },
+      {
+        "stage": "advisor_messages.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.022333000000799075,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3010.0767079999932
+      },
+      {
+        "stage": "output.validation",
+        "status": "passed",
+        "candidateCount": 3,
+        "durationMs": 0.3977500000037253,
+        "ruleIds": [],
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 1,
+        "elapsedMs": 3010.5264999999927
+      },
+      {
+        "stage": "brand_audit.http",
+        "status": "passed",
+        "httpStatus": 200,
+        "apiSuccess": true,
+        "durationMs": 879.5656670000026,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3890.1895829999994
+      },
+      {
+        "stage": "brand_audit.body",
+        "status": "passed",
+        "durationMs": 0.17875000000640284,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3890.3867919999902
+      },
+      {
+        "stage": "brand_audit.api",
+        "status": "passed",
+        "durationMs": 879.7741669999959,
+        "inputTokens": 3776,
+        "cachedInputTokens": 896,
+        "outputTokens": 15,
+        "returnedModel": "deepseek-flash",
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3890.395332999993
+      },
+      {
+        "stage": "brand_audit.parse",
+        "status": "passed",
+        "parseSuccess": true,
+        "durationMs": 0.010458000004291534,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3890.4320420000004
+      },
+      {
+        "stage": "brand_audit.schema",
+        "status": "passed",
+        "schemaSuccess": true,
+        "durationMs": 0.012125000008381903,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3890.446750000003
+      },
+      {
+        "stage": "brand_audit.validation",
+        "status": "passed",
+        "ruleIds": [],
+        "durationMs": 0.03237499999522697,
+        "retryCount": 0,
+        "repairCount": 0,
+        "apiCallCount": 2,
+        "elapsedMs": 3890.489124999993
+      }
+    ]
+  },
+  "deterministic": {
+    "version": "final-deterministic-v1",
+    "passed": true,
+    "hard": [],
+    "warnings": [],
+    "semanticGuard": "Mandatory production factual/scenario audit remains active; deterministic checks do not prove every semantic claim."
+  },
+  "generationMs": 3890.8412090000056,
+  "completedAt": "2026-11-07T19:59:19.336Z",
+  "providerAttempts": [
+    {
+      "index": 56,
+      "caseId": "F-027",
+      "attempt": 1,
+      "stage": "advisor_messages",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:15.445Z",
+      "promptSha256": "b82e0f5e546e505a62ba4980f10caf28d77346a2ce604f9083c8e4a4dc024479",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3771,
+        "input_tokens_details": {
+          "cached_tokens": 1792
+        },
+        "output_tokens": 253,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4024
+      },
+      "status": "completed",
+      "durationMs": 3008.658666000003,
+      "completedAt": "2026-11-07T19:59:18.454Z"
+    },
+    {
+      "index": 57,
+      "caseId": "F-027",
+      "attempt": 2,
+      "stage": "brand_audit",
+      "requestedModel": "deepseek-flash",
+      "startedAt": "2026-11-07T19:59:18.456Z",
+      "promptSha256": "b32e166633998016033934e7f9c2869a809fad2aca87f88912c1ed1138e7c7be",
+      "httpStatus": 200,
+      "returnedModel": "deepseek-flash",
+      "usage": {
+        "input_tokens": 3776,
+        "input_tokens_details": {
+          "cached_tokens": 896
+        },
+        "output_tokens": 15,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3791
+      },
+      "status": "completed",
+      "durationMs": 877.0567080000037,
+      "completedAt": "2026-11-07T19:59:19.333Z"
+    }
+  ],
+  "apiLatencyMs": 3885.7153740000067,
+  "tokenUsage": {
+    "input": 7547,
+    "cached": 2688,
+    "output": 268,
+    "callsWithoutUsage": 0
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "mode": "targeted-retest",
+  "createdAt": "2026-11-07T20:49:14.539Z",
+  "sourceRun": "runtime/final-evaluation/live-2026-11-07T19-57-17-059Z-88a109ee",
+  "originalCalls": 104,
+  "priorRetestRun": "/Users/perona/Documents/LuxuryOutreach/runtime/final-evaluation/targeted-2026-11-07T20-46-19-764Z-fc1d4961",
+  "cumulativeBase": 125,
+  "targetIds": [
+    "F-017"
+  ],
+  "offlineOnlyIds": [
+    "F-037"
+  ],
+  "additionalCallCap": 4,
+  "cumulativeCap": 200,
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "promptVersion": "advisor-1.5.2",
+  "deterministicVersion": "final-deterministic-v2.1",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "caseSetVersion": "final-50-submission-v2",
+  "recovery": {
+    "maxProviderCalls": 4,
+    "maxTransientRetries": 1,
+    "maxOutputRepairs": 1,
+    "timeoutMs": 45000,
+    "outputTokens": 2400,
+    "backoffMs": 1000,
+    "maxBackoffMs": 10000,
+    "temperature": 0.2
+  },
+  "sourceFingerprints": {
+    "server/generation.mjs": "cd277126d82545891d538746e549f97f611935052c8b40d6a37bf4662a2d00c4",
+    "server/rules.mjs": "bca24fd50143d45eab13d9ea8218b07bf821a0f7e9bc7eb966a1d37f44687491",
+    "server/scenario-facts.mjs": "bb0647223fc20007de2bd43a87e0816555882600a1ae3e0f1a40bdb0409fd7bc",
+    "server/prompt-context.mjs": "181b09e4f321f2329424e6e074c948b8505be73285a708c29ce8a8130d661895",
+    "server/output-assessment.mjs": "4a8af5412a20c178ae58278a34a6ccd200b85259221f16c9ec90400ad13895e9",
+    "server/audit-policy.mjs": "f8b72ab7ed498f3a1865b5f40a89c110e459f56f31023b24596975a817085937",
+    "evaluation/final-v1/deterministic-v2.mjs": "f342e088ff52377c482f48b5653bb9d17781c84438a089963947a4e14619188f",
+    "scripts/targeted-retest.mjs": "af8fdf896bb8098f80dbdf2491ca1b5bcf9856dd8a84509f02c341089777cc4b"
+  },
+  "actualProviderCalls": 2,
+  "cumulativeProviderCalls": 127,
+  "completed": 1,
+  "attempted": 1
+}

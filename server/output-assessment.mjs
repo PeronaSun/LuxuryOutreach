@@ -10,6 +10,10 @@ const softRules = {
   "收尾不符合当前场景的克制表达。": "CTA_WORDING",
 };
 const hardRules = {
+  "活动正文缺少或更改了已核实的名称、日期时间或地点。":
+    "EVENT_REQUIRED_DETAILS",
+  "把所选意象描述成了未经核实的活动议程。": "EVENT_UNVERIFIED_AGENDA",
+  "空白客户历史不能支持过去兴趣的断言。": "FACT_CUSTOMER_HISTORY",
   "必须恰好返回三条候选消息。": "CANDIDATE_COUNT",
   "候选风格或顺序无效。": "CANDIDATE_STYLE",
   "消息语言或长度无效。": "LANGUAGE_OR_SIZE",

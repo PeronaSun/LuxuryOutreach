@@ -1,0 +1,46 @@
+{
+  "mode": "targeted-retest",
+  "createdAt": "2026-11-07T20:46:19.767Z",
+  "sourceRun": "runtime/final-evaluation/live-2026-11-07T19-57-17-059Z-88a109ee",
+  "originalCalls": 104,
+  "targetIds": [
+    "F-014",
+    "F-017",
+    "F-031",
+    "F-034",
+    "F-039",
+    "F-041",
+    "F-042",
+    "F-045"
+  ],
+  "offlineOnlyIds": [
+    "F-037"
+  ],
+  "additionalCallCap": 32,
+  "cumulativeCap": 200,
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "promptVersion": "advisor-1.5.1",
+  "deterministicVersion": "final-deterministic-v2",
+  "brandBibleVersion": "1.0 · 2026-11",
+  "caseSetVersion": "final-50-submission-v2",
+  "recovery": {
+    "maxProviderCalls": 4,
+    "maxTransientRetries": 1,
+    "maxOutputRepairs": 1,
+    "timeoutMs": 45000,
+    "outputTokens": 2400,
+    "backoffMs": 1000,
+    "maxBackoffMs": 10000,
+    "temperature": 0.2
+  },
+  "sourceFingerprints": {
+    "server/generation.mjs": "cd277126d82545891d538746e549f97f611935052c8b40d6a37bf4662a2d00c4",
+    "server/rules.mjs": "4fd84c3d78835ad60bc979e354ad48b2686d9fd39e591c4753d417e868ab0f6b",
+    "server/scenario-facts.mjs": "bb0647223fc20007de2bd43a87e0816555882600a1ae3e0f1a40bdb0409fd7bc",
+    "server/prompt-context.mjs": "181b09e4f321f2329424e6e074c948b8505be73285a708c29ce8a8130d661895",
+    "server/output-assessment.mjs": "4a8af5412a20c178ae58278a34a6ccd200b85259221f16c9ec90400ad13895e9",
+    "evaluation/final-v1/deterministic-v2.mjs": "bf8f778b21f7c00004139fa03d0abeaee9262e00cbca2c677d3cc010499fed08",
+    "scripts/targeted-retest.mjs": "cc9c8f9f5254b704109d3d548f12c6a683d028c2142f87b6d8d88e0cd3c72720"
+  }
+}
