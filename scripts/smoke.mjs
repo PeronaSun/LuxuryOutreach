@@ -46,7 +46,7 @@ try {
       splitParagraphs(c.text)[0].includes("珠宝顾问 Sophie"),
     ),
   );
-  assert.equal(out.resolvedProduct.sku, "JAS-R01");
+  assert.equal(out.resolvedProduct.sku, "JAS-B01");
   assert.equal(out.mode, "demo");
   const records = await (await fetch(base + "/api/records")).json();
   assert.equal(records.records.length, 1);

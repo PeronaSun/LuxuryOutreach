@@ -315,11 +315,15 @@ test("explicit restrictions filter predictions; conflicting manual SKU stays sel
     motif: "jasmin",
     line: "jasmin",
   };
-  assert.equal(evaluateRequest(base).resolved.product.sku, "JAS-R01");
+  assert.equal(evaluateRequest(base).resolved.product.sku, "JAS-B01");
   const input = { ...base, notes: "客户现在只考虑18K白金项链。" },
     ctx = evaluateRequest(input);
-  assert.equal(ctx.resolved.product.sku, "JAS-N01");
-  const result = await generate(input, ctx, { demo: true });
+  assert.equal(ctx.resolved.product, null);
+  assert.equal(ctx.resolved.source, "scope_only");
+  const explicitWhite = { ...input, sku: "JAS-N01" };
+  const explicitContext = evaluateRequest(explicitWhite);
+  assert.equal(explicitContext.resolved.product.sku, "JAS-N01");
+  const result = await generate(explicitWhite, explicitContext, { demo: true });
   for (const main of mains(result.candidates)) {
     assert.match(main, /18K白金/);
     assert.doesNotMatch(main, /曾关注.*戒指/);

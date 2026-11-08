@@ -34,12 +34,12 @@ test("HTTP API validates, generates three, persists, exports and rejects overrid
   assert.equal(b.OPENAI_API_KEY, undefined);
   const validation = await (await post("validate", input)).json();
   assert.equal(validation.status, "READY");
-  assert.equal(validation.resolvedProduct.sku, "JAS-R01");
+  assert.equal(validation.resolvedProduct.sku, "JAS-B01");
   assert.equal(
     validation.recommendationSource,
     "simulated_platform_prediction",
   );
-  assert.equal(validation.prediction.sku, "JAS-R01");
+  assert.equal(validation.prediction.sku, "JAS-B01");
   const forged = await (
     await post("validate", {
       ...input,
@@ -49,7 +49,7 @@ test("HTTP API validates, generates three, persists, exports and rejects overrid
   ).json();
   assert.equal(
     forged.resolvedProduct.sku,
-    "JAS-R01",
+    "JAS-B01",
     "caller-supplied predictions cannot replace server fixtures",
   );
   const r = await post("generate", { ...input, caseId: "HTTP-01" });
@@ -93,13 +93,13 @@ test("HTTP API validates, generates three, persists, exports and rejects overrid
   assert.equal(recordResponse.records.length, 2);
   const record = recordResponse.records[0];
   assert.equal(record.caseId, "HTTP-01");
-  assert.equal(record.resolvedProductSku, "JAS-R01");
+  assert.equal(record.resolvedProductSku, "JAS-B01");
   assert.equal(record.recommendationSource, "simulated_platform_prediction");
   assert.ok(record.promptVersion);
   assert.ok(record.brandBibleVersion);
   assert.equal(record.candidates.length, 3);
   assert.equal(record.messageFormatVersion, "three-paragraph-v1");
-  assert.equal(record.messagePlan.story.product.sku, "JAS-R01");
+  assert.equal(record.messagePlan.story.product.sku, "JAS-B01");
   assert.equal(record.clientContext.assignedAdvisor, "Sophie");
   assert.equal(
     (await readFile(join(dir, "records.jsonl"), "utf8")).trim().split("\n")

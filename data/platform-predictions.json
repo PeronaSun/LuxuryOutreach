@@ -1,38 +1,18 @@
 {
-  "version": "simulated-platform-v1-post-v5",
+  "version": "simulated-platform-v1.1-post-v5",
   "seed": 20261107,
   "label": "平台模拟预测（非客户明确偏好）",
   "clients": {
     "CL-001": [
       {
-        "sku": "JAS-R01",
-        "line": "jasmin",
-        "motif": "jasmin",
-        "rank": 1,
-        "rationale": "固定种子模拟，参考已知作品方向、已知系列方向、已知自然意象、已知品类方向、已知材质方向、近期材质方向；不代表客户明确偏好。",
-        "source": "simulated_platform_prediction",
-        "isSimulated": true,
-        "version": "simulated-platform-v1-post-v5"
-      },
-      {
         "sku": "JAS-B01",
         "line": "jasmin",
         "motif": "jasmin",
-        "rank": 2,
-        "rationale": "固定种子模拟，参考已知系列方向、已知自然意象、已知材质方向、近期材质方向；不代表客户明确偏好。",
+        "rank": 1,
+        "rationale": "平台模拟预测（定向调整），用于探索手镯作品；不代表客户明确偏好或历史购买。",
         "source": "simulated_platform_prediction",
         "isSimulated": true,
-        "version": "simulated-platform-v1-post-v5"
-      },
-      {
-        "sku": "JAS-N01",
-        "line": "jasmin",
-        "motif": "jasmin",
-        "rank": 3,
-        "rationale": "固定种子模拟，参考已知系列方向、已知自然意象；不代表客户明确偏好。",
-        "source": "simulated_platform_prediction",
-        "isSimulated": true,
-        "version": "simulated-platform-v1-post-v5"
+        "version": "simulated-platform-v1.1-post-v5"
       }
     ],
     "CL-002": [
@@ -71,14 +51,14 @@
     ],
     "CL-004": [
       {
-        "sku": "MUG-C-N01",
-        "line": "clochette",
+        "sku": "MUG-R-B01",
+        "line": "rosee",
         "motif": "muguet",
         "rank": 1,
-        "rationale": "固定种子模拟，参考已知系列方向、已知自然意象、已知品类方向；不代表客户明确偏好。",
+        "rationale": "平台模拟预测（定向调整），用于探索手镯作品；不代表客户明确偏好或历史购买。",
         "source": "simulated_platform_prediction",
         "isSimulated": true,
-        "version": "simulated-platform-v1-post-v5"
+        "version": "simulated-platform-v1.1-post-v5"
       }
     ],
     "CL-005": [
@@ -139,24 +119,14 @@
     ],
     "CL-008": [
       {
-        "sku": "FEU-A-R01",
-        "line": "aqua",
-        "motif": "feuille",
-        "rank": 1,
-        "rationale": "固定种子模拟，参考已知系列方向、已知宝石方向；不代表客户明确偏好。",
-        "source": "simulated_platform_prediction",
-        "isSimulated": true,
-        "version": "simulated-platform-v1-post-v5"
-      },
-      {
         "sku": "FEU-A-B01",
         "line": "aqua",
         "motif": "feuille",
-        "rank": 2,
-        "rationale": "固定种子模拟，参考已知系列方向、已知宝石方向；不代表客户明确偏好。",
+        "rank": 1,
+        "rationale": "平台模拟预测（定向调整），用于探索手镯作品；不代表客户明确偏好或历史购买。",
         "source": "simulated_platform_prediction",
         "isSimulated": true,
-        "version": "simulated-platform-v1-post-v5"
+        "version": "simulated-platform-v1.1-post-v5"
       }
     ],
     "CL-009": [

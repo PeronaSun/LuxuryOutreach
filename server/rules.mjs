@@ -14,7 +14,7 @@ import {
   communicationContext,
   contextCoverageErrors,
 } from "./communication-context.mjs";
-export const PROMPT_VERSION = "advisor-1.6.0";
+export const PROMPT_VERSION = "advisor-1.6.1";
 export const productScenarios = new Set([
   "recommend",
   "reactivate",

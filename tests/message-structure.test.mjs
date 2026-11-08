@@ -3,6 +3,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { clients } from "../data/clients.mjs";
+import { assessCandidates } from "../server/output-assessment.mjs";
 import { motifs, lines, products } from "../data/catalog.mjs";
 import { validateCandidates, validateMessage } from "../server/rules.mjs";
 import {
@@ -14,6 +15,7 @@ import {
   splitParagraphs,
   messagePlan,
   greetingFor,
+  assembleCandidates,
 } from "../server/message-contract.mjs";
 
 const selected = (sku, extra = {}) => {
@@ -149,9 +151,17 @@ test("F/G: all scenarios use the structure and appropriate non-promissory ending
       out = demoCandidates(input, ctx);
     assert.equal(ctx.status, "READY");
     assert.deepEqual(validateCandidates(out, { ...ctx, input }), []);
-    for (const c of out) {
+    assert.ok(plan.ctaOptions[1].length > plan.ctaOptions[0].length);
+    for (const [index, c] of out.entries()) {
       const [, main, cta] = splitParagraphs(c.text);
-      assert.ok(plan.ctaOptions.includes(cta));
+      assert.equal(cta, plan.ctaOptions[index]);
+      if (input.scenario === "greeting")
+        assert.doesNotMatch(cta, /购买|到店|预约|联系|参与/);
+      if (input.scenario === "care")
+        assert.doesNotMatch(cta, /购买|到店|选购|新款/);
+      if (input.scenario === "event") assert.match(cta, /活动|参与/);
+      if (input.scenario === "price")
+        assert.doesNotMatch(cta, /购买|到店|赶紧|下单/);
       assert.ok(!/备妥|准备好|预留|预约|档期|席位|折扣|优惠/.test(cta));
       if (input.scenario === "greeting")
         assert.ok(!/18K|Jasmin|Rosée|Aqua|戒指|项链/.test(main));
@@ -184,7 +194,7 @@ test("malformed structure, wrong advisor, duplicate bodies, headings and unsafe 
     out[0].text.replace("Bonjour", "您好"),
     out[0].text.replace("Jasmin Étoilé", "光之铃兰"),
     out[0].text.replace(
-      "如您感兴趣，欢迎随时与我聊聊作品细节。",
+      splitParagraphs(out[0].text)[2],
       "专属藏品已为您备妥，欢迎到店品鉴。",
     ),
     out[0].text.replace("\n\nJasmin", "\n\nProduct Story: Jasmin"),
@@ -303,4 +313,47 @@ test("live mode normalizes internal body whitespace while preserving the trusted
   assert.ok(
     result.candidates.every((c) => !splitParagraphs(c.text)[1].includes("\n")),
   );
+});
+
+test("conditional visit-assistance CTA paraphrases pass existing hard checks without booked arrangements", () => {
+  const input = selected("JAS-B01"),
+    ctx = evaluateRequest(input);
+  const alternatives = [
+    "想到店时提前告诉我，我可以协助安排时间。",
+    "如果您计划到店了解作品，可以先与我沟通，我会协助安排合适的时间。",
+    "若您希望到店细赏作品，欢迎提前与我联系，以便协助安排合适的接待时间。",
+  ];
+  const parts = demoCandidates(input, ctx).map((candidate, index) => ({
+    style: candidate.style,
+    main: splitParagraphs(candidate.text)[1],
+    cta: alternatives[index],
+  }));
+  const candidates = assembleCandidates(parts, input, ctx);
+  assert.ok(candidates.every((c) => splitParagraphs(c.text).length === 3));
+  const assessment = assessCandidates(candidates, { ...ctx, input });
+  assert.deepEqual(assessment.hard, []);
+  assert.ok(assessment.warnings.some((w) => w.ruleId === "CTA_WORDING"));
+  for (const unsafe of [
+    "作品已为您备妥，欢迎到店。",
+    "已预留专属接待时间。",
+    "请立即下单。",
+    "可以为您提供折扣。",
+  ]) {
+    const modified = candidates.map((candidate, index) =>
+      index
+        ? candidate
+        : {
+            ...candidate,
+            text: [
+              splitParagraphs(candidate.text)[0],
+              splitParagraphs(candidate.text)[1],
+              unsafe,
+            ].join("\n\n"),
+          },
+    );
+    assert.ok(
+      assessCandidates(modified, { ...ctx, input }).hard.length > 0,
+      unsafe,
+    );
+  }
 });

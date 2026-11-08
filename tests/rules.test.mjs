@@ -20,16 +20,28 @@ const modelParts = (candidates) =>
     return { style: c.style, main, cta };
   });
 // Preserve the V5 fixture inputs and expected fields; version changed expectations
-// here because post-V5 explicitly removes history/alphabetical SKU fallback.
+// here for post-V5 selection behavior and the requested prediction replacements.
 const postV5Sku = {
+  "ML-001": "JAS-B01",
+  "ML-032": "JAS-B01",
+  "ML-033": "JAS-B01",
+  "ML-034": "JAS-B01",
+  "ML-035": "JAS-B01",
+  "ML-036": "JAS-B01",
+  "ML-037": "JAS-B01",
+  "ML-041": "JAS-B01",
+  "ML-043": "JAS-B01",
+  "ML-045": "JAS-B01",
+  "ML-050": "JAS-B01",
+
   "ML-002": null,
   "ML-003": null,
-  "ML-012": "FEU-A-R01",
+  "ML-012": "FEU-A-B01",
   "ML-014": null,
   "ML-015": "JAS-R01",
-  "ML-026": "JAS-R01",
-  "ML-027": "JAS-R01",
-  "ML-030": "JAS-R01",
+  "ML-026": "JAS-B01",
+  "ML-027": "JAS-B01",
+  "ML-030": "JAS-B01",
   "ML-048": null,
   "ML-049": null,
 };
@@ -157,7 +169,7 @@ test("prompt separates untrusted notes and contains only relevant stored client 
     p = buildPrompt(input, ctx),
     payload = JSON.parse(p.input);
   assert.equal(payload.untrusted_context.notes, input.notes);
-  assert.equal(payload.product.sku, "JAS-R01");
+  assert.equal(payload.product.sku, "JAS-B01");
   assert.ok(!p.input.includes("CL-008"));
   assert.ok(p.instructions.includes("不可信"));
 });

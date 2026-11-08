@@ -17,12 +17,34 @@ const task = (extra = {}) => ({
   scenario: "recommend",
   ...extra,
 });
-test("all nine clients have persisted, reproducible, canonical simulated predictions", () => {
+const requestedPredictions = {
+  "CL-001": "JAS-B01",
+  "CL-004": "MUG-R-B01",
+  "CL-008": "FEU-A-B01",
+};
+test("three requested bracelet predictions replace prior arrays; the other six retain seeded predictions", () => {
   assert.equal(clients.length, 9);
-  assert.deepEqual(
-    simulatePredictions(clients, products, fixture.seed),
-    fixture.clients,
-  );
+  const seeded = simulatePredictions(clients, products, fixture.seed);
+  for (const client of clients) {
+    if (requestedPredictions[client.id]) {
+      assert.deepEqual(
+        client.predictedInterests.map((p) => p.sku),
+        [requestedPredictions[client.id]],
+      );
+      assert.equal(client.predictedInterests[0].rank, 1);
+      assert.equal(client.predictedInterests[0].version, fixture.version);
+      assert.equal(
+        products.find((p) => p.sku === client.predictedInterests[0].sku)
+          .category,
+        "手镯",
+      );
+    } else {
+      assert.deepEqual(client.predictedInterests, seeded[client.id], client.id);
+    }
+  }
+});
+test("all nine clients have persisted, canonical simulated predictions", () => {
+  assert.equal(clients.length, 9);
   for (const c of clients) {
     assert.ok(
       c.predictedInterests.length >= 1 && c.predictedInterests.length <= 3,
@@ -53,7 +75,7 @@ test("Motif-only and Line-only resolve the highest-ranked matching prediction wi
     const before = structuredClone(input);
     const ctx = evaluateRequest(input);
     assert.equal(ctx.status, "READY");
-    assert.equal(ctx.resolved.product.sku, "JAS-R01");
+    assert.equal(ctx.resolved.product.sku, "JAS-B01");
     assert.equal(ctx.resolved.source, "simulated_platform_prediction");
     assert.equal(ctx.normalized.selection.sku.value, null);
     assert.equal(ctx.normalized.selection.line.value, input.line || null);
@@ -69,6 +91,8 @@ test("explicit SKU overrides prediction rank and canonical facts override untrus
   assert.equal(ctx.resolved.prediction, null);
   const c = structuredClone(clients[0]);
   c.predictedInterests[0].line = "aqua";
+  assert.equal(resolveProduct(task({ motif: "jasmin" }), c).product, null);
+  c.predictedInterests.push({ ...fixture.clients["CL-001"][0], rank: 2 });
   const r = resolveProduct(task({ motif: "jasmin" }), c);
   assert.equal(r.product.sku, "JAS-B01");
   assert.equal(
@@ -98,23 +122,23 @@ test("ranking is numeric and only in-scope predictions participate", () => {
   const c = {
     ...clients[0],
     predictedInterests: [
-      { ...fixture.clients["CL-001"][1], rank: 9 },
+      { ...fixture.clients["CL-001"][0], sku: "JAS-N01", rank: 9 },
       { ...fixture.clients["CL-002"][0], rank: 1 },
       { ...fixture.clients["CL-001"][0], rank: 2 },
     ],
   };
   assert.equal(
     resolveProduct(task({ motif: "jasmin" }), c).product.sku,
-    "JAS-R01",
+    "JAS-B01",
   );
   assert.equal(resolveProduct(task(), c).product.sku, "FEU-A-N01");
 });
 test("scenario relevance preserves greetings/events/general-price and prioritizes care purchases", () => {
   const c = clients[0];
-  assert.equal(resolveProduct(task(), c).product.sku, "JAS-R01");
+  assert.equal(resolveProduct(task(), c).product.sku, "JAS-B01");
   assert.equal(
     resolveProduct(task({ scenario: "reactivate" }), c).product.sku,
-    "JAS-R01",
+    "JAS-B01",
   );
   for (const scenario of ["greeting", "event"])
     assert.equal(resolveProduct(task({ scenario }), c).product, null);
@@ -138,7 +162,7 @@ test("scenario relevance preserves greetings/events/general-price and prioritize
       }),
       c,
     ).product.sku,
-    "JAS-R01",
+    "JAS-B01",
   );
   const care = resolveProduct(
     task({
@@ -174,7 +198,8 @@ test("strong explicit restrictions filter automatic predictions and block confli
   const narrowed = evaluateRequest(
     task({ motif: "jasmin", notes: "客户只考虑白金。" }),
   );
-  assert.equal(narrowed.resolved.product.sku, "JAS-N01");
+  assert.equal(narrowed.resolved.product, null);
+  assert.equal(narrowed.resolved.source, "scope_only");
   const impossible = evaluateRequest(
     task({ motif: "jasmin", line: "jasmin", notes: "客户只考虑黄金。" }),
   );
@@ -264,5 +289,50 @@ test("all client predictions reach structured generation and audit as simulated 
     });
     assert.equal(calls.length, 2);
     assert.equal(result.candidates.length, 3);
+  }
+});
+
+test("updated predictions respect Motif, Line, explicit SKU, and purchase priority for all three clients", () => {
+  for (const [clientId, sku] of Object.entries(requestedPredictions)) {
+    const product = products.find((p) => p.sku === sku);
+    for (const scope of [
+      {},
+      { motif: product.motif },
+      { motif: product.motif, line: product.line },
+    ]) {
+      const input = task({ clientId, ...scope });
+      const before = structuredClone(input);
+      const ctx = evaluateRequest(input);
+      assert.equal(ctx.status, "READY");
+      assert.equal(ctx.resolved.product, product);
+      assert.equal(ctx.resolved.source, "simulated_platform_prediction");
+      assert.deepEqual(input, before);
+    }
+    const explicit = products.find(
+      (p) => p.line === product.line && p.sku !== sku,
+    );
+    const pinned = evaluateRequest(
+      task({
+        clientId,
+        motif: product.motif,
+        line: product.line,
+        sku: explicit.sku,
+      }),
+    );
+    assert.equal(pinned.resolved.product, explicit);
+    assert.equal(pinned.resolved.source, "ca_sku");
+    const outside = products.find((p) => p.motif !== product.motif);
+    const scoped = evaluateRequest(
+      task({ clientId, motif: outside.motif, line: outside.line }),
+    );
+    assert.equal(scoped.resolved.product, null);
+    assert.equal(scoped.resolved.source, "scope_only");
+    const client = clients.find((c) => c.id === clientId);
+    const purchase = client.purchases[0];
+    const care = evaluateRequest(
+      task({ clientId, scenario: "care", purchaseId: purchase.id }),
+    );
+    assert.equal(care.resolved.product.sku, purchase.sku);
+    assert.equal(care.resolved.source, "verified_purchase");
   }
 });
