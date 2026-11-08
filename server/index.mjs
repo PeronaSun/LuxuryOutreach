@@ -149,6 +149,8 @@ export function createApp({
             notices: context.notices || [],
             resolvedProduct: context.resolved?.product || null,
             reason: context.resolved?.reason || "",
+            recommendationSource: context.resolved?.source || null,
+            prediction: context.resolved?.prediction || null,
             calendar: context.calendar || null,
             selectionDepth: context.normalized?.selection.depth ?? 0,
           };
@@ -194,6 +196,8 @@ export function createApp({
             communicationContext: context.communicationContext || null,
             resolvedProductSku: context.resolved?.product?.sku || null,
             resolutionReason: context.resolved?.reason || null,
+            recommendationSource: context.resolved?.source || null,
+            resolvedPrediction: context.resolved?.prediction || null,
             brandBibleVersion: BRAND_VERSION,
             promptVersion: PROMPT_VERSION,
             messageFormatVersion: MESSAGE_FORMAT_VERSION,

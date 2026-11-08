@@ -80,6 +80,7 @@ export function assessAudit(audit) {
 }
 
 export const auditInstructions =
+  "平台模拟预测边界：client.predictedInterests及productRecommendation.prediction不是已核实的客户偏好、原话或购买。只有client.interests/history/latestPreference、notes或已核实purchase可支持客户事实。把预测写成客户明确喜欢、曾说过或已购买，按FACT_CUSTOMER硬失败；不能因为它在client对象里就当成CRM事实。product仍是唯一目录事实，自动预测不能覆盖CA范围、明确限制或购买关怀的选定purchase。\n" +
   "事实来源澄清：client.latestPreference、client.interests、client.history和purchase都是已核实CRM事实，不要求notes重复证明。notes为空或hasNotes=false仅表示没有新备注，不能据此把CRM中已有偏好判为FACT_CUSTOMER；相关新备注优先于旧资料，但空备注不会抹除资料。真实且清楚标为历史的其他Motif偏好引用，不等于把它说成当前作品的故事；当前产品叙事仍须遵循唯一grounding。\n" +
   "这是同步硬约束核验，不进行主观质量打分；自然度、风格差别、故事深度和优雅感在离线judge评估。不要为正常的简洁/概括输出质量findings。仅当事实、任务或安全硬约束违规时报告；reason简短具体。\n" +
   scopeInstructions +

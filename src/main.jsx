@@ -927,9 +927,14 @@ function App() {
                       </div>
                     </div>
                   )}
+                  {!product &&
+                    validation?.reason &&
+                    !["greeting", "care"].includes(task.scenario) && (
+                      <p className="field-hint">{validation.reason}</p>
+                    )}
                   {!task.line && (
                     <p className="field-hint">
-                      无需选定具体作品，我们会在当前范围内参考已有偏好。
+                      可保留当前选择层级；仅在范围内存在平台模拟预测时自动推荐单品。
                     </p>
                   )}
                 </div>

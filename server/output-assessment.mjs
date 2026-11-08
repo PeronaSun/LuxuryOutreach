@@ -10,6 +10,7 @@ const softRules = {
   "收尾不符合当前场景的克制表达。": "CTA_WORDING",
 };
 const hardRules = {
+  "平台模拟预测不能冒充客户明确偏好或购买事实。": "PREDICTION_ATTRIBUTION",
   "活动正文缺少或更改了已核实的名称、日期时间或地点。":
     "EVENT_REQUIRED_DETAILS",
   "把所选意象描述成了未经核实的活动议程。": "EVENT_UNVERIFIED_AGENDA",

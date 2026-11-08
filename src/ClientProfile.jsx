@@ -20,6 +20,31 @@ export default function ClientProfile({ client, catalog }) {
           生日月 <strong>{client.birthMonth} 月</strong>
         </span>
       </div>
+      <section className="platform-predictions" aria-label="平台模拟预测">
+        <div className="purchase-history-heading">
+          <span>
+            平台模拟预测 <small>Simulated Platform Predictions</small>
+          </span>
+        </div>
+        <p className="prediction-disclaimer">
+          仅为模拟推荐，不代表客户明确表达的偏好或历史购买。
+        </p>
+        {(client.predictedInterests || []).map((prediction) => {
+          const display = resolvePurchaseDisplay(prediction, catalog);
+          return (
+            <div className="prediction-row" key={prediction.sku}>
+              <span className="prediction-rank">{prediction.rank}</span>
+              <div>
+                <strong>{display.label}</strong>
+                <small>
+                  {prediction.sku} · {display.motif?.zh}
+                </small>
+                <p>{prediction.rationale}</p>
+              </div>
+            </div>
+          );
+        })}
+      </section>
       <section className="purchase-history" aria-label="历史购买">
         <div className="purchase-history-heading">
           <span>
@@ -54,6 +79,18 @@ export default function ClientProfile({ client, catalog }) {
           })
         ) : (
           <p className="profile-empty-history">暂无历史购买记录</p>
+        )}
+      </section>
+      <section className="profile-conversations" aria-label="历史沟通">
+        <div className="purchase-history-heading">
+          <span>
+            历史沟通 <small>Conversation History</small>
+          </span>
+        </div>
+        {client.history?.length ? (
+          client.history.map((text, index) => <p key={index}>{text}</p>)
+        ) : (
+          <p className="profile-empty-history">暂无历史沟通记录</p>
         )}
       </section>
     </section>

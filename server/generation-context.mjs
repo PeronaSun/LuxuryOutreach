@@ -90,7 +90,7 @@ export function normalizedContext(input, context) {
   const line =
     lines.find((item) => item.id === lineId && item.motif === motifId) || null;
   return {
-    version: "generation-context-v2",
+    version: "generation-context-v3-post-v5",
     task: input,
     clientId: context.client?.id || input.clientId,
     assignedAdvisor: context.client?.assignedAdvisor || null,
@@ -109,6 +109,13 @@ export function normalizedContext(input, context) {
     },
     grounding: {
       source: "Brand Bible v1.0 · section 04",
+      recommendationSource: {
+        type: context.resolved?.source || "scope_only",
+        isSimulated:
+          context.resolved?.source === "simulated_platform_prediction",
+        prediction: context.resolved?.prediction || null,
+        restrictions: context.resolved?.restrictions || null,
+      },
       level: product ? "sku" : line ? "line" : motif ? "motif" : "none",
       mode:
         input.scenario === "care"
@@ -116,14 +123,16 @@ export function normalizedContext(input, context) {
           : product
             ? input.sku
               ? "explicit_sku"
-              : "deterministic_recommendation"
+              : "simulated_platform_prediction"
             : input.scenario === "price"
               ? "general_price"
               : "optional_story",
       motif,
       line,
       product,
-      storyRequired: ["recommend", "care"].includes(input.scenario),
+      storyRequired:
+        input.scenario === "care" ||
+        (input.scenario === "recommend" && Boolean(product || motif)),
       productFactsAllowed: Boolean(product),
       exactPriceAllowed: Boolean(product) && input.scenario === "price",
     },

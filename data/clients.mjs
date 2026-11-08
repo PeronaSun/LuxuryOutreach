@@ -1,4 +1,5 @@
 import { products } from "./catalog.mjs";
+import platformPredictions from "./platform-predictions.json" with { type: "json" };
 // All profiles, months, purchases and event logistics are fictional demonstration data.
 // Every demo client is eligible for outreach; only minimal, relevant profile fields reach the model.
 export const DEMO_CONTEXT_DATE = "2026-11-05";
@@ -257,6 +258,7 @@ export const clients = [
   },
 ].map(({ purchaseInputs, ...client }) => ({
   ...client,
+  predictedInterests: platformPredictions.clients[client.id],
   purchases: purchaseInputs.map(purchaseRecord),
 }));
 export const events = [
@@ -276,6 +278,7 @@ export function clientProfile(client) {
     name: client.name,
     assignedAdvisor: client.assignedAdvisor,
     interests: client.interests,
+    predictedInterests: client.predictedInterests || [],
     latestPreference: client.latestPreference,
     purchases: client.purchases,
     history: client.history,

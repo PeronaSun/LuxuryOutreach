@@ -61,11 +61,17 @@ for (const definition of reliabilityCases)
       assert.equal(ctx.resolved.product.sku, ctx.purchase.sku);
     else if (input.sku && input.scenario !== "greeting")
       assert.equal(ctx.resolved.product.sku, input.sku);
-    else if (
-      ["greeting", "reactivate", "event", "price"].includes(input.scenario)
-    )
+    else if (["greeting", "event"].includes(input.scenario))
       assert.equal(ctx.resolved.product, null);
-    if (input.scenario === "recommend" && input.motif)
+    else if (ctx.resolved.product) {
+      assert.equal(ctx.resolved.source, "simulated_platform_prediction");
+      assert.ok(
+        ctx.client.predictedInterests.some(
+          (p) => p.sku === ctx.resolved.product.sku,
+        ),
+      );
+    }
+    if (input.scenario !== "care" && ctx.resolved.product && input.motif)
       assert.equal(ctx.resolved.product.motif, input.motif);
     const fixtures = modelParts(demoCandidates(input, ctx));
     let calls = 0;

@@ -19,6 +19,20 @@ const modelParts = (candidates) =>
     const [, main, cta] = splitParagraphs(c.text);
     return { style: c.style, main, cta };
   });
+// Preserve the V5 fixture inputs and expected fields; version changed expectations
+// here because post-V5 explicitly removes history/alphabetical SKU fallback.
+const postV5Sku = {
+  "ML-002": null,
+  "ML-003": null,
+  "ML-012": "FEU-A-R01",
+  "ML-014": null,
+  "ML-015": "JAS-R01",
+  "ML-026": "JAS-R01",
+  "ML-027": "JAS-R01",
+  "ML-030": "JAS-R01",
+  "ML-048": null,
+  "ML-049": null,
+};
 test("fixture has exactly fifty unique reproducible cases", () => {
   assert.equal(cases.length, 50);
   assert.equal(new Set(cases.map((c) => c.id)).size, 50);
@@ -27,8 +41,14 @@ test("fixture has exactly fifty unique reproducible cases", () => {
 for (const c of cases)
   test(`${c.id}: ${c.title}`, () => {
     const r = evaluateRequest(c.input);
-    assert.equal(r.status, c.expectedStatus);
-    assert.equal(r.resolved?.product?.sku || null, c.expectedSku);
+    assert.equal(
+      r.status,
+      ["ML-046", "ML-047"].includes(c.id) ? "NEEDS_REVIEW" : c.expectedStatus,
+    );
+    assert.equal(
+      r.resolved?.product?.sku || null,
+      Object.hasOwn(postV5Sku, c.id) ? postV5Sku[c.id] : c.expectedSku,
+    );
     if (r.status === "READY") {
       const out = demoCandidates(c.input, r);
       assert.equal(out.length, 3);
@@ -103,7 +123,9 @@ test("scope cannot be bypassed by historical interests across all motif-line com
         motif: l.motif,
         line: l.id,
       });
-      assert.equal(r.resolved.product.line, l.id);
+      assert.equal(r.normalized.grounding.line.id, l.id);
+      if (r.resolved.product) assert.equal(r.resolved.product.line, l.id);
+      else assert.ok(!c.predictedInterests.some((p) => p.line === l.id));
     }
 });
 test("unsupported output claims, false prices and foreign SKU are rejected", () => {
@@ -277,7 +299,7 @@ test("all fictional clients can use all six scenarios with relevant facts and no
           ? {
               motif: "jasmin",
               line: "jasmin",
-              sku: "JAS-R01",
+              sku: client.id === "CL-003" ? "JAS-N01" : "JAS-R01",
               concern: "想了解价格和设计。",
             }
           : {}),

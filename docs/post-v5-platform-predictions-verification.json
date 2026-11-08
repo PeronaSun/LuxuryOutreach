@@ -1,0 +1,96 @@
+{
+  "verifiedAt": "2026-11-08T01:22:24.393340+00:00",
+  "v5BaseCommit": "9a1aea9807886bc09369c92bd3b55862502d4080",
+  "newPromptVersion": "advisor-1.6.0",
+  "newContextVersion": "generation-context-v3-post-v5",
+  "predictionVersion": "simulated-platform-v1-post-v5",
+  "predictionSeed": 20261107,
+  "clients": 9,
+  "predictionEntries": 15,
+  "predictionsByClient": {
+    "CL-001": [
+      "JAS-R01",
+      "JAS-B01",
+      "JAS-N01"
+    ],
+    "CL-002": [
+      "FEU-A-N01",
+      "FEU-A-B01"
+    ],
+    "CL-003": [
+      "MUG-C-N01"
+    ],
+    "CL-004": [
+      "MUG-C-N01"
+    ],
+    "CL-005": [
+      "MUG-R-B01",
+      "MUG-R-R01",
+      "MUG-R-N01"
+    ],
+    "CL-006": [
+      "MUG-R-R01"
+    ],
+    "CL-007": [
+      "JAS-R01"
+    ],
+    "CL-008": [
+      "FEU-A-R01",
+      "FEU-A-B01"
+    ],
+    "CL-009": [
+      "FEU-V-N01"
+    ]
+  },
+  "tests": {
+    "passed": 629,
+    "failed": 0,
+    "skipped": 0,
+    "newPredictionTests": 9,
+    "providerCalls": "Mock fetch only"
+  },
+  "build": "PASS",
+  "productionDemoHttpSmoke": "PASS",
+  "uiDomRegression": "PASS",
+  "realBrowserVisualVerification": "Unavailable; in-app browser not connected",
+  "xlsxVisualVerification": "PASS: all three sheets inspected from cell/style renders",
+  "workbook": "deliverables/client_info.xlsx",
+  "workbookSha256": "fa1c9cdc421e24105d7e054930d42fe7931af95034d5883935f51ea764c67e9f",
+  "cachedFormulaCellsVerified": 18,
+  "frozenFilesVerified": 1714,
+  "frozenFilesChanged": [],
+  "legacyCaseInputsUnchanged": true,
+  "expectedAppSourceChanges": [
+    "data/clients.mjs",
+    "src/styles.css",
+    "src/main.jsx",
+    "src/ClientProfile.jsx"
+  ],
+  "paidApiCalls": 0,
+  "githubPushes": 0,
+  "sourceFingerprints": {
+    "data/clients.mjs": "b5acfd95531dc1217c1beacebba8ca920b48c023100838644ac9af713bbd7eda",
+    "data/platform-predictions.json": "5d094968abe0c746af6ebf6fd83dc87d5e9dda4aaeb7e4a48a7e5455f731f482",
+    "data/prediction-simulation.mjs": "59219fa1507802f6ed75cb4d8bbbe873930e439ab7f3f775b3092dd54c57a33d",
+    "server/product-selection.mjs": "81b2da67b1fe5be766225be05ef7534f382baf4ff98aa540f81c9b3c446140b4",
+    "server/prediction-claims.mjs": "de445d6b6b1ab28cea61ba746e61869ca56865010a3ba84726fff95fb447de65",
+    "server/rules.mjs": "6396db0abc8e0e5dba38251e29e4258f55302a5f6f7978e2685ce676691a253d",
+    "server/generation-context.mjs": "eef13268f68fa879db24d6e9d2c0f885237ed73d03beb8e8c1a1a5f5c02eb391",
+    "server/generation.mjs": "3c7d3a2a73395ca32d7cdfc2288aa540b9ecaa91bb6cc187b7bcef2ae8cc275a",
+    "server/audit-policy.mjs": "a6070e8f7bdad16445bcd186aab41f3c5266203aad35ede0b36a669d91bc0461",
+    "server/output-assessment.mjs": "9821226fc675c946e4cc2113537476f9e1aa2885b2a4acc9e1449c2f0de22d56",
+    "server/prompt-context.mjs": "7a4f387713446cfe10bec257c0b176c86b95540920324a5c680ebb3f89aea41f",
+    "server/message-contract.mjs": "da59997768bdd9c1a3192018b3916b0b9154927d9dade2c23a6ff28023f93e8f",
+    "server/index.mjs": "1b58e8f34af15dd53b331f62dba5ddfa5e7f52e10ea0b4b7267d5f0bd0569fe6",
+    "src/ClientProfile.jsx": "c340d2680f7a6c8785739c0a8fd21f2e6882bffaadcc694b8243c055868af92d",
+    "src/main.jsx": "5a01685273a599c12eb558736bce9164b3acb531a175c7f80f43bd37ddcc16f4",
+    "src/styles.css": "2a09afd56f1b69c36252536803792d3c138fa838abf951b239fa07df30b4bf1e",
+    "scripts/export-client-info.py": "99629da53a62badc177c1d7e38cb7a90afe3061e530069425bbe089568335450",
+    "tests/platform-predictions.test.mjs": "62d7efc9438ad6dca4b20a191229bfdda4993889539a45a6588a09f1032fc24a",
+    "tests/api.test.mjs": "f3963a9887fdf0f7dbd17ef9f63e5f4da5ce3d2a7258d02753eaab3c28475777",
+    "tests/greeting-context.test.mjs": "965845cbaa9a8032ec2798d7dd4f2617c0f29a75e3d880a374eccb208bc9ce14",
+    "tests/reliability-matrix.test.mjs": "1c8c7e22a40591ec430e28bc382e91ddc643f631927a6b6f006ee674b58f1be8",
+    "tests/rules.test.mjs": "ce795b44d62a3189ff8b728c25b7c34b0f2e4a211d0da12a4a1fe1cbe5457ffe",
+    "tests/ui.test.mjs": "07788668b8d009857463c64916b578b6ed6cc1beae3cd886ac31018d9df24b72"
+  }
+}

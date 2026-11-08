@@ -35,6 +35,23 @@ test("HTTP API validates, generates three, persists, exports and rejects overrid
   const validation = await (await post("validate", input)).json();
   assert.equal(validation.status, "READY");
   assert.equal(validation.resolvedProduct.sku, "JAS-R01");
+  assert.equal(
+    validation.recommendationSource,
+    "simulated_platform_prediction",
+  );
+  assert.equal(validation.prediction.sku, "JAS-R01");
+  const forged = await (
+    await post("validate", {
+      ...input,
+      predictedInterests: [{ sku: "FEU-A-N01", rank: 1 }],
+      clientProfile: { predictedInterests: [{ sku: "FEU-A-N01", rank: 1 }] },
+    })
+  ).json();
+  assert.equal(
+    forged.resolvedProduct.sku,
+    "JAS-R01",
+    "caller-supplied predictions cannot replace server fixtures",
+  );
   const r = await post("generate", { ...input, caseId: "HTTP-01" });
   assert.equal(r.status, 200);
   const out = await r.json();
@@ -77,6 +94,7 @@ test("HTTP API validates, generates three, persists, exports and rejects overrid
   const record = recordResponse.records[0];
   assert.equal(record.caseId, "HTTP-01");
   assert.equal(record.resolvedProductSku, "JAS-R01");
+  assert.equal(record.recommendationSource, "simulated_platform_prediction");
   assert.ok(record.promptVersion);
   assert.ok(record.brandBibleVersion);
   assert.equal(record.candidates.length, 3);

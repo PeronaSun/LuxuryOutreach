@@ -3,16 +3,18 @@ import { clients, events, clientProfile } from "../data/clients.mjs";
 import { messagePlan, splitParagraphs } from "./message-contract.mjs";
 import { normalizeTask, normalizedContext } from "./generation-context.mjs";
 import { scenarioFactErrors } from "./scenario-facts.mjs";
+import { resolveProduct } from "./product-selection.mjs";
+import { unsupportedPredictionAttribution } from "./prediction-claims.mjs";
+export { resolveProduct } from "./product-selection.mjs";
 import {
   applicationCalendar,
   festivalContext,
 } from "./application-calendar.mjs";
 import {
   communicationContext,
-  currentPreferenceScore,
   contextCoverageErrors,
 } from "./communication-context.mjs";
-export const PROMPT_VERSION = "advisor-1.5.2";
+export const PROMPT_VERSION = "advisor-1.6.0";
 export const productScenarios = new Set([
   "recommend",
   "reactivate",
@@ -21,71 +23,6 @@ export const productScenarios = new Set([
 ]);
 export const forbiddenRequest =
   /(?:编造|虚构|捏造|假装|承诺|提供|给[她他您客户]*|告诉[她他客户]*).{0,14}(?:折扣|优惠|打折|现货|库存|证书|保修|生日|席位|皇室)|(?:打[一二三四五六七八九\d]折|[一二三四五六七八九\d]折优惠|保证升值|保值增值|全网最低|最后机会|今天必须下单)|(?:ignore|忽略|无视|绕过).{0,30}(?:规则|指令|限制|同意|instructions|rules)|(?:system\s*:|developer\s*:)|(?:使用|提及|利用).{0,12}(?:未授权|未经许可).{0,15}(?:生日|家庭|预算|购买|隐私)/i;
-export function resolveProduct(input, client) {
-  if (input.scenario === "care") {
-    const purchase = client.purchases.find((p) => p.id === input.purchaseId);
-    return {
-      product: purchase ? products.find((p) => p.sku === purchase.sku) : null,
-      reason: "使用本次选定的历史购买记录。",
-      scope: [],
-    };
-  }
-  if (!productScenarios.has(input.scenario))
-    return { product: null, reason: "此场景无需产品。", scope: [] };
-  if (input.scenario !== "recommend" && !input.sku)
-    return {
-      product: null,
-      reason:
-        input.scenario === "price"
-          ? "作品尚未明确，仅回应实际价格顾虑，不引用单品规格或价格。"
-          : "保留已选意象或系列作为可选背景，不自动推荐单品。",
-      scope: [],
-    };
-  const scope = products.filter(
-    (p) =>
-      (!input.motif || p.motif === input.motif) &&
-      (!input.line || p.line === input.line) &&
-      (!input.sku || p.sku === input.sku),
-  );
-  if (!scope.length)
-    return { product: null, scope, reason: "没有匹配的产品。" };
-  const interests = client.interests;
-  const score = (p) =>
-    interests.reduce(
-      (s, i) =>
-        s +
-        (i.sku === p.sku ? 100 : 0) +
-        (i.line === p.line ? 30 : 0) +
-        (i.motif === p.motif ? 12 : 0) +
-        (i.category === p.category ? 10 : 0) +
-        (i.material === p.material ? 8 : 0) +
-        (i.gemstone && i.gemstone === p.gemstone ? 8 : 0),
-      0,
-    ) +
-    (client.latestPreference?.material === p.material ? 150 : 0) +
-    (lines.find((l) => l.id === p.line).occasions.includes(input.occasion)
-      ? 2
-      : 0);
-  const currentContext = communicationContext(input);
-  const ranked = [...scope].sort(
-    (a, b) =>
-      currentPreferenceScore(b, currentContext) -
-        currentPreferenceScore(a, currentContext) ||
-      score(b) - score(a) ||
-      a.sku.localeCompare(b.sku),
-  );
-  return {
-    product: ranked[0],
-    scope,
-    reason: input.sku
-      ? "采用顾问明确选择的 SKU。"
-      : currentPreferenceScore(ranked[0], currentContext) > 0
-        ? "在当前选择范围内优先匹配本次明确表达的偏好。"
-        : score(ranked[0]) > 0
-          ? "在当前范围内匹配已有偏好；同分按 SKU 字母顺序。"
-          : "无明确偏好匹配，按 SKU 字母顺序选择；未推断客户偏好。",
-  };
-}
 export function evaluateRequest(input, { now = new Date() } = {}) {
   const started = performance.now();
   input = normalizeTask(input);
@@ -203,8 +140,12 @@ export function evaluateRequest(input, { now = new Date() } = {}) {
   }
   const resolutionStarted = performance.now();
   const resolved = resolveProduct(input, client);
-  if (input.scenario === "recommend" && !resolved.product)
-    add("NEEDS_REVIEW", "请重新选择有效的产品范围。", "scope");
+  if (resolved.restrictionConflict)
+    add(
+      "NEEDS_REVIEW",
+      "当前 SKU 与客户明确的材质限制冲突。请调整选择或更新已核实背景；系统不会替换顾问选择。",
+      "explicit-restriction-conflict",
+    );
   const notesContext = communicationContext(input, resolved.product);
   const notices = [];
   const effectiveMaterial =
@@ -254,6 +195,8 @@ export function validateMessage(t, context, { enforceCta = true } = {}) {
   )
     return ["消息语言或长度无效。"];
   const paragraphs = splitParagraphs(t);
+  if (unsupportedPredictionAttribution(t, context))
+    errors.push("平台模拟预测不能冒充客户明确偏好或购买事实。");
   const plan = messagePlan(context.input || {}, context);
   if (paragraphs.length === 3 && !/[\u4e00-\u9fff]/.test(paragraphs[1]))
     errors.push("正文必须使用中文。");

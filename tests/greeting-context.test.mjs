@@ -308,7 +308,7 @@ for (const [label, base, notes, meaning] of pairedCases) {
   });
 }
 
-test("new explicit preferences outrank old interests inside current scope; explicit SKU remains authoritative", async () => {
+test("explicit restrictions filter predictions; conflicting manual SKU stays selected but blocks generation", async () => {
   const base = {
     clientId: "CL-001",
     scenario: "recommend",
@@ -327,15 +327,14 @@ test("new explicit preferences outrank old interests inside current scope; expli
   const pinned = { ...input, sku: "JAS-R01" },
     pinnedContext = evaluateRequest(pinned);
   assert.equal(pinnedContext.resolved.product.sku, "JAS-R01");
-  for (const main of mains(
-    (await generate(pinned, pinnedContext, { demo: true })).candidates,
-  )) {
-    assert.match(main, /材质/);
-    assert.match(main, /18K玫瑰金/);
-    assert.doesNotMatch(main, /18K白金/);
-  }
+  assert.equal(pinnedContext.status, "NEEDS_REVIEW");
+  await assert.rejects(generate(pinned, pinnedContext, { demo: true }));
   const otherMotif = { ...input, motif: "feuille", line: "vive" };
-  assert.equal(evaluateRequest(otherMotif).resolved.product.line, "vive");
+  assert.equal(evaluateRequest(otherMotif).resolved.product, null);
+  assert.equal(
+    evaluateRequest(otherMotif).normalized.grounding.line.id,
+    "vive",
+  );
 });
 
 test("irrelevant notes and conflicting specifications are not copied; unsafe instructions block", async () => {

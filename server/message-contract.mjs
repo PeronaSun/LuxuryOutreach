@@ -125,7 +125,14 @@ export function messagePlan(input, context) {
           elegant:
             "更优雅：以克制自然的语言回应场景，可浓缩已选故事，不推断私人生活或商品事实。",
         },
-    ctaOptions: ctas[input.scenario] || [],
+    ctaOptions:
+      input.scenario === "recommend" && !context.resolved?.product
+        ? ctas.recommend.map((text) =>
+            text
+              .replace("这件作品", "这个设计方向")
+              .replace("作品细节", "设计方向"),
+          )
+        : ctas[input.scenario] || [],
   };
 }
 

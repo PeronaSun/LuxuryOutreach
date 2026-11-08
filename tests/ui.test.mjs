@@ -199,7 +199,20 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
   assert.equal(profile().querySelectorAll(".purchase-history-row").length, 2);
   assert.ok(profile().textContent.includes("Jasmin Étoilé（星夜初绽）戒指"));
   assert.ok(profile().textContent.includes("2026-09-18"));
-  assert.ok(!profile().textContent.includes(clients[0].history[0]));
+  assert.ok(
+    profile()
+      .querySelector('[aria-label="历史沟通"]')
+      .textContent.includes(clients[0].history[0]),
+  );
+  const predictions = profile().querySelector('[aria-label="平台模拟预测"]');
+  assert.ok(predictions.textContent.includes("不代表客户明确表达"));
+  assert.equal(
+    predictions.querySelectorAll(".prediction-row").length,
+    clients[0].predictedInterests.length,
+  );
+  assert.ok(
+    !profile().querySelector('[aria-label="历史购买"]').contains(predictions),
+  );
   await act(async () =>
     buttons()
       .find(
@@ -275,7 +288,13 @@ test("workspace DOM: buttons, dependent selection, scenarios, generate, edit, co
   assert.equal(group("设计系列").children.length, 2);
   await click(group("设计系列").children[1]);
   assert.equal(lastTask.line, "aqua");
-  assert.ok(document.body.textContent.includes("历史偏好保持原记录"));
+  assert.ok(document.body.textContent.includes("没有符合明确限制的平台预测"));
+  assert.equal(document.querySelector(".resolved"), null);
+  assert.equal(
+    lastTask.sku,
+    null,
+    "prediction lookup must not fill the CA's SKU selection",
+  );
   assert.equal(
     buttons().some((b) => b.textContent.includes("确认本次")),
     false,

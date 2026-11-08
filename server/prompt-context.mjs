@@ -35,6 +35,8 @@ export function promptContext(input, context) {
 }
 
 export const repairGuidance = {
+  PREDICTION_ATTRIBUTION:
+    "删除仅依据模拟预测编造的客户喜欢、曾提到或购买的断言；改为顾问提出的作品探索方向。只有独立的真实档案或notes证据才可归因给客户。",
   EVENT_REQUIRED_DETAILS:
     "每条待修复main保留event.name、完整日期时间，以及event.location中的场地名和街道地址；不能只保留地址。场地和地址可调整先后语序。",
   EVENT_UNVERIFIED_AGENDA:
