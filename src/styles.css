@@ -105,7 +105,7 @@ svg {
   stroke-width: 1.5;
 }
 .topbar {
-  height: 94px;
+  height: 78px;
   border-bottom: 1px solid #dce8f1;
   background: #ffffff;
   display: flex;
@@ -129,24 +129,25 @@ svg {
 .wordmark > span {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 27px;
-  letter-spacing: 3px;
+  font-size: 25px;
+  letter-spacing: 2.6px;
   white-space: nowrap;
 }
 .wordmark small {
   display: block;
   font-family: Arial, sans-serif;
-  font-size: 8px;
-  letter-spacing: 3px;
-  color: #42617d;
-  text-align: center;
-  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  color: #54718f;
+  text-align: left;
+  margin-top: 5px;
 }
 .topbar nav {
   align-self: stretch;
   display: flex;
   gap: 38px;
-  margin-right: 50px;
+  margin-right: 0;
 }
 .topbar nav button {
   position: relative;
@@ -207,7 +208,7 @@ svg {
 }
 main {
   max-width: 1510px;
-  padding: 0 4.2%;
+  padding: 24px 4.2% 0;
   margin: 0 auto;
 }
 .page-intro {
@@ -569,54 +570,30 @@ main {
   flex-direction: column;
   text-align: center;
   gap: 4px;
-  padding: 10px 5px 13px;
-  min-height: 140px;
-  background: #f4f8fb;
+  padding: 12px 8px 16px;
+  min-height: 216px;
+  background: #ffffff;
 }
 .motif-card strong {
-  font: 500 14px var(--serif);
-  line-height: 1.2;
-  white-space: nowrap;
+  font: 500 15px var(--serif);
+  line-height: 1.35;
+  white-space: normal;
+  min-height: 2.7em;
+  display: grid;
+  place-items: center;
 }
 .motif-card > span {
-  font-size: 9px;
+  font-size: 11px;
   color: #54718f;
-  margin-top: 3px;
   letter-spacing: 1px;
 }
 .motif-art {
-  width: 68px;
-  height: 65px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 5px;
-  color: #54718f;
-}
-.motif-art > svg {
-  width: 54px;
-  height: 54px;
-  stroke-width: 0.8;
-  fill: none;
-}
-.motif-art.jasmin > svg {
-  width: 49px;
-  height: 49px;
-  color: #54718f;
-  filter: drop-shadow(0 3px 2px #54718f25);
-}
-.motif-art.feuille > svg {
-  transform: rotate(-25deg);
-  color: #54718f;
-  stroke-width: 0.8;
-}
-.motif-art.muguet > svg {
-  color: #54718f;
-}
-.motif-check {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  color: #42617d;
+  display: block;
+  width: 100%;
+  height: 144px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 6px;
 }
 .chips {
   display: flex;
@@ -686,60 +663,44 @@ main {
   align-self: stretch;
 }
 .product-image {
-  height: 105px;
-  background: #eaf2f8;
+  aspect-ratio: 1;
+  background: #f4f8fb;
   position: relative;
-  display: grid;
-  place-items: center;
 }
-.product-image > span {
+.product-art {
   position: absolute;
-  bottom: 5px;
-  right: 6px;
-  font-size: 7px;
-  color: #54718f;
-}
-.product-image > svg:last-child:not(.jewel-art) {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-}
-.jewel-art {
+  inset: 0;
   width: 100%;
   height: 100%;
-  stroke: #b7ad94;
-  fill: none;
+  display: block;
+  padding: 14px;
+  object-fit: contain;
+  object-position: center;
 }
-.jewel-art.rose {
-  color: #bd997e;
-  stroke: #bd997e;
-}
-.jewel-art.yellow {
-  color: #b9a165;
-  stroke: #b9a165;
-}
-.jewel-art.white {
-  color: #acb3ac;
-  stroke: #acb3ac;
+.product-image > svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--navy);
 }
 .product-content {
-  padding: 11px 10px;
+  padding: 14px 12px;
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
 .product-category {
-  font-size: 8px;
+  font-size: 10px;
   color: #54718f;
 }
 .product-content strong {
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.7;
-  min-height: 36px;
+  min-height: 42px;
 }
 .material {
-  font-size: 9px;
+  font-size: 10px;
   color: #54718f;
 }
 .product-price {
@@ -1538,7 +1499,7 @@ footer button:hover {
 }
 @media (max-width: 1100px) {
   main {
-    padding: 0 3%;
+    padding: 24px 3% 0;
   }
   .topbar {
     padding: 0 3%;
@@ -1547,9 +1508,6 @@ footer button:hover {
   .topbar nav {
     gap: 25px;
     margin-right: 0;
-  }
-  .advisor > span:not(.status-dot) {
-    display: none;
   }
   .workspace {
     gap: 18px;
@@ -1626,20 +1584,14 @@ footer button:hover {
   .wordmark > svg {
     width: 30px;
   }
-  .wordmark small {
-    font-size: 6px;
-  }
   .topbar nav {
     gap: 19px;
   }
   .topbar nav button {
     font-size: 11px;
   }
-  .advisor {
-    display: none;
-  }
   main {
-    padding: 0 5%;
+    padding: 22px 5% 0;
   }
   .page-intro {
     padding: 30px 0;
@@ -1683,9 +1635,6 @@ footer button:hover {
   .more-clients {
     margin-left: 4px;
   }
-  .motif-card {
-    min-height: 155px;
-  }
   .message-text {
     font-size: 14px;
   }
@@ -1726,7 +1675,7 @@ footer button:hover {
 }
 @media (max-width: 450px) {
   main {
-    padding: 0 15px;
+    padding: 18px 15px 0;
   }
   .topbar {
     padding: 0 18px;
@@ -1818,44 +1767,37 @@ footer button:hover {
     gap: 6px;
   }
   .motif-card {
-    min-height: 135px;
-    padding: 8px 3px 12px;
+    min-height: 176px;
+    padding: 8px 4px 12px;
   }
   .motif-card strong {
-    font-size: 11px;
+    font-size: 12px;
   }
   .motif-card > span {
-    font-size: 8px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
   }
   .motif-art {
-    width: 57px;
-    height: 57px;
-  }
-  .motif-art > svg {
-    width: 44px;
-    height: 44px;
-  }
-  .motif-art.jasmin > svg {
-    width: 41px;
-    height: 41px;
+    height: 100px;
   }
   .generate-area {
     padding: 0 17px 20px;
   }
   .product-grid {
-    gap: 6px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
   .product-content {
-    padding: 9px 7px;
+    padding: 12px 10px;
   }
   .product-content strong {
-    font-size: 9px;
+    font-size: 11px;
   }
   .product-category {
-    font-size: 7px;
+    font-size: 9px;
   }
-  .product-image {
-    height: 85px;
+  .product-art {
+    padding: 10px;
   }
   .product-price {
     font-size: 15px;
@@ -2203,5 +2145,76 @@ footer button:hover {
   }
   .purchase-history-row strong {
     font-size: 11px;
+  }
+}
+
+/* Artwork-led cards keep the existing selection state without tinting the images. */
+.choice.motif-card,
+.choice.product-card {
+  background: #ffffff;
+}
+.choice.motif-card.active,
+.choice.product-card.active {
+  border-color: var(--navy);
+  box-shadow: inset 0 0 0 0.5px var(--navy);
+}
+.choice.motif-card:hover:not(:disabled),
+.choice.product-card:hover:not(:disabled) {
+  background: #f8fbfd;
+  border-color: #8ba3ba;
+}
+.choice.motif-card.active:hover,
+.choice.product-card.active:hover {
+  border-color: var(--navy);
+}
+.advisor .mode {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 11px;
+  white-space: nowrap;
+}
+@media (max-width: 650px) {
+  .topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    height: auto;
+    padding: 17px 5% 0;
+    gap: 15px 12px;
+  }
+  .wordmark > span {
+    font-size: 21px;
+    letter-spacing: 1.7px;
+  }
+  .wordmark small {
+    font-size: 9px;
+  }
+  .advisor {
+    justify-self: end;
+    gap: 6px;
+  }
+  .advisor .mode {
+    font-size: 10px;
+  }
+  .topbar nav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    justify-content: center;
+    gap: 44px;
+  }
+  .topbar nav button {
+    padding: 0 8px 13px;
+    font-size: 11px;
+  }
+  .topbar nav button span {
+    font-size: 11px;
+  }
+}
+@media (max-width: 360px) {
+  .wordmark > span {
+    font-size: 18px;
+  }
+  .advisor .mode {
+    font-size: 9px;
   }
 }

@@ -12,7 +12,6 @@ import {
   Gift,
   Heart,
   Info,
-  Leaf,
   LoaderCircle,
   MessageSquare,
   RefreshCw,
@@ -101,106 +100,29 @@ function SectionHeading({ number, title, caption, optional }) {
     </div>
   );
 }
-function MotifArt({ motif, small = false }) {
+const motifImages = {
+  jasmin: "/image/motif/星夜茉莉.png",
+  muguet: "/image/motif/光之铃兰.png",
+  feuille: "/image/motif/蔚蓝叶语.png",
+};
+function MotifArt({ motif }) {
   return (
-    <div
-      className={`motif-art ${motif} ${small ? "small" : ""}`}
-      aria-hidden="true"
-    >
-      {motif === "jasmin" ? (
-        <Flower2 />
-      ) : motif === "muguet" ? (
-        <svg viewBox="0 0 80 80">
-          <path d="M39 69c2-18 8-37 3-56M42 25C26 16 18 30 23 39c7 5 15 2 18-5M44 41c14-11 24 2 19 12-6 5-14 1-17-5M38 48c-14-9-21 1-16 10 5 4 10 1 14-3M36 68c-7-17-18-19-24-19 4 14 11 20 24 19" />
-        </svg>
-      ) : (
-        <Leaf />
-      )}
-    </div>
+    <img
+      className="motif-art"
+      src={motifImages[motif]}
+      alt=""
+      decoding="async"
+    />
   );
 }
 function JewelryArt({ p }) {
   return (
-    <svg
-      className={
-        "jewel-art " +
-        (p.material === "18K玫瑰金"
-          ? "rose"
-          : p.material === "18K黄金"
-            ? "yellow"
-            : "white")
-      }
-      viewBox="0 0 140 100"
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient id={"metal" + p.sku} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="currentColor" />
-          <stop offset=".5" stopColor="#fffdf7" />
-          <stop offset="1" stopColor="currentColor" />
-        </linearGradient>
-      </defs>
-      {p.category === "戒指" ? (
-        <>
-          <ellipse
-            cx="70"
-            cy="61"
-            rx="27"
-            ry="25"
-            fill="none"
-            stroke={"url(#metal" + p.sku + ")"}
-            strokeWidth="4"
-          />
-          <path d="M47 45l8-10m30 0 8 10" />
-        </>
-      ) : p.category === "手镯" ? (
-        <ellipse
-          cx="70"
-          cy="55"
-          rx="47"
-          ry="27"
-          fill="none"
-          stroke={"url(#metal" + p.sku + ")"}
-          strokeWidth="3"
-        />
-      ) : (
-        <path
-          d="M24 4c-1 42 17 56 46 60 29-4 47-18 46-60"
-          fill="none"
-          stroke={"url(#metal" + p.sku + ")"}
-          strokeWidth="2"
-        />
-      )}
-      {p.motif === "jasmin" ? (
-        <g transform={`translate(70 ${p.category === "项链" ? 70 : 32})`}>
-          <path
-            d="M0-2C-20-25-28-1-8 4-31 12-12 30 0 10c12 20 31 2 8-6 20-5 12-29-8-6Z"
-            fill="#f6eee1"
-          />
-          <circle r="4" fill="#fff" />
-        </g>
-      ) : p.line === "aqua" ? (
-        <g>
-          <ellipse
-            cx="70"
-            cy={p.category === "项链" ? 72 : 30}
-            rx="11"
-            ry="15"
-            fill="#c4dfe0"
-            strokeWidth="2"
-          />
-          <path d="m60 27 10-12 10 12-10 17Z" fill="none" opacity=".5" />
-        </g>
-      ) : (
-        <g transform={`translate(70 ${p.category === "项链" ? 70 : 32})`}>
-          <path
-            d="M0 13C-25 4-19-17 0-11 19-17 25 4 0 13Z"
-            fill={p.line === "vive" ? "#b5b69a" : "#f8f6ee"}
-          />
-          <path d="M0-10V12" />
-        </g>
-      )}
-    </svg>
+    <img
+      className="product-art"
+      src={`/image/product/${p.sku}.png`}
+      alt=""
+      decoding="async"
+    />
   );
 }
 function App() {
@@ -416,9 +338,8 @@ function App() {
             setView("workspace");
           }}
         >
-          <Flower2 />
           <span>
-            MAISON LIORÉ<small>CLIENT ADVISOR ATELIER</small>
+            MAISON LIORÉ<small>Client Advisor</small>
           </span>
         </a>
         <nav aria-label="主导航">
@@ -437,35 +358,12 @@ function App() {
         </nav>
         <div className="advisor">
           <span className="status-dot" />
-          <span>私人顾问工作空间</span>
-          <div className="avatar">CA</div>
+          <span className={`mode ${data.mode === "demo" ? "demo" : ""}`}>
+            {data.mode === "demo" ? "示例模式 · 非 AI 生成" : "实时 AI"}
+          </span>
         </div>
       </header>
       <main>
-        <div className="page-intro">
-          <div>
-            <div className="eyebrow">THE ART OF THOUGHTFUL CONNECTION</div>
-            <h1>
-              {view === "workspace"
-                ? "让每一次问候，恰如其分。"
-                : "每一次用心，都有迹可循。"}
-            </h1>
-            <p>
-              {view === "workspace"
-                ? "从一份了解开始，为客户写下一段有温度的微信。"
-                : "回顾生成依据与版本，导出可复现的评估记录。"}
-            </p>
-          </div>
-          <div className="intro-aside">
-            <span className="brand-motto">A quiet moment, kept forever.</span>
-            <span className={`mode ${data.mode === "demo" ? "demo" : ""}`}>
-              <span className="status-dot" />
-              {data.mode === "demo"
-                ? "示例模式 · 非 AI 生成"
-                : "实时 AI · " + data.model}
-            </span>
-          </div>
-        </div>
         {view === "records" ? (
           <section className="journal">
             <div className="journal-head">
@@ -512,7 +410,10 @@ function App() {
                       </h3>
                       <p>
                         {r.resolvedProductSku || "无需产品"} ·{" "}
-                        {r.model || "未生成"} · Prompt {r.promptVersion}
+                        {r.model?.startsWith("deepseek-")
+                          ? "实时 AI"
+                          : r.model || "未生成"}{" "}
+                        · Prompt {r.promptVersion}
                       </p>
                     </div>
                     <span
@@ -817,9 +718,6 @@ function App() {
                         <MotifArt motif={m.id} />
                         <strong>{m.name}</strong>
                         <span>{m.zh}</span>
-                        {task.motif === m.id && (
-                          <Check className="motif-check" size={13} />
-                        )}
                       </Choice>
                     ))}
                   </div>
@@ -894,7 +792,6 @@ function App() {
                             >
                               <div className="product-image">
                                 <JewelryArt p={p} />
-                                <span>设计示意</span>
                                 {task.sku === p.sku && <Check size={13} />}
                               </div>
                               <div className="product-content">
@@ -911,7 +808,7 @@ function App() {
                           ))}
                       </div>
                       <p className="field-hint">
-                        虚构产品与模拟零售价；插图仅为设计示意。
+                        虚构产品与模拟零售价；产品图片仅为视觉参考。
                       </p>
                     </>
                   )}
