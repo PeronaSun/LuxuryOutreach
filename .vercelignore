@@ -1,0 +1,12 @@
+.git/
+.vercel/
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+runtime/
+evaluation/
+deliverables/
+tests/
+.DS_Store

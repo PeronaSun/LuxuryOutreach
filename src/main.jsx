@@ -152,7 +152,7 @@ function App() {
   useEffect(() => {
     api("bootstrap")
       .then(setData)
-      .catch(() => setBootError("无法连接本地服务，请确认服务器正在运行。"));
+      .catch(() => setBootError("无法连接服务，请稍后重试。"));
   }, []);
   useEffect(() => {
     const refresh = () => setCalendarEpoch((value) => value + 1);

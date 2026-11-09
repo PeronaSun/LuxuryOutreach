@@ -1,10 +1,14 @@
 # Maison Lioré · Client Advisor Workspace
 
-A working local MVP for a **fictional** fine jewelry brand. React, Vite, and a small Node HTTP server. Chinese WeChat drafts remain under the Client Advisor's control; nothing sends messages automatically.
+A working MVP for a **fictional** fine jewelry brand, supporting local Node and Vercel deployment. React, Vite, and a small Node HTTP server. Chinese WeChat drafts remain under the Client Advisor's control; nothing sends messages automatically.
+
+## Vercel deployment
+
+The Vite frontend and all five API endpoints can run on the same Vercel domain. See [deployment setup, environment variables, Journal storage and verification](docs/vercel-deployment.md). Local `.env` files are not uploaded: configure server-side DeepSeek variables in Vercel and redeploy the repository root, including `api/` and `server/`.
 
 ## Run locally
 
-Requires npm and a supported Node.js version: **24.15+ in the 24.x line** (tested with 24.16.0), **22.22.2+ in the 22.x line**, or 26+. The version floor includes jsdom's test-runtime requirements.
+Requires npm and **Node.js 24.15+ in the 24.x line** (tested with 24.16.0). The deployment pins Node 24.x; the minor version floor includes jsdom's test-runtime requirements.
 
 ```sh
 npm install
@@ -20,7 +24,7 @@ npm run build
 npm start
 ```
 
-Open **http://127.0.0.1:3001**. Both servers bind to loopback. This is a local, single-advisor application.
+Open **http://127.0.0.1:3001**. Both servers bind to loopback. This starts the local, single-advisor server. Vercel uses the separate Function entry point instead of running this listener.
 
 ## Configure the LLM
 
@@ -34,12 +38,13 @@ Edit `.env` locally:
 
 ```dotenv
 DEMO_MODE=false
-OPENAI_API_KEY=your_key_here
-OPENAI_MODEL=gpt-4.1-mini
+DEEPSEEK_API_KEY=your_key_here
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_MODEL=deepseek-flash
 PORT=3001
 ```
 
-Restart `npm run dev` after changing `.env`. Use an account-accessible model that supports the Responses API and strict JSON-schema output. The model identifier is configurable; `gpt-4.1-mini` is a configuration default, not an assertion of account access. `DEMO_MODE=true` explicitly forces demo output even with a key. `DEMO_MODE=false` without a key reports a configuration error.
+Restart `npm run dev` after changing `.env`. Use an account-accessible model that supports the Responses API and strict JSON-schema output. The model identifier is configurable; `deepseek-flash` is the existing DeepSeek configuration default, not an assertion of account access. `DEMO_MODE=true` explicitly forces demo output even with a key. `DEMO_MODE=false` without a key reports a configuration error.
 
 Secrets stay on the server. `.env` is ignored, the frontend receives only mode/model metadata, and requests set `store:false`. **Never prefix API keys with `VITE_`.** Live generation uses two API calls: structured generation, followed by a fresh same-model factual/tone audit. Requests time out after 45 seconds per call. Failed generation, refusals, invalid output, or failed review withhold all candidates and show a safe error.
 
@@ -54,7 +59,7 @@ API implementation reference: [OpenAI Structured Outputs](https://developers.ope
 5. Generate, compare the three styles, select, edit, and copy. A preference difference is informational and never changes the CA-selected product or requires approval. Edited text is marked as unreviewed; its optional basic check is not a compliance certification.
 6. Open **生成记录 / Journal** or use **导出生成记录** for JSON export.
 
-For a quick demo: the default 林女士 + 产品推荐 + Jasmin Motif resolves to `JAS-R01` without choosing a Line or SKU. Switch to 生日 / 节日祝福 to generate November birthday-month wishes with no date input. In 购买后关怀, select either her September ring or June necklace. 陈女士 and 许先生 also have two purchases each. All nine fictional clients support all six scenarios when the necessary scenario facts are supplied. Sparse preference information produces neutral catalog recommendations.
+For a quick demo: the default 林女士 + 产品推荐 + Jasmin Motif resolves to `JAS-B01` without choosing a Line or SKU. Switch to 生日 / 节日祝福 to generate November birthday-month wishes with no date input. In 购买后关怀, select either her September ring or June necklace. 陈女士 and 许先生 also have two purchases each. All nine fictional clients support all six scenarios when the necessary scenario facts are supplied. Sparse preference information produces neutral catalog recommendations.
 
 ## Three-paragraph message contract
 
@@ -122,5 +127,5 @@ See [evaluation and defect report](docs/evaluation-report.md) and [implementatio
 - No browser connection was available, so visual, mobile viewport, clipboard-permission, and keyboard behavior in a real browser remain unverified. Responsive CSS and native button keyboard semantics are implemented and DOM interactions are tested.
 - Semantic fact checking and same-model review reduce risk but cannot guarantee compliance. Nuanced prompt injection, phrasing, inferred attributes, or unsupported claims can evade keyword checks or model judgment. CA review is always required; edited-message checking is limited to deterministic rules.
 - The 45–100 Chinese-character range is guidance. Event messages may run longer to retain verified logistics. Demo templates are intentionally deterministic and are not evidence of live model quality.
-- Profiles, purchase records, and verified events are server fixtures. There is no CRM editing, login, shared-user database, automatic WeChat delivery, or deployment in this MVP. Loopback binding and local-origin checks support the intended local workflow.
+- Profiles, purchase records, and verified events are server fixtures. There is no CRM editing, login, per-user data isolation or automatic WeChat delivery. Local mode retains loopback restrictions; Vercel mode uses HTTPS same-origin requests and optional Redis-backed Journal storage.
 - Next: run and annotate the live evaluation against the nine-dimension rubric, complete real-browser/a11y review, and persist edited drafts if required.

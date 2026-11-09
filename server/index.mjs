@@ -1,5 +1,5 @@
 import http from "node:http";
-import { readFile, mkdir, appendFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { resolve, extname } from "node:path";
 import { randomUUID } from "node:crypto";
@@ -16,6 +16,8 @@ import { evaluateRequest, PROMPT_VERSION } from "./rules.mjs";
 import { generate } from "./generation.mjs";
 import { applicationCalendar } from "./application-calendar.mjs";
 import { providerConfig } from "./provider-config.mjs";
+import { createRecordStore } from "./record-store.mjs";
+import { requestAllowed } from "./request-policy.mjs";
 import { recoveryConfig } from "./recovery-policy.mjs";
 import { GenerationError, diagnosticEvent } from "./generation-errors.mjs";
 import {
@@ -24,14 +26,17 @@ import {
   DEMO_MODEL,
 } from "./message-contract.mjs";
 const root = fileURLToPath(new URL("..", import.meta.url));
-export function createApp({
-  recordDir = resolve(root, "runtime"),
+export function createHandler({
+  recordDir,
+  recordStore,
+  deployed = false,
   generator = generate,
   env = process.env,
   clock = () => new Date(),
   diagnosticLogger = (event) => console.info(JSON.stringify(event)),
 } = {}) {
   const provider = providerConfig(env);
+  const store = recordStore || createRecordStore({ recordDir, env, deployed });
   let busy = false;
   const send = (res, status, data) => {
     res.writeHead(status, {
@@ -40,31 +45,18 @@ export function createApp({
     });
     res.end(JSON.stringify(data));
   };
-  const save = async (record) => {
-    await mkdir(recordDir, { recursive: true });
-    await appendFile(
-      resolve(recordDir, "records.jsonl"),
-      (provider.key
+  const save = (record) =>
+    store.append(
+      provider.key
         ? JSON.stringify(record).replaceAll(provider.key, "[REDACTED]")
-        : JSON.stringify(record)) + "\n",
+        : JSON.stringify(record),
     );
-  };
-  return http.createServer(async (req, res) => {
+  return async (req, res) => {
     try {
-      // Local-only app. Reject cross-origin writes and DNS-rebinding hostnames.
-      if (
-        !/^(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/.test(
-          req.headers.host || "",
-        )
-      )
-        return send(res, 403, { error: "仅支持本地访问。" });
+      if (!requestAllowed(req, { deployed }))
+        return send(res, 403, { error: "请求来源无效。" });
       const url = new URL(req.url, "http://localhost");
       if (url.pathname.startsWith("/api/")) {
-        if (
-          req.headers.origin &&
-          !/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(req.headers.origin)
-        )
-          return send(res, 403, { error: "请求来源无效。" });
         if (req.method === "GET" && url.pathname === "/api/bootstrap")
           return send(res, 200, {
             products,
@@ -83,20 +75,10 @@ export function createApp({
             mode: provider.demo ? "demo" : "live",
             provider: provider.provider,
             model: provider.model,
+            journalStorage: store.metadata,
           });
         if (req.method === "GET" && url.pathname === "/api/records") {
-          let records = [];
-          try {
-            records = (
-              await readFile(resolve(recordDir, "records.jsonl"), "utf8")
-            )
-              .trim()
-              .split("\n")
-              .filter(Boolean)
-              .map(JSON.parse);
-          } catch (e) {
-            if (e.code !== "ENOENT") throw e;
-          }
+          const records = await store.read();
           return send(res, 200, { records });
         }
         if (
@@ -107,14 +89,25 @@ export function createApp({
         ) {
           if (!req.headers["content-type"]?.startsWith("application/json"))
             return send(res, 415, { error: "请使用 JSON 请求。" });
-          let body = "";
-          for await (const chunk of req) {
-            body += chunk;
-            if (Buffer.byteLength(body) > 16000)
-              return send(res, 413, { error: "输入内容过长。" });
-          }
-          let input;
+          let body = "",
+            input;
           try {
+            // Vercel may already have consumed the stream and parsed req.body.
+            const parsedBody = req.body;
+            if (parsedBody !== undefined) {
+              body =
+                typeof parsedBody === "string" || Buffer.isBuffer(parsedBody)
+                  ? parsedBody.toString()
+                  : JSON.stringify(parsedBody);
+              if (Buffer.byteLength(body) > 16000)
+                return send(res, 413, { error: "输入内容过长。" });
+            } else {
+              for await (const chunk of req) {
+                body += chunk;
+                if (Buffer.byteLength(body) > 16000)
+                  return send(res, 413, { error: "输入内容过长。" });
+              }
+            }
             input = JSON.parse(body);
           } catch {
             return send(res, 400, { error: "请求格式无效。" });
@@ -350,7 +343,10 @@ export function createApp({
     } catch {
       send(res, 500, { error: "服务暂时不可用，请稍后重试。" });
     }
-  });
+  };
+}
+export function createApp(options = {}) {
+  return http.createServer(createHandler(options));
 }
 if (
   process.argv[1] &&
